@@ -138,16 +138,14 @@
   .carte .jours i.fait { background: #2E8F86; }
   .carte-seance { top: 0; right: -34px; }
   .carte-seance .pastille-ronde { background: var(--cardio); color: var(--cardio-encre); }
-  /* À droite, derrière le dos de la figurante : la bulle ne cache pas le mouvement. */
-  .carte-semaine { top: 31%; right: -24px; }
+  /* En bas à gauche, sur le nom de l'exercice, sous les pieds : la bulle ne cache pas le mouvement. */
+  .carte-semaine { top: 69%; left: -46px; }
   .carte-exercice { bottom: -24px; right: -44px; }
   @media (prefers-reduced-motion: no-preference) {
     .carte { animation: flotte 6s ease-in-out infinite; }
     .carte-semaine { animation-delay: -2s; } .carte-exercice { animation-delay: -4s; }
     @keyframes flotte { 50% { transform: translateY(-10px); } }
   }
-  /* Fenêtre étroite, plus de place à droite : la bulle passe à gauche, sur le nom de l'exercice, sous le pied avant. */
-  @media (max-width: 1100px) { .carte-semaine { top: 69%; left: -46px; right: auto; } }
 
   @media (max-width: 860px) {
     main { grid-template-columns: 1fr; padding: 22px 20px 16px; gap: 8px; }
@@ -183,13 +181,15 @@
     margin-top: 26px; max-width: 31rem; color: var(--texte);
     font-size: clamp(1.03rem, 2.6vw, 1.2rem); line-height: 1.6; font-weight: 500; text-wrap: balance;
   }
+  /* Le bouton en corail plein, avec le logo Apple : il ne se confond pas avec les bulles crème du téléphone. */
   .bientot {
     margin-top: 32px; display: inline-flex; align-items: center; gap: 10px;
-    padding: 14px 26px; border-radius: 999px;
-    background: var(--creme); color: var(--petrole);
-    font-weight: 700; font-size: 1rem;
-    box-shadow: 0 14px 30px -12px rgba(0,0,0,.5);
+    padding: 15px 28px 15px 24px; border-radius: 999px;
+    background: var(--corail); color: var(--nuit);
+    font-weight: 800; font-size: 1.02rem;
+    box-shadow: 0 0 0 4px rgba(234,128,105,.22), 0 16px 34px -12px rgba(234,128,105,.65);
   }
+  .bientot svg { width: 17px; height: 20px; flex: none; }
   .preuve { margin-top: 18px; max-width: 31rem; text-wrap: balance; font-size: .86rem; color: var(--discret); font-weight: 500; line-height: 1.9; }
   .preuve b { color: var(--turquoise); font-weight: 700; }
   .u { white-space: nowrap; }
@@ -220,12 +220,12 @@
   <div class="texte">
     <h1 class="leve leve-2"><span class="u">Recommence à bouger,</span><em>en douceur.</em></h1>
     <p class="promesse leve leve-3">Des séances de mouvement doux composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
-    <p class="bientot leve leve-4">Bientôt sur l'App Store</p>
+    <p class="bientot leve leve-4"><svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg>Bientôt sur l'App Store</p>
     <p class="preuve leve leve-5">Aucune inscription requise et <b class="u">7&nbsp;jours d'essai gratuit</b> pour profiter pleinement de l'application.</p>
   </div>
   <div class="scene leve leve-3" aria-hidden="true">
     <div class="iphone"><span class="bouton action"></span><span class="bouton volume-haut"></span><span class="bouton volume-bas"></span><span class="bouton marche"></span>
-      <div class="bordure"><div class="ecran-tel"><img src="images/ecrans/hero-fente.webp" alt=""><span class="ilot"></span></div></div>
+      <div class="bordure"><div class="ecran-tel"><img src="images/ecrans/hero-marche.webp" alt=""><span class="ilot"></span></div></div>
     </div>
     <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min, 12 exercices</b></span></div>
     <div class="carte carte-semaine"><span><small>Bravo Julie&nbsp;!</small><b>4 séances cette semaine</b><span class="jours"><i class="fait"></i><i class="fait"></i><i class="fait"></i><i class="fait"></i><i></i><i></i><i></i></span></span></div>
