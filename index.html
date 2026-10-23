@@ -96,7 +96,7 @@
   main {
     position: relative; z-index: 2; flex: 1; width: 100%;
     display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 24px;
-    max-width: 1120px; margin: 0 auto; padding: 28px 32px 8px;
+    max-width: 1120px; margin: 0 auto; padding: 8px 32px 8px;
   }
   .texte { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
   .scene { position: relative; display: grid; place-items: center; }
@@ -138,16 +138,19 @@
   .carte .jours i.fait { background: #2E8F86; }
   .carte-seance { top: 0; right: -34px; }
   .carte-seance .pastille-ronde { background: var(--cardio); color: var(--cardio-encre); }
-  .carte-semaine { top: 44%; left: -46px; }
+  /* À droite, derrière le dos de la figurante : la bulle ne cache pas le mouvement. */
+  .carte-semaine { top: 31%; right: -24px; }
   .carte-exercice { bottom: -24px; right: -44px; }
   @media (prefers-reduced-motion: no-preference) {
     .carte { animation: flotte 6s ease-in-out infinite; }
     .carte-semaine { animation-delay: -2s; } .carte-exercice { animation-delay: -4s; }
     @keyframes flotte { 50% { transform: translateY(-10px); } }
   }
+  /* Fenêtre étroite, plus de place à droite : la bulle passe à gauche, sur le nom de l'exercice, sous le pied avant. */
+  @media (max-width: 1100px) { .carte-semaine { top: 69%; left: -46px; right: auto; } }
 
   @media (max-width: 860px) {
-    main { grid-template-columns: 1fr; padding: 44px 20px 16px; gap: 8px; }
+    main { grid-template-columns: 1fr; padding: 22px 20px 16px; gap: 8px; }
     .texte { align-items: center; text-align: center; }
     .scene { min-height: 0; padding: 36px 0 56px; }
     .iphone { --l: 230px; --bordure: 7px; }
@@ -155,16 +158,27 @@
     .carte b { font-size: .82rem; } .carte small { font-size: .66rem; }
     .carte .pastille-ronde, .carte .vignette { width: 34px; height: 34px; border-radius: 10px; }
     .carte-seance { top: 10px; right: max(0px, calc(50% - 215px)); }
-    .carte-semaine { top: 42%; left: max(0px, calc(50% - 215px)); }
+    .carte-semaine { top: 66%; left: max(0px, calc(50% - 215px)); }
     .carte-exercice { bottom: 22px; right: max(0px, calc(50% - 210px)); }
   }
-  .marque { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 22px); }
-  .logo { width: clamp(68px, 16vw, 104px); height: auto; display: block; flex: none; }
+  /* Le logo en en-tête, aligné sur la colonne de texte : le titre a toute la largeur pour lui. */
+  .haut { position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 26px 32px 0; }
+  .logo { width: clamp(62px, 6vw, 80px); height: auto; display: block; }
   h1 {
-    font-weight: 800; letter-spacing: -.025em; text-align: left;
-    font-size: clamp(1.2rem, 5.9vw, 2.75rem); line-height: 1.08;
+    font-weight: 800; letter-spacing: -.03em;
+    font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.04;
   }
-  h1 em { display: block; font-style: normal; color: var(--corail); }
+  /* Léger dégradé corail vers pêche sur « en douceur. » */
+  h1 em {
+    display: block; width: fit-content; font-style: normal; color: var(--corail);
+    background: linear-gradient(90deg, var(--corail) 0%, #F09A80 50%, #F6C1AA 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 860px) {
+    .haut { display: flex; justify-content: center; padding: 24px 20px 0; }
+    h1 { font-size: clamp(1.45rem, 6.3vw, 2.6rem); }
+    h1 em { margin: 0 auto; }
+  }
   .promesse {
     margin-top: 26px; max-width: 31rem; color: var(--texte);
     font-size: clamp(1.03rem, 2.6vw, 1.2rem); line-height: 1.6; font-weight: 500; text-wrap: balance;
@@ -200,12 +214,11 @@
 <div class="mur" aria-hidden="true"><div class="incline" id="incline"></div></div>
 <div class="voile" aria-hidden="true"></div>
 
+<header class="haut leve"><img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100"></header>
+
 <main>
   <div class="texte">
-    <div class="marque leve">
-      <img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100">
-      <h1><span class="u">Recommence à bouger,</span><em>en douceur.</em></h1>
-    </div>
+    <h1 class="leve leve-2"><span class="u">Recommence à bouger,</span><em>en douceur.</em></h1>
     <p class="promesse leve leve-3">Des séances de mouvement doux composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
     <p class="bientot leve leve-4">Bientôt sur l'App Store</p>
     <p class="preuve leve leve-5">Sans compte, et tes réponses restent sur ton téléphone. <b class="u">7 jours d'essai gratuit.</b></p>
