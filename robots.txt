@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /contenu/
+Disallow: /outils/
+
+Sitemap: https://moovini.app/sitemap.xml

@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Moovini – Recommence à bouger, en douceur</title>
-<meta name="description" content="Moovini compose tes séances de mouvement doux d'après tes réponses : chez toi ou au travail, sur une chaise ou debout, de 10 à 30 minutes.">
+<!-- Titre et description pour les moteurs de recherche : les requêtes visées (« reprendre le sport en douceur »,
+     « exercices sur chaise », « au bureau ») et le mot « app » qui distingue Moovini des homonymes (gel, vélos). -->
+<title>Moovini, l'app pour reprendre le sport en douceur</title>
+<meta name="description" content="Des séances de mouvement doux composées d'après tes réponses : 10 à 30 min, sur une chaise ou debout, chez toi ou au bureau. 7 jours d'essai gratuit.">
+
+<meta name="application-name" content="Moovini">
+<meta name="apple-mobile-web-app-title" content="Moovini">
 <link rel="canonical" href="https://moovini.app/">
 <!-- Aperçu quand le lien est partagé (réseaux, messageries) : image 1200 × 630 capturée depuis cette page. -->
 <meta property="og:type" content="website">
@@ -20,6 +25,47 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14292E">
 <link rel="icon" href="images/symbole.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Données structurées : qui est Moovini (et pas le gel ni les vélos du même nom), le site et l'app à venir.
+     Pas de note ni de prix : l'app n'est pas encore sur l'App Store. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://moovini.app/#organisation",
+      "name": "Moovini",
+      "url": "https://moovini.app/",
+      "logo": { "@type": "ImageObject", "url": "https://moovini.app/images/icone-512.png", "width": 512, "height": 512 },
+      "email": "contact@moovini.app",
+      "description": "Moovini, l'app de mouvement doux qui compose des séances de 10 à 30 minutes d'après tes réponses."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://moovini.app/#site",
+      "url": "https://moovini.app/",
+      "name": "Moovini",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://moovini.app/#organisation" }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://moovini.app/#app",
+      "name": "Moovini",
+      "alternateName": "Moovini, mouvement doux",
+      "description": "Des séances de mouvement doux composées d'après tes réponses : chez toi ou au bureau, sur une chaise ou debout, de 10 à 30 minutes. Mobilité, étirements, renforcement léger et cardio doux, avec des démonstrations vidéo et une voix qui guide.",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "Fitness",
+      "inLanguage": "fr",
+      "image": "https://moovini.app/images/partage.jpg",
+      "screenshot": "https://moovini.app/images/ecrans/hero-marche.webp",
+      "publisher": { "@id": "https://moovini.app/#organisation" }
+    }
+  ]
+}
+</script>
 <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   /* Plus Jakarta Sans hébergée sur le site (licence OFL, fonts/OFL.txt) : un seul fichier variable pour l'alphabet
@@ -177,7 +223,11 @@
     .carte-exercice { bottom: 22px; right: max(0px, calc(50% - 210px)); }
   }
   /* Le logo en en-tête, aligné sur la colonne de texte : le titre a toute la largeur pour lui. */
-  .entete { position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 26px 32px 0; }
+  .entete { position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 26px 32px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  /* Menu discret vers les pages de contenu (blog, exercices, questions) : l'accueil reste sur un seul écran. */
+  .menu { display: flex; gap: 22px; }
+  .menu a { color: var(--creme); text-decoration: none; font-weight: 700; font-size: .95rem; opacity: .9; }
+  .menu a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
   .logo { width: clamp(62px, 6vw, 80px); height: auto; display: block; }
   h1 {
     font-weight: 800; letter-spacing: -.03em;
@@ -190,7 +240,8 @@
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   }
   @media (max-width: 860px) {
-    .entete { display: flex; justify-content: center; padding: 24px 20px 0; }
+    .entete { flex-direction: column; justify-content: center; gap: 12px; padding: 24px 20px 0; }
+    .menu { gap: 18px; }
     h1 { font-size: clamp(1.45rem, 6.3vw, 2.6rem); }
     h1 em { margin: 0 auto; }
   }
@@ -243,7 +294,8 @@
 <div class="mur" aria-hidden="true"><div class="incline" id="incline"></div></div>
 <div class="voile" aria-hidden="true"></div>
 
-<header class="entete leve"><img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100"></header>
+<header class="entete leve"><img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100">
+  <nav class="menu" aria-label="Navigation principale"><a href="blog/">Blog</a><a href="exercices/">Exercices</a><a href="questions-frequentes/">Questions</a></nav></header>
 
 <main>
   <div class="texte">
@@ -263,6 +315,9 @@
 </main>
 
 <footer>
+  <a href="pour-qui/teletravail/">Télétravail</a>
+  <a href="pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a>
+  <a href="pour-qui/debutant-sedentaire/">Débutants</a>
   <a href="privacy/">Politique de confidentialité</a>
   <a href="cgu/">Conditions d'utilisation</a>
   <a href="mailto:contact@moovini.app">contact@moovini.app</a>

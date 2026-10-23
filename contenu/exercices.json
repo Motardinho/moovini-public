@@ -1,0 +1,5955 @@
+[
+ {
+  "code": "M01",
+  "id": "m01-tourner-tete",
+  "slug": "tourner-tete",
+  "name": "Tourner la tête",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Nuque"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Tu regardes d’un côté puis de l’autre, la nuque se délie.",
+  "dosage": "30 à 40 s : 3 rotations par côté, tenue 3 à 5 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, le dos droit et décollé du dossier, les pieds à plat à la largeur du bassin. Pose les mains l’une sur l’autre sur le haut des cuisses, les épaules basses."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis tourne lentement la tête vers la gauche, comme pour regarder par-dessus ton épaule, le menton à l’horizontale. Garde la position quelques secondes."
+     ],
+     [
+      "Revenir",
+      "Ramène lentement la tête face à toi, sans à-coup."
+     ],
+     [
+      "De l’autre côté",
+      "Tourne la tête vers la droite de la même façon, puis reviens au centre. Alterne calmement en respirant."
+     ]
+    ],
+    "tips": [
+     "Seule la tête tourne : les épaules et le buste restent face à l’avant, le dos droit",
+     "Le menton reste parallèle au sol, sans pencher la tête ni la baisser",
+     "Tourne jusqu’où c’est confortable, jamais en cercle : arrête si ça tire, fait mal ou donne le vertige"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/tourner-tete-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_tourner-tete-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les genoux souples. Pose les mains sur le devant des cuisses, les épaules basses."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis tourne lentement la tête vers la gauche, comme pour regarder par-dessus ton épaule, le menton à l’horizontale. Garde la position quelques secondes."
+     ],
+     [
+      "Revenir",
+      "Ramène lentement la tête face à toi, sans à-coup."
+     ],
+     [
+      "De l’autre côté",
+      "Tourne la tête vers la droite de la même façon, puis reviens au centre. Alterne calmement en respirant."
+     ]
+    ],
+    "tips": [
+     "Seule la tête tourne : les épaules et le buste restent face à l’avant",
+     "Le menton reste parallèle au sol, sans pencher la tête ni la baisser",
+     "Tourne jusqu’où c’est confortable, jamais en cercle : arrête si ça tire, fait mal ou donne le vertige"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/tourner-tete-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_tourner-tete-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M02",
+  "id": "m02-oreille-epaule",
+  "slug": "oreille-epaule",
+  "name": "Oreille vers l’épaule",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Nuque",
+   "Épaules"
+  ],
+  "moments": [
+   "pause",
+   "soir"
+  ],
+  "pitch": "L’oreille descend vers l’épaule, le côté du cou s’étire.",
+  "dosage": "30 s : tenue 5 s, 3 par côté",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, le dos décollé du dossier, les pieds à plat à la largeur du bassin. Pose les mains sur les cuisses. Debout, garde les genoux souples."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis descends lentement l’oreille vers l’épaule, jusqu’à sentir un léger étirement sur le côté du cou. Ton visage reste tourné vers l’avant."
+     ],
+     [
+      "Tenir",
+      "Tiens 5 secondes en respirant calmement, l’épaule opposée bien basse."
+     ],
+     [
+      "Revenir",
+      "Remonte lentement la tête au centre, puis fais la même chose de l’autre côté."
+     ]
+    ],
+    "tips": [
+     "Garde les deux épaules basses, loin des oreilles",
+     "Ta tête penche sur le côté, sans tourner ni partir en avant",
+     "Un léger étirement suffit : arrête si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-16_oreille-epaule-chaise_studio_v2.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les genoux souples. Laisse les bras pendre le long du corps, les épaules basses."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis descends lentement l’oreille gauche vers l’épaule gauche, jusqu’à sentir un léger étirement sur le côté droit du cou. Ton visage reste tourné vers l’avant."
+     ],
+     [
+      "Revenir",
+      "Remonte lentement la tête bien droite, sans à-coup."
+     ],
+     [
+      "De l’autre côté",
+      "Descends l’oreille droite vers l’épaule droite, puis reviens au centre. Alterne calmement en respirant."
+     ]
+    ],
+    "tips": [
+     "Laisse les bras lourds : l’épaule opposée reste basse, loin de l’oreille",
+     "La tête penche sur le côté, sans tourner ni partir en avant",
+     "Un léger étirement suffit : arrête si ça tire ou si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M03",
+  "id": "m03-rouler-epaules",
+  "slug": "rouler-epaules",
+  "name": "Rouler les épaules",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Épaules",
+   "Haut du dos"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "De grands cercles lents qui dénouent la nuque.",
+  "dosage": "30 à 40 s : 5 vers l’arrière, 5 vers l’avant",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi droit, mains posées sur les cuisses."
+     ],
+     [
+      "Le geste",
+      "Dessine de grands cercles avec les épaules, vers l’arrière."
+     ],
+     [
+      "Revenir",
+      "Relâche les épaules et souffle doucement."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit, sans t’appuyer",
+     "Fais des cercles lents et amples"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les bras relâchés le long du corps, les mains contre les cuisses."
+     ],
+     [
+      "Monter",
+      "Grandis-toi, puis monte les deux épaules vers les oreilles, sans bouger la tête."
+     ],
+     [
+      "Rouler",
+      "Emmène les épaules vers l’arrière, laisse-les descendre, puis ramène-les devant : un grand cercle lent d’environ 3 secondes."
+     ],
+     [
+      "Changer de sens",
+      "Fais 5 cercles vers l’arrière, puis 5 vers l’avant, et relâche les épaules en soufflant doucement."
+     ]
+    ],
+    "tips": [
+     "Seules les épaules bougent : les bras pendent, les mains restent contre les cuisses",
+     "Garde la tête droite et le cou long, le regard devant toi",
+     "Va moins haut si la nuque tire ; le mouvement ne doit pas faire mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/rouler-epaules-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_rouler-epaules-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M04",
+  "id": "m04-ouvrir-poitrine",
+  "slug": "ouvrir-poitrine",
+  "name": "Ouvrir la poitrine",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Poitrine",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les bras s’ouvrent, la poitrine respire mieux.",
+  "dosage": "40 s : tenue 5 à 10 s, 4 à 5 fois",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, décollé(e) du dossier, pieds à plat, mains sur les cuisses."
+     ],
+     [
+      "Ouvrir",
+      "En inspirant, ouvre les bras sur les côtés à hauteur d’épaules, paumes vers l’avant, et laisse la poitrine s’avancer."
+     ],
+     [
+      "Tenir",
+      "Garde la position deux secondes, épaules basses."
+     ],
+     [
+      "Revenir",
+      "En soufflant, ramène les mains sur les cuisses, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Les épaules descendent et partent en arrière, loin des oreilles",
+     "C’est la poitrine qui s’ouvre, pas le bas du dos qui se creuse",
+     "Garde les bras un peu sous l’horizontale si une épaule gêne"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_ouvrir-poitrine-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": "Les mains jointes dans le dos, tu tires les bras en arrière et la poitrine s’ouvre.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin. Joins les mains dans le bas du dos, les doigts croisés."
+     ],
+     [
+      "Ouvrir",
+      "Bras tendus, tire doucement les mains vers l’arrière et un peu vers le haut : les omoplates se rapprochent et la poitrine s’avance."
+     ],
+     [
+      "Tenir",
+      "Garde la position quelques secondes, épaules basses, menton droit, en respirant tranquillement."
+     ],
+     [
+      "Revenir",
+      "Relâche lentement, les mains de nouveau dans le bas du dos, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Les épaules descendent et partent en arrière, loin des oreilles",
+     "C’est la poitrine qui avance : le bas du dos se creuse à peine",
+     "Si les mains se rejoignent mal ou qu’une épaule gêne, tire moins loin, sans forcer"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/ouvrir-poitrine-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_ouvrir-poitrine-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M05",
+  "id": "m05-rotation-buste",
+  "slug": "rotation-buste",
+  "name": "Rotation du buste",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Dos",
+   "Taille"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Tu tournes doucement le buste, le dos se délie.",
+  "dosage": "40 s : tenue 3 à 5 s, alterné",
+  "side": "En alternant",
+  "caution": "Après une chirurgie de la hanche ou du dos, demande d’abord l’avis de ton médecin.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, le dos décollé du dossier, les pieds à plat à la largeur du bassin."
+     ],
+     [
+      "Croiser les bras",
+      "Croise les bras sur la poitrine et pose chaque main sur l’épaule opposée."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis tourne lentement le buste et la tête d’un côté, aussi loin que c’est confortable. Le bassin et les genoux restent face à l’avant."
+     ],
+     [
+      "Revenir",
+      "Tiens 3 à 5 secondes en respirant, reviens au centre, puis tourne de l’autre côté."
+     ]
+    ],
+    "tips": [
+     "Ta tête suit le buste, sans aller plus loin que lui",
+     "Garde les épaules basses et le dos long",
+     "Un léger étirement suffit : arrête si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/rotation-buste-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-15_rotation-buste-chaise_studio_v2.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à plat à la largeur du bassin, les pointes vers l’avant, les genoux souples."
+     ],
+     [
+      "Croiser les bras",
+      "Croise les bras sur la poitrine, pose chaque main à plat sur le haut de l’épaule opposée, les coudes devant la poitrine."
+     ],
+     [
+      "Le geste",
+      "Grandis-toi, puis tourne lentement le buste et la tête d’un côté, aussi loin que c’est confortable. Le bassin, les genoux et les pieds restent face à l’avant."
+     ],
+     [
+      "Revenir",
+      "Tiens 3 à 5 secondes en respirant, reviens au centre, puis tourne de l’autre côté."
+     ]
+    ],
+    "tips": [
+     "Garde les pieds à plat : les talons ne pivotent pas",
+     "Ta tête suit le buste, sans aller plus loin que lui",
+     "Un léger étirement suffit : arrête si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/rotation-buste-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_rotation-buste-debout_studio.mp4"
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Torsion allongée",
+    "pitch": "Allongé(e), les genoux descendent d’un côté puis de l’autre.",
+    "level": 2,
+    "dosage": null,
+    "steps": [],
+    "tips": [],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M06",
+  "id": "m06-inclinaison-laterale",
+  "slug": "inclinaison-laterale",
+  "name": "Inclinaison latérale",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Taille",
+   "Dos"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "D’un côté puis de l’autre, la taille s’allonge.",
+  "dosage": "30 à 40 s : tenue 2 à 3 s, 3 par côté",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi droit au milieu de la chaise, les pieds à plat écartés à la largeur du bassin, les mains posées sur les cuisses."
+     ],
+     [
+      "Pencher",
+      "Penche le buste sur le côté et laisse la main glisser le long de la cuisse puis vers le sol, l’autre main reste posée sur le genou."
+     ],
+     [
+      "Tenir",
+      "Tiens 2 à 3 secondes en sentant la taille s’allonger, sans partir ni en avant ni en arrière, le bassin bien posé sur la chaise."
+     ],
+     [
+      "Alterner",
+      "Remonte doucement au centre, puis penche-toi de l’autre côté, 3 fois de chaque côté."
+     ]
+    ],
+    "tips": [
+     "Garde les deux fesses bien posées sur l’assise pendant tout le mouvement",
+     "Imagine que tu glisses entre deux vitres, sans t’enrouler vers l’avant",
+     "Souffle en te penchant et inspire en remontant"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds à la largeur du bassin, les genoux souples, les bras le long du corps."
+     ],
+     [
+      "S’incliner",
+      "Monte un bras en arc au-dessus de la tête et penche-toi doucement de l’autre côté, l’autre main glissant le long de la cuisse."
+     ],
+     [
+      "Tenir",
+      "Reste deux à trois secondes en respirant : tu sens le côté de la taille s’allonger."
+     ],
+     [
+      "De l’autre côté",
+      "Reviens au centre, bras le long du corps, puis penche-toi de l’autre côté."
+     ]
+    ],
+    "tips": [
+     "Penche-toi bien sur le côté, ni en avant ni en arrière",
+     "Le bassin reste immobile, les deux pieds bien à plat",
+     "Un léger étirement suffit : arrête si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/inclinaison-laterale-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_inclinaison-laterale-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M07",
+  "id": "m07-se-grandir",
+  "slug": "se-grandir",
+  "name": "Se grandir, bras au-dessus de la tête",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Épaules",
+   "Dos"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Tu t’étires vers le haut, ton dos respire.",
+  "dosage": "30 s : 4 à 6 montées lentes",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, ou assis(e) au bord de la chaise, pieds à plat."
+     ],
+     [
+      "Le geste",
+      "Monte les bras au-dessus de la tête, paumes face à face."
+     ],
+     [
+      "Revenir",
+      "Redescends lentement, bras le long du corps."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses",
+     "Respire pendant la montée"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, ou assis(e) au bord de la chaise, pieds à plat."
+     ],
+     [
+      "Le geste",
+      "Monte les bras au-dessus de la tête, paumes face à face."
+     ],
+     [
+      "Revenir",
+      "Redescends lentement, bras le long du corps."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses",
+     "Respire pendant la montée"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_se-grandir-debout_studio.mp4"
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": "Allongé(e), tu t’étires de tout ton long.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, ou assis(e) au bord de la chaise, pieds à plat."
+     ],
+     [
+      "Le geste",
+      "Monte les bras au-dessus de la tête, paumes face à face."
+     ],
+     [
+      "Revenir",
+      "Redescends lentement, bras le long du corps."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses",
+     "Respire pendant la montée"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M08",
+  "id": "m08-chevilles",
+  "slug": "chevilles",
+  "name": "Pointe et flex des chevilles",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Chevilles",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Le pied pointe puis remonte, les chevilles se réveillent.",
+  "dosage": "30 à 40 s : 5 par pied, puis cercles",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi droit sur la chaise, les mains posées sur l’assise de chaque côté des hanches, les deux pieds à plat."
+     ],
+     [
+      "Pointer",
+      "Allonge la jambe droite loin devant toi et pointe le pied vers le sol, le genou tendu sans le verrouiller."
+     ],
+     [
+      "Remonter",
+      "Pose le talon et ramène les orteils vers toi, puis pointe à nouveau, lentement, cinq fois."
+     ],
+     [
+      "Changer de pied",
+      "Repose le pied, puis fais de même avec la jambe gauche ; termine par quelques cercles de chaque cheville."
+     ]
+    ],
+    "tips": [
+     "Garde le geste lent, sans à-coups",
+     "Si ça tire derrière le genou, garde le pied plus près du sol",
+     "Le dos reste droit : adosse-toi au dossier si c’est plus confortable"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": "40 s : 8 à 10 pointes et flex lents, les deux pieds ensemble",
+    "side": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au sol, les jambes allongées devant toi, les mains posées à plat derrière les hanches, le buste un peu en arrière."
+     ],
+     [
+      "Pointer",
+      "Tends les deux pieds loin devant toi, orteils vers le sol, le dessus du pied dans le prolongement du tibia."
+     ],
+     [
+      "Remonter",
+      "Ramène les orteils vers toi, talons posés au sol, jusqu’à sentir l’arrière des mollets s’étirer."
+     ],
+     [
+      "Enchaîner",
+      "Alterne lentement pointe et flex, sans plier les genoux, en respirant calmement."
+     ]
+    ],
+    "tips": [
+     "Pieds nus ou en chaussettes, le pied bouge plus librement",
+     "Genoux tendus, mais sans les verrouiller",
+     "Si le bas du dos tire, adosse-toi à un mur ou à un canapé"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/chevilles-sol-photos.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_chevilles-sol_photos.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M09",
+  "id": "m09-arriere-cuisses",
+  "slug": "arriere-cuisses",
+  "name": "Étirement arrière des cuisses",
+  "family": "mobilite",
+  "level": 2,
+  "zones": [
+   "Jambes",
+   "Dos"
+  ],
+  "moments": [
+   "pause",
+   "soir"
+  ],
+  "pitch": "Allongé(e), tu tends une jambe vers le plafond, l’arrière de la cuisse s’étire.",
+  "dosage": "Au sol, 40 s par jambe : droite puis gauche",
+  "side": "Côté droit puis gauche",
+  "caution": "Après une chirurgie de la hanche ou du dos, demande d’abord l’avis de ton médecin.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos sur un tapis, les genoux pliés, les pieds à plat à la largeur du bassin, les bras le long du corps."
+     ],
+     [
+      "Le geste",
+      "Ramène le genou droit vers toi et croise les mains derrière la cuisse, au-dessus du genou. Tends doucement la jambe vers le plafond, sans verrouiller le genou, jusqu’à sentir un léger étirement à l’arrière de la cuisse."
+     ],
+     [
+      "Tenir",
+      "Garde la jambe en l’air jusqu’à la fin du décompte, environ 40 secondes, en respirant calmement, la tête, les épaules et le bassin posés au sol, l’autre pied à plat."
+     ],
+     [
+      "De l’autre côté",
+      "Plie le genou et repose le pied au sol. Au signal, fais la même chose avec la jambe gauche et tiens-la aussi jusqu’à la fin du décompte."
+     ]
+    ],
+    "tips": [
+     "Tiens l’arrière de la cuisse, jamais le genou ni le mollet",
+     "Plie un peu plus le genou si ça tire trop : un léger étirement suffit",
+     "Pas d’à-coups ; arrête si ça fait mal ou si une douleur descend dans la jambe"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_arriere-cuisses-sol_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M10",
+  "id": "m10-genou-poitrine",
+  "slug": "genou-poitrine",
+  "name": "Genou vers la poitrine",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Hanches",
+   "Dos"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Le genou remonte vers toi, le bas du dos se relâche.",
+  "dosage": "30 à 40 s : tenue 5 s par côté, alterné",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au milieu d’une chaise stable, le dos droit, les pieds à plat et les mains sur les cuisses."
+     ],
+     [
+      "Ramener",
+      "Monte un genou vers la poitrine et attrape-le avec les deux mains sous le genou, pas sur la rotule."
+     ],
+     [
+      "Tenir",
+      "Tire doucement le genou vers toi, les épaules relâchées, et garde la position 5 secondes en respirant."
+     ],
+     [
+      "Alterner",
+      "Repose le pied au sol en douceur, puis fais la même chose avec l’autre genou, en alternant."
+     ]
+    ],
+    "tips": [
+     "Reste grandi(e) : c’est le genou qui vient vers toi, pas le dos qui se courbe",
+     "Si la jambe est lourde à monter, garde le pied plus bas et tire moins",
+     "Expire en ramenant le genou, le bas du dos se relâche mieux"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": "Allongé(e), tu ramènes un genou puis l’autre.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allongé(e) sur le dos sur un tapis, la tête posée, les jambes allongées."
+     ],
+     [
+      "Le geste",
+      "Ramène un genou vers la poitrine et croise les mains sur le tibia, juste sous le genou ; l’autre jambe reste allongée."
+     ],
+     [
+      "Tenir",
+      "Tire doucement le genou vers toi et garde la position quelques secondes, la tête et les épaules relâchées au sol."
+     ],
+     [
+      "En alternant",
+      "Relâche, ramène un instant les deux genoux, puis tiens l’autre genou de la même façon ; continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Les mains sous le genou, pas sur la rotule",
+     "Tire sans forcer : tu sens le bas du dos et la fesse s’étirer, sans douleur",
+     "Si le genou est sensible, tiens l’arrière de la cuisse plutôt que le tibia"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/genou-poitrine-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_genou-poitrine-sol_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M11",
+  "id": "m11-fessier-en-4",
+  "slug": "fessier-en-4",
+  "name": "Étirement du fessier en 4",
+  "family": "mobilite",
+  "level": 2,
+  "zones": [
+   "Hanches"
+  ],
+  "moments": [
+   "soir",
+   "pause"
+  ],
+  "pitch": "La cheville sur le genou, la hanche s’ouvre doucement.",
+  "dosage": "Tenue 20 à 30 s par côté",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, le dos droit, les pieds à plat au sol et les mains sur les cuisses."
+     ],
+     [
+      "Croiser",
+      "Pose la cheville droite sur le genou gauche, pied flex, laisse le genou droit s’ouvrir sur le côté et pose les mains sur la jambe croisée."
+     ],
+     [
+      "Se pencher",
+      "Penche-toi un peu vers l’avant depuis la hanche, le dos long, et tiens 20 à 30 s en respirant, sans appuyer sur le genou."
+     ],
+     [
+      "Changer de côté",
+      "Repose le pied au sol, puis recommence avec la cheville gauche sur le genou droit."
+     ]
+    ],
+    "tips": [
+     "Garde le pied flex pour protéger le genou",
+     "Si la hanche tire trop, reste le buste droit sans te pencher",
+     "Souffle en te penchant : la hanche se relâche mieux"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les genoux pliés, les pieds à plat au sol, les bras posés le long du corps."
+     ],
+     [
+      "Croiser",
+      "Pose la cheville droite sur le genou gauche, le pied flex, et laisse le genou droit s’ouvrir doucement sur le côté."
+     ],
+     [
+      "Tenir",
+      "Reste dans cette position, le dos long et posé, sans appuyer sur le genou, en respirant calmement."
+     ],
+     [
+      "Changer de côté",
+      "Repose le pied droit au sol, puis croise la cheville gauche sur le genou droit et tiens autant de temps."
+     ]
+    ],
+    "tips": [
+     "Garde le pied flex pour protéger le genou",
+     "Pour étirer davantage, décolle un peu le pied d’appui du sol et rapproche la jambe de toi",
+     "Laisse la hanche s’ouvrir toute seule à chaque expiration, sans forcer"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M12",
+  "id": "m12-mollet",
+  "slug": "mollet",
+  "name": "Étirement du mollet",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Mollets",
+   "Jambes"
+  ],
+  "moments": [
+   "pause",
+   "soir"
+  ],
+  "pitch": "Une jambe en arrière, talon au sol, le mollet s’étire.",
+  "dosage": "Tenue 20 à 30 s par côté",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout face à un mur, à un pas de lui, et pose les deux mains à plat dessus, un peu au-dessus de ta tête, doigts vers le haut."
+     ],
+     [
+      "Reculer",
+      "Décolle le talon droit, puis recule la jambe droite d’un grand pas : la pointe du pied se pose d’abord, puis le talon redescend à plat."
+     ],
+     [
+      "Tenir",
+      "Jambe arrière tendue, talon bien au sol, plie le genou avant et penche le corps vers le mur, la tête dans l’axe : le mollet arrière s’étire. Tiens jusqu’à la fin du décompte, sans rebond."
+     ],
+     [
+      "De l’autre côté",
+      "Ramène la jambe arrière à côté de l’autre. Au signal, recule la jambe gauche et fais la même chose."
+     ]
+    ],
+    "tips": [
+     "Si le talon arrière se décolle, raccourcis un peu ton pas",
+     "Pour étirer plus, plie un peu plus le genou avant et rapproche le bassin du mur",
+     "Respire calmement : le mollet se relâche à chaque expiration"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M13",
+  "id": "m13-poignets-mains",
+  "slug": "poignets-mains",
+  "name": "Poignets et mains",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Mains",
+   "Poignets"
+  ],
+  "moments": [
+   "pause"
+  ],
+  "pitch": "Des cercles et des mains qui s’ouvrent, après le clavier.",
+  "dosage": "30 s : cercles lents, ouvrir et fermer les mains, secouer",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, dos droit, les avant-bras devant toi, coudes relâchés."
+     ],
+     [
+      "Les poignets",
+      "Dessine des cercles lents avec les poignets, dans un sens puis dans l’autre."
+     ],
+     [
+      "Les mains",
+      "Ouvre grand les mains en écartant les doigts, puis referme-les doucement en poing."
+     ],
+     [
+      "Revenir",
+      "Repose les mains sur les cuisses et secoue-les un peu pour les détendre."
+     ]
+    ],
+    "tips": [
+     "Des gestes lents, dans une amplitude confortable",
+     "Les épaules restent basses et relâchées",
+     "Idéal après un long moment au clavier ou au téléphone"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_poignets-mains-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les coudes près du corps, les avant-bras devant toi à hauteur de taille, les mains détendues."
+     ],
+     [
+      "Les poignets",
+      "Dessine des cercles lents avec les mains, dans un sens puis dans l’autre, puis un huit couché avec les deux mains."
+     ],
+     [
+      "Les mains",
+      "Lève les mains doigts vers le haut, puis laisse-les tomber vers le bas. Ouvre grand les doigts, puis ferme doucement le poing."
+     ],
+     [
+      "Finir",
+      "Joins les paumes devant la poitrine et descends-les doucement vers le nombril, puis secoue les mains pour les détendre."
+     ]
+    ],
+    "tips": [
+     "Des gestes lents, dans une amplitude confortable",
+     "Les épaules restent basses, les coudes relâchés",
+     "Arrête si un poignet fait mal ou fourmille"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M14",
+  "id": "m14-cercles-bras",
+  "slug": "cercles-bras",
+  "name": "Cercles de bras",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Épaules",
+   "Bras"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les bras tendus sur les côtés dessinent des cercles, les épaules se réveillent.",
+  "dosage": "30 à 40 s : 5 cercles vers l’avant, puis 5 vers l’arrière, à reprendre",
+  "side": null,
+  "caution": "Fais des cercles plus petits si une épaule tire.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi sur une chaise stable, le dos droit, les pieds à plat à la largeur du bassin."
+     ],
+     [
+      "Ouvrir les bras",
+      "Tends les bras sur les côtés, à hauteur d’épaules, les épaules basses, loin des oreilles."
+     ],
+     [
+      "Tourner",
+      "Dessine 5 cercles lents vers l’avant avec les bras tendus, petits d’abord, puis plus grands si c’est confortable."
+     ],
+     [
+      "Changer de sens",
+      "Fais ensuite 5 cercles vers l’arrière, puis reprends dans l’autre sens, en respirant régulièrement."
+     ]
+    ],
+    "tips": [
+     "Fais des cercles plus petits si une épaule tire",
+     "Si les bras fatiguent, baisse-les un instant puis reprends",
+     "Garde le cou long et le visage détendu pendant les cercles"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin. Tends les bras sur les côtés, à hauteur d’épaules, les mains ouvertes, paumes vers le sol."
+     ],
+     [
+      "Vers l’avant",
+      "Dessine de petits cercles lents avec les deux bras en même temps, à partir des épaules : la main monte en arrière et redescend devant. Fais-en cinq."
+     ],
+     [
+      "Changer de sens",
+      "Ralentis jusqu’à t’arrêter, bras en haut du cercle, puis repars doucement dans l’autre sens."
+     ],
+     [
+      "Vers l’arrière",
+      "Fais cinq cercles vers l’arrière, toujours petits et réguliers, puis ralentis et reprends vers l’avant."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses, loin des oreilles, et les coudes tendus sans les bloquer",
+     "Le corps et la tête restent immobiles : seuls les bras tournent",
+     "Respire tranquillement, sans bloquer ton souffle pendant les cercles"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/cercles-bras-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_cercles-bras-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M15",
+  "id": "m15-menton-poitrine",
+  "slug": "menton-poitrine",
+  "name": "Menton vers la poitrine",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Nuque"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Le menton descend vers la poitrine, l’arrière du cou s’allonge.",
+  "dosage": "30 s : 5 enroulements lents",
+  "side": null,
+  "caution": "Va très lentement. Arrête si un vertige ou un fourmillement apparaît.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": "Les mains derrière la tête, le menton descend vers la poitrine, l’arrière du cou s’allonge.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assis(e) bien droit sur la chaise, sans t’appuyer au dossier, les pieds à plat au sol. Croise les doigts derrière la tête, les coudes ouverts sur les côtés."
+     ],
+     [
+      "Descendre",
+      "Depuis le regard droit, laisse lentement la tête partir vers l’avant et le bas, le menton vers la poitrine. Les mains suivent la tête, sans tirer."
+     ],
+     [
+      "Tenir",
+      "Reste deux secondes le menton près de la poitrine : l’arrière du cou s’étire. Le dos, les épaules et le bassin ne bougent pas."
+     ],
+     [
+      "Remonter",
+      "Redresse doucement la tête jusqu’au regard droit, sans la basculer en arrière, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Les mains accompagnent la tête : elles ne tirent pas dessus",
+     "Seule la tête bouge : le dos reste droit, sans s’affaisser sur la chaise",
+     "Respire calmement pendant la tenue"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/menton-poitrine-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_menton-poitrine-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": "Les mains derrière la tête, le menton descend vers la poitrine, l’arrière du cou s’allonge.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, le dos droit et les épaules basses. Croise les doigts derrière la tête, les coudes ouverts sur les côtés."
+     ],
+     [
+      "Descendre",
+      "Depuis le regard droit, laisse lentement la tête partir vers l’avant et le bas, le menton vers la poitrine. Les mains suivent la tête, sans tirer."
+     ],
+     [
+      "Tenir",
+      "Reste deux secondes le menton près de la poitrine : l’arrière du cou s’étire. Le dos, les épaules et les pieds ne bougent pas."
+     ],
+     [
+      "Remonter",
+      "Redresse doucement la tête jusqu’au regard droit, sans la basculer en arrière, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Les mains accompagnent la tête : elles ne tirent pas dessus",
+     "Seule la tête bouge : le dos reste droit, les épaules basses",
+     "Respire calmement pendant la tenue"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/menton-poitrine-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_menton-poitrine-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M16",
+  "id": "m16-cercles-bassin",
+  "slug": "cercles-bassin",
+  "name": "Cercles de bassin",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Hanches",
+   "Taille"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Mains sur les hanches, le bassin dessine de grands cercles.",
+  "dosage": "40 s : 5 cercles dans chaque sens",
+  "side": "Un sens puis l’autre",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds écartés de la largeur du bassin et bien à plat, les genoux souples, les mains posées sur les hanches."
+     ],
+     [
+      "Le cercle",
+      "Dessine avec le bassin un grand cercle lent : vers l’avant, sur le côté, vers l’arrière, puis de l’autre côté."
+     ],
+     [
+      "Tourner",
+      "Enchaîne les cercles à un rythme régulier, sans à-coup. Les épaules restent au-dessus des pieds, la tête stable."
+     ],
+     [
+      "Changer de sens",
+      "À mi-temps, au signal, fais les mêmes cercles dans l’autre sens."
+     ]
+    ],
+    "tips": [
+     "Ce sont les hanches qui tournent : les épaules et les pieds restent en place",
+     "Garde les genoux souples et les mains posées sur les hanches",
+     "Des cercles amples mais confortables ; arrête si le bas du dos fait mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/cercles-bassin-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_cercles-bassin-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M17",
+  "id": "m17-balancier-jambe",
+  "slug": "balancier-jambe",
+  "name": "Balancier de jambe",
+  "family": "mobilite",
+  "level": 2,
+  "zones": [
+   "Hanches",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Une main sur la chaise, la jambe se balance d’avant en arrière.",
+  "dosage": "40 s : 10 balancements par jambe",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi debout derrière une chaise stable, les mains posées sur le dossier. Grandis-toi, la jambe d’appui un peu fléchie."
+     ],
+     [
+      "Le geste",
+      "Laisse la jambe droite se balancer doucement d’avant en arrière depuis la hanche, comme un balancier, sans donner d’élan."
+     ],
+     [
+      "L’amplitude",
+      "Devant, le pied monte à peu près à hauteur du genou ; derrière, il passe bien derrière le talon d’appui. Le buste reste droit, le bassin tourné vers l’avant."
+     ],
+     [
+      "De l’autre côté",
+      "Au signal, repose le pied et balance la jambe gauche de la même façon."
+     ]
+    ],
+    "tips": [
+     "C’est la hanche qui bouge, pas le dos : garde le buste droit",
+     "Commence petit, l’amplitude vient d’elle-même au fil des balancements",
+     "Pas de coup de pied ni d’à-coup ; arrête si la hanche ou le dos fait mal"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_balancier-jambe-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M18",
+  "id": "m18-dos-rond-creux",
+  "slug": "dos-rond-creux",
+  "name": "Dos rond, dos creux",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Dos",
+   "Haut du dos"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Le dos s’arrondit puis se creuse doucement, au rythme du souffle.",
+  "dosage": "40 s : 6 à 8 allers-retours lents",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise, les pieds à plat au sol, les mains posées sur les genoux, le dos droit."
+     ],
+     [
+      "Arrondir",
+      "En soufflant, arrondis le dos et rentre le menton vers la poitrine, le regard vers les genoux."
+     ],
+     [
+      "Creuser",
+      "En inspirant, creuse doucement le dos, ouvre la poitrine vers l’avant et regarde devant toi."
+     ],
+     [
+      "Enchaîner",
+      "Passe lentement d’une position à l’autre, 6 à 8 allers-retours, dans une amplitude confortable."
+     ]
+    ],
+    "tips": [
+     "Laisse le souffle guider le rythme, sans te presser",
+     "Garde les mains posées sur les genoux pour t’aider",
+     "Creuse sans forcer : le cou reste long, sans basculer la tête en arrière"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": "À quatre pattes, le dos s’arrondit puis se creuse, au rythme du souffle.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, le dos à plat."
+     ],
+     [
+      "Arrondir",
+      "En soufflant, arrondis le dos vers le plafond et rentre le menton vers la poitrine."
+     ],
+     [
+      "Creuser",
+      "En inspirant, creuse doucement le dos, sors les fesses et porte le regard devant toi."
+     ],
+     [
+      "Enchaîner",
+      "Passe lentement d’une position à l’autre, au rythme de ton souffle, dans une amplitude confortable."
+     ]
+    ],
+    "tips": [
+     "Laisse le mouvement partir du bassin et monter jusqu’à la tête",
+     "Si les genoux sont sensibles, glisse une serviette pliée dessous",
+     "Garde les bras tendus sans bloquer les coudes"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M19",
+  "id": "m19-position-enfant",
+  "slug": "position-enfant",
+  "name": "Position de l’enfant",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Dos",
+   "Hanches"
+  ],
+  "moments": [
+   "pause",
+   "soir"
+  ],
+  "pitch": "Assis(e) sur les talons, le buste se pose vers l’avant et le dos se relâche.",
+  "dosage": "30 à 60 s de tenue",
+  "side": null,
+  "caution": "Glisse un coussin entre les fesses et les talons si les genoux tirent.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes sur un tapis, les mains sous les épaules et les genoux sous les hanches."
+     ],
+     [
+      "Reculer",
+      "Recule doucement les fesses vers les talons en laissant les mains glisser devant toi, les bras allongés."
+     ],
+     [
+      "Se poser",
+      "Pose le front au sol ou sur un coussin et relâche le dos, les bras allongés devant ou le long du corps. Tiens 30 à 60 secondes en respirant lentement dans le dos."
+     ],
+     [
+      "Revenir",
+      "Ramène les mains vers toi et remonte doucement à quatre pattes, la tête en dernier."
+     ]
+    ],
+    "tips": [
+     "Glisse un coussin entre les fesses et les talons si les genoux tirent",
+     "Écarte un peu les genoux pour laisser plus de place au ventre",
+     "À chaque inspiration, sens ton dos s’élargir et se gonfler"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "M20",
+  "id": "m20-avant-hanche",
+  "slug": "avant-hanche",
+  "name": "Étirement de l’avant de la hanche",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Hanches",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Une jambe loin en arrière, les hanches avancent, l’avant de la hanche s’étire.",
+  "dosage": "30 s par côté : droite puis gauche",
+  "side": "Côté droit puis gauche",
+  "caution": "Après une prothèse de hanche, ou si une hanche ou un genou te fait souffrir, demande d’abord l’avis d’un professionnel.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les mains posées souplement sur les hanches."
+     ],
+     [
+      "Le geste",
+      "Porte un peu ton poids sur la jambe gauche, puis envoie la jambe droite loin en arrière : seule la pointe du pied se pose, talon levé, la jambe arrière reste presque tendue et le genou avant se plie au-dessus de la cheville."
+     ],
+     [
+      "Tenir",
+      "Rentre un peu le bassin, serre la fesse de la jambe arrière et avance doucement les hanches, le buste droit : l’avant de la hanche arrière s’étire. Garde la pose jusqu’à la fin du décompte en respirant calmement."
+     ],
+     [
+      "De l’autre côté",
+      "Ramène le pied arrière à côté de l’autre. Au signal, envoie la jambe gauche en arrière et fais la même chose."
+     ]
+    ],
+    "tips": [
+     "Tu ne sens rien : serre davantage la fesse arrière",
+     "C’est trop fort : avance moins les hanches",
+     "Le bas du dos ne se creuse pas : c’est le bassin qui bascule, pas le dos"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/avant-hanche-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_avant-hanche-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M22",
+  "id": "m22-bras-croise",
+  "slug": "bras-croise",
+  "name": "Bras croisé devant la poitrine",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Épaules",
+   "Bras"
+  ],
+  "moments": [
+   "pause",
+   "soir"
+  ],
+  "pitch": "Un bras passe devant la poitrine, l’arrière de l’épaule s’étire.",
+  "dosage": "30 s par bras : droit puis gauche",
+  "side": "Côté droit puis gauche",
+  "caution": "Après une blessure ou une opération de l’épaule, ou en cas de douleur nouvelle qui dure, demande d’abord l’avis d’un médecin.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, sans t’adosser, les pieds à plat et le dos droit."
+     ],
+     [
+      "Le geste",
+      "Monte le bras droit à hauteur d’épaule et passe-le devant ta poitrine. Avec la main gauche, tiens-le juste au-dessus du coude."
+     ],
+     [
+      "Tenir",
+      "Rapproche doucement le bras de ta poitrine, le buste face à l’avant et les épaules basses : l’arrière de l’épaule s’étire. Garde la pose jusqu’à la fin du décompte en respirant calmement."
+     ],
+     [
+      "De l’autre côté",
+      "Relâche lentement et laisse redescendre le bras. Au signal, fais la même chose avec le bras gauche."
+     ]
+    ],
+    "tips": [
+     "Baisse les épaules, loin des oreilles",
+     "Une gêne à l’avant de l’épaule : descends un peu le bras"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_bras-croise-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds écartés de la largeur des épaules, les genoux souples."
+     ],
+     [
+      "Le geste",
+      "Monte le bras droit parallèle au sol et passe-le devant toi. Tiens-le au-dessus du coude avec la main gauche."
+     ],
+     [
+      "Tenir",
+      "Rapproche doucement le bras de ta poitrine, sans tourner le buste, les épaules basses. Garde la pose jusqu’à la fin du décompte en respirant calmement."
+     ],
+     [
+      "De l’autre côté",
+      "Relâche et redescends le bras lentement. Au signal, fais la même chose avec le bras gauche."
+     ]
+    ],
+    "tips": [
+     "Baisse les épaules, loin des oreilles",
+     "Une gêne à l’avant de l’épaule : descends un peu le bras"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_bras-croise-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "M23",
+  "id": "m23-haut-du-dos",
+  "slug": "haut-du-dos",
+  "name": "Étirement du haut du dos",
+  "family": "mobilite",
+  "level": 1,
+  "zones": [
+   "Haut du dos",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les bras tendus devant, le haut du dos s’arrondit, les omoplates s’écartent.",
+  "dosage": "30 s de tenue",
+  "side": null,
+  "caution": "Si ton cou ou ton dos te fait souffrir, ou après une blessure, demande d’abord l’avis d’un professionnel.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi sur une chaise ferme, sans t’adosser, les pieds à plat."
+     ],
+     [
+      "Le geste",
+      "Tends les bras devant toi à hauteur d’épaule et croise les doigts."
+     ],
+     [
+      "Tenir",
+      "Rentre un peu le menton, pousse les mains loin devant et arrondis le haut du dos : les omoplates s’écartent. Respire calmement."
+     ],
+     [
+      "Revenir",
+      "Relâche les mains et redresse-toi lentement, la tête en dernier."
+     ]
+    ],
+    "tips": [
+     "Souffle en poussant les mains vers l’avant",
+     "Imagine que tu enlaces un gros ballon"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds écartés de la largeur du bassin, les genoux souples : croise les doigts devant la poitrine, paumes tournées vers toi."
+     ],
+     [
+      "Pousser",
+      "Tends lentement les bras devant toi à hauteur d’épaule, les doigts toujours croisés, comme pour repousser un mur."
+     ],
+     [
+      "Tenir",
+      "Arrondis le haut du dos pour écarter les omoplates et laisse la tête s’incliner doucement, menton un peu rentré. Respire calmement, les hanches immobiles."
+     ],
+     [
+      "Revenir",
+      "Plie les coudes et ramène les mains contre la poitrine en redressant le dos, la tête en dernier."
+     ]
+    ],
+    "tips": [
+     "Pousse les mains loin devant, sans monter les épaules",
+     "Seul le haut du dos s’arrondit : le bassin et les pieds restent en place",
+     "Souffle en poussant les mains vers l’avant"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/haut-du-dos-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_haut-du-dos-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C01",
+  "id": "c01-marche-sur-place",
+  "slug": "marche-sur-place",
+  "name": "Marche sur place",
+  "family": "cardio",
+  "level": 1,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Quelques pas tranquilles pour réveiller les jambes.",
+  "dosage": "40 à 60 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, le dos droit et décollé du dossier, les pieds à plat à la largeur du bassin. Tiens le bord de l’assise d’une main."
+     ],
+     [
+      "Le geste",
+      "Lève un genou pour décoller le pied du sol, puis repose-le en douceur. Enchaîne avec l’autre jambe, sans t’arrêter, comme si tu marchais."
+     ],
+     [
+      "Le rythme",
+      "Marche tranquillement, environ un pas par seconde. L’autre bras accompagne le pas, coude plié, et tu respires normalement."
+     ],
+     [
+      "Revenir",
+      "Ralentis peu à peu, puis pose les deux pieds à plat et respire calmement."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit, sans t’appuyer au dossier",
+     "Lève le genou à ta hauteur : quelques centimètres suffisent pour commencer",
+     "Tu dois pouvoir parler en marchant, pas chanter"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/marche-sur-place-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_marche-sur-place-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les genoux souples, le regard devant."
+     ],
+     [
+      "Le geste",
+      "Décolle un talon, puis le pied de quelques centimètres, et repose-le en douceur au même endroit. Fais de même avec l’autre jambe, sans t’arrêter."
+     ],
+     [
+      "Le rythme",
+      "Marche tranquillement, un peu plus d’un pas par seconde. Les mains restent devant toi, coudes pliés, et accompagnent le pas."
+     ],
+     [
+      "Revenir",
+      "Ralentis peu à peu, puis pose les deux pieds à plat et respire calmement."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit et le regard devant",
+     "Lève le genou plus haut si tu veux plus d’effort, un pied toujours au sol",
+     "Tu dois pouvoir parler en marchant, pas chanter"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/marche-sur-place-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_marche-sur-place-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C02",
+  "id": "c02-talons-devant",
+  "slug": "talons-devant",
+  "name": "Talons devant",
+  "family": "cardio",
+  "level": 1,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Un talon devant, puis l’autre, sans sauter.",
+  "dosage": "40 s, alterné",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, le dos droit, les pieds à plat et les mains sur les cuisses."
+     ],
+     [
+      "Poser le talon",
+      "Tends une jambe devant toi et pose le talon au sol, la pointe du pied relevée."
+     ],
+     [
+      "Revenir",
+      "Ramène le pied sous la chaise, à plat, en laissant les bras accompagner le mouvement."
+     ],
+     [
+      "Alterner",
+      "Pose l’autre talon devant, puis continue en alternant à un rythme régulier, sans sauter."
+     ]
+    ],
+    "tips": [
+     "Balance les bras comme pour marcher, ça réchauffe plus vite",
+     "Pour corser, accélère un peu le rythme en gardant le dos droit",
+     "Garde la poitrine ouverte et respire tranquillement"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds sous les hanches, le dos droit. Pose les mains sur les hanches."
+     ],
+     [
+      "Le geste",
+      "Avance un pied d’un petit pas et pose le talon au sol, la pointe relevée vers le haut. Le genou de la jambe d’appui reste légèrement fléchi."
+     ],
+     [
+      "Revenir",
+      "Ramène le pied sous toi, à côté de l’autre."
+     ],
+     [
+      "En alternant",
+      "Pose l’autre talon devant de la même façon, puis continue en alternant, environ un talon par seconde."
+     ]
+    ],
+    "tips": [
+     "Pose le talon en douceur, sans taper ni sauter",
+     "Garde le buste droit : seule la jambe avance",
+     "Tu peux garder une main sur une chaise si l’équilibre te gêne"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/talons-devant-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_talons-devant-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C03",
+  "id": "c03-genou-main-opposee",
+  "slug": "genou-main-opposee",
+  "name": "Genou vers la main opposée",
+  "family": "cardio",
+  "level": 2,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Un genou après l’autre, pour te réchauffer en douceur.",
+  "dosage": "40 s, alterné",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, le dos droit et décollé du dossier, les pieds à plat à la largeur du bassin."
+     ],
+     [
+      "Le geste",
+      "Lève le genou gauche et laisse le pied passer devant l’autre jambe. Descends la main droite toucher le talon gauche, l’autre bras ouvert sur le côté, puis repose le pied en douceur."
+     ],
+     [
+      "De l’autre côté",
+      "Même chose avec le pied droit et la main gauche. Alterne sans te presser, en respirant normalement."
+     ],
+     [
+      "Revenir",
+      "Ralentis peu à peu, puis pose les deux pieds à plat et les mains sur les cuisses."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit : c’est le pied qui vient vers la main, pas le buste qui plonge",
+     "Un simple effleurement du talon suffit, sans attraper le pied",
+     "Si le talon est trop loin, touche la cheville ou le tibia"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les genoux souples, les bras le long du corps."
+     ],
+     [
+      "Le geste",
+      "Avance la main gauche devant la hanche droite, paume vers le bas, à hauteur de ceinture. Monte lentement le genou droit jusqu’à toucher ta paume, puis repose le pied en douceur."
+     ],
+     [
+      "De l’autre côté",
+      "Main droite devant la hanche gauche, genou gauche qui vient la toucher. Alterne sans te presser, en respirant normalement."
+     ],
+     [
+      "Revenir",
+      "Ralentis peu à peu, puis pose les deux pieds à plat et respire calmement."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit : c’est le genou qui monte vers la main",
+     "Un pied reste toujours au sol : ni saut ni rebond",
+     "Mets-toi près d’une chaise si ton équilibre est incertain"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_genou-main-opposee-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C04",
+  "id": "c04-pas-de-cote",
+  "slug": "pas-de-cote",
+  "name": "Pas de côté",
+  "family": "cardio",
+  "level": 1,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Un pas de chaque côté, les hanches se réveillent.",
+  "dosage": "40 à 60 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds joints, les genoux souples, les bras détendus."
+     ],
+     [
+      "Un pas à droite",
+      "Fais un pas sur le côté droit, puis ramène le pied gauche contre lui."
+     ],
+     [
+      "Un pas à gauche",
+      "Repars vers la gauche de la même façon, pied droit ramené contre le gauche."
+     ],
+     [
+      "Continuer",
+      "Enchaîne à un rythme régulier, en respirant tranquillement."
+     ]
+    ],
+    "tips": [
+     "Les pieds glissent ou se posent sans sauter",
+     "Garde les hanches et le buste face à toi",
+     "Ajoute les bras qui s’ouvrent et se referment pour plus d’élan"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/pas-de-cote-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pas-de-cote-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C05",
+  "id": "c05-talons-fesses",
+  "slug": "talons-fesses",
+  "name": "Talons-fesses",
+  "family": "cardio",
+  "level": 2,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Le talon remonte vers l’arrière, à hauteur confortable.",
+  "dosage": "40 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds écartés de la largeur du bassin, le buste droit, les mains posées dans le bas du dos."
+     ],
+     [
+      "Le geste",
+      "Sur place, sans te déplacer : laisse un talon remonter vers la fesse, puis repose le pied en douceur sous la hanche."
+     ],
+     [
+      "En alternant",
+      "Droite, gauche, à un rythme régulier, en gardant toujours un pied au sol."
+     ]
+    ],
+    "tips": [
+     "Sans sauter ni courir : un pied reste toujours au sol",
+     "Le talon monte à hauteur confortable, le genou reste pointé vers le sol",
+     "Ralentis ou réduis la hauteur si le genou ou le bas du dos tire"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C06",
+  "id": "c06-boxe",
+  "slug": "boxe",
+  "name": "Boxe dans le vide",
+  "family": "cardio",
+  "level": 1,
+  "zones": [
+   "Bras",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les poings partent devant toi l’un après l’autre, et le cœur s’active.",
+  "dosage": "40 à 60 s : coups de poing alternés devant soi",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, les pieds à plat écartés à la largeur du bassin, le dos droit."
+     ],
+     [
+      "Se mettre en garde",
+      "Monte les poings à hauteur du menton, les coudes près du corps."
+     ],
+     [
+      "Frapper",
+      "En soufflant, envoie un poing devant toi, le buste qui tourne un peu avec le bras, sans tendre le coude à fond, puis ramène-le en garde."
+     ],
+     [
+      "Alterner",
+      "Frappe avec l’autre poing, puis continue en alternant les deux bras à ton rythme."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses, loin des oreilles",
+     "Laisse toujours le coude un peu plié au bout du coup",
+     "Pour corser, frappe plus vite ; pour alléger, ralentis"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, un pied un peu devant l’autre, les genoux souples. Monte les poings fermés sans serrer à hauteur du menton, les coudes près du corps."
+     ],
+     [
+      "Le coup",
+      "Envoie un poing droit devant toi, à hauteur de poitrine, en laissant l’épaule et le buste tourner un peu avec le bras. Souffle pendant le coup."
+     ],
+     [
+      "Revenir",
+      "Ramène aussitôt le poing au menton, par le même chemin."
+     ],
+     [
+      "En alternant",
+      "Envoie l’autre poing de la même façon, puis continue en alternant, à un rythme calme et régulier. Le talon arrière peut se soulever un peu à chaque coup."
+     ]
+    ],
+    "tips": [
+     "Frappe devant toi, jamais sur le côté : imagine une cible face à ta poitrine",
+     "Garde le coude un peu fléchi en bout de geste, sans le verrouiller",
+     "Les pieds restent au sol, sans sauter : ralentis si tu t’essouffles ou si l’épaule tire"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/boxe-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_boxe-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C07",
+  "id": "c07-pas-ecartes",
+  "slug": "pas-ecartes",
+  "name": "Pas écartés, bras levés",
+  "family": "cardio",
+  "level": 2,
+  "zones": [
+   "Jambes",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Le jumping jack sans sauter : un pied s’écarte pendant que les bras montent.",
+  "dosage": "45 s : en alternant les côtés",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds joints, les bras relâchés le long du corps, les genoux souples. Garde un grand pas de place de chaque côté."
+     ],
+     [
+      "Le pas",
+      "Fais un pas sur le côté, plus large que les épaules, en montant les deux bras au-dessus de la tête en V, les mains ouvertes."
+     ],
+     [
+      "Pieds joints",
+      "Ramène l’autre pied contre le premier en baissant les bras le long du corps : tu as avancé d’un pas sur le côté."
+     ],
+     [
+      "Et retour",
+      "Refais le même pas dans l’autre sens pour revenir au milieu, puis continue de l’autre côté, à un rythme calme et régulier."
+     ]
+    ],
+    "tips": [
+     "Pose le pied à chaque pas : les deux pieds restent au sol, on ne saute pas",
+     "Monte les bras sans hausser les épaules, les coudes un peu souples",
+     "Ralentis si tu t’essouffles : le pas peut être plus petit et les bras moins hauts"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/pas-ecartes-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pas-ecartes-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C08",
+  "id": "c08-pas-croise",
+  "slug": "pas-croise",
+  "name": "Pas croisé en arrière",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Comme un patineur, sans sauter : une jambe se croise derrière l’autre.",
+  "dosage": "45 s : en alternant les côtés",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à largeur du bassin, les genoux souples, les bras relâchés. Garde un grand pas de place de chaque côté."
+     ],
+     [
+      "Le pas",
+      "Fais un grand pas sur le côté et pose bien ce pied : il porte ton poids."
+     ],
+     [
+      "Croiser derrière",
+      "Amène l’autre jambe en arrière, croisée derrière la première, la pointe du pied posée au sol. Les genoux fléchissent un peu, le buste reste droit, et le bras du même côté passe devant toi."
+     ],
+     [
+      "De l’autre côté",
+      "Repars par un grand pas de l’autre côté et croise l’autre jambe derrière, à un rythme calme et régulier."
+     ]
+    ],
+    "tips": [
+     "Les deux pieds restent au contact du sol : on ne saute pas, comme un patineur au ralenti",
+     "Fléchis juste un peu les genoux : ce n’est pas une fente, le genou arrière reste loin du sol",
+     "Raccourcis le pas si l’équilibre te gêne, ou fais-le près d’un mur pour pouvoir t’y appuyer"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/pas-croise-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pas-croise-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "C09",
+  "id": "c09-grimpeur",
+  "slug": "grimpeur",
+  "name": "Grimpeur lent",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Épaules",
+   "Jambes"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "En appui sur les mains, les genoux montent l’un après l’autre vers la poitrine.",
+  "dosage": "40 s : un genou vers la poitrine, puis l’autre",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi en appui sur les mains, posées sous les épaules, jambes tendues derrière toi, le corps aligné de la tête aux pieds."
+     ],
+     [
+      "Monter le genou",
+      "Amène lentement un genou vers la poitrine, sans laisser le bassin monter."
+     ],
+     [
+      "Reposer",
+      "Ramène le pied en arrière et repose-le au sol, le corps de nouveau bien aligné."
+     ],
+     [
+      "Alterner",
+      "Fais de même avec l’autre genou, et continue en alternant lentement."
+     ]
+    ],
+    "tips": [
+     "Plus facile : pose les mains sur l’assise d’une chaise stable calée contre un mur",
+     "Garde les épaules au-dessus des mains et le regard vers le sol",
+     "Souffle quand le genou monte, inspire quand le pied revient"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F01",
+  "id": "f01-assis-debout",
+  "slug": "assis-debout",
+  "name": "Assis-debout",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Tu te lèves et tu te rassieds, sans t’aider des bras.",
+  "dosage": "40 à 50 s : 5 à 8 répétitions lentes (2 s montée, 3 s descente)",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi sur la moitié avant d’une chaise stable, sans accoudoirs, calée contre un mur. Pieds à plat, écartés de la largeur du bassin, un peu en arrière des genoux."
+     ],
+     [
+      "Se lever",
+      "Penche le buste en avant, dos droit, puis pousse dans tes talons pour te lever, bras le long du corps, sans t’aider des mains."
+     ],
+     [
+      "En haut",
+      "Grandis-toi, debout bien droit(e), le regard devant toi."
+     ],
+     [
+      "Se rasseoir",
+      "Recule les fesses et redescends lentement jusqu’à la chaise, sans te laisser tomber, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Monte en deux secondes et redescends en trois : la descente compte autant que la montée",
+     "Garde les genoux dans l’axe des pieds, sans qu’ils rentrent vers l’intérieur",
+     "Si c’est trop dur, pose les mains sur les cuisses pour t’aider, ou prends une chaise plus haute"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F02",
+  "id": "f02-mini-squat",
+  "slug": "mini-squat",
+  "name": "Squat avec appui",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les mains sur le dossier, tu descends comme pour t’asseoir.",
+  "dosage": "40 à 50 s : 8 à 10 répétitions",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout derrière une chaise stable, les pieds à la largeur du bassin, les mains posées sur le dossier."
+     ],
+     [
+      "Descendre",
+      "Pousse les fesses en arrière comme pour t’asseoir et plie les genoux, les bras s’allongent vers le dossier, jusqu’aux cuisses parallèles au sol."
+     ],
+     [
+      "Tenir l’axe",
+      "Garde les genoux dans l’axe des orteils, les talons au sol et le dos droit."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les talons pour revenir debout en serrant les fessiers, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Le dossier sert à l’équilibre : n’appuie pas tout ton poids dessus",
+     "Si tes genoux tirent, descends moins bas",
+     "Inspire en descendant, souffle en remontant"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": "Squat sans appui",
+    "pitch": "Les mains jointes devant la poitrine, tu fléchis comme pour t’asseoir, sans tenir la chaise.",
+    "level": 3,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les orteils vers l’avant. Joins les mains devant la poitrine."
+     ],
+     [
+      "Descendre",
+      "Plie les genoux en poussant les fesses en arrière, comme pour t’asseoir sur une chaise, en deux secondes environ. Le buste se penche un peu vers l’avant, le dos reste droit."
+     ],
+     [
+      "En bas",
+      "Descends jusqu’aux cuisses presque parallèles au sol, ou moins bas si c’est plus confortable. Les talons restent posés."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les talons pour te redresser jusqu’à être bien debout, puis marque une courte pause avant le squat suivant."
+     ]
+    ],
+    "tips": [
+     "Les genoux suivent la direction des orteils : ils ne rentrent pas vers l’intérieur",
+     "Garde la poitrine ouverte et le regard devant toi, sans arrondir le dos",
+     "Souffle en remontant ; descends moins bas si les genoux tirent"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/squat-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_squat-debout_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": "Squat jambes écartées",
+    "pitch": "Pieds larges et pointes vers l’extérieur, tu descends droit vers le sol.",
+    "level": 3,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Écarte les pieds bien plus large que le bassin, les pointes tournées vers l’extérieur. Joins les poings devant la poitrine, sous le menton, les coudes vers le bas."
+     ],
+     [
+      "Descendre",
+      "Plie les genoux en les ouvrant au-dessus des orteils et descends droit vers le sol, en deux secondes environ. Le buste reste presque droit."
+     ],
+     [
+      "En bas",
+      "Descends jusqu’aux cuisses presque parallèles au sol, ou moins bas si c’est plus confortable. Les talons restent posés."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les talons pour te redresser jusqu’à être bien debout, puis marque une courte pause avant le squat suivant."
+     ]
+    ],
+    "tips": [
+     "Les genoux s’ouvrent dans la direction des orteils : ils ne rentrent pas vers l’intérieur",
+     "Garde le dos droit et la poitrine ouverte, le regard devant toi",
+     "Souffle en remontant ; rapproche un peu les pieds ou descends moins bas si les genoux ou l’intérieur des cuisses tirent"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/squat-sumo-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_squat-sumo-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F03",
+  "id": "f03-pompes-mur",
+  "slug": "pompes-mur",
+  "name": "Pompes contre le mur",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Bras",
+   "Poitrine"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les mains au mur, tu pousses doucement, les bras se renforcent.",
+  "dosage": "40 à 50 s : 8 à 10 répétitions",
+  "side": null,
+  "caution": null,
+  "gear": [
+   "un mur dégagé"
+  ],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout face à un mur, à un grand pas, pose les mains à plat à hauteur d’épaules, un peu plus écartées que les épaules."
+     ],
+     [
+      "Descendre",
+      "Plie les coudes vers l’arrière et rapproche la poitrine du mur, le corps droit de la tête aux talons."
+     ],
+     [
+      "Pousser",
+      "Souffle en poussant dans les mains pour revenir bras tendus."
+     ],
+     [
+      "Répéter",
+      "Recommence lentement, les mains et les pieds toujours à la même place."
+     ]
+    ],
+    "tips": [
+     "Talons au sol, bassin dans l’alignement : ni fesses en arrière, ni ventre en avant",
+     "Garde la tête dans le prolongement du dos, sans la pousser vers le mur",
+     "Pour que ce soit plus facile, rapproche les pieds du mur ; pour que ce soit plus dur, éloigne-les"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Pompes sur les genoux",
+    "pitch": "Au sol, les genoux posés, la poitrine descend entre les mains.",
+    "level": 3,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "À genoux sur un tapis, pose les mains au sol à hauteur de poitrine, un peu plus larges que les épaules."
+     ],
+     [
+      "S’aligner",
+      "Avance les mains pour que ton corps soit droit de la tête aux genoux, le ventre rentré, sans laisser le bassin monter ni creuser."
+     ],
+     [
+      "Descendre",
+      "Plie les coudes près du corps et descends lentement la poitrine entre les mains."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les mains pour tendre les bras, en soufflant pendant que tu pousses."
+     ]
+    ],
+    "tips": [
+     "Mets un coussin ou plie le tapis sous les genoux pour plus de confort",
+     "Pour alléger, descends moins bas ; pour corser, éloigne un peu plus les genoux des mains",
+     "Regarde le sol un peu devant les mains pour garder la nuque dans l’axe"
+    ],
+    "gear": [],
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F04",
+  "id": "f04-pointes-pieds",
+  "slug": "pointes-pieds",
+  "name": "Montées sur la pointe des pieds",
+  "family": "force",
+  "level": 1,
+  "zones": [
+   "Mollets"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Sur la pointe des pieds, les mollets travaillent.",
+  "dosage": "40 s : 10 répétitions (2 s, 2 s)",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, le dos droit, les mains posées sur les cuisses, les pieds à plat sous les genoux."
+     ],
+     [
+      "Monter",
+      "Lève lentement les deux talons en 2 s, les pointes au sol, sans reculer les fesses sur l’assise."
+     ],
+     [
+      "Redescendre",
+      "Repose les talons en 2 s, en contrôlant la descente jusqu’au sol."
+     ],
+     [
+      "Répéter",
+      "Enchaîne 10 montées à ton rythme, en respirant normalement."
+     ]
+    ],
+    "tips": [
+     "Pousse bien dans la base des orteils pour monter haut",
+     "Pour corser, appuie un peu les mains sur les cuisses pendant la montée",
+     "Fais-le pieds nus ou en chaussures souples pour mieux sentir le mouvement"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/pointes-pieds-chaise-photos.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pointes-pieds-chaise_photos.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les mains sur les hanches, les genoux souples."
+     ],
+     [
+      "Monter",
+      "Monte lentement sur la pointe des deux pieds, en te grandissant, sans avancer ni reculer."
+     ],
+     [
+      "Tenir",
+      "Marque une courte pause en haut, puis redescends les talons doucement jusqu’au sol."
+     ],
+     [
+      "Répéter",
+      "Recommence à ton rythme, en respirant normalement."
+     ]
+    ],
+    "tips": [
+     "Grandis-toi, comme tiré par un fil au sommet de la tête",
+     "Redescends lentement : la descente travaille aussi les mollets",
+     "Mets-toi près d’un mur ou d’une chaise si ton équilibre est incertain"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pointes-pieds-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F05",
+  "id": "f05-jambe-laterale",
+  "slug": "jambe-laterale",
+  "name": "Élévation latérale de la jambe",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Hanches",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Une main sur le dossier, la jambe s’écarte sur le côté.",
+  "dosage": "40 à 50 s : 5 par jambe, tenue 1 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout à côté d’une chaise, une main sur le dossier, l’autre sur la hanche, les pieds joints, orteils vers l’avant."
+     ],
+     [
+      "Écarter",
+      "Lève la jambe opposée à la chaise sur le côté, pied tendu et orteils vers l’avant, le buste bien droit sans te pencher."
+     ],
+     [
+      "Revenir",
+      "Marque une courte pause en haut, puis ramène lentement la jambe près de l’autre."
+     ],
+     [
+      "Changer de jambe",
+      "Tourne-toi pour poser l’autre main sur le dossier et lève l’autre jambe de la même façon."
+     ]
+    ],
+    "tips": [
+     "Garde la jambe d’appui légèrement fléchie",
+     "Monte la jambe juste assez haut pour garder le buste droit",
+     "Pour corser, tiens un peu plus longtemps en haut"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F06",
+  "id": "f06-tendre-jambe",
+  "slug": "tendre-jambe",
+  "name": "Tendre la jambe",
+  "family": "force",
+  "level": 1,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Assis(e), tu tends une jambe puis l’autre.",
+  "dosage": "40 à 50 s : alterné, environ 3 s montée, 3 à 5 s descente",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi le dos contre le dossier, les pieds à plat au sol, les genoux pliés à angle droit. Tiens le bord de l’assise des deux mains."
+     ],
+     [
+      "Tendre",
+      "Tends lentement une jambe devant toi jusqu’à l’horizontale, la pointe du pied tirée vers toi. La cuisse reste posée sur la chaise."
+     ],
+     [
+      "Redescendre",
+      "Garde la jambe tendue un instant, puis repose le pied au sol en contrôlant la descente, sans le laisser tomber."
+     ],
+     [
+      "Alterner",
+      "Fais de même avec l’autre jambe, puis continue en alternant, à ton rythme, en respirant normalement."
+     ]
+    ],
+    "tips": [
+     "Tends la jambe sans bloquer le genou",
+     "Garde le dos contre le dossier : seule la jambe bouge",
+     "Monte moins haut si ça tire derrière le genou ; arrête si ça fait mal"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/tendre-jambe-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_tendre-jambe-chaise_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F07",
+  "id": "f07-lever-bras",
+  "slug": "lever-bras",
+  "name": "Lever les bras",
+  "family": "force",
+  "level": 1,
+  "zones": [
+   "Épaules",
+   "Bras"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les bras montent et redescendent, les épaules se renforcent.",
+  "dosage": "40 s : 8 à 12 répétitions, tenue 1 s en haut",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi droit sur une chaise, les pieds à plat, les coudes pliés et les mains à hauteur d’épaules, paumes vers l’avant."
+     ],
+     [
+      "Monter",
+      "Pousse les mains vers le plafond en soufflant, jusqu’aux bras presque tendus, les coudes légèrement fléchis."
+     ],
+     [
+      "Tenir",
+      "Marque une pause d’une seconde en haut, les épaules basses, loin des oreilles."
+     ],
+     [
+      "Redescendre",
+      "Ramène lentement les mains à hauteur d’épaules, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Garde le dos droit et le ventre doucement rentré, sans cambrer",
+     "Si les épaules montent, arrête-toi un peu plus bas",
+     "Pour corser, tiens une petite bouteille d’eau dans chaque main"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds écartés de la largeur du bassin, les genoux souples, les bras détendus le long du corps."
+     ],
+     [
+      "Le geste",
+      "Lève les deux bras ensemble devant toi, bras longs et coudes souples, paumes face à face, jusqu’au-dessus de la tête. Souffle en montant."
+     ],
+     [
+      "Tenir",
+      "Garde une seconde en haut, les épaules basses, loin des oreilles."
+     ],
+     [
+      "Revenir",
+      "Redescends les bras devant toi, lentement, jusqu’au long du corps, en inspirant, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Monte seulement jusqu’où ton épaule est à l’aise : à hauteur des épaules, c’est déjà bien",
+     "Le dos reste droit, sans se cambrer quand les bras passent au-dessus de la tête",
+     "Arrête si tu sens une douleur ou un pincement dans l’épaule"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/lever-bras-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_lever-bras-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F08",
+  "id": "f08-omoplates",
+  "slug": "omoplates",
+  "name": "Serrer les omoplates",
+  "family": "force",
+  "level": 1,
+  "zones": [
+   "Haut du dos",
+   "Épaules"
+  ],
+  "moments": [
+   "pause"
+  ],
+  "pitch": "La poitrine s’ouvre, le haut du dos se redresse.",
+  "dosage": "40 s : 10 répétitions, tenue 2 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord de la chaise, pieds à plat, le buste un peu penché en avant depuis la hanche, dos droit."
+     ],
+     [
+      "Le geste",
+      "Coudes pliés devant toi, tire-les vers l’arrière le long du buste en rapprochant les omoplates."
+     ],
+     [
+      "Tenir",
+      "Serre deux secondes, la poitrine ouverte, les épaules basses."
+     ],
+     [
+      "Revenir",
+      "Ramène les coudes devant toi en douceur, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Imagine que tu veux pincer un crayon entre tes omoplates",
+     "Les épaules restent loin des oreilles",
+     "Le dos reste droit, sans se creuser quand les coudes reculent"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_omoplates-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds écartés de la largeur du bassin, les genoux souples, le buste droit."
+     ],
+     [
+      "Le geste",
+      "Coudes pliés le long du corps, poings souples devant toi : tire les coudes vers l’arrière, derrière le buste, en rapprochant les omoplates."
+     ],
+     [
+      "Tenir",
+      "Serre deux secondes, la poitrine ouverte, les épaules basses."
+     ],
+     [
+      "Revenir",
+      "Ramène les coudes devant toi en douceur, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Imagine que tu veux pincer un crayon entre tes omoplates",
+     "Les jambes et le bassin restent immobiles : seuls les bras bougent",
+     "Le dos reste droit, sans se creuser quand les coudes reculent"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F09",
+  "id": "f09-equilibre-une-jambe",
+  "slug": "equilibre-une-jambe",
+  "name": "Équilibre sur une jambe",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Jambes",
+   "Chevilles"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Sur un pied, sans t’appuyer, tu trouves ton équilibre.",
+  "dosage": "Tenue 15 à 30 s par côté",
+  "side": "Côté droit puis gauche",
+  "caution": "Garde une chaise ou un mur à portée de main, pour t’y rattraper au besoin.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "Se placer",
+      "Tiens-toi debout, les pieds joints, les bras le long du corps un peu écartés, les mains détendues. Fixe un point devant toi."
+     ],
+     [
+      "Lever le genou",
+      "Monte lentement le genou droit devant toi, jusqu’à ce que le pied décolle à hauteur du milieu du tibia."
+     ],
+     [
+      "Tenir",
+      "Reste en équilibre sur la jambe gauche, les hanches de niveau, le regard fixe, en respirant calmement."
+     ],
+     [
+      "Changer de jambe",
+      "Repose le pied doucement, pieds joints, puis fais pareil avec le genou gauche."
+     ]
+    ],
+    "tips": [
+     "Si tu vacilles, pose le bout du pied levé au sol un instant, puis repars",
+     "Le genou n’a pas besoin de monter haut : un pied à peine décollé suffit pour travailler l’équilibre",
+     "Garde la jambe d’appui souple, sans verrouiller le genou"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/equilibre-une-jambe-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_equilibre-une-jambe-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F10",
+  "id": "f10-pont-fessier",
+  "slug": "pont-fessier",
+  "name": "Pont fessier",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Hanches",
+   "Dos"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Allongé(e), le bassin monte puis se déroule.",
+  "dosage": "40 à 50 s : 8 à 10 répétitions, tenue 2 s en haut",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, genoux pliés, pieds à plat écartés de la largeur des hanches, bras le long du corps."
+     ],
+     [
+      "Monter",
+      "En soufflant, pousse dans les talons et monte le bassin jusqu’à former une ligne genoux, bassin, épaules."
+     ],
+     [
+      "Tenir",
+      "Reste un instant en haut, fesses serrées, sans creuser le dos."
+     ],
+     [
+      "Redescendre",
+      "Redescends lentement en déroulant le dos, vertèbre après vertèbre, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Ce sont les fesses qui montent le bassin, pas le bas du dos",
+     "Garde les genoux écartés de la largeur des hanches",
+     "Monte moins haut si le dos ou la nuque gêne"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "prototype",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F11",
+  "id": "f11-pointeur",
+  "slug": "pointeur",
+  "name": "Pointeur à quatre pattes",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Dos"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "À quatre pattes, un bras et la jambe opposée s’allongent.",
+  "dosage": "40 s : alterné, tenue 2 à 3 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "À quatre pattes sur un tapis, mains sous les épaules et genoux sous les hanches, le dos plat, le regard vers le sol."
+     ],
+     [
+      "Allonger",
+      "Tends un bras devant toi et la jambe opposée derrière, dans l’alignement du dos, sans tourner le bassin."
+     ],
+     [
+      "Tenir",
+      "Garde la position 2 à 3 secondes en respirant, le dos toujours plat."
+     ],
+     [
+      "Alterner",
+      "Repose la main et le genou, puis allonge l’autre bras et l’autre jambe, en alternant."
+     ]
+    ],
+    "tips": [
+     "Imagine un verre d’eau posé sur le bas du dos qui ne doit pas tomber",
+     "Plus facile : allonge d’abord seulement la jambe, ou seulement le bras",
+     "Pense à t’allonger loin plutôt qu’à monter haut"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Pointeur, un bras à la fois",
+    "pitch": "À quatre pattes, un bras s’allonge devant toi, les genoux restent au sol.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes sur un tapis, les mains sous les épaules, les genoux sous les hanches, le dos plat."
+     ],
+     [
+      "Allonger",
+      "Allonge un bras devant toi, à hauteur de l’épaule, dans l’alignement du dos, les genoux au sol et le regard vers le sol."
+     ],
+     [
+      "Tenir",
+      "Tiens 2 à 3 s en respirant, sans pencher le bassin, puis repose la main au sol."
+     ],
+     [
+      "Alterner",
+      "Allonge l’autre bras de la même façon, puis continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Imagine un verre d’eau posé sur ton dos",
+     "Plie une serviette sous les genoux s’ils sont sensibles",
+     "Pour corser, allonge aussi la jambe opposée vers l’arrière"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Pointeur, une jambe à la fois",
+    "pitch": "À quatre pattes, une jambe s’allonge derrière toi, les mains restent au sol.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, le dos plat et le regard vers le sol."
+     ],
+     [
+      "Allonger",
+      "Allonge une jambe derrière toi, pied tendu, jusqu’à l’aligner avec le dos, les deux mains restant au sol."
+     ],
+     [
+      "Tenir",
+      "Garde la position deux à trois secondes en respirant, le bassin bien à plat."
+     ],
+     [
+      "Alterner",
+      "Repose le genou au sol, puis allonge l’autre jambe, et continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Ne monte pas la jambe plus haut que le dos pour ne pas creuser les reins",
+     "Imagine un verre d’eau posé sur le bas du dos",
+     "Pour corser, allonge aussi le bras opposé devant toi"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F12",
+  "id": "f12-fente-avant",
+  "slug": "fente-avant",
+  "name": "Fente avant",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Un grand pas en avant pour des jambes plus solides.",
+  "dosage": "60 s : côté droit puis gauche (dosage du prototype, non sourcé)",
+  "side": "Côté droit puis gauche",
+  "caution": "Si l’équilibre ou les genoux te gênent, choisis la fente avec appui sur la chaise.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les mains posées souplement sur les hanches, le buste droit."
+     ],
+     [
+      "La fente",
+      "Fais un grand pas en avant avec la jambe droite, le pied bien à plat. Descends doucement en pliant les deux genoux : le genou avant reste au-dessus de la cheville, le genou arrière descend près du sol sans le toucher, talon arrière levé."
+     ],
+     [
+      "Revenir",
+      "Pousse dans le pied avant pour remonter, puis ramène-le à côté de l’autre."
+     ],
+     [
+      "De l’autre côté",
+      "Fais la même chose avec la jambe gauche, puis continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Le pied avant reste à plat, talon posé, du début à la fin",
+     "Le buste reste droit, sans te pencher en avant",
+     "Descends moins bas au début ; si l’équilibre ou les genoux gênent, choisis la fente avec appui sur la chaise"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/fente-avant-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_fente-avant-debout_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": "Fente avec appui sur la chaise",
+    "pitch": "La même fente, une main sur la chaise pour l’équilibre.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout à côté du dossier d’une chaise stable, une main posée dessus, l’autre sur la hanche, le buste droit."
+     ],
+     [
+      "Avancer",
+      "Fais un grand pas en avant avec la jambe du côté de la chaise, le talon arrière décollé."
+     ],
+     [
+      "Descendre",
+      "Plie les deux genoux et descends tout droit, sans à-coup, le genou avant au-dessus de la cheville et le genou arrière qui va vers le sol sans le toucher."
+     ],
+     [
+      "Changer de côté",
+      "Pousse dans le pied avant pour revenir pieds joints, puis fais le même mouvement de l’autre côté, en changeant de main sur la chaise."
+     ]
+    ],
+    "tips": [
+     "Si les genoux te gênent, descends moins bas",
+     "Garde le buste vertical, comme si ton dos glissait le long d’un mur",
+     "Appuie-toi juste ce qu’il faut sur la chaise pour rester stable"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": "Fente arrière",
+    "pitch": "Un pas en arrière, le genou descend vers le sol, puis de l’autre côté.",
+    "level": 3,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les mains posées sur l’avant des hanches, le buste droit."
+     ],
+     [
+      "La fente",
+      "Fais un grand pas en arrière avec la jambe gauche, sur la pointe du pied. Descends doucement : le genou arrière descend près du sol sans le toucher, le genou avant reste au-dessus de la cheville."
+     ],
+     [
+      "Revenir",
+      "Pousse dans le pied avant pour remonter et ramène la jambe arrière à côté de l’autre."
+     ],
+     [
+      "De l’autre côté",
+      "Fais la même chose en reculant la jambe droite, puis continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Le pied avant reste à plat, talon posé, pendant toute la fente",
+     "Le buste reste droit, sans te pencher en avant",
+     "Descends moins bas au début ; si l’équilibre ou les genoux gênent, choisis la fente avec appui sur la chaise"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/fente-arriere-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_fente-arriere-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F13",
+  "id": "f13-fente-laterale",
+  "slug": "fente-laterale",
+  "name": "Fente latérale",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Un grand pas sur le côté, tu t’assois sur une jambe.",
+  "dosage": "60 s : en alternant les côtés (dosage du prototype, non sourcé)",
+  "side": "En alternant",
+  "caution": "Si l’équilibre ou les genoux te gênent, choisis plutôt le pas de côté.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, les pieds réunis, orteils vers l’avant, les mains jointes devant la poitrine."
+     ],
+     [
+      "La fente",
+      "Fais un grand pas sur le côté droit et assieds-toi sur cette jambe en pliant le genou ; l’autre jambe reste tendue."
+     ],
+     [
+      "Revenir",
+      "Pousse dans le pied droit pour ramener les pieds ensemble."
+     ],
+     [
+      "De l’autre côté",
+      "Fais la même chose vers la gauche, puis alterne."
+     ]
+    ],
+    "tips": [
+     "Le genou plié reste au-dessus des orteils, sans rentrer vers l’intérieur",
+     "Les deux talons restent au sol, le buste reste long",
+     "Descends moins bas au début ; si les genoux gênent, choisis le pas de côté"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-14_fente-laterale_studio_v2.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F14",
+  "id": "f14-ecarter-jambe",
+  "slug": "ecarter-jambe",
+  "name": "Écarter la jambe, assis(e)",
+  "family": "force",
+  "level": 1,
+  "zones": [
+   "Hanches",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Assis(e), une jambe tendue glisse sur le côté et revient.",
+  "dosage": "40 s : 8 à 10 par jambe",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise stable, le dos droit, les mains posées sur les côtés de l’assise, les pieds à plat."
+     ],
+     [
+      "Tendre",
+      "Tends la jambe droite devant toi, le talon posé au sol."
+     ],
+     [
+      "Glisser",
+      "Fais glisser la jambe tendue sur le côté, talon au sol, puis ramène-la devant, le buste immobile."
+     ],
+     [
+      "Changer de côté",
+      "Après tes 8 à 10 mouvements, repose le pied et fais la même chose avec la jambe gauche."
+     ]
+    ],
+    "tips": [
+     "Tiens l’assise avec les mains pour garder le buste bien stable",
+     "Plus facile : écarte la jambe moins loin",
+     "Pose-toi sur un sol qui glisse un peu, ou en chaussettes, pour que le talon file mieux"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F16",
+  "id": "f16-bascule-buste",
+  "slug": "bascule-buste",
+  "name": "Bascule du buste, dos droit",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Dos",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Mains derrière la tête, le buste bascule vers l’avant, le dos bien droit.",
+  "dosage": "40 s : 8 à 10 bascules lentes",
+  "side": null,
+  "caution": "Arrête la descente dès que le dos s’arrondit.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin. Pose les mains derrière la tête, doigts croisés, coudes ouverts sur les côtés."
+     ],
+     [
+      "Basculer",
+      "Plie un peu les genoux et pousse les fesses vers l’arrière : le buste bascule vers l’avant en deux secondes environ, le dos droit de la tête au bassin."
+     ],
+     [
+      "En bas",
+      "Arrête-toi quand la poitrine arrive un peu au-dessus des hanches, ou plus haut si le dos commence à s’arrondir. Les tibias restent droits, les talons au sol."
+     ],
+     [
+      "Remonter",
+      "Ramène les hanches vers l’avant en serrant les fessiers pour revenir bien droit, puis marque une courte pause avant la bascule suivante."
+     ]
+    ],
+    "tips": [
+     "Les mains se posent derrière la tête sans tirer sur la nuque",
+     "Garde le regard vers le sol un peu devant toi, la tête dans l’axe du dos",
+     "Souffle en remontant ; descends moins bas si l’arrière des cuisses tire"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/bascule-buste-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_bascule-buste-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F17",
+  "id": "f17-dead-bug",
+  "slug": "dead-bug",
+  "name": "Bras et jambe opposés, sur le dos",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Dos"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Sur le dos, un bras et la jambe opposée s’allongent vers le sol.",
+  "dosage": "40 s : en alternant, lentement",
+  "side": "En alternant",
+  "caution": "Si le bas du dos se décolle du sol, choisis plutôt la version un bras après l’autre.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, le bas du dos posé au sol, les bras tendus vers le plafond et les genoux pliés au-dessus des hanches."
+     ],
+     [
+      "Allonger",
+      "En soufflant, allonge lentement un bras derrière la tête et la jambe opposée vers le sol, sans la poser."
+     ],
+     [
+      "Revenir",
+      "Ramène le bras et la jambe au départ, le bas du dos toujours posé au sol."
+     ],
+     [
+      "Alterner",
+      "Recommence avec l’autre bras et l’autre jambe, puis continue en alternant lentement."
+     ]
+    ],
+    "tips": [
+     "Si le bas du dos se décolle du sol, choisis plutôt la version un bras après l’autre",
+     "Réduis l’amplitude : la jambe n’a pas besoin de descendre bas",
+     "Souffle longuement à chaque allongement"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Sur le dos, un bras après l’autre",
+    "pitch": "Sur le dos, genoux pliés, un bras s’allonge derrière la tête puis l’autre.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les genoux pliés, les pieds à plat, et tends les deux bras vers le plafond."
+     ],
+     [
+      "Plaquer le dos",
+      "Pose bien le bas du dos au sol et garde-le collé tout du long."
+     ],
+     [
+      "Allonger un bras",
+      "En soufflant, allonge lentement un bras derrière la tête vers le sol, puis ramène-le vers le plafond."
+     ],
+     [
+      "Alterner",
+      "Fais de même avec l’autre bras, et continue en alternant lentement."
+     ]
+    ],
+    "tips": [
+     "Si le bas du dos se décolle, allonge le bras moins loin",
+     "Garde la nuque longue et les épaules détendues",
+     "Pour corser, ajoute la jambe opposée, genoux pliés au-dessus des hanches"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": "Sur le dos, une jambe après l’autre",
+    "pitch": "Sur le dos, une jambe s’allonge vers le sol puis l’autre, les bras vers le plafond.",
+    "level": 2,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les bras tendus vers le plafond au-dessus des épaules, et monte les genoux pliés au-dessus des hanches."
+     ],
+     [
+      "Plaquer le dos",
+      "Colle le bas du dos au sol et garde-le posé tout du long de l’exercice."
+     ],
+     [
+      "Allonger",
+      "En soufflant, allonge lentement une jambe vers le sol sans la poser, les bras toujours tendus vers le plafond."
+     ],
+     [
+      "Alterner",
+      "Ramène le genou au-dessus de la hanche, puis allonge l’autre jambe, en alternant lentement."
+     ]
+    ],
+    "tips": [
+     "Si le bas du dos se décolle, descends moins la jambe ou choisis la version un bras après l’autre",
+     "Va lentement : c’est le contrôle qui fait travailler le ventre",
+     "Souffle à chaque fois que la jambe s’allonge"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F18",
+  "id": "f18-planche-genoux",
+  "slug": "planche-genoux",
+  "name": "Planche sur les genoux",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Épaules"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Sur les avant-bras et les genoux, tout le corps reste bien droit.",
+  "dosage": "20 à 30 s de tenue",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le ventre sur un tapis, les avant-bras au sol et les coudes sous les épaules."
+     ],
+     [
+      "Monter",
+      "Pousse dans les avant-bras et décolle le buste et le bassin, en gardant les genoux posés au sol."
+     ],
+     [
+      "S’aligner",
+      "Place ton corps bien droit des épaules aux genoux, le ventre légèrement rentré, sans creuser le dos."
+     ],
+     [
+      "Tenir",
+      "Garde la position 20 à 30 secondes en respirant, puis repose-toi doucement sur le ventre."
+     ]
+    ],
+    "tips": [
+     "Mets un coussin sous les genoux si le sol est dur",
+     "Regarde le sol entre tes mains pour garder la nuque dans l’axe",
+     "Si tu trembles trop, fais une courte pause et reprends"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F19",
+  "id": "f19-planche-laterale",
+  "slug": "planche-laterale",
+  "name": "Planche latérale sur un genou",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Sur le côté, en appui sur l’avant-bras et le genou, le bassin se soulève.",
+  "dosage": "15 à 20 s par côté",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le côté, le coude sous l’épaule, l’avant-bras au sol, les genoux pliés vers l’arrière."
+     ],
+     [
+      "Monter",
+      "Soulève le bassin pour aligner la tête, le bassin et les genoux, l’autre main posée sur la hanche."
+     ],
+     [
+      "Tenir",
+      "Tiens 15 à 20 s en respirant, sans laisser le bassin tomber, puis repose-le doucement."
+     ],
+     [
+      "Changer de côté",
+      "Tourne-toi sur l’autre côté et recommence."
+     ]
+    ],
+    "tips": [
+     "Pousse le sol avec l’avant-bras pour garder l’épaule stable",
+     "Garde la tête dans le prolongement du corps",
+     "Pour alléger, tiens moins longtemps et repose-toi entre deux montées"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F20",
+  "id": "f20-dips-chaise",
+  "slug": "dips-chaise",
+  "name": "Dips sur la chaise",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Bras",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les mains sur l’assise d’une chaise, les bras plient puis te remontent.",
+  "dosage": "40 s : 8 à 10",
+  "side": null,
+  "caution": "Ne descends pas plus bas que les coudes à angle droit. Arrête si une épaule fait mal.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Dos à une chaise stable, pose les mains sur le bord avant de l’assise, doigts vers l’avant, et avance les fesses juste devant."
+     ],
+     [
+      "Se placer",
+      "Bras tendus, pieds à plat devant toi, genoux pliés à angle droit au-dessus des chevilles, buste droit."
+     ],
+     [
+      "Descendre",
+      "Plie les coudes vers l’arrière et descends le bassin devant la chaise, le dos tout près de l’assise, jusqu’aux coudes à angle droit."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les mains pour tendre les bras et revenir en haut, les épaules basses."
+     ]
+    ],
+    "tips": [
+     "Cale la chaise contre un mur pour qu’elle ne glisse pas",
+     "Garde les épaules loin des oreilles et le cou long",
+     "Pour alléger, rapproche les pieds de la chaise ; pour corser, éloigne-les"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/dips-chaise-debout-photos.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_dips-chaise-debout_photos.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F21",
+  "id": "f21-crunch-inverse",
+  "slug": "crunch-inverse",
+  "name": "Crunch inversé",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Sur le dos, les genoux remontent vers la poitrine et le bassin décolle à peine.",
+  "dosage": "40 s : 8 à 10, lentement",
+  "side": null,
+  "caution": "Évite-le si le bas du dos fait mal pendant le mouvement.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les bras le long du corps, et lève les genoux pliés au-dessus des hanches."
+     ],
+     [
+      "Enrouler",
+      "En soufflant, ramène les genoux vers la poitrine en décollant à peine le bassin du sol."
+     ],
+     [
+      "Redescendre",
+      "Redescends lentement le bassin et reviens genoux au-dessus des hanches, sans élan."
+     ],
+     [
+      "Répéter",
+      "Recommence lentement, la nuque et les épaules relâchées au sol."
+     ]
+    ],
+    "tips": [
+     "Évite-le si le bas du dos fait mal pendant le mouvement",
+     "Appuie légèrement les mains au sol pour te stabiliser",
+     "Plus facile : rapproche juste les genoux de la poitrine sans décoller le bassin"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F22",
+  "id": "f22-superman",
+  "slug": "superman",
+  "name": "Superman, sur le ventre",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Dos",
+   "Haut du dos"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Sur le ventre, bras et jambes décollent un peu du sol.",
+  "dosage": "40 s : 6 à 8 tenues de 3 s",
+  "side": null,
+  "caution": "Petite amplitude : à éviter si cambrer le bas du dos fait mal.",
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le ventre sur un tapis, les bras tendus devant toi, les jambes allongées, le front posé au sol."
+     ],
+     [
+      "Décoller",
+      "Décolle un peu les bras et les jambes du sol en allongeant tout le corps, de quelques centimètres seulement."
+     ],
+     [
+      "Tenir",
+      "Tiens 3 secondes, le regard vers le sol et la nuque longue."
+     ],
+     [
+      "Reposer",
+      "Repose doucement bras, jambes et front au sol, relâche un instant, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Pense à t’allonger vers l’avant et l’arrière plutôt qu’à monter haut",
+     "Arrête si cambrer le bas du dos fait mal",
+     "Pour simplifier, décolle seulement les bras, puis seulement les jambes"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F23",
+  "id": "f23-ruade",
+  "slug": "ruade",
+  "name": "Ruade à quatre pattes",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "À quatre pattes, le talon pousse vers le plafond, le genou plié.",
+  "dosage": "40 s : 10 par jambe",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "À quatre pattes sur un tapis, mains sous les épaules et genoux sous les hanches, le dos plat."
+     ],
+     [
+      "Pousser",
+      "Garde un genou plié et pousse le talon vers le plafond, la semelle vers le haut."
+     ],
+     [
+      "Redescendre",
+      "Ramène lentement le genou sous la hanche, sans le poser, le dos toujours plat, sans cambrer."
+     ],
+     [
+      "Changer de côté",
+      "Après tes 10 mouvements, fais la même chose avec l’autre jambe."
+     ]
+    ],
+    "tips": [
+     "Monte seulement jusqu’à ce que la cuisse soit dans l’alignement du dos",
+     "Serre la fesse en haut, c’est elle qui travaille",
+     "Mets un coussin sous le genou d’appui pour plus de confort"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F24",
+  "id": "f24-ouverture-hanche",
+  "slug": "ouverture-hanche",
+  "name": "Ouverture de hanche à quatre pattes",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Hanches"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "À quatre pattes, le genou s’ouvre sur le côté puis revient.",
+  "dosage": "40 s : 10 par jambe",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, le dos plat."
+     ],
+     [
+      "Ouvrir",
+      "Ouvre un genou sur le côté en le gardant plié, sans pencher le buste ni le bassin."
+     ],
+     [
+      "Revenir",
+      "Ramène lentement le genou au sol, sous la hanche."
+     ],
+     [
+      "Changer de côté",
+      "Fais 10 ouvertures avec cette jambe, puis 10 avec l’autre."
+     ]
+    ],
+    "tips": [
+     "Monte seulement tant que le bassin reste stable",
+     "Rentre légèrement le ventre pour garder le dos plat",
+     "Plie une serviette sous les genoux s’ils sont sensibles"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F25",
+  "id": "f25-tirage-serviette",
+  "slug": "tirage-serviette",
+  "name": "Tirage avec une serviette",
+  "family": "force",
+  "level": 2,
+  "zones": [
+   "Haut du dos",
+   "Bras"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Une serviette tendue entre les mains, tu la ramènes vers la poitrine.",
+  "dosage": "40 s : 10 tirages lents",
+  "side": null,
+  "caution": null,
+  "gear": [
+   "une serviette"
+  ],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi au bord d’une chaise, le dos droit, les pieds à plat, une serviette tenue à deux mains, bras tendus devant toi."
+     ],
+     [
+      "Tendre",
+      "Tire la serviette vers les côtés pour qu’elle reste bien tendue."
+     ],
+     [
+      "Tirer",
+      "Ramène les coudes en arrière et la serviette vers la poitrine, en serrant les omoplates."
+     ],
+     [
+      "Revenir",
+      "Tends lentement les bras devant toi sans relâcher la tension, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Garde les épaules basses, loin des oreilles",
+     "Souffle en tirant, inspire en tendant les bras",
+     "Pour corser, tire plus fort sur les côtés de la serviette"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin. Roule une serviette dans sa longueur et tiens-la à deux mains, poings fermés, paumes vers le bas."
+     ],
+     [
+      "Tendre",
+      "Tends les bras devant toi à hauteur d’épaules et tire la serviette vers les côtés pour qu’elle reste bien tendue."
+     ],
+     [
+      "Tirer",
+      "Ramène la serviette vers le haut de ta poitrine : les coudes partent en arrière, les omoplates se serrent, les épaules restent basses. Tiens un instant."
+     ],
+     [
+      "Revenir",
+      "Tends lentement les bras devant toi, sans relâcher la tension de la serviette, puis recommence."
+     ]
+    ],
+    "tips": [
+     "La serviette reste tendue du début à la fin : tire vers les côtés",
+     "Garde les épaules basses, loin des oreilles",
+     "Le buste reste droit et les jambes immobiles ; si l’épaule gêne, tire moins loin"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/tirage-serviette-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_tirage-serviette-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F26",
+  "id": "f26-ours",
+  "slug": "ours",
+  "name": "Position de l’ours",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Épaules"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "À quatre pattes, les genoux décollent de quelques centimètres et tu tiens.",
+  "dosage": "20 à 30 s de tenue",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, les orteils posés au sol."
+     ],
+     [
+      "Gainer",
+      "Rentre le ventre et garde le dos plat, comme une table."
+     ],
+     [
+      "Décoller",
+      "Pousse dans les mains et les orteils pour décoller les genoux de deux ou trois centimètres, sans bouger le dos."
+     ],
+     [
+      "Tenir",
+      "Tiens 20 à 30 secondes en respirant, puis repose les genoux doucement."
+     ]
+    ],
+    "tips": [
+     "Les genoux restent tout près du sol : plus bas, c’est plus efficace",
+     "Respire normalement, sans bloquer le souffle",
+     "Pour simplifier, repose les genoux quelques secondes puis repars"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "K01",
+  "id": "k01-respiration-ventre",
+  "slug": "respiration-ventre",
+  "name": "Respiration abdominale",
+  "family": "calme",
+  "level": 1,
+  "zones": [
+   "Respiration"
+  ],
+  "moments": [
+   "matin",
+   "pause",
+   "soir"
+  ],
+  "pitch": "Une longue respiration pour finir dans le calme.",
+  "dosage": "45 à 120 s : compter jusqu’à 4 ou 5",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assis(e) bien droit sur la chaise, pieds à plat au sol : pose une main à plat sur le haut de la poitrine et l’autre sur le ventre."
+     ],
+     [
+      "Inspirer par le nez",
+      "Inspire lentement par le nez, bouche fermée : le ventre se gonfle et pousse la main vers l’avant."
+     ],
+     [
+      "Expirer par la bouche",
+      "Souffle doucement par la bouche, lèvres entrouvertes : le ventre se dégonfle et la main revient."
+     ],
+     [
+      "Recommencer",
+      "Enchaîne les respirations sans forcer, en comptant jusqu’à 4 ou 5 à chaque temps."
+     ]
+    ],
+    "tips": [
+     "La main sur la poitrine reste immobile : seul le ventre bouge",
+     "Garde le dos droit, sans t’affaisser ni te pencher en arrière contre le dossier",
+     "Laisse l’expiration durer un peu plus longtemps que l’inspiration"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/respiration-ventre-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_respiration-ventre-chaise_studio.mp4"
+   },
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Debout, pieds écartés de la largeur du bassin, genoux souples : pose une main à plat sur le haut de la poitrine et l’autre sur le ventre."
+     ],
+     [
+      "Inspirer par le nez",
+      "Inspire lentement par le nez, bouche fermée : le ventre se gonfle et pousse la main vers l’avant."
+     ],
+     [
+      "Expirer par la bouche",
+      "Souffle doucement par la bouche, lèvres entrouvertes : le ventre se dégonfle et la main revient."
+     ],
+     [
+      "Recommencer",
+      "Enchaîne les respirations sans forcer, en comptant jusqu’à 4 ou 5 à chaque temps."
+     ]
+    ],
+    "tips": [
+     "La main sur la poitrine reste immobile : seul le ventre bouge",
+     "Garde les épaules basses et le dos droit, sans lever le menton",
+     "Laisse l’expiration durer un peu plus longtemps que l’inspiration"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/respiration-ventre-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_respiration-ventre-debout_studio.mp4"
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos sur un tapis, les genoux pliés, les pieds à plat et une main posée sur le ventre."
+     ],
+     [
+      "Inspirer",
+      "Inspire lentement par le nez en comptant jusqu’à 4 ou 5 : le ventre se gonfle sous ta main."
+     ],
+     [
+      "Expirer",
+      "Expire doucement par la bouche en comptant jusqu’à 4 ou 5 : le ventre redescend, sans forcer."
+     ],
+     [
+      "Continuer",
+      "Recommence à ton rythme, les épaules immobiles et détendues."
+     ]
+    ],
+    "tips": [
+     "Pose l’autre main sur la poitrine : elle doit bouger moins que celle du ventre",
+     "Si la tête tire, glisse un coussin plat dessous",
+     "Si tu manques d’air, compte moins longtemps"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "K02",
+  "id": "k02-long-soupir",
+  "slug": "long-soupir",
+  "name": "Le long soupir",
+  "family": "calme",
+  "level": 1,
+  "zones": [
+   "Respiration"
+  ],
+  "moments": [
+   "soir",
+   "pause"
+  ],
+  "pitch": "Deux inspirations, un long soupir : les épaules descendent.",
+  "dosage": "60 à 120 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi droit sur une chaise, les pieds à plat, puis pose les deux mains sur le ventre."
+     ],
+     [
+      "Inspirer",
+      "Inspire par le nez, puis ajoute une seconde inspiration plus courte pour remplir encore un peu."
+     ],
+     [
+      "Soupirer",
+      "Souffle longuement par la bouche, comme un long soupir, et laisse les épaules descendre."
+     ],
+     [
+      "Répéter",
+      "Recommence à ton rythme, les yeux mi-clos si tu le souhaites."
+     ]
+    ],
+    "tips": [
+     "Laisse l’expiration durer plus longtemps que l’inspiration",
+     "Sens le ventre se gonfler puis se vider sous tes mains",
+     "Si la tête tourne, reprends une respiration normale"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les genoux pliés, les pieds à plat, et pose les mains sur le ventre."
+     ],
+     [
+      "Inspirer deux fois",
+      "Inspire par le nez, puis ajoute une seconde inspiration courte pour remplir les poumons."
+     ],
+     [
+      "Soupirer",
+      "Expire longuement par la bouche, comme un grand soupir, et laisse les épaules descendre."
+     ],
+     [
+      "Recommencer",
+      "Ferme les yeux si tu le souhaites et continue à ton rythme, sans forcer."
+     ]
+    ],
+    "tips": [
+     "Sens le ventre se soulever sous tes mains à l’inspiration",
+     "Rends l’expiration plus longue que l’inspiration",
+     "Si la tête bascule en arrière, glisse un coussin plat sous la nuque"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "K03",
+  "id": "k03-relachement",
+  "slug": "relachement",
+  "name": "Relâchement final",
+  "family": "calme",
+  "level": 1,
+  "zones": [
+   "Respiration"
+  ],
+  "moments": [
+   "soir"
+  ],
+  "pitch": "Les yeux fermés, tout le corps se relâche.",
+  "dosage": "60 à 120 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": null,
+  "variants": [
+   {
+    "position": "assis",
+    "label": "Sur une chaise",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Assieds-toi confortablement sur une chaise, le dos droit, les pieds à plat, les mains posées sur les cuisses."
+     ],
+     [
+      "Fermer les yeux",
+      "Ferme doucement les yeux et laisse tomber les épaules."
+     ],
+     [
+      "Relâcher",
+      "Relâche le visage, la mâchoire, puis les bras et les jambes, en respirant lentement par le nez."
+     ],
+     [
+      "Revenir",
+      "Reste ainsi 1 à 2 minutes, puis rouvre les yeux en douceur et étire-toi si tu en as envie."
+     ]
+    ],
+    "tips": [
+     "Tu peux aussi le faire allongé(e), bras écartés paumes vers le haut",
+     "Laisse ton expiration devenir un peu plus longue que ton inspiration",
+     "Si une pensée arrive, laisse-la passer et reviens à ton souffle"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   },
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos sur un tapis, les genoux pliés et les bras le long du corps."
+     ],
+     [
+      "S’allonger",
+      "Fais glisser les jambes jusqu’à les allonger, ou garde les genoux pliés si c’est plus confortable."
+     ],
+     [
+      "Relâcher",
+      "Écarte un peu les bras du corps, paumes vers le haut, et ferme les yeux."
+     ],
+     [
+      "Laisser aller",
+      "Respire calmement et laisse tout le corps peser dans le sol, des pieds jusqu’à la tête."
+     ]
+    ],
+    "tips": [
+     "Glisse un coussin sous les genoux si le bas du dos tire",
+     "Couvre-toi d’un plaid, le corps se refroidit vite au repos",
+     "Tu peux aussi le faire assis(e), mains sur les cuisses et yeux fermés"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F27",
+  "id": "f27-planche",
+  "slug": "planche",
+  "name": "Planche sur les avant-bras",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Sur les avant-bras et la pointe des pieds, tout le corps forme une ligne.",
+  "dosage": "20 à 40 s de tenue",
+  "side": null,
+  "caution": "Si le bas du dos se creuse, choisis plutôt la planche sur les genoux.",
+  "gear": [],
+  "unlock": 1,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi à genoux sur un tapis, les avant-bras au sol, les coudes sous les épaules."
+     ],
+     [
+      "Monter",
+      "Recule une jambe puis l’autre et pose les pointes de pieds au sol, le corps aligné de la tête aux talons."
+     ],
+     [
+      "Tenir",
+      "Rentre légèrement le ventre, serre les fessiers et tiens 20 à 40 s en respirant, sans creuser le dos."
+     ],
+     [
+      "Revenir",
+      "Repose doucement les genoux au sol, puis relâche."
+     ]
+    ],
+    "tips": [
+     "Si le bas du dos se creuse, choisis plutôt la planche sur les genoux",
+     "Regarde le sol entre tes mains, la nuque longue",
+     "Pousse le sol avec les avant-bras pour ne pas t’affaisser dans les épaules"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F28",
+  "id": "f28-pont-une-jambe",
+  "slug": "pont-une-jambe",
+  "name": "Pont sur une jambe",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Hanches",
+   "Jambes"
+  ],
+  "moments": [
+   "matin",
+   "soir"
+  ],
+  "pitch": "Sur le dos, une jambe tendue, le bassin monte en poussant sur l’autre pied.",
+  "dosage": "40 s : 6 par côté",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": 2,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les bras le long du corps, un pied au sol près des fesses, l’autre jambe tendue dans l’axe de la cuisse."
+     ],
+     [
+      "Monter",
+      "Pousse dans le talon au sol pour monter le bassin, bien horizontal, sans basculer d’un côté."
+     ],
+     [
+      "Redescendre",
+      "Redescends lentement le bassin jusqu’au sol, la jambe toujours tendue."
+     ],
+     [
+      "Changer de côté",
+      "Après tes répétitions, change de jambe et fais de même de l’autre côté."
+     ]
+    ],
+    "tips": [
+     "Appuie les bras au sol pour garder l’équilibre",
+     "Plus facile : garde les deux pieds au sol",
+     "Souffle en montant, inspire en descendant"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F29",
+  "id": "f29-squat-poussee",
+  "slug": "squat-poussee",
+  "name": "Squat et poussée vers le ciel",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Épaules"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu descends en squat, poings aux épaules, puis tu pousses les bras vers le ciel en te relevant.",
+  "dosage": "40 s : 8 à 10",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": 3,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": "Mains ouvertes devant les épaules, tu descends en squat, puis tu pousses les bras vers le ciel en te relevant.",
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds un peu plus larges que les hanches. Pose les mains ouvertes devant les épaules, paumes vers le haut, coudes vers l’avant."
+     ],
+     [
+      "Descendre",
+      "Pousse les fesses en arrière et plie les genoux jusqu’aux cuisses presque parallèles au sol. Les talons restent posés, le buste se penche vers l’avant, le dos reste droit."
+     ],
+     [
+      "Pousser",
+      "Redresse-toi en poussant dans les talons et, dans le même élan, monte les bras jusqu’à les tendre au-dessus de la tête, paumes vers l’avant."
+     ],
+     [
+      "Revenir",
+      "Marque une courte pause bras tendus, puis redescends les mains devant les épaules avant le squat suivant."
+     ]
+    ],
+    "tips": [
+     "Les bras montent avec les jambes, pas après : un seul mouvement fluide",
+     "Les genoux suivent la direction des orteils et le dos reste droit",
+     "Souffle en poussant vers le haut ; descends moins bas si les genoux tirent"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/squat-poussee-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_squat-poussee-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F30",
+  "id": "f30-pompes",
+  "slug": "pompes",
+  "name": "Pompes",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Bras",
+   "Poitrine"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Mains au sol, corps gainé, la poitrine descend vers le sol puis remonte.",
+  "dosage": "40 s : 6 à 10",
+  "side": null,
+  "caution": "Pose les genoux au sol si le dos se creuse ou si les épaules forcent.",
+  "gear": [],
+  "unlock": 4,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Pose les mains à plat au sol, un peu plus écartées que les épaules, doigts vers l’avant, et les pointes de pieds derrière toi : le corps droit de la tête aux talons."
+     ],
+     [
+      "Descendre",
+      "Plie les coudes vers l’arrière et descends la poitrine près du sol, sans laisser tomber le bassin."
+     ],
+     [
+      "Pousser",
+      "Souffle en poussant dans les mains pour revenir bras tendus."
+     ],
+     [
+      "Répéter",
+      "Recommence lentement, les mains et les pieds toujours à la même place."
+     ]
+    ],
+    "tips": [
+     "Serre le ventre et les fesses : le dos ne se creuse pas et les fesses ne montent pas",
+     "Garde la nuque dans le prolongement du dos, le regard vers le sol juste devant les mains",
+     "Descends seulement aussi bas que tu peux remonter sans te cambrer"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/pompes-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pompes-sol_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F31",
+  "id": "f31-planche-laterale-pieds",
+  "slug": "planche-laterale-pieds",
+  "name": "Planche latérale",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Sur le côté, en appui sur l’avant-bras et les pieds, le corps reste droit.",
+  "dosage": "15 à 30 s par côté",
+  "side": "Côté droit puis gauche",
+  "caution": null,
+  "gear": [],
+  "unlock": 5,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le côté, en appui sur l’avant-bras, le coude sous l’épaule, les jambes tendues et les pieds l’un sur l’autre, l’autre main sur la hanche."
+     ],
+     [
+      "Monter",
+      "Soulève le bassin pour aligner la tête, le bassin et les pieds."
+     ],
+     [
+      "Tenir",
+      "Tiens 15 à 30 secondes en respirant, sans laisser le bassin tomber, puis repose-le doucement."
+     ],
+     [
+      "Changer de côté",
+      "Tourne-toi sur l’autre côté et recommence sur l’autre avant-bras."
+     ]
+    ],
+    "tips": [
+     "Pour simplifier, garde les genoux pliés au sol",
+     "Pousse le sol avec l’avant-bras pour ne pas t’affaisser dans l’épaule",
+     "Respire calmement, sans bloquer le souffle"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F32",
+  "id": "f32-squat-bulgare",
+  "slug": "squat-bulgare",
+  "name": "Squat bulgare",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Le pied arrière posé sur une chaise, la jambe avant plie et te remonte.",
+  "dosage": "50 s : 6 par jambe",
+  "side": "Côté droit puis gauche",
+  "caution": "Si le genou avant fait mal, choisis plutôt la fente avec appui sur la chaise. Une main contre un mur aide à l’équilibre.",
+  "gear": [],
+  "unlock": 6,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Dos à une chaise stable, avance d’un grand pas et pose le dessus du pied arrière sur l’assise."
+     ],
+     [
+      "Se placer",
+      "Garde le buste droit, le pied avant bien à plat, le genou avant au-dessus de la cheville."
+     ],
+     [
+      "Descendre",
+      "Plie la jambe avant pour descendre lentement, le genou arrière vers le sol."
+     ],
+     [
+      "Changer de côté",
+      "Pousse dans le talon avant pour remonter ; après tes 6 répétitions, change de jambe."
+     ]
+    ],
+    "tips": [
+     "Si le genou avant fait mal, choisis plutôt la fente avec appui sur la chaise",
+     "Une main contre un mur aide à l’équilibre",
+     "Descends moins bas pour commencer, puis un peu plus quand tu es à l’aise"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C10",
+  "id": "c10-montees-genoux",
+  "slug": "montees-genoux",
+  "name": "Montées de genoux rapides",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu cours sur place en montant les genoux vers les hanches.",
+  "dosage": "30 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": 7,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, les coudes pliés le long du corps."
+     ],
+     [
+      "Courir",
+      "Cours sur place sur l’avant du pied, en montant les genoux vers la hauteur des hanches."
+     ],
+     [
+      "Accompagner",
+      "Balance les bras en rythme, le bras opposé au genou qui monte."
+     ],
+     [
+      "Alterner",
+      "Alterne les genoux sans t’arrêter pendant 30 s, et ralentis dès que le souffle manque."
+     ]
+    ],
+    "tips": [
+     "Pose les pieds en douceur pour limiter les chocs",
+     "Pour alléger, marche sur place en montant les genoux",
+     "Garde le buste droit, sans te pencher en arrière"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F33",
+  "id": "f33-dips-jambes-tendues",
+  "slug": "dips-jambes-tendues",
+  "name": "Dips jambes tendues",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Bras",
+   "Épaules"
+  ],
+  "moments": [
+   "matin",
+   "pause"
+  ],
+  "pitch": "Les mains sur une chaise, jambes tendues devant, les bras plient puis te remontent.",
+  "dosage": "40 s : 6 à 10",
+  "side": null,
+  "caution": "Ne descends pas plus bas que les coudes à angle droit. Arrête si une épaule fait mal.",
+  "gear": [],
+  "unlock": 8,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Cale une chaise stable contre un mur, dos à elle, et pose les mains sur le bord de l’assise, doigts vers l’avant."
+     ],
+     [
+      "Se placer",
+      "Avance les pieds pour tendre les jambes devant toi, talons au sol, bras tendus, le bassin juste devant la chaise."
+     ],
+     [
+      "Descendre",
+      "Plie les coudes vers l’arrière pour descendre le bassin, sans aller plus bas que les coudes à angle droit."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les mains pour tendre les bras et revenir en haut, les épaules basses."
+     ]
+    ],
+    "tips": [
+     "Arrête si une épaule fait mal",
+     "Pour alléger, plie les genoux et rapproche les pieds",
+     "Garde le dos tout près de l’assise"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C11",
+  "id": "c11-grimpeur-rapide",
+  "slug": "grimpeur-rapide",
+  "name": "Grimpeur rapide",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Taille",
+   "Épaules",
+   "Jambes"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "En appui sur les mains, les genoux viennent vers la poitrine l’un après l’autre, en rythme.",
+  "dosage": "30 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": 9,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi en planche, les mains sous les épaules, les jambes tendues, le corps gainé de la tête aux talons."
+     ],
+     [
+      "Ramener",
+      "Ramène un genou vers la poitrine, sans monter le bassin."
+     ],
+     [
+      "Changer",
+      "Repose ce pied en arrière et ramène aussitôt l’autre genou."
+     ],
+     [
+      "Alterner",
+      "Enchaîne en alternant les jambes, en rythme, avec une respiration régulière."
+     ]
+    ],
+    "tips": [
+     "Garde le bassin bas, à hauteur des épaules",
+     "Pour simplifier, ralentis ou pose les mains sur un banc ou une marche",
+     "Cherche un rythme que tu peux tenir 30 secondes"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C12",
+  "id": "c12-jumping-jacks",
+  "slug": "jumping-jacks",
+  "name": "Jumping jacks",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Épaules"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu sautes en écartant les jambes et en levant les bras, puis tu reviens.",
+  "dosage": "30 s",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": 10,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds joints, les bras tendus le long du corps, les mains ouvertes."
+     ],
+     [
+      "Ouvrir",
+      "D’un petit saut, écarte les pieds un peu plus large que les épaules et monte les bras sur les côtés jusqu’au-dessus de la tête, mains ouvertes, coudes souples."
+     ],
+     [
+      "Fermer",
+      "D’un autre petit saut, ramène les pieds joints et redescends les bras le long du corps."
+     ],
+     [
+      "Enchaîner",
+      "Recommence en rythme régulier, en te posant chaque fois en douceur sur l’avant des pieds, genoux souples."
+     ]
+    ],
+    "tips": [
+     "Des sauts petits et légers suffisent : les pieds décollent à peine",
+     "Pose-toi sur l’avant du pied, genoux souples, jamais jambes raides",
+     "Si le souffle manque ou si les genoux gênent, ralentis ou fais le geste sans sauter, un pied après l’autre"
+    ],
+    "gear": null,
+    "thumbnail": "assets/moovini/mouvements/jumping-jacks-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_jumping-jacks-debout_studio.mp4"
+   }
+  ]
+ },
+ {
+  "code": "F34",
+  "id": "f34-gainage-creux",
+  "slug": "gainage-creux",
+  "name": "Gainage en creux",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Sur le dos, bras et jambes décollés, le bas du dos reste collé au sol.",
+  "dosage": "15 à 30 s de tenue",
+  "side": null,
+  "caution": "Arrête si le bas du dos se cambre ou fait mal.",
+  "gear": [],
+  "unlock": 11,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos sur un tapis, les genoux pliés, et plaque le bas du dos au sol."
+     ],
+     [
+      "Décoller",
+      "Tends les bras vers l’arrière et décolle légèrement les épaules, puis décolle les jambes tendues."
+     ],
+     [
+      "Tenir",
+      "Garde la position 15 à 30 secondes en respirant, le bas du dos toujours collé au sol."
+     ],
+     [
+      "Revenir",
+      "Plie les genoux et repose les épaules et les pieds en douceur."
+     ]
+    ],
+    "tips": [
+     "Arrête si le bas du dos se cambre ou fait mal",
+     "Plus facile : plie les genoux ou monte les jambes plus haut",
+     "Souffle longuement pour garder le ventre rentré"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F35",
+  "id": "f35-portefeuille",
+  "slug": "portefeuille",
+  "name": "Abdos portefeuille",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Sur le dos, bras et jambes se rejoignent au-dessus du ventre puis redescendent.",
+  "dosage": "40 s : 6 à 10",
+  "side": null,
+  "caution": "Évite-le si le dos est fragile ou fait mal pendant le mouvement.",
+  "gear": [],
+  "unlock": 12,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Allonge-toi sur le dos, les jambes tendues, les bras tendus au sol derrière la tête."
+     ],
+     [
+      "Monter",
+      "En soufflant, monte en même temps les bras et les jambes tendues pour que les mains rejoignent les jambes au-dessus du ventre."
+     ],
+     [
+      "Redescendre",
+      "Redescends lentement les bras et les jambes, sans les laisser claquer au sol."
+     ],
+     [
+      "Répéter",
+      "Enchaîne 6 à 10 montées à ton rythme."
+     ]
+    ],
+    "tips": [
+     "Évite-le si le dos est fragile ou fait mal pendant le mouvement",
+     "Pour alléger, plie un peu les genoux",
+     "Garde la nuque longue, sans tirer la tête vers l’avant"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F36",
+  "id": "f36-planche-commando",
+  "slug": "planche-commando",
+  "name": "Planche commando",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Bras",
+   "Épaules",
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "De la planche sur les avant-bras, tu montes sur les mains, un bras après l’autre, puis tu redescends.",
+  "dosage": "40 s : 6 à 8",
+  "side": "En alternant",
+  "caution": "Si les épaules ou les coudes forcent, choisis plutôt la planche sur les genoux.",
+  "gear": [],
+  "unlock": 13,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi en planche sur les avant-bras, les coudes sous les épaules, le corps aligné de la tête aux pieds."
+     ],
+     [
+      "Monter",
+      "Pose une main au sol, puis l’autre, pour monter bras tendus, sans balancer le bassin."
+     ],
+     [
+      "Redescendre",
+      "Repose un avant-bras, puis l’autre, pour revenir en planche sur les avant-bras."
+     ],
+     [
+      "Alterner",
+      "Recommence en changeant de bras pour commencer, le bassin bien stable."
+     ]
+    ],
+    "tips": [
+     "Si les épaules ou les coudes forcent, choisis plutôt la planche sur les genoux",
+     "Écarte un peu les pieds pour être plus stable",
+     "Respire régulièrement, sans bloquer le souffle"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "F37",
+  "id": "f37-pompes-serrees",
+  "slug": "pompes-serrees",
+  "name": "Pompes mains serrées",
+  "family": "force",
+  "level": 3,
+  "zones": [
+   "Bras",
+   "Poitrine"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Les mains rapprochées sous la poitrine, les coudes frôlent le corps.",
+  "dosage": "40 s : 5 à 8",
+  "side": null,
+  "caution": "Écarte un peu les mains si les poignets font mal.",
+  "gear": [],
+  "unlock": 14,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi en planche, les mains rapprochées sous la poitrine, le corps aligné de la tête aux talons."
+     ],
+     [
+      "Descendre",
+      "Plie les bras pour descendre la poitrine vers le sol, les coudes près du corps."
+     ],
+     [
+      "Remonter",
+      "Pousse dans les mains pour remonter, le corps bien droit."
+     ],
+     [
+      "Répéter",
+      "Recommence à ton rythme, de 5 à 8 fois."
+     ]
+    ],
+    "tips": [
+     "Pour simplifier, pose les genoux au sol",
+     "Écarte un peu les mains si les poignets font mal",
+     "Inspire en descendant, souffle en remontant"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C13",
+  "id": "c13-patineur-saute",
+  "slug": "patineur-saute",
+  "name": "Patineur sauté",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu sautes d’un pied sur l’autre, de côté, comme un patineur.",
+  "dosage": "30 s",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": 15,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout sur une jambe, le genou souple, l’autre pied décollé, les bras prêts comme pour courir."
+     ],
+     [
+      "Sauter",
+      "Saute de côté pour atterrir sur l’autre pied, en douceur, genou souple et dans l’axe du pied."
+     ],
+     [
+      "Croiser",
+      "Laisse la jambe libre croiser derrière toi et les bras accompagner le mouvement."
+     ],
+     [
+      "Alterner",
+      "Repars aussitôt de l’autre côté et continue en alternant."
+     ]
+    ],
+    "tips": [
+     "Plus doux : fais un pas de côté au lieu de sauter",
+     "Atterris sur l’avant du pied puis déroule, sans bruit",
+     "Saute moins loin si tu perds l’équilibre"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C14",
+  "id": "c14-squat-saute",
+  "slug": "squat-saute",
+  "name": "Squat sauté",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu descends en squat, puis tu sautes et tu te réceptionnes en douceur.",
+  "dosage": "30 s : 6 à 10",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": 16,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin."
+     ],
+     [
+      "Descendre",
+      "Descends en squat, les fesses vers l’arrière, le buste droit, les bras devant toi."
+     ],
+     [
+      "Sauter",
+      "Pousse fort dans les pieds pour sauter, en t’aidant de l’élan des bras."
+     ],
+     [
+      "Réceptionner",
+      "Atterris sur l’avant du pied, genoux souples et dans l’axe des pieds, puis redescends en squat."
+     ]
+    ],
+    "tips": [
+     "Pour alléger, monte sur la pointe des pieds sans quitter le sol",
+     "Saute en baskets, sur un sol qui ne glisse pas",
+     "Souffle à chaque saut"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C15",
+  "id": "c15-demi-burpee",
+  "slug": "demi-burpee",
+  "name": "Demi-burpee",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Épaules",
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Mains au sol, les pieds partent en arrière en planche, puis reviennent et tu te relèves.",
+  "dosage": "40 s : 5 à 8",
+  "side": null,
+  "caution": "Recule les pieds un après l’autre si le dos fatigue.",
+  "gear": [],
+  "unlock": 17,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, puis accroupis-toi et pose les mains au sol devant toi."
+     ],
+     [
+      "Reculer",
+      "Envoie les pieds en arrière pour te mettre en planche, le corps aligné de la tête aux pieds."
+     ],
+     [
+      "Revenir",
+      "Ramène les pieds vers les mains, en position accroupie."
+     ],
+     [
+      "Se relever",
+      "Relève-toi debout, sans pompe ni saut, puis recommence."
+     ]
+    ],
+    "tips": [
+     "Recule les pieds un après l’autre si le dos fatigue",
+     "Plie bien les genoux pour poser les mains au sol",
+     "Souffle en reculant les pieds"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C16",
+  "id": "c16-fente-sautee",
+  "slug": "fente-sautee",
+  "name": "Fente sautée",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Hanches"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "En fente, tu sautes pour changer de jambe devant.",
+  "dosage": "30 s : 6 à 10",
+  "side": "En alternant",
+  "caution": null,
+  "gear": [],
+  "unlock": 18,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Mets-toi en fente, une jambe devant, le genou avant au-dessus de la cheville, le buste droit, les bras pliés."
+     ],
+     [
+      "Sauter",
+      "Pousse dans les deux pieds pour sauter et inverse les jambes en l’air."
+     ],
+     [
+      "Atterrir",
+      "Retombe en fente, en douceur, l’autre jambe devant, le genou arrière loin du sol."
+     ],
+     [
+      "Alterner",
+      "Enchaîne les sauts en changeant de jambe devant à chaque fois."
+     ]
+    ],
+    "tips": [
+     "Atterris sur l’avant du pied et amortis avec les genoux",
+     "Pour simplifier, fais des fentes alternées sans sauter",
+     "Souffle à chaque saut"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C17",
+  "id": "c17-burpee",
+  "slug": "burpee",
+  "name": "Burpee",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Bras",
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Accroupi(e), planche, pompe, retour des pieds, puis un saut bras levés.",
+  "dosage": "40 s : 4 à 8",
+  "side": null,
+  "caution": "Sans la pompe ni le saut, c’est un demi-burpee : plus doux pour le dos et les articulations.",
+  "gear": [],
+  "unlock": 19,
+  "variants": [
+   {
+    "position": "sol",
+    "label": "Au sol",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’accroupir",
+      "Debout, accroupis-toi et pose les mains au sol devant les pieds."
+     ],
+     [
+      "Planche",
+      "Envoie les pieds en arrière pour te mettre en planche, puis fais une pompe."
+     ],
+     [
+      "Ramener",
+      "Ramène les pieds près des mains en restant accroupi(e)."
+     ],
+     [
+      "Sauter",
+      "Relève-toi et saute, les bras tendus vers le ciel, puis atterris en douceur."
+     ]
+    ],
+    "tips": [
+     "Sans la pompe ni le saut, c’est un demi-burpee : plus doux pour le dos et les articulations",
+     "Recule et ramène les pieds un par un si sauter est trop dur",
+     "Garde le ventre serré en planche pour protéger le dos"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ },
+ {
+  "code": "C18",
+  "id": "c18-sauts-genoux",
+  "slug": "sauts-genoux",
+  "name": "Sauts genoux poitrine",
+  "family": "cardio",
+  "level": 3,
+  "zones": [
+   "Jambes",
+   "Taille"
+  ],
+  "moments": [
+   "matin"
+  ],
+  "pitch": "Tu sautes en ramenant les deux genoux vers la poitrine.",
+  "dosage": "30 s : 4 à 8",
+  "side": null,
+  "caution": null,
+  "gear": [],
+  "unlock": 20,
+  "variants": [
+   {
+    "position": "debout",
+    "label": "Debout",
+    "name": null,
+    "pitch": null,
+    "level": null,
+    "dosage": null,
+    "steps": [
+     [
+      "S’installer",
+      "Tiens-toi debout, les pieds à la largeur du bassin, puis plie les genoux, les bras vers l’arrière."
+     ],
+     [
+      "Sauter",
+      "Saute en ramenant les deux genoux vers la poitrine, les bras qui partent devant toi."
+     ],
+     [
+      "Réceptionner",
+      "Retombe sur l’avant du pied, genoux souples, en pliant les jambes pour amortir."
+     ],
+     [
+      "Souffler",
+      "Reprends ton souffle entre deux sauts, puis repars."
+     ]
+    ],
+    "tips": [
+     "Pour alléger, monte un seul genou à la fois sans sauter",
+     "Atterris en silence : c’est le signe d’une réception douce",
+     "Saute en baskets, sur un sol qui ne glisse pas"
+    ],
+    "gear": null,
+    "thumbnail": null,
+    "video": "photos",
+    "videoSrc": null
+   }
+  ]
+ }
+]

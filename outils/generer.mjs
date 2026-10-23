@@ -1,0 +1,292 @@
+// Générateur des pages de contenu de moovini.app (23 octobre 2026) : blog, pages « Pour qui », questions fréquentes,
+// fiches exercices et plan du site. Sans dépendance : node outils/generer.mjs, depuis la racine du site.
+//
+// Sources, dans contenu/ :
+// - blog/<slug>.md et pour-qui/<slug>.md : en-tête (titre, description, date, mots-cles) puis texte en Markdown simple ;
+// - questions-frequentes.md : chaque « ## » est une question, le texte qui suit sa réponse ;
+// - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app).
+// Les vignettes retenues des exercices sont réduites dans images/fiches/ par outils/vignettes.py (Pillow).
+// L'accueil (index.html) et les pages légales ne sont pas générés ; seul le plan du site les liste.
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
+const SITE = 'https://moovini.app';
+const APP = 'C:/Projets/Moovini';
+const AUJOURDHUI = new Date().toISOString().slice(0, 10);
+const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio doux', force: 'Renforcement', calme: 'Calme' };
+const NIVEAUX = { 1: 'Tout doux', 2: 'Modéré', 3: 'Plus soutenu' };
+const PREVENIR = 'mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store.';
+const POMME = '<svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg>';
+
+const ecrire = (chemin, contenu) => { const f = join(RACINE, chemin); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, contenu); };
+const echapper = t => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const texteBrut = html => html.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
+// Titre pour Google (coupé vers 60 caractères) : « | Moovini » seulement s'il tient, sinon la première forme qui tient.
+const titrePour = (...formes) => {
+  for (const f of formes) if (`${f} | Moovini`.length <= 62) return `${f} | Moovini`;
+  return formes.find(f => f.length <= 62) ?? formes[formes.length - 1];
+};
+const dateFr = iso => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// ---------- Markdown simple : intertitres, paragraphes, listes, citations, gras, italique, liens ----------
+function enLigne(t) {
+  return echapper(t)
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, txt, url) => `<a href="${url.replace(/&amp;/g, '&amp;')}"${/^https?:/.test(url) && !url.startsWith(SITE) ? ' rel="noopener"' : ''}>${txt}</a>`)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[\s(«])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
+    .replace(/(^|[\s(«])_([^_\s][^_]*)_/g, '$1<em>$2</em>');
+}
+function markdown(md) {
+  const blocs = md.replace(/\r/g, '').trim().split(/\n{2,}/);
+  return blocs.map(b => {
+    const l = b.split('\n');
+    if (/^#{2,4} /.test(b)) { const n = b.match(/^#+/)[0].length; const t = b.replace(/^#+ /, ''); return `<h${n} id="${ancre(t)}">${enLigne(t)}</h${n}>`; }
+    if (l.every(x => /^\s*[-*] /.test(x))) return `<ul>${l.map(x => `<li>${enLigne(x.replace(/^\s*[-*] /, ''))}</li>`).join('')}</ul>`;
+    if (l.every(x => /^\s*\d+[.)] /.test(x))) return `<ol>${l.map(x => `<li>${enLigne(x.replace(/^\s*\d+[.)] /, ''))}</li>`).join('')}</ol>`;
+    if (l.every(x => /^> ?/.test(x))) return `<blockquote><p>${enLigne(l.map(x => x.replace(/^> ?/, '')).join(' '))}</p></blockquote>`;
+    return `<p>${enLigne(l.join(' '))}</p>`;
+  }).join('\n');
+}
+const ancre = t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function lireMd(fichier) {
+  const brut = readFileSync(fichier, 'utf8').replace(/^\uFEFF/, '');
+  const m = brut.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!m) throw new Error(`En-tête manquant : ${fichier}`);
+  const meta = Object.fromEntries(m[1].split(/\r?\n/).filter(Boolean).map(l => { const i = l.indexOf(':'); return [l.slice(0, i).trim(), l.slice(i + 1).trim()]; }));
+  return { ...meta, corps: m[2] };
+}
+
+// ---------- Gabarit commun ----------
+function page({ chemin, titre, titreSeo, description, image = `${SITE}/images/partage.jpg`, imageAlt = 'Moovini, l\u2019app de mouvement doux', jsonld = [], corps, type = 'website' }) {
+  const url = `${SITE}${chemin}`;
+  const graphe = { '@context': 'https://schema.org', '@graph': [...jsonld] };
+  return `<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${echapper(titreSeo ?? titre)}</title>
+<meta name="description" content="${echapper(description)}">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="${type}">
+<meta property="og:site_name" content="Moovini">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="${url}">
+<meta property="og:title" content="${echapper(titre)}">
+<meta property="og:description" content="${echapper(description)}">
+<meta property="og:image" content="${image}">
+<meta property="og:image:alt" content="${echapper(imageAlt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14292E">
+<link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe, null, 1)}\n</script>\n` : ''}</head>
+<body>
+<header class="barre">
+  <a class="marque" href="/"><img src="/images/logo-creme.svg" alt="Moovini, accueil" width="104" height="100"></a>
+  <nav aria-label="Navigation principale">
+    <a href="/blog/"${chemin.startsWith('/blog/') ? ' aria-current="page"' : ''}>Blog</a>
+    <a href="/exercices/"${chemin.startsWith('/exercices/') ? ' aria-current="page"' : ''}>Exercices</a>
+    <a href="/questions-frequentes/"${chemin.startsWith('/questions') ? ' aria-current="page"' : ''}>Questions</a>
+    <a class="appli" href="${PREVENIR}" title="Être prévenu de la sortie par e-mail">${POMME}<span>Bientôt sur l'App Store</span></a>
+  </nav>
+</header>
+<main id="contenu">
+${corps}
+</main>
+<footer class="pied">
+  <section class="appel" aria-labelledby="appel-titre">
+    <h2 id="appel-titre">Recommence à bouger, <em>en douceur.</em></h2>
+    <p>Moovini compose tes séances de mouvement doux d'après tes réponses : 10 à 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Aucune inscription requise et 7 jours d'essai gratuit.</p>
+    <a class="bouton" href="${PREVENIR}">${POMME}Bientôt sur l'App Store<span class="vh"> : être prévenu de la sortie par e-mail</span></a>
+  </section>
+  <nav class="liens" aria-label="Pied de page">
+    <a href="/">Accueil</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
+    <a href="/pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a><a href="/pour-qui/debutant-sedentaire/">Débutants</a>
+    <a href="/questions-frequentes/">Questions fréquentes</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d'utilisation</a>
+    <a href="mailto:contact@moovini.app">contact@moovini.app</a>
+  </nav>
+  <p class="mention">Moovini propose des exercices doux pour le bien-être et ne remplace pas l'avis d'un médecin ou d'un(e) kiné. © 2026 Moovini</p>
+</footer>
+</body>
+</html>
+`;
+}
+const ORGANISATION = { '@id': `${SITE}/#organisation` };
+const filAriane = elements => ({ '@type': 'BreadcrumbList', itemListElement: elements.map(([nom, chemin], i) => ({ '@type': 'ListItem', position: i + 1, name: nom, item: `${SITE}${chemin}` })) });
+const arianeHtml = elements => `<nav class="ariane" aria-label="Fil d'Ariane"><ol>${elements.map(([nom, chemin], i) => i === elements.length - 1 ? `<li aria-current="page">${echapper(nom)}</li>` : `<li><a href="${chemin}">${echapper(nom)}</a></li>`).join('')}</ol></nav>`;
+
+const plan = [['/', '2026-10-23'], ['/privacy/', '2026-10-23'], ['/cgu/', '2026-10-23']];
+
+// ---------- Exercices ----------
+const exercices = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices.json'), 'utf8'));
+const vignettes = [];
+// Image de la fiche : tirée de la vidéo retenue (nette), sinon la vignette retenue (180 px), sinon aucune.
+for (const e of exercices) for (const v of e.variants) {
+  const source = v.videoSrc ?? v.thumbnail;
+  if (!source) continue;
+  v.image = `/images/fiches/${source.split('/').pop().replace(/\.\w+$/, '')}.webp`;
+  // Au sol, la personne est allongée : image en 3:2 au lieu d'un carré.
+  v.ratio = v.position === 'sol' && v.videoSrc ? 1.5 : 1;
+  vignettes.push([join(APP, source), join(RACINE, v.image.slice(1)), v.ratio]);
+}
+const manquantes = vignettes.filter(([, dest]) => !existsSync(dest));
+if (manquantes.length) {
+  writeFileSync(join(RACINE, 'outils', '.vignettes.json'), JSON.stringify(manquantes));
+  execFileSync('python', [join(RACINE, 'outils', 'vignettes.py'), join(RACINE, 'outils', '.vignettes.json')], { stdio: 'inherit' });
+}
+// Pour les vignettes carrées (liste, en-tête de fiche), une variante cadrée en carré de préférence.
+const imageDe = e => (e.variants.find(v => v.image && v.ratio === 1) ?? e.variants.find(v => v.image))?.image ?? null;
+const visuel = (e, taille) => {
+  const img = imageDe(e);
+  return img ? `<img src="${img}" alt="${echapper(e.name)} : démonstration" width="${taille}" height="${taille}" loading="lazy" decoding="async">`
+    : `<span class="sans-photo ${e.family}" aria-hidden="true">${echapper(e.name.slice(0, 1))}</span>`;
+};
+const positions = e => [...new Set(e.variants.map(v => v.label))];
+
+for (const e of exercices) {
+  const chemin = `/exercices/${e.slug}/`;
+  const ariane = [['Accueil', '/'], ['Exercices', '/exercices/'], [e.name, chemin]];
+  const voisins = exercices.filter(x => x.family === e.family && x.slug !== e.slug).slice(0, 4);
+  const sections = e.variants.map(v => `
+<section class="variante">
+  <h2>${echapper(v.name ?? e.name)} ${v.label === 'Debout' ? 'debout' : v.label === 'Au sol' ? 'au sol' : 'sur une chaise'}</h2>
+  <div class="variante-corps">
+    ${v.image ? `<img class="photo${v.ratio > 1 ? ' large' : ''}" src="${v.image}" alt="${echapper(e.name)} ${v.label.toLowerCase()} : position de démonstration" width="480" height="${Math.round(480 / v.ratio)}" loading="lazy" decoding="async">` : ''}
+    <div>
+      ${v.pitch ? `<p class="accroche">${echapper(v.pitch)}</p>` : ''}
+      ${v.steps.length ? `<h3>Les étapes</h3><ol class="etapes">${v.steps.map(([t, txt]) => `<li><strong>${echapper(t)}.</strong> ${echapper(txt)}</li>`).join('')}</ol>` : ''}
+      ${v.tips.length ? `<h3>Les astuces</h3><ul class="astuces">${v.tips.map(t => `<li>${echapper(t)}</li>`).join('')}</ul>` : ''}
+      ${v.gear?.length ? `<p class="objets">À prévoir : ${echapper(v.gear.join(', '))}.</p>` : ''}
+    </div>
+  </div>
+</section>`).join('');
+  const debut = `${e.name} (${positions(e).join(', ').toLowerCase()}) : ${e.pitch.replace(/\.$/, '')}.`;
+  const description = [`${debut} Les étapes, les astuces et une version plus douce dans Moovini.`, `${debut} Les étapes et les astuces, pas à pas.`, `${debut} Pas à pas.`, debut]
+    .find(d => d.length <= 158) ?? debut;
+  ecrire(`exercices/${e.slug}/index.html`, page({
+    chemin, titre: `${e.name} : l'exercice pas à pas`, titreSeo: titrePour(`${e.name} : exercice ${FAMILLES[e.family].toLowerCase()} pas à pas`, `${e.name} : l'exercice pas à pas`, `${e.name}, pas à pas`, e.name),
+    description, image: imageDe(e) ? `${SITE}${imageDe(e)}` : undefined, imageAlt: e.name,
+    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: `${e.name} : l'exercice pas à pas`, description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, publisher: ORGANISATION, ...(imageDe(e) ? { primaryImageOfPage: `${SITE}${imageDe(e)}` } : {}) }],
+    corps: `${arianeHtml(ariane)}
+<article class="fiche">
+  <header class="fiche-tete">
+    ${visuel(e, 160)}
+    <div>
+      <h1>${echapper(e.name)}</h1>
+      <p class="chapeau">${echapper(e.pitch)}</p>
+      <ul class="pastilles">
+        <li class="famille ${e.family}">${FAMILLES[e.family]}</li><li>${NIVEAUX[e.level]}</li>${positions(e).map(p => `<li>${p}</li>`).join('')}
+      </ul>
+    </div>
+  </header>
+  <dl class="reperes">
+    <div><dt>Zones</dt><dd>${echapper(e.zones.join(', '))}</dd></div>
+    <div><dt>Dosage</dt><dd>${echapper(e.dosage)}</dd></div>
+    ${e.side ? `<div><dt>Côtés</dt><dd>${echapper(e.side)}</dd></div>` : ''}
+    ${e.gear.length ? `<div><dt>À prévoir</dt><dd>${echapper(e.gear.join(', '))}</dd></div>` : ''}
+  </dl>
+  ${sections}
+  ${e.caution ? `<p class="precaution"><strong>Précaution.</strong> ${echapper(e.caution)}</p>` : ''}
+  <p class="prudence">Va à ton rythme et arrête si ça fait mal. En cas de problème de santé, de blessure ou de grossesse, demande d'abord conseil à ton médecin.</p>
+  <aside class="dans-appli"><h2>Dans Moovini</h2><p>Moovini place ${echapper(e.name.toLowerCase())} dans tes séances quand il convient à tes réponses : démonstration en vidéo, voix qui te guide, décompte et version plus douce si besoin.</p></aside>
+</article>
+${voisins.length ? `<section class="voisins"><h2>Autres exercices de ${FAMILLES[e.family].toLowerCase()}</h2><ul class="grille-fiches">${voisins.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span></a></li>`).join('')}</ul></section>` : ''}`,
+  }));
+  plan.push([chemin, AUJOURDHUI]);
+}
+{
+  const chemin = '/exercices/';
+  const ariane = [['Accueil', '/'], ['Exercices', chemin]];
+  const groupes = Object.keys(FAMILLES).map(f => [f, exercices.filter(e => e.family === f)]).filter(([, l]) => l.length);
+  ecrire('exercices/index.html', page({
+    chemin, titre: 'Exercices doux : 79 mouvements expliqués pas à pas', titreSeo: 'Exercices doux sur chaise, debout ou au sol, pas à pas | Moovini',
+    description: 'Mobilité, cardio doux, renforcement et respiration : les 79 exercices de Moovini, sur une chaise, debout ou au sol, avec leurs étapes et leurs astuces.',
+    jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'Exercices doux', inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
+    corps: `${arianeHtml(ariane)}
+<header class="entete-page"><h1>Les exercices de Moovini</h1>
+<p class="chapeau">${exercices.length} mouvements doux, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. Dans l'app, ils se combinent en séances de 10 à 30 minutes d'après tes réponses.</p></header>
+${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercices</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${positions(x).join(' · ')}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
+  }));
+  plan.push([chemin, AUJOURDHUI]);
+}
+
+// ---------- Blog et pages « Pour qui » ----------
+function articles(dossier) {
+  const d = join(RACINE, 'contenu', dossier);
+  return existsSync(d) ? readdirSync(d).filter(f => f.endsWith('.md')).map(f => ({ slug: f.slice(0, -3), ...lireMd(join(d, f)) })) : [];
+}
+const billets = articles('blog').sort((a, b) => b.date.localeCompare(a.date) || a.titre.localeCompare(b.titre));
+for (const b of billets) {
+  const chemin = `/blog/${b.slug}/`;
+  const ariane = [['Accueil', '/'], ['Blog', '/blog/'], [b.titre, chemin]];
+  const autres = billets.filter(x => x.slug !== b.slug).slice(0, 3);
+  ecrire(`blog/${b.slug}/index.html`, page({
+    chemin, titre: b.titre, titreSeo: titrePour(b.titre), description: b.description, type: 'article',
+    jsonld: [filAriane(ariane), { '@type': 'BlogPosting', '@id': `${SITE}${chemin}#article`, mainEntityOfPage: `${SITE}${chemin}`, headline: b.titre, description: b.description, datePublished: b.date, dateModified: b['mise-a-jour'] ?? b.date, inLanguage: 'fr-FR', keywords: b['mots-cles'], image: `${SITE}/images/partage.jpg`, author: ORGANISATION, publisher: ORGANISATION, isPartOf: { '@id': `${SITE}/#site` } }],
+    corps: `${arianeHtml(ariane)}
+<article class="billet">
+  <header class="entete-page"><p class="surtitre">Blog Moovini · <time datetime="${b.date}">${dateFr(b.date)}</time></p><h1>${echapper(b.titre)}</h1></header>
+  <div class="texte">${markdown(b.corps)}</div>
+</article>
+${autres.length ? `<section class="voisins"><h2>À lire aussi</h2><ul class="cartes">${autres.map(x => `<li><a href="/blog/${x.slug}/"><strong>${echapper(x.titre)}</strong><span>${echapper(x.description)}</span></a></li>`).join('')}</ul></section>` : ''}`,
+  }));
+  plan.push([chemin, b['mise-a-jour'] ?? b.date]);
+}
+{
+  const chemin = '/blog/';
+  const ariane = [['Accueil', '/'], ['Blog', chemin]];
+  ecrire('blog/index.html', page({
+    chemin, titre: 'Le blog Moovini : bouger en douceur au quotidien', titreSeo: 'Blog Moovini : reprendre le sport en douceur, conseils',
+    description: 'Reprendre le sport en douceur, exercices sur chaise, étirements au bureau, routines du matin : les conseils de Moovini pour bouger un peu chaque jour.',
+    jsonld: [filAriane(ariane), { '@type': 'Blog', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'Le blog Moovini', inLanguage: 'fr-FR', publisher: ORGANISATION, blogPost: billets.map(b => ({ '@id': `${SITE}/blog/${b.slug}/#article` })) }],
+    corps: `${arianeHtml(ariane)}
+<header class="entete-page"><h1>Le blog Moovini</h1><p class="chapeau">Des conseils simples pour bouger un peu chaque jour, reprendre en douceur et garder le rythme, chez toi comme au bureau.</p></header>
+<ul class="cartes grandes">${billets.map(b => `<li><a href="/blog/${b.slug}/"><time datetime="${b.date}">${dateFr(b.date)}</time><strong>${echapper(b.titre)}</strong><span>${echapper(b.description)}</span></a></li>`).join('')}</ul>`,
+  }));
+  plan.push([chemin, billets[0]?.date ?? AUJOURDHUI]);
+}
+for (const p of articles('pour-qui')) {
+  const chemin = `/pour-qui/${p.slug}/`;
+  const ariane = [['Accueil', '/'], [p.titre, chemin]];
+  ecrire(`pour-qui/${p.slug}/index.html`, page({
+    chemin, titre: p.titre, titreSeo: titrePour(p.titre), description: p.description,
+    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: p.titre, description: p.description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` } }],
+    corps: `${arianeHtml(ariane)}
+<article class="billet">
+  <header class="entete-page"><p class="surtitre">Pour qui ?</p><h1>${echapper(p.titre)}</h1></header>
+  <div class="texte">${markdown(p.corps)}</div>
+</article>`,
+  }));
+  plan.push([chemin, p.date]);
+}
+
+// ---------- Questions fréquentes ----------
+{
+  const q = lireMd(join(RACINE, 'contenu', 'questions-frequentes.md'));
+  const [intro, ...blocs] = q.corps.split(/^## /m);
+  const paires = blocs.map(b => { const [question, ...reste] = b.split('\n'); return [question.trim(), markdown(reste.join('\n'))]; });
+  const chemin = '/questions-frequentes/';
+  const ariane = [['Accueil', '/'], ['Questions fréquentes', chemin]];
+  ecrire('questions-frequentes/index.html', page({
+    chemin, titre: q.titre, titreSeo: `${q.titre} : essai, prix, séances, données`, description: q.description,
+    jsonld: [filAriane(ariane), { '@type': 'FAQPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, inLanguage: 'fr-FR', mainEntity: paires.map(([question, reponse]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: texteBrut(reponse) } })) }],
+    corps: `${arianeHtml(ariane)}
+<header class="entete-page"><h1>${echapper(q.titre)}</h1><div class="chapeau">${markdown(intro)}</div></header>
+<div class="faq">${paires.map(([question, reponse]) => `<details><summary><h2>${echapper(question)}</h2></summary><div class="reponse">${reponse}</div></details>`).join('\n')}</div>`,
+  }));
+  plan.push([chemin, q.date]);
+}
+
+// ---------- Plan du site ----------
+ecrire('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${plan.map(([c, d]) => `  <url><loc>${SITE}${c}</loc><lastmod>${d}</lastmod></url>`).join('\n')}
+</urlset>
+`);
+console.log(`${exercices.length} fiches, ${billets.length} billets, ${articles('pour-qui').length} pages « Pour qui », questions fréquentes ; ${plan.length} adresses dans le plan du site ; ${manquantes.length} vignettes réduites.`);
