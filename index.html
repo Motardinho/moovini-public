@@ -2,106 +2,288 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moovini · Politique de confidentialité</title>
-<meta name="description" content="Politique de confidentialité de l'app Moovini : quelles données, pourquoi, où elles vont.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moovini · Recommence à bouger, en douceur</title>
+<meta name="description" content="Moovini compose tes séances de mouvement doux d'après tes réponses : chez toi ou au travail, sur une chaise ou debout, de 10 à 30 minutes.">
+<meta name="theme-color" content="#14292E">
+<link rel="icon" href="images/symbole.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --bg: #F5F0E8; --card: #FFFFFF; --ink: #225B65; --muted: #5A7177; --line: #E3DDD2; --accent: #2E8F86; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; }
-  .date { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
-  section { background: var(--card); border-radius: 20px; padding: 22px 22px 8px; margin: 0 0 16px; box-shadow: 0 6px 18px rgba(34, 91, 101, 0.08); }
-  h2 { font-size: 20px; line-height: 1.3; margin: 0 0 10px; }
-  p, li { margin: 0 0 14px; }
-  ul { padding-left: 20px; margin: 0 0 14px; }
-  .muted { color: var(--muted); }
-  a { color: var(--accent); }
-  .brief li { margin-bottom: 6px; }
+  :root {
+    --nuit: #14292E; --creme: #FAF7F1; --petrole: #225B65; --gris: #5A7177; --texte: #D5E3E2; --discret: #A9BEBF;
+    --turquoise: #45B9AD; --corail: #EA8069;
+    --mobilite: #E6F5F2; --mobilite-encre: #2E8F86;
+    --cardio: #FDF1D6; --cardio-encre: #B07A10;
+    --force: #E4EEF0; --force-encre: #225B65;
+    --calme: #FCE9E3; --calme-encre: #C4553D;
+    --largeur: 168px; --ecart: 22px; --inclinaison: -16deg;
+  }
+  @media (max-width: 600px) { :root { --largeur: 118px; --ecart: 14px; } }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; }
+  body {
+    background: var(--nuit); color: var(--creme);
+    font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+
+  /* ---------- Le mur incliné : des écrans de l'app qui défilent dans l'axe de la diagonale ---------- */
+  .mur { position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none; }
+  .incline {
+    position: absolute; left: 50%; top: 50%;
+    width: var(--cote); height: var(--cote);
+    transform: translate(-50%, -50%) rotate(var(--inclinaison));
+    display: flex; justify-content: center; gap: var(--ecart);
+  }
+  .colonne { width: var(--largeur); flex: none; }
+  .defile { display: flex; flex-direction: column; gap: var(--ecart); will-change: transform; }
+  @media (prefers-reduced-motion: no-preference) {
+    .defile { animation: monte var(--duree) linear infinite; animation-delay: var(--depart); }
+    .colonne.descend .defile { animation-direction: reverse; }
+  }
+  /* Le contenu de chaque colonne est dessiné deux fois : glisser de la moitié boucle sans raccord. */
+  @keyframes monte { from { transform: translateY(0); } to { transform: translateY(calc(-50% - var(--ecart) / 2)); } }
+
+  .telephone {
+    background: #0E1C1F; border-radius: 26px; padding: 5px;
+    box-shadow: 0 0 0 1px rgba(250,247,241,.10) inset, 0 18px 40px -14px rgba(0,0,0,.55);
+  }
+  .telephone img { display: block; width: 100%; height: auto; aspect-ratio: 360 / 731; border-radius: 21px; background: var(--creme); }
+  @media (max-width: 600px) { .telephone { border-radius: 18px; padding: 3.5px; } .telephone img { border-radius: 15px; } }
+
+  .ecran {
+    background: var(--creme); border-radius: 22px; padding: 12px 11px 11px;
+    display: flex; flex-direction: column; gap: 7px;
+    box-shadow: 0 14px 30px -14px rgba(0,0,0,.55);
+  }
+  .ecran .haut { display: flex; justify-content: space-between; align-items: center; font-size: 9px; font-weight: 600; color: var(--gris); }
+  .ecran .photo { border-radius: 14px; aspect-ratio: 1; overflow: hidden; }
+  .ecran .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ecran .nom { font-size: 12px; line-height: 1.25; font-weight: 700; color: var(--petrole); min-height: 30px; }
+  .ecran .bas { display: flex; align-items: center; gap: 7px; }
+  .ecran .barre { flex: 1; height: 5px; border-radius: 3px; background: #E3DDD2; overflow: hidden; }
+  .ecran .barre i { display: block; height: 100%; border-radius: 3px; }
+  .ecran .temps { font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .ecran .pastille { font-size: 8.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; }
+  @media (max-width: 600px) {
+    .ecran { border-radius: 16px; padding: 8px; gap: 5px; }
+    .ecran .haut { font-size: 7px; } .ecran .photo { border-radius: 10px; }
+    .ecran .nom { font-size: 9.5px; min-height: 24px; } .ecran .temps { font-size: 8px; }
+    .ecran .pastille { font-size: 7px; padding: 1px 5px; } .ecran .barre { height: 4px; }
+  }
+  .mobilite .photo, .mobilite .pastille { background: var(--mobilite); } .mobilite .pastille { color: var(--mobilite-encre); } .mobilite .barre i { background: var(--mobilite-encre); }
+  .cardio .photo, .cardio .pastille { background: var(--cardio); } .cardio .pastille { color: var(--cardio-encre); } .cardio .barre i { background: var(--cardio-encre); }
+  .force .photo, .force .pastille { background: var(--force); } .force .pastille { color: var(--force-encre); } .force .barre i { background: var(--force-encre); }
+  .calme .photo, .calme .pastille { background: var(--calme); } .calme .pastille { color: var(--calme-encre); } .calme .barre i { background: var(--calme-encre); }
+
+  /* Voile pétrole : le mur reste une ambiance, le texte se lit sans effort. */
+  .voile {
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      radial-gradient(ellipse 42% 60% at 70% 50%, rgba(20,41,46,.70) 0%, rgba(20,41,46,0) 70%),
+      linear-gradient(90deg, rgba(20,41,46,.97) 0%, rgba(20,41,46,.92) 42%, rgba(20,41,46,.62) 70%, rgba(20,41,46,.45) 100%);
+  }
+  @media (max-width: 860px) {
+    .voile { background: linear-gradient(rgba(20,41,46,.95) 0%, rgba(20,41,46,.93) 55%, rgba(20,41,46,.62) 100%); }
+  }
+
+  /* ---------- Le seul écran : le texte, et le téléphone tenu en main comme sur les pages d'app qui inspirent ---------- */
+  main {
+    position: relative; z-index: 2; min-height: 100svh;
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 24px;
+    max-width: 1120px; margin: 0 auto; padding: 48px 32px 24px;
+  }
+  .texte { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+  .scene { position: relative; display: grid; place-items: center; min-height: 640px; }
+
+  /* iPhone au format réel : écran 393 × 852 pt, coins de 55 pt (14 % de la largeur), Dynamic Island de 126 × 37 pt
+     à 11 pt du haut, cadre titane, bordure noire et boutons (action et volume à gauche, marche à droite). */
+  .iphone {
+    --l: 290px; --cadre: 3px; --bordure: 9px;
+    --ecran: calc(var(--l) - 2 * var(--cadre) - 2 * var(--bordure));
+    position: relative; width: var(--l); padding: var(--cadre);
+    border-radius: calc(var(--ecran) * .14 + var(--bordure) + var(--cadre));
+    background: linear-gradient(135deg, #8E9498 0%, #E4E7E9 22%, #7A8084 48%, #C9CDD0 74%, #6B7175 100%);
+    box-shadow: 0 50px 90px -30px rgba(0,0,0,.75), 0 0 140px rgba(69,185,173,.14);
+    transform: rotate(-9deg);
+  }
+  .iphone .bordure { background: #050708; padding: var(--bordure); border-radius: calc(var(--ecran) * .14 + var(--bordure)); }
+  .iphone .ecran-tel { position: relative; overflow: hidden; border-radius: calc(var(--ecran) * .14); aspect-ratio: 393 / 852; background: #B9AE9F; }
+  .iphone .ecran-tel img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .iphone .ilot { position: absolute; top: 1.29%; left: 50%; transform: translateX(-50%); width: 32%; height: 4.38%; border-radius: 999px; background: #000; }
+  .iphone .bouton { position: absolute; width: 3px; border-radius: 2px; background: linear-gradient(90deg, #6B7175, #C9CDD0); }
+  .iphone .action { left: -3px; top: 17%; height: 5.5%; }
+  .iphone .volume-haut { left: -3px; top: 25%; height: 10%; }
+  .iphone .volume-bas { left: -3px; top: 37%; height: 10%; }
+  .iphone .marche { right: -3px; top: 28%; height: 15%; }
+  .carte {
+    position: absolute; z-index: 2; display: flex; align-items: center; gap: 11px;
+    background: rgba(255,255,255,.94); border-radius: 18px; padding: 12px 15px 12px 12px;
+    box-shadow: 0 22px 40px -18px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.18);
+    text-align: left; white-space: nowrap;
+  }
+  .carte small { display: block; font-size: .72rem; font-weight: 600; color: var(--gris); }
+  .carte b { display: block; font-size: .95rem; font-weight: 800; color: #225B65; }
+  .carte .pastille-ronde { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; flex: none; font-weight: 800; font-size: .8rem; }
+  .carte .vignette { width: 44px; height: 44px; border-radius: 12px; background: var(--force); overflow: hidden; flex: none; }
+  .carte .vignette img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .carte .jours { display: flex; gap: 4px; margin-top: 6px; }
+  .carte .jours i { width: 14px; height: 14px; border-radius: 50%; background: #E3DDD2; }
+  .carte .jours i.fait { background: #2E8F86; }
+  .carte-seance { top: 0; right: -34px; }
+  .carte-seance .pastille-ronde { background: var(--cardio); color: var(--cardio-encre); }
+  .carte-semaine { top: 44%; left: -46px; }
+  .carte-exercice { bottom: -4px; right: -30px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .carte { animation: flotte 6s ease-in-out infinite; }
+    .carte-semaine { animation-delay: -2s; } .carte-exercice { animation-delay: -4s; }
+    @keyframes flotte { 50% { transform: translateY(-10px); } }
+  }
+
+  @media (max-width: 860px) {
+    main { grid-template-columns: 1fr; padding: 44px 20px 16px; gap: 8px; }
+    .texte { align-items: center; text-align: center; }
+    .scene { min-height: 0; padding: 36px 0 56px; }
+    .iphone { --l: 230px; --bordure: 7px; }
+    .carte { padding: 9px 12px 9px 9px; gap: 9px; border-radius: 15px; }
+    .carte b { font-size: .82rem; } .carte small { font-size: .66rem; }
+    .carte .pastille-ronde, .carte .vignette { width: 34px; height: 34px; border-radius: 10px; }
+    .carte-seance { top: 10px; right: max(0px, calc(50% - 215px)); }
+    .carte-semaine { top: 42%; left: max(0px, calc(50% - 215px)); }
+    .carte-exercice { bottom: 22px; right: max(0px, calc(50% - 210px)); }
+  }
+  .marque { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 22px); }
+  .logo { width: clamp(68px, 16vw, 104px); height: auto; display: block; flex: none; }
+  h1 {
+    font-weight: 800; letter-spacing: -.025em; text-align: left;
+    font-size: clamp(1.2rem, 5.9vw, 2.75rem); line-height: 1.08;
+  }
+  h1 em { display: block; font-style: normal; color: var(--corail); }
+  .promesse {
+    margin-top: 26px; max-width: 31rem; color: var(--texte);
+    font-size: clamp(1.03rem, 2.6vw, 1.2rem); line-height: 1.6; font-weight: 500; text-wrap: balance;
+  }
+  .bientot {
+    margin-top: 32px; display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 26px; border-radius: 999px;
+    background: var(--creme); color: var(--petrole);
+    font-weight: 700; font-size: 1rem;
+    box-shadow: 0 14px 30px -12px rgba(0,0,0,.5);
+  }
+  .bientot .point { width: 9px; height: 9px; border-radius: 50%; background: #EA8069; box-shadow: 0 0 0 4px rgba(234,128,105,.28); }
+  .preuve { margin-top: 18px; font-size: .86rem; color: var(--discret); font-weight: 500; line-height: 1.9; }
+  .preuve b { color: var(--turquoise); font-weight: 700; }
+  .u { white-space: nowrap; }
+
+  footer {
+    position: relative; z-index: 2; padding: 0 20px 32px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px;
+    font-size: .82rem; color: var(--discret);
+  }
+  footer a { color: var(--creme); text-decoration: none; font-weight: 600; }
+  footer a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; border-radius: 4px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .leve { opacity: 0; transform: translateY(14px); animation: lever .9s cubic-bezier(.22,1,.36,1) forwards; }
+    .leve-2 { animation-delay: .1s; } .leve-3 { animation-delay: .2s; } .leve-4 { animation-delay: .3s; } .leve-5 { animation-delay: .4s; }
+    @keyframes lever { to { opacity: 1; transform: none; } }
+  }
 </style>
 </head>
 <body>
+<div class="mur" aria-hidden="true"><div class="incline" id="incline"></div></div>
+<div class="voile" aria-hidden="true"></div>
+
 <main>
-  <h1>Politique de confidentialité de Moovini</h1>
-  <p class="date">Dernière mise à jour : 23 octobre 2026</p>
-
-  <section class="brief">
-    <h2>En bref</h2>
-    <ul>
-      <li>Pas de compte : tu n'as rien à créer, ni e-mail ni mot de passe.</li>
-      <li>Tes réponses, tes séances et tes zones à ménager restent sur ton téléphone.</li>
-      <li>Ni publicité, ni outil de mesure d'audience, ni pistage d'une app à l'autre.</li>
-      <li>Seuls partent vers un serveur : un message que tu choisis de nous envoyer, les informations nécessaires à ton abonnement, et une vérification des mises à jour de l'app.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Qui est responsable de tes données</h2>
-    <p>Moovini est éditée par <strong>Marc MAGNON</strong>, responsable du traitement des données décrites ici.</p>
-    <p>Pour toute question : <a href="mailto:contact@moovini.app">contact@moovini.app</a>, ou dans l'app, Préférences, puis Nous écrire.</p>
-  </section>
-
-  <section>
-    <h2>Ce qui reste sur ton téléphone</h2>
-    <p>Pour composer tes séances et suivre ta progression, Moovini enregistre sur ton téléphone, et seulement là :</p>
-    <ul>
-      <li>ton prénom, si tu le donnes ;</li>
-      <li>tes réponses : objectif, niveau, durée, fréquence, jours, moment, positions possibles et zones à ménager ;</li>
-      <li>tes séances faites, tes ressentis, tes badges, tes favoris et les exercices que tu as mis de côté ;</li>
-      <li>tes réglages : rappels (jours et heure), sons et voix.</li>
-    </ul>
-    <p>Nous n'y avons pas accès : rien de tout cela n'est envoyé à un serveur. Les zones à ménager touchent à ta santé ; elles servent seulement à choisir tes exercices, sur ton téléphone.</p>
-    <p>Les vidéos des exercices sont incluses dans l'app et se lisent sans connexion. Les rappels sont programmés par ton téléphone lui-même ; aucun serveur ne les envoie.</p>
-    <p class="muted">Sur iPhone, ces données peuvent faire partie de la sauvegarde de ton téléphone (iCloud ou ordinateur) si tu l'as activée ; cette sauvegarde est gérée par Apple et nous n'y avons pas accès. Sur Android, l'app est exclue de la sauvegarde automatique.</p>
-  </section>
-
-  <section>
-    <h2>Quand tu nous écris</h2>
-    <p>Avec « Nous écrire », nous recevons le sujet et le texte de ton message, ton adresse e-mail pour te répondre et, seulement si tu le veux, la version de l'app et de ton système.</p>
-    <p>Ce message est transmis par le service d'envoi d'e-mails <strong>EmailJS</strong>, puis arrive dans notre messagerie (Gmail, de Google). Nous l'utilisons uniquement pour te répondre.</p>
-    <p>Durée de conservation : <strong>1 an après notre réponse</strong>, puis le message est effacé.</p>
-  </section>
-
-  <section>
-    <h2>Ton essai et ton abonnement</h2>
-    <p>L'essai et l'abonnement se paient par ta boutique d'applications : l'<strong>App Store</strong> d'Apple sur iPhone. Le paiement est traité par la boutique : nous ne voyons ni ta carte ni tes coordonnées de paiement, ni ton identifiant Apple.</p>
-    <p>Pour savoir si ton abonnement est actif, le proposer au bon prix et restaurer tes achats, l'app utilise le service <strong>RevenueCat</strong>. RevenueCat reçoit :</p>
-    <ul>
-      <li>un identifiant anonyme créé par l'app, sans lien avec ton nom ou ton e-mail ;</li>
-      <li>les informations d'achat transmises par la boutique : formule, dates, essai, renouvellement ou résiliation, pays et devise ;</li>
-      <li>des informations techniques : modèle et système du téléphone, version de l'app, adresse IP.</li>
-    </ul>
-    <p>Ces informations servent seulement à gérer ton abonnement et à en suivre le nombre. Elles sont conservées tant que l'abonnement existe, puis selon les durées de RevenueCat et de la boutique.</p>
-  </section>
-
-  <section>
-    <h2>Mises à jour de l'app</h2>
-    <p>À l'ouverture, l'app vérifie auprès du service <strong>Expo</strong> (EAS Update) s'il existe une nouvelle version de son contenu, par exemple une nouvelle vidéo. Cette vérification transmet seulement des informations techniques : version de l'app, système du téléphone et adresse IP. Aucune de tes réponses ni de tes séances n'est envoyée.</p>
-  </section>
-
-  <section>
-    <h2>Services tiers utilisés</h2>
-    <ul>
-      <li><strong>Apple</strong> (App Store) : paiement de l'abonnement, sur iPhone ;</li>
-      <li><strong>RevenueCat</strong> : état de l'abonnement et restauration des achats ;</li>
-      <li><strong>EmailJS</strong> et <strong>Google</strong> (Gmail) : acheminement et réception des messages « Nous écrire » ;</li>
-      <li><strong>Expo</strong> (EAS Update) : mises à jour du contenu de l'app.</li>
-    </ul>
-    <p>Certains de ces services peuvent traiter des données hors de l'Union européenne, avec les garanties prévues par le RGPD. Aucun service de publicité ni de mesure d'audience n'est utilisé.</p>
-  </section>
-
-  <section>
-    <h2>Tes droits</h2>
-    <p>Pour tout effacer de ton téléphone : dans l'app, Préférences, puis Recommencer le parcours, efface tes réponses et ton historique ; désinstaller l'app supprime tout ce qu'elle a gardé.</p>
-    <p>Tu peux exercer tes droits d'accès, de rectification, d'effacement, d'opposition et de limitation en écrivant à <a href="mailto:contact@moovini.app">contact@moovini.app</a>. Ton abonnement se gère et se résilie dans les réglages de ton compte de boutique.</p>
-    <p>Tu peux aussi adresser une réclamation à la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
-  </section>
-
-  <section>
-    <h2>Changements</h2>
-    <p>Si cette politique change, la date en haut de la page est mise à jour, et l'app te le signale en cas de changement important.</p>
-  </section>
+  <div class="texte">
+    <div class="marque leve">
+      <img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100">
+      <h1><span class="u">Recommence à bouger,</span><em>en douceur.</em></h1>
+    </div>
+    <p class="promesse leve leve-3">Des séances de mouvement doux composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
+    <p class="bientot leve leve-4"><span class="point" aria-hidden="true"></span>Bientôt sur l'App Store</p>
+    <p class="preuve leve leve-5"><span class="u">Sans compte</span> · <span class="u">Tes réponses restent sur ton téléphone</span> · <b class="u">7 jours d'essai gratuit</b></p>
+  </div>
+  <div class="scene leve leve-3" aria-hidden="true">
+    <div class="iphone"><span class="bouton action"></span><span class="bouton volume-haut"></span><span class="bouton volume-bas"></span><span class="bouton marche"></span>
+      <div class="bordure"><div class="ecran-tel"><img src="images/ecrans/hero-fente.webp" alt=""><span class="ilot"></span></div></div>
+    </div>
+    <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min · 12 exercices</b></span></div>
+    <div class="carte carte-semaine"><span><small>Bravo Julie&nbsp;!</small><b>4 séances cette semaine</b><span class="jours"><i class="fait"></i><i class="fait"></i><i class="fait"></i><i class="fait"></i><i></i><i></i><i></i></span></span></div>
+    <div class="carte carte-exercice"><span class="vignette"><img src="images/exercices/fente-avant-debout-studio.webp" alt=""></span><span><small>Ensuite</small><b>Fente avant, côté gauche</b></span></div>
+  </div>
 </main>
+
+<footer>
+  <a href="privacy/">Politique de confidentialité</a>
+  <a href="mailto:contact@moovini.app">contact@moovini.app</a>
+  <span>© 2026 Moovini</span>
+</footer>
+
+<script>
+  // Vrais écrans de l'app (captures du 23 octobre 2026, profil de démonstration) et écrans d'exercices.
+  const ECRANS = ['app-03-lecteur', 'onboarding-02-objectif', 'app-01-accueil', 'onboarding-05-seance', 'app-05-progres',
+    'onboarding-04-positions', 'app-02-seance', 'onboarding-07-essai', 'app-06-programme', 'onboarding-01-bienvenue',
+    'app-04-fin', 'onboarding-03-duree', 'onboarding-06-fonctions'];
+  const EXERCICES = [
+    ['tourner-tete-debout-studio', 'Tourner la tête', 'mobilite'], ['boxe-debout-studio', 'Boxe dans le vide', 'cardio'],
+    ['squat-debout-studio', 'Squat avec appui', 'force'], ['respiration-ventre-chaise-studio', 'Respiration abdominale', 'calme'],
+    ['cercles-bras-debout-studio', 'Cercles de bras', 'mobilite'], ['fente-avant-debout-studio', 'Fente avant', 'force'],
+    ['marche-sur-place-chaise-studio', 'Marche sur place', 'cardio'], ['ouvrir-poitrine-debout-studio', 'Ouvrir la poitrine', 'mobilite'],
+    ['jumping-jacks-debout-studio', 'Jumping jacks', 'cardio'], ['equilibre-une-jambe-debout-studio', 'Équilibre sur une jambe', 'force'],
+    ['rotation-buste-chaise-studio', 'Rotation du buste', 'mobilite'], ['lever-bras-debout-studio', 'Lever les bras', 'force'],
+    ['genou-poitrine-sol-studio', 'Genou vers la poitrine', 'mobilite'], ['pas-de-cote-debout-studio', 'Pas de côté', 'cardio'],
+    ['tirage-serviette-debout-studio', 'Tirage avec une serviette', 'force'], ['inclinaison-laterale-debout-studio', 'Inclinaison latérale', 'mobilite'],
+    ['tendre-jambe-chaise-studio', 'Tendre la jambe', 'force'], ['rouler-epaules-debout-studio', 'Rouler les épaules', 'mobilite'],
+    ['pompes-sol-studio', 'Pompes', 'force'], ['cercles-bassin-debout-studio', 'Cercles de bassin', 'mobilite'],
+    ['talons-devant-debout-studio', 'Talons devant', 'cardio'], ['squat-poussee-debout-studio', 'Squat et poussée vers le ciel', 'force'],
+    ['menton-poitrine-chaise-studio', 'Menton vers la poitrine', 'mobilite'], ['haut-du-dos-debout-studio', 'Étirement du haut du dos', 'mobilite'],
+  ];
+  const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio', force: 'Force', calme: 'Calme' };
+  const DUREES = [30, 40, 45, 60];
+
+  const telephone = i => `<div class="telephone"><img src="images/ecrans/${ECRANS[i % ECRANS.length]}.webp" alt="" decoding="async"></div>`;
+  function exercice(i) {
+    const [fichier, nom, famille] = EXERCICES[i % EXERCICES.length];
+    const duree = DUREES[i % DUREES.length], ecoule = Math.round(duree * (0.2 + ((i * 37) % 60) / 100));
+    return `<div class="ecran ${famille}">
+      <div class="haut"><span>${i % 6 + 1} sur 6</span><span class="pastille">${FAMILLES[famille]}</span></div>
+      <div class="photo"><img src="images/exercices/${fichier}.webp" alt="" decoding="async"></div>
+      <div class="nom">${nom}</div>
+      <div class="bas"><div class="barre"><i style="width:${Math.round(100 * ecoule / duree)}%"></i></div><span class="temps">0:${String(duree - ecoule).padStart(2, '0')}</span></div>
+    </div>`;
+  }
+
+  // Le plan incliné est un carré de la diagonale de l'écran : il couvre tout, quel que soit l'angle. Chaque colonne
+  // alterne écrans de l'app et écrans d'exercices, part décalée, et défile à vitesse constante dans l'axe incliné.
+  function construire() {
+    const incline = document.getElementById('incline');
+    const css = getComputedStyle(document.documentElement);
+    const l = parseFloat(css.getPropertyValue('--largeur')), e = parseFloat(css.getPropertyValue('--ecart'));
+    const cote = Math.ceil(Math.hypot(innerWidth, innerHeight) * 1.08);
+    const colonnes = Math.ceil(cote / (l + e)) + 1;
+    const hTel = l * 731 / 360 + 10, hEx = l * 1.62;
+    let html = '', iTel = 0, iEx = 0;
+    for (let c = 0; c < colonnes; c++) {
+      let bloc = '', hauteur = 0, k = c;
+      while (hauteur < cote + hTel) {
+        if (k % 3 === 1) { bloc += exercice(iEx++ * 5 + c); hauteur += hEx + e; }
+        else { bloc += telephone(iTel++ * 7 + c * 3); hauteur += hTel + e; }
+        k++;
+      }
+      const vitesse = 26; // pixels par seconde
+      html += `<div class="colonne${c % 2 ? ' descend' : ''}" style="--duree:${(hauteur / vitesse).toFixed(1)}s; --depart:-${((c * 7.3) % 20).toFixed(1)}s"><div class="defile">${bloc}${bloc}</div></div>`;
+    }
+    incline.style.setProperty('--cote', `${cote}px`);
+    incline.innerHTML = html;
+  }
+  construire();
+  let attente, largeur = innerWidth;
+  addEventListener('resize', () => { if (innerWidth === largeur) return; largeur = innerWidth; clearTimeout(attente); attente = setTimeout(construire, 250); });
+</script>
 </body>
 </html>
