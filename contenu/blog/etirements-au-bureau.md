@@ -3,9 +3,11 @@ titre: Étirements au bureau : 6 mouvements à faire assis ou debout
 description: Étirements au bureau simples et discrets : 6 mouvements pour la nuque, les épaules, le dos, les poignets et les hanches, à faire assis ou debout.
 date: 2026-10-13
 mots-cles: étirements au bureau, exercices au bureau, étirements assis au bureau, exercices télétravail, pause active, bouger plus au quotidien, exercices de mobilité
+image: /images/blog/etirements-au-bureau.webp
+image-alt: Un homme debout près de son bureau s'étire, bras tendus au-dessus de la tête
 ---
 
-Les étirements au bureau sont un moyen tout simple de couper une longue journée assise. En quelques minutes, sans matériel et sans te changer, tu peux délier la nuque, ouvrir les épaules et te dégourdir les jambes. Voici 6 mouvements à faire assis ou debout, au bureau comme en télétravail, avec les bons gestes pour chacun.
+Les étirements au bureau sont un moyen tout simple de couper une longue journée assise. En quelques minutes, sans matériel et sans te changer, tu peux délier la nuque, ouvrir les épaules et te dégourdir les jambes. Tu trouveras ici 6 mouvements à faire assis ou debout, au bureau comme en télétravail, avec les bons gestes pour chacun.
 
 ## Pourquoi s'étirer quand on travaille assis ?
 
@@ -15,7 +17,7 @@ Quelques étirements au bureau permettent de changer de position, de respirer un
 
 ## Quand faire ses étirements au bureau ?
 
-Le meilleur moment est celui que tu n'oublieras pas. Quelques idées :
+Le plus simple est de choisir un moment que tu n'oublieras pas, par exemple :
 
 - entre deux appels ou deux visios ;
 - après une longue série de mails ;
@@ -26,7 +28,7 @@ Une minute ou deux suffit pour commencer. Si tu as tendance à oublier, programm
 
 ## 6 étirements au bureau, assis ou debout
 
-Avant de commencer, un rappel important : ces mouvements ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, arrête et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord à ton médecin.
+Avant de commencer, garde en tête que ces mouvements ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. Arrête en cas de douleur et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord à ton médecin.
 
 ### 1. Tourner la tête
 
@@ -34,7 +36,7 @@ Assieds-toi au bord de la chaise, le dos droit et décollé du dossier, les main
 
 ### 2. Ouvrir la poitrine
 
-Assis(e) au bord de la chaise, mains sur les cuisses : en inspirant, ouvre les bras sur les côtés à hauteur d'épaules, paumes vers l'avant, et laisse la poitrine s'avancer. Garde deux secondes, épaules basses, puis ramène les mains en soufflant. Debout, tu peux aussi joindre les mains dans le bas du dos et tirer doucement les bras vers l'arrière. C'est la poitrine qui s'ouvre, pas le bas du dos qui se creuse. Les deux versions sont sur la fiche [Ouvrir la poitrine](/exercices/ouvrir-poitrine/).
+Assis(e) au bord de la chaise, mains sur les cuisses : en inspirant, ouvre les bras sur les côtés à hauteur d'épaules, paumes vers l'avant, et laisse la poitrine s'avancer. Garde deux secondes, épaules basses, puis ramène les mains en soufflant. Debout, tu peux aussi joindre les mains dans le bas du dos et tirer doucement les bras vers l'arrière. La poitrine s'ouvre sans que le bas du dos se creuse. Les deux versions sont sur la fiche [Ouvrir la poitrine](/exercices/ouvrir-poitrine/).
 
 ### 3. Étirement du haut du dos
 
@@ -46,7 +48,7 @@ Assis(e) droit au milieu de la chaise, penche le buste sur le côté en laissant
 
 ### 5. Poignets et mains
 
-C'est l'étirement du clavier et du téléphone. Assis(e), les avant-bras devant toi et les coudes relâchés, dessine des cercles lents avec les poignets, dans un sens puis dans l'autre. Ouvre ensuite grand les mains en écartant les doigts, puis referme-les doucement en poing. Termine en posant les mains sur les cuisses et en les secouant un peu. Retrouve la fiche [Poignets et mains](/exercices/poignets-mains/).
+C'est le mouvement à faire après des heures de clavier et de téléphone. Assis(e), les avant-bras devant toi et les coudes relâchés, dessine des cercles lents avec les poignets, dans un sens puis dans l'autre. Ouvre ensuite grand les mains en écartant les doigts, puis referme-les doucement en poing. Termine en posant les mains sur les cuisses et en les secouant un peu. Retrouve la fiche [Poignets et mains](/exercices/poignets-mains/).
 
 ### 6. Étirement de l'avant de la hanche
 
@@ -54,26 +56,24 @@ Celui-ci se fait debout, idéal pour une pause loin de l'écran. Pieds à la lar
 
 ## Comment s'étirer au bureau sans se faire remarquer ?
 
-En open space, tout le monde n'a pas envie de se lever pour s'étirer devant ses collègues. Bonne nouvelle : la plupart de ces mouvements passent inaperçus.
+En open space, tout le monde n'a pas envie de se lever pour s'étirer devant ses collègues. La plupart de ces mouvements passent pourtant inaperçus.
 
-- **Les plus discrets :** tourner la tête, poignets et mains, et l'étirement du haut du dos se font assis, en quelques secondes.
-- **Pour une pause un peu plus longue :** l'ouverture de la poitrine et l'inclinaison latérale, assis ou debout.
-- **Quand tu te lèves :** l'étirement de l'avant de la hanche, en allant chercher un café ou en attendant l'impression d'un document.
+Tourner la tête, les poignets et les mains, ou l'étirement du haut du dos se font assis, en quelques secondes, sans que personne ne le remarque. L'ouverture de la poitrine et l'inclinaison latérale, assis ou debout, demandent une pause un peu plus longue. Garde l'étirement de l'avant de la hanche pour les moments où tu te lèves, en allant chercher un café ou en attendant l'impression d'un document.
 
 En télétravail, c'est encore plus simple : personne ne te regarde, profites-en pour faire les six à la suite.
 
 ## Quels sont les bons réflexes pour s'étirer en douceur ?
 
-- **Un léger étirement suffit.** Tu dois sentir que ça s'allonge, jamais que ça fait mal.
-- **Respire.** Souffle pendant le geste, et ne bloque jamais ta respiration.
-- **Pas de rebond.** Des gestes lents, des tenues calmes.
-- **Garde les épaules basses.** C'est le conseil qui revient dans presque tous les mouvements.
-- **Mieux vaut souvent que longtemps.** Deux minutes plusieurs fois par jour valent mieux qu'une longue séance oubliée.
+- Cherche un léger étirement : tu dois sentir que ça s'allonge, jamais que ça fait mal.
+- Souffle pendant le geste et ne bloque jamais ta respiration.
+- Fais des gestes lents et des tenues calmes, sans rebond.
+- Garde les épaules basses, un conseil qui revient dans presque tous les mouvements.
+- Deux minutes plusieurs fois par jour valent mieux qu'une longue séance que tu finis par oublier.
 
 ## Pour aller plus loin
 
 Si tu veux aussi renforcer un peu les jambes et les bras sans quitter ta chaise, jette un œil à nos [exercices sur chaise](/blog/exercices-sur-chaise/). Et si tu travailles de chez toi, la page [Moovini pour le télétravail](/pour-qui/teletravail/) explique comment glisser une vraie pause active dans ta journée.
 
-## Moovini, tes pauses étirements toutes prêtes
+## Des pauses étirements prêtes dans Moovini
 
-Moovini est une app iPhone de mouvement doux, en français, pour les adultes qui bougent peu ou veulent s'y remettre. Tu choisis le moment qui te convient, par exemple pendant une pause, et l'app compose ta séance du jour, assis(e) ou debout, avec des démonstrations vidéo et une voix qui te guide. La routine « Nuque d'écran » est pensée pour les longues journées devant l'ordinateur. Moovini arrive bientôt sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Moovini, notre app iPhone de mouvement doux en français, s'adresse aux adultes qui bougent peu ou veulent s'y remettre. Tu lui indiques le moment qui te convient, une pause par exemple, et elle compose ta séance du jour, assis(e) ou debout, avec des démonstrations vidéo et une voix qui te guide. La routine « Nuque d'écran » a été pensée pour les longues journées devant l'ordinateur. L'app sera bientôt sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).

@@ -3,9 +3,11 @@ titre: Exercices sur chaise : 8 mouvements pour bouger sans te lever
 description: Exercices sur chaise faciles et sans matériel : 8 mouvements de gym douce à faire assis, chez toi ou au bureau, expliqués pas à pas pour bien démarrer.
 date: 2026-10-09
 mots-cles: exercices sur chaise, exercices assis, gym douce sur chaise, sport sur chaise, exercices assis sans matériel, exercices au bureau, bouger plus au quotidien
+image: /images/blog/exercices-sur-chaise.webp
+image-alt: Une femme assise sur une chaise en bois ramène un genou vers sa poitrine, dans un salon parisien lumineux
 ---
 
-Les exercices sur chaise sont la façon la plus simple de bouger quand tu passes une bonne partie de ta journée assis(e), au bureau comme à la maison. Pas besoin de tenue, de tapis ni de matériel : une chaise stable suffit. Voici 8 mouvements de gym douce sur chaise, faciles à enchaîner en quelques minutes, pour te dégourdir et te sentir plus à l'aise dans ton corps.
+Quand tu passes une bonne partie de ta journée assis(e), au bureau comme à la maison, les exercices sur chaise sont un moyen facile de bouger un peu. Tu n'as besoin ni de tenue ni de tapis, une chaise stable suffit. Les 8 mouvements de gym douce sur chaise qui suivent s'enchaînent en quelques minutes et t'aident à te dégourdir et à te sentir plus à l'aise dans ton corps.
 
 ## Les exercices assis, c'est pour qui ?
 
@@ -16,11 +18,11 @@ On imagine souvent la gym sur chaise réservée aux seniors. En réalité, elle 
 - ils sont parfaits pour (re)commencer en douceur, sans pression ;
 - ils se glissent dans une pause, entre deux appels ou après le déjeuner.
 
-Le but n'est pas la performance. Il s'agit de remettre un peu de mouvement dans ta journée, de te sentir moins raide et de prendre une habitude qui tient.
+On ne cherche pas la performance ici. L'idée est de remettre un peu de mouvement dans ta journée, de te sentir moins raide et de prendre une habitude qui tient.
 
 ## Comment bien s'installer sur sa chaise ?
 
-Avant de commencer, prends quelques secondes pour te placer. C'est ce qui rend les mouvements confortables.
+Avant de commencer, prends quelques secondes pour te placer, les mouvements n'en seront que plus confortables.
 
 - Choisis une chaise stable et ferme, plutôt sans roulettes.
 - Assieds-toi au bord de l'assise, le dos droit et décollé du dossier.
@@ -28,11 +30,11 @@ Avant de commencer, prends quelques secondes pour te placer. C'est ce qui rend l
 - Garde les épaules basses, loin des oreilles, et respire normalement.
 - Bouge lentement, dans une amplitude confortable : un léger étirement suffit.
 
-Un rappel important, une fois pour toutes : ces exercices ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, arrête et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord à ton médecin.
+Une précision valable pour toute la séance : ces exercices ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, arrête et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord à ton médecin.
 
 ## 8 exercices sur chaise à faire chez toi ou au bureau
 
-L'ordre ci-dessous suit une petite séance complète : on délie le haut du corps, on réveille les jambes, on renforce un peu, puis on termine au calme.
+L'ordre ci-dessous forme une petite séance complète. Tu commences par délier le haut du corps, tu réveilles ensuite les jambes, puis tu renforces un peu avant de terminer au calme.
 
 ### 1. Rouler les épaules
 
@@ -44,15 +46,15 @@ Au bord de la chaise, croise les bras sur la poitrine, chaque main posée sur l'
 
 ### 3. Genou vers la poitrine
 
-Assis(e) au milieu de la chaise, monte un genou vers la poitrine et attrape-le à deux mains, sous le genou et pas sur la rotule. Tire-le doucement vers toi, garde la position 5 secondes en respirant, puis repose le pied et alterne. Reste grandi(e) : c'est le genou qui vient vers toi, pas le dos qui se courbe. Si la jambe a du mal à monter, garde le pied plus bas et tire moins. Tout est expliqué sur la fiche [Genou vers la poitrine](/exercices/genou-poitrine/).
+Assis(e) au milieu de la chaise, monte un genou vers la poitrine et attrape-le à deux mains, sous le genou et pas sur la rotule. Tire-le doucement vers toi, garde la position 5 secondes en respirant, puis repose le pied et alterne. Reste grandi(e) : le genou vient vers toi sans que le dos se courbe. Si la jambe a du mal à monter, garde le pied plus bas et tire moins. Tout est expliqué sur la fiche [Genou vers la poitrine](/exercices/genou-poitrine/).
 
 ### 4. Marche sur place, assis(e)
 
-Au bord de la chaise, tiens le bord de l'assise d'une main. Lève un genou pour décoller le pied du sol, repose-le en douceur, puis enchaîne avec l'autre jambe comme si tu marchais, à environ un pas par seconde. Quelques centimètres suffisent pour commencer. Bon repère : tu dois pouvoir parler en marchant, pas chanter. La version assise est sur la fiche [Marche sur place](/exercices/marche-sur-place/).
+Au bord de la chaise, tiens le bord de l'assise d'une main. Lève un genou pour décoller le pied du sol, repose-le en douceur, puis enchaîne avec l'autre jambe comme si tu marchais, à environ un pas par seconde. Quelques centimètres suffisent pour commencer. Pour le rythme, tu dois pouvoir parler en marchant, pas chanter. La version assise est sur la fiche [Marche sur place](/exercices/marche-sur-place/).
 
 ### 5. Boxe dans le vide
 
-Pieds à plat, monte les poings à hauteur du menton, les coudes près du corps. En soufflant, envoie un poing devant toi en laissant le buste tourner un peu, sans tendre le coude à fond, puis ramène-le en garde. Alterne les deux bras à ton rythme : plus vite pour corser, plus lentement pour alléger. Retrouve la fiche [Boxe dans le vide](/exercices/boxe/).
+Pieds à plat, monte les poings à hauteur du menton, les coudes près du corps. En soufflant, envoie un poing devant toi en laissant le buste tourner un peu, sans tendre le coude à fond, puis ramène-le en garde. Alterne les deux bras à ton rythme, plus vite pour corser, plus lentement pour alléger. Retrouve la fiche [Boxe dans le vide](/exercices/boxe/).
 
 ### 6. Tendre la jambe
 
@@ -68,31 +70,26 @@ Pour finir, pose une main sur le haut de la poitrine et l'autre sur le ventre. I
 
 ## Combien de temps faut-il pour une séance de gym douce sur chaise ?
 
-L'enchaînement ci-dessus tient en quelques minutes. C'est voulu : mieux vaut une séance courte que tu refais souvent qu'une longue séance que tu repousses sans cesse. Commence par ces 8 mouvements une fois dans la journée, puis ajoute un tour ou un second moment quand ça devient facile.
+L'enchaînement ci-dessus tient en quelques minutes, et c'est voulu : une séance courte que tu refais souvent sert davantage qu'une longue séance que tu repousses sans cesse. Commence par ces 8 mouvements une fois dans la journée, puis ajoute un tour ou un second moment quand ça devient facile.
 
-Pour que ça tienne, accroche la séance à un moment qui existe déjà :
+Pour que ça tienne, accroche la séance à un moment qui existe déjà, par exemple après le café du matin, entre deux visios ou juste avant d'aller déjeuner.
 
-- après le café du matin ;
-- entre deux visios ;
-- avant d'aller déjeuner ;
-- en fin de journée, avant de fermer l'ordinateur.
-
-Et les jours où tu as moins d'élan, fais seulement deux ou trois mouvements : c'est déjà bouger, et l'habitude reste en place.
+Les jours où tu as moins d'élan, fais seulement deux ou trois mouvements. Tu bouges quand même, et l'habitude reste en place.
 
 ## Quelles erreurs éviter quand on fait des exercices assis ?
 
-Les exercices sur chaise sont simples, mais quelques détails changent tout :
+Les exercices sur chaise sont simples, mais quelques erreurs reviennent souvent :
 
-- **S'affaler contre le dossier.** Sauf indication contraire, reste au bord de l'assise, le dos long.
-- **Laisser monter les épaules.** Pense régulièrement à les redescendre, loin des oreilles.
-- **Aller trop vite.** Des gestes lents et contrôlés, sans à-coups, sont plus agréables.
-- **Bloquer sa respiration.** Souffle pendant l'effort, inspire au retour.
-- **Forcer.** Un léger étirement suffit. Si ça fait mal, arrête.
+- s'affaler contre le dossier : sauf indication contraire, reste au bord de l'assise, le dos long ;
+- laisser monter les épaules (pense régulièrement à les redescendre, loin des oreilles) ;
+- aller trop vite, alors que des gestes lents et contrôlés, sans à-coups, sont plus agréables ;
+- bloquer sa respiration, au lieu de souffler pendant l'effort et d'inspirer au retour ;
+- forcer. Un léger étirement suffit, et si ça fait mal, tu arrêtes.
 
 ## Et pour s'étirer au bureau ?
 
-Si tu travailles assis(e) toute la journée, tu peux compléter ces exercices par quelques [étirements au bureau](/blog/etirements-au-bureau/), centrés sur la nuque, les épaules et les poignets. Et si tu travailles de chez toi, la page [Moovini pour le télétravail](/pour-qui/teletravail/) montre comment glisser une séance dans une pause.
+Si tu travailles assis(e) toute la journée, tu peux compléter ces exercices par quelques [étirements au bureau](/blog/etirements-au-bureau/), centrés sur la nuque, les épaules et les poignets. En télétravail, la page [Moovini pour le télétravail](/pour-qui/teletravail/) te montre comment caser une séance dans une pause.
 
-## Moovini, la gym douce qui s'adapte à ta chaise
+## Une séance sur chaise avec Moovini
 
-Moovini est une app iPhone de mouvement doux, en français, pensée pour les adultes qui bougent peu ou veulent s'y remettre. Au premier lancement, tu peux choisir « tout sur une chaise » : l'app compose alors la séance du jour, de 10 à 30 minutes, uniquement en position assise, avec des démonstrations vidéo et une voix qui te guide. La routine « Tout le corps sur la chaise » est faite pour ces moments où tu ne veux pas te lever. Moovini arrive bientôt sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Dans Moovini, notre app iPhone de mouvement doux en français, pensée pour les adultes qui bougent peu ou veulent s'y remettre, tu peux choisir « tout sur une chaise » dès le premier lancement. L'app compose alors la séance du jour, de 10 à 30 minutes, uniquement en position assise, avec des démonstrations vidéo et une voix qui te guide. Pour les moments où tu ne veux pas te lever, il y a aussi la routine « Tout le corps sur la chaise ». Moovini sera bientôt disponible sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).

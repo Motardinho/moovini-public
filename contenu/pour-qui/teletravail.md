@@ -3,15 +3,17 @@ titre: Moovini pour le télétravail : bouger pendant tes pauses
 description: En télétravail, on reste assis des heures sans s'en rendre compte. Moovini glisse de courtes séances de mouvement doux dans tes pauses, sur ta chaise.
 date: 2026-10-23
 mots-cles: exercices télétravail, pause active télétravail, bouger en télétravail, étirements au bureau, exercices sur chaise, rester assis longtemps, bouger plus au quotidien
+image: /images/pour-qui/teletravail.webp
+image-alt: Une femme en télétravail s'étire la nuque devant son bureau à deux écrans, près d'une porte-fenêtre
 ---
 
-Le télétravail a du bon, mais il a un effet discret : on bouge beaucoup moins. Plus de trajet, plus de couloir jusqu'à la salle de réunion, et la machine à café est à quelques pas. Moovini t'aide à remettre du mouvement dans ces journées, avec de courtes séances à faire pendant une pause, souvent sans même quitter ta chaise.
+Le télétravail a du bon, mais on y bouge beaucoup moins, souvent sans s'en apercevoir. Plus de trajet, plus de couloir jusqu'à la salle de réunion, et la machine à café est à quelques pas. Moovini t'aide à remettre du mouvement dans ces journées, avec de courtes séances à faire pendant une pause, souvent sans même quitter ta chaise.
 
 ## Pourquoi bouge-t-on si peu en télétravail ?
 
-À la maison, les petits déplacements du bureau disparaissent. On enchaîne les visios, on déjeune parfois devant l'écran, et la journée se termine sans qu'on se soit vraiment levé. Résultat : on se sent raide le soir, la nuque et les épaules en premier.
+À la maison, les petits déplacements du bureau disparaissent. On enchaîne les visios, on déjeune parfois devant l'écran, et la journée se termine sans qu'on se soit vraiment levé. Le soir, on se sent raide, la nuque et les épaules en premier.
 
-L'Organisation mondiale de la santé recommande aux adultes au moins 150 à 300 minutes d'activité d'intensité modérée par semaine, et conseille de limiter le temps passé assis ([lignes directrices de l'OMS sur l'activité physique et la sédentarité](https://www.who.int/europe/fr/publications/i/item/9789240014886)). Elle rappelle aussi que toute activité vaut mieux qu'aucune. En télétravail, chaque pause active est une occasion d'y contribuer.
+L'Organisation mondiale de la santé recommande aux adultes au moins 150 à 300 minutes d'activité d'intensité modérée par semaine, et conseille de limiter le temps passé assis ([lignes directrices de l'OMS sur l'activité physique et la sédentarité](https://www.who.int/europe/fr/publications/i/item/9789240014886)). Elle rappelle aussi que toute activité vaut mieux qu'aucune. En télétravail, chaque pause active t'en rapproche un peu.
 
 ## Qu'est-ce qu'une pause active ?
 
@@ -32,14 +34,14 @@ L'app compose alors ta séance du jour d'après tes réponses. Des démonstratio
 
 En plus de ta séance du jour, deux routines sont faites pour le télétravail.
 
-- **Nuque d'écran.** Pour la nuque et les épaules, entièrement assise. On y retrouve par exemple tourner la tête, l'oreille vers l'épaule ou serrer les omoplates. Parfaite entre deux visios.
-- **Tout le corps sur la chaise.** Pour bouger de la tête aux chevilles sans te lever : ouvrir la poitrine, tendre la jambe, marche sur place assis(e), pointe et flex des chevilles.
+- **Nuque d'écran** s'occupe de la nuque et des épaules, entièrement assise, avec par exemple tourner la tête, l'oreille vers l'épaule ou serrer les omoplates. Elle tient facilement entre deux visios.
+- **Tout le corps sur la chaise** te fait bouger de la tête aux chevilles sans te lever : ouvrir la poitrine, tendre la jambe, marche sur place assis(e), pointe et flex des chevilles.
 
 Les routines respectent aussi tes réponses de départ, comme les positions choisies et ton niveau.
 
 ## Et quand la motivation n'est pas là ?
 
-C'est normal, surtout les jours chargés. Quelques coups de pouce aident à tenir :
+Ça arrive à tout le monde, surtout les jours chargés. L'app prévoit quelques coups de pouce pour tenir :
 
 - des rappels aux jours que tu choisis ;
 - le suivi de tes minutes bougées et de tes séances de la semaine ;
@@ -56,4 +58,4 @@ L'app fonctionne sans compte ni inscription : tes réponses et tes séances rest
 
 ## Bientôt sur l'App Store
 
-Moovini est une app iPhone de mouvement doux, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Elle arrive bientôt sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Moovini est une app iPhone de mouvement doux, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Si tu veux l'essayer dès qu'elle arrive sur l'App Store, [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).

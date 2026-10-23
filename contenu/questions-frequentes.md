@@ -5,7 +5,7 @@ date: 2026-10-23
 mots-cles: Moovini, application gym douce, application exercices doux, essai gratuit, sans inscription
 ---
 
-Tout ce qu'il faut savoir sur Moovini avant de commencer. Une autre question ? Écris-nous à [contact@moovini.app](mailto:contact@moovini.app).
+On a réuni ici les questions qu'on nous pose le plus souvent sur Moovini. Si la tienne n'y est pas, écris-nous à [contact@moovini.app](mailto:contact@moovini.app).
 
 ## Qu'est-ce que Moovini ?
 
@@ -13,7 +13,7 @@ Moovini est une app de mouvement doux. Tu réponds à quelques questions (ton ob
 
 ## À qui s'adresse Moovini ?
 
-Aux adultes qui bougent peu, ou qui veulent s'y remettre sans pression : après une longue pause, avec des journées bien remplies, en télétravail ou simplement pour se sentir moins raide. Moovini n'est pas une app de performance : tout commence doucement et la difficulté suit tes progrès, avec ton accord.
+Aux adultes sédentaires et aux débutants : ceux qui bougent peu, ou qui veulent s'y remettre sans pression, après une longue pause, avec des journées bien remplies, en télétravail ou simplement pour se sentir moins raide. Moovini ne cherche pas la performance : tout commence doucement et la difficulté suit tes progrès, avec ton accord.
 
 ## Je ne fais aucun sport : est-ce que c'est pour moi ?
 
@@ -49,7 +49,7 @@ L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store. P
 
 ## Quand sort Moovini ?
 
-Moovini arrive bientôt sur l'App Store, d'abord sur iPhone. Pour être prévenu(e) de la sortie, [écris-nous](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini) : nous te répondrons dès qu'elle est disponible.
+Moovini arrive bientôt sur l'App Store, d'abord sur iPhone. Pour être prévenu(e) de la sortie, [écris-nous](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
 
 ## Moovini remplace-t-elle un avis médical ?
 

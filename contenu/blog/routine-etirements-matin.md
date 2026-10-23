@@ -3,9 +3,11 @@ titre: Routine étirements matin : 10 minutes pour bien démarrer
 description: Une routine d'étirements du matin de 10 minutes, debout ou sur une chaise : 7 mouvements doux, dans l'ordre, pour te sentir moins raide au réveil.
 date: 2026-10-16
 mots-cles: routine étirements matin, routine stretching matin, étirements du matin, étirements au réveil, exercices de mobilité, mobilité articulaire
+image: /images/blog/routine-etirements-matin.webp
+image-alt: Une femme s'étire bras au-dessus de la tête à côté de son lit, le matin, dans une chambre claire
 ---
 
-Une routine d'étirements le matin, c'est une façon simple de te sentir moins raide au réveil et de démarrer la journée en douceur. Pas besoin de tapis ni de tenue de sport : tu peux tout faire debout, ou sur une chaise. Voici une routine d'environ 10 minutes, en 7 mouvements à enchaîner dans l'ordre.
+Faire une routine d'étirements le matin t'aide à te sentir moins raide au réveil et à démarrer la journée en douceur. Tu n'as besoin ni de tapis ni de tenue de sport, et tout peut se faire debout ou sur une chaise. La routine ci-dessous dure environ 10 minutes et compte 7 mouvements, à enchaîner dans l'ordre.
 
 ## Pourquoi faire une routine de stretching le matin ?
 
@@ -15,12 +17,7 @@ L'autre intérêt, c'est l'habitude. Le matin, la journée n'a pas encore eu le 
 
 ## Comment faire cette routine d'étirements du matin ?
 
-Quelques règles pour que ça reste agréable :
-
-- **Va lentement.** Pas d'à-coups, pas de rebonds : chaque mouvement se fait en douceur.
-- **Respire.** Ne bloque jamais ton souffle, surtout quand tu tiens une position.
-- **Reste dans le confortable.** Un léger étirement suffit. Si ça tire trop ou si ça fait mal, réduis l'amplitude ou passe au mouvement suivant.
-- **Debout ou assis(e), c'est toi qui choisis.** La plupart des mouvements ont une version sur chaise.
+Pour que ça reste agréable, va lentement, sans à-coups ni rebonds, et ne bloque jamais ton souffle, surtout quand tu tiens une position. Un léger étirement suffit : si ça tire trop ou si ça fait mal, réduis l'amplitude ou passe au mouvement suivant. Tu peux faire la routine debout ou assis(e), la plupart des mouvements ont une version sur chaise.
 
 Un tour complet prend 5 à 6 minutes. Pour arriver à une dizaine de minutes, fais-en deux, un peu plus lentement au second tour.
 
@@ -36,7 +33,7 @@ Compte jusqu'à 4 ou 5 à chaque temps, pendant environ une minute. La main sur 
 
 Debout, les mains posées sur le devant des cuisses, les épaules basses. Grandis-toi, puis tourne lentement la tête vers la gauche, comme pour regarder par-dessus ton épaule, le menton à l'horizontale. Garde quelques secondes, reviens face à toi sans à-coup, puis tourne vers la droite. Fais 3 rotations de chaque côté.
 
-Seule la tête tourne : les épaules et le buste restent face à l'avant. Tourne jusqu'où c'est confortable, jamais en cercle, et arrête si ça tire, fait mal ou donne le vertige. Voir [tourner la tête](/exercices/tourner-tete/).
+Seule la tête tourne, les épaules et le buste restent face à l'avant. Tourne jusqu'où c'est confortable, jamais en cercle, et arrête si ça tire, fait mal ou donne le vertige. Voir [tourner la tête](/exercices/tourner-tete/).
 
 ### 3. Rouler les épaules
 
@@ -70,16 +67,16 @@ Sur une chaise, lève simplement un genou pour décoller le pied, puis l'autre, 
 
 ## Peut-on faire cette routine assis(e) ?
 
-Oui, presque entièrement. La respiration, la tête, les épaules, l'inclinaison, la rotation du buste et la marche sur place existent toutes en version sur chaise. Assieds-toi au bord d'une chaise stable, le dos décollé du dossier, les pieds à plat. Seuls les cercles de bassin se font debout : tu peux les remplacer par un mouvement de plus pour les épaules.
+Oui, presque entièrement. La respiration, la tête, les épaules, l'inclinaison, la rotation du buste et la marche sur place existent toutes en version sur chaise. Assieds-toi au bord d'une chaise stable, le dos décollé du dossier, les pieds à plat. Seuls les cercles de bassin se font debout, et tu peux les remplacer par un mouvement de plus pour les épaules.
 
 ## Combien de temps faut-il pour prendre l'habitude ?
 
-Il n'y a pas de durée magique. Ce qui aide, c'est de garder la routine courte, au même moment chaque matin, et de ne pas culpabiliser si tu en manques une. Reprends simplement le lendemain. Si un jour tu n'as que trois minutes, fais seulement les premiers mouvements : c'est toujours ça de pris.
+Aucune durée ne vaut pour tout le monde. Ce qui aide, c'est de garder la routine courte, au même moment chaque matin, et de ne pas culpabiliser si tu en manques une. Reprends simplement le lendemain. Si un jour tu n'as que trois minutes, fais seulement les premiers mouvements, c'est toujours ça de pris.
 
-Tu as envie d'aller un peu plus loin, avec du cardio doux et du renforcement ? Regarde notre guide de la [gym douce à la maison](/blog/gym-douce-a-la-maison/).
+Pour aller un peu plus loin, avec du cardio doux et du renforcement, regarde notre guide de la [gym douce à la maison](/blog/gym-douce-a-la-maison/).
 
-Ces mouvements ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, arrête et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord l'avis de ton médecin.
+Ces mouvements ne remplacent pas l'avis d'un médecin ou d'un(e) kiné. Arrête si tu as mal et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord l'avis de ton médecin.
 
 ## Une routine du matin toute prête dans Moovini
 
-Dans Moovini, l'app de mouvement doux qui arrive bientôt sur l'App Store, la routine Bonjour le corps est pensée pour le réveil, avec notamment la rotation du buste, l'inclinaison latérale, les épaules qui roulent et un peu de marche sur place. Chaque exercice est montré en démonstration et une voix te guide, tu n'as rien à retenir. Tu peux aussi répondre à quelques questions pour que Moovini compose ta séance du jour, au moment qui te convient. Pour être prévenu(e) de sa sortie, écris-nous à [contact@moovini.app](mailto:contact@moovini.app).
+Dans Moovini, l'app de mouvement doux qui arrive bientôt sur l'App Store, la routine Bonjour le corps est pensée pour le réveil, avec notamment la rotation du buste, l'inclinaison latérale, les épaules qui roulent et un peu de marche sur place. Chaque exercice est montré en démonstration et une voix te guide, tu n'as donc rien à retenir. Tu peux aussi répondre à quelques questions pour que Moovini compose ta séance du jour, au moment qui te convient. Si tu veux savoir quand l'app sort, écris-nous à [contact@moovini.app](mailto:contact@moovini.app).
