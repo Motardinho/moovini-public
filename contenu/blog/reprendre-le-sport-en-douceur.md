@@ -1,7 +1,7 @@
 ---
 titre: Reprendre le sport en douceur : le guide pour s'y remettre
 description: Reprendre le sport en douceur après un long arrêt, chez toi et sans te décourager : pourquoi ça coince, par où commencer et comment tenir dans la durée.
-date: 2026-10-23
+date: 2026-10-06
 mots-cles: reprendre le sport en douceur, reprendre le sport en douceur chez soi, reprendre le sport après un long arrêt, pourquoi je n'arrive pas à reprendre le sport, reprise du sport, sport à la maison débutant, sport sans matériel
 ---
 

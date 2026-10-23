@@ -1,7 +1,7 @@
 ---
 titre: Routine étirements matin : 10 minutes pour bien démarrer
 description: Une routine d'étirements du matin de 10 minutes, debout ou sur une chaise : 7 mouvements doux, dans l'ordre, pour te sentir moins raide au réveil.
-date: 2026-10-23
+date: 2026-10-16
 mots-cles: routine étirements matin, routine stretching matin, étirements du matin, étirements au réveil, exercices de mobilité, mobilité articulaire
 ---
 

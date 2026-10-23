@@ -1,7 +1,7 @@
 ---
 titre: Gym douce à la maison : la séance débutant, sans matériel
 description: Gym douce à la maison quand tu débutes : comment organiser une séance de 10 minutes sans matériel, avec 7 exercices simples expliqués pas à pas.
-date: 2026-10-23
+date: 2026-10-20
 mots-cles: gym douce à la maison, gym douce à la maison débutant, sport à la maison débutant, sport sans matériel, renforcement musculaire débutant sans matériel, exercices de mobilité, séance de sport courte
 ---
 

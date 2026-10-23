@@ -1,7 +1,7 @@
 ---
 titre: Étirements au bureau : 6 mouvements à faire assis ou debout
 description: Étirements au bureau simples et discrets : 6 mouvements pour la nuque, les épaules, le dos, les poignets et les hanches, à faire assis ou debout.
-date: 2026-10-23
+date: 2026-10-13
 mots-cles: étirements au bureau, exercices au bureau, étirements assis au bureau, exercices télétravail, pause active, bouger plus au quotidien, exercices de mobilité
 ---
 

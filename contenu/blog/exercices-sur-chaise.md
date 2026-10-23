@@ -1,7 +1,7 @@
 ---
 titre: Exercices sur chaise : 8 mouvements pour bouger sans te lever
 description: Exercices sur chaise faciles et sans matériel : 8 mouvements de gym douce à faire assis, chez toi ou au bureau, expliqués pas à pas pour bien démarrer.
-date: 2026-10-23
+date: 2026-10-09
 mots-cles: exercices sur chaise, exercices assis, gym douce sur chaise, sport sur chaise, exercices assis sans matériel, exercices au bureau, bouger plus au quotidien
 ---
 
