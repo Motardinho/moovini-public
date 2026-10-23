@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Moovini · Recommence à bouger, en douceur</title>
+<title>Moovini – Recommence à bouger, en douceur</title>
 <meta name="description" content="Moovini compose tes séances de mouvement doux d'après tes réponses : chez toi ou au travail, sur une chaise ou debout, de 10 à 30 minutes.">
 <meta name="theme-color" content="#14292E">
 <link rel="icon" href="images/symbole.svg" type="image/svg+xml">
@@ -24,6 +24,8 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { min-height: 100%; }
+  /* Une seule hauteur d'écran sur ordinateur : le pied de page tient dedans, sans défilement. */
+  body { display: flex; flex-direction: column; min-height: 100svh; }
   body {
     background: var(--nuit); color: var(--creme);
     font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -92,22 +94,23 @@
 
   /* ---------- Le seul écran : le texte, et le téléphone tenu en main comme sur les pages d'app qui inspirent ---------- */
   main {
-    position: relative; z-index: 2; min-height: 100svh;
+    position: relative; z-index: 2; flex: 1; width: 100%;
     display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 24px;
-    max-width: 1120px; margin: 0 auto; padding: 48px 32px 24px;
+    max-width: 1120px; margin: 0 auto; padding: 28px 32px 8px;
   }
   .texte { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-  .scene { position: relative; display: grid; place-items: center; min-height: 640px; }
+  .scene { position: relative; display: grid; place-items: center; }
 
   /* iPhone au format réel : écran 393 × 852 pt, coins de 55 pt (14 % de la largeur), Dynamic Island de 126 × 37 pt
      à 11 pt du haut, cadre titane, bordure noire et boutons (action et volume à gauche, marche à droite). */
   .iphone {
-    --l: 290px; --cadre: 3px; --bordure: 9px;
+    /* La hauteur du téléphone incliné vaut environ 2,35 fois sa largeur : il suit la hauteur de la fenêtre. */
+    --l: clamp(180px, calc((100svh - 140px) / 2.35), 290px); --cadre: 3px; --bordure: 9px;
     --ecran: calc(var(--l) - 2 * var(--cadre) - 2 * var(--bordure));
     position: relative; width: var(--l); padding: var(--cadre);
     border-radius: calc(var(--ecran) * .14 + var(--bordure) + var(--cadre));
     background: linear-gradient(135deg, #8E9498 0%, #E4E7E9 22%, #7A8084 48%, #C9CDD0 74%, #6B7175 100%);
-    box-shadow: 0 50px 90px -30px rgba(0,0,0,.75), 0 0 140px rgba(69,185,173,.14);
+    box-shadow: 0 50px 90px -30px rgba(0,0,0,.75);
     transform: rotate(-9deg);
   }
   .iphone .bordure { background: #050708; padding: var(--bordure); border-radius: calc(var(--ecran) * .14 + var(--bordure)); }
@@ -136,7 +139,7 @@
   .carte-seance { top: 0; right: -34px; }
   .carte-seance .pastille-ronde { background: var(--cardio); color: var(--cardio-encre); }
   .carte-semaine { top: 44%; left: -46px; }
-  .carte-exercice { bottom: -4px; right: -30px; }
+  .carte-exercice { bottom: -24px; right: -44px; }
   @media (prefers-reduced-motion: no-preference) {
     .carte { animation: flotte 6s ease-in-out infinite; }
     .carte-semaine { animation-delay: -2s; } .carte-exercice { animation-delay: -4s; }
@@ -173,13 +176,12 @@
     font-weight: 700; font-size: 1rem;
     box-shadow: 0 14px 30px -12px rgba(0,0,0,.5);
   }
-  .bientot .point { width: 9px; height: 9px; border-radius: 50%; background: #EA8069; box-shadow: 0 0 0 4px rgba(234,128,105,.28); }
   .preuve { margin-top: 18px; font-size: .86rem; color: var(--discret); font-weight: 500; line-height: 1.9; }
   .preuve b { color: var(--turquoise); font-weight: 700; }
   .u { white-space: nowrap; }
 
   footer {
-    position: relative; z-index: 2; padding: 0 20px 32px;
+    position: relative; z-index: 2; padding: 4px 20px 18px;
     display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px;
     font-size: .82rem; color: var(--discret);
   }
@@ -205,14 +207,14 @@
       <h1><span class="u">Recommence à bouger,</span><em>en douceur.</em></h1>
     </div>
     <p class="promesse leve leve-3">Des séances de mouvement doux composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
-    <p class="bientot leve leve-4"><span class="point" aria-hidden="true"></span>Bientôt sur l'App Store</p>
-    <p class="preuve leve leve-5"><span class="u">Sans compte</span> · <span class="u">Tes réponses restent sur ton téléphone</span> · <b class="u">7 jours d'essai gratuit</b></p>
+    <p class="bientot leve leve-4">Bientôt sur l'App Store</p>
+    <p class="preuve leve leve-5">Sans compte, et tes réponses restent sur ton téléphone. <b class="u">7 jours d'essai gratuit.</b></p>
   </div>
   <div class="scene leve leve-3" aria-hidden="true">
     <div class="iphone"><span class="bouton action"></span><span class="bouton volume-haut"></span><span class="bouton volume-bas"></span><span class="bouton marche"></span>
       <div class="bordure"><div class="ecran-tel"><img src="images/ecrans/hero-fente.webp" alt=""><span class="ilot"></span></div></div>
     </div>
-    <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min · 12 exercices</b></span></div>
+    <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min, 12 exercices</b></span></div>
     <div class="carte carte-semaine"><span><small>Bravo Julie&nbsp;!</small><b>4 séances cette semaine</b><span class="jours"><i class="fait"></i><i class="fait"></i><i class="fait"></i><i class="fait"></i><i></i><i></i><i></i></span></span></div>
     <div class="carte carte-exercice"><span class="vignette"><img src="images/exercices/fente-avant-debout-studio.webp" alt=""></span><span><small>Ensuite</small><b>Fente avant, côté gauche</b></span></div>
   </div>
