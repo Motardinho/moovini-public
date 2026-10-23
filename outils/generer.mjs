@@ -11,11 +11,14 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 
 import { join, dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://moovini.app';
 const APP = 'C:/Projets/Moovini';
 const AUJOURDHUI = new Date().toISOString().slice(0, 10);
+// Empreinte de la feuille de style dans son adresse : un navigateur qui a gardé l'ancienne en cache charge la nouvelle.
+const VERSION_CSS = createHash('sha256').update(readFileSync(join(RACINE, 'assets/site.css'))).digest('hex').slice(0, 8);
 const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio doux', force: 'Renforcement', calme: 'Calme' };
 const NIVEAUX = { 1: 'Tout doux', 2: 'Modéré', 3: 'Plus soutenu' };
 const PREVENIR = 'mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store.';
@@ -91,7 +94,7 @@ function page({ chemin, titre, titreSeo, description, image = `${SITE}/images/pa
 <link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=${VERSION_CSS}">
 ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe, null, 1)}\n</script>\n` : ''}</head>
 <body>
 <header class="barre">
