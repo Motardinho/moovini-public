@@ -130,6 +130,14 @@ ${corps}
   </nav>
   <p class="mention">Moovini propose des exercices doux pour le bien-être et ne remplace pas l'avis d'un médecin ou d'un(e) kiné. © 2026 Moovini</p>
 </footer>
+<button class="haut-page" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
+<script>
+  // Ombre sous la barre dès qu'on défile, bouton de retour en haut après un écran.
+  const barre = document.querySelector('.barre'), haut = document.querySelector('.haut-page');
+  const suivre = () => { barre.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > innerHeight * .8); };
+  addEventListener('scroll', suivre, { passive: true }); suivre();
+  haut.addEventListener('click', () => { scrollTo({ top: 0 }); barre.querySelector('.marque').focus({ preventScroll: true }); });
+</script>
 </body>
 </html>
 `;

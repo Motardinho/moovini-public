@@ -229,9 +229,16 @@
     .carte-exercice { bottom: 22px; right: max(0px, calc(50% - 210px)); }
   }
   /* Le logo en en-tête, aligné sur la colonne de texte : le titre a toute la largeur pour lui. */
-  .entete { position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 26px 32px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  /* Il reste collé en haut quand on défile (sur téléphone), sur un fond nuit qui n'apparaît qu'après le premier pixel. */
+  .entete { position: sticky; top: 0; z-index: 3; transition: background .2s, box-shadow .2s; width: 100%; padding: 26px max(32px, calc(50% - 528px)) 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   /* Menu discret vers les pages de contenu (blog, exercices, questions) : l'accueil reste sur un seul écran. */
+  .entete.decollee { background: rgba(20,41,46,.95); box-shadow: 0 4px 18px rgba(0,0,0,.25); }
   .menu { display: flex; gap: 22px; }
+  /* Retour en haut, sur téléphone (l'accueil tient en un écran sur ordinateur). */
+  .haut-page { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 3; width: 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--creme); color: var(--nuit); box-shadow: 0 6px 20px rgba(0,0,0,.3); cursor: pointer; opacity: 0; visibility: hidden; translate: 0 8px; transition: opacity .2s, translate .2s, visibility .2s; }
+  .haut-page.visible { opacity: 1; visibility: visible; translate: 0 0; }
+  .haut-page svg { width: 20px; height: 20px; }
+  .haut-page:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
   .menu a { color: var(--creme); text-decoration: none; font-weight: 700; font-size: .95rem; opacity: .9; }
   .menu a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
   .logo { width: clamp(62px, 6vw, 80px); height: auto; display: block; }
@@ -246,7 +253,7 @@
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   }
   @media (max-width: 860px) {
-    .entete { flex-direction: column; justify-content: center; gap: 12px; padding: 24px 20px 0; }
+    .entete { flex-direction: column; justify-content: center; gap: 12px; padding: 18px 20px 12px; }
     .menu { gap: 18px; }
     h1 { font-size: clamp(1.45rem, 6.3vw, 2.6rem); }
     h1 em { margin: 0 auto; }
@@ -280,6 +287,8 @@
     background: linear-gradient(rgba(20,41,46,0) 0%, rgba(20,41,46,.94) 38%, rgba(20,41,46,.97) 100%);
   }
   footer a { color: var(--creme); text-decoration: none; font-weight: 600; }
+  /* Place pour le bouton de retour en haut, qui n'apparaît que sur téléphone. */
+  @media (max-width: 860px) { footer { padding-bottom: 76px; } }
   footer a:hover { text-decoration: underline; }
   /* Le mur et les bulles bougent sans fin : ce bouton les fige (WCAG 2.2.2). Inutile si le système réduit déjà les animations. */
   .pause { font: inherit; font-weight: 600; color: var(--creme); background: none; border: 1px solid rgba(250,247,241,.35); border-radius: 999px; padding: 4px 14px; cursor: pointer; }
@@ -332,6 +341,7 @@
   <button class="pause" type="button" id="pause" aria-pressed="false">Mettre en pause l'animation</button>
 </footer>
 
+<button class="haut-page" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
 <script>
   // Vrais écrans de l'app (captures du 23 octobre 2026, profil de démonstration) et écrans d'exercices.
   const ECRANS = ['app-03-lecteur', 'onboarding-02-objectif', 'app-01-accueil', 'onboarding-05-seance', 'app-05-progres',
@@ -394,6 +404,11 @@
   requestAnimationFrame(() => setTimeout(construire, 0));
   let attente, largeur = innerWidth;
   addEventListener('resize', () => { if (innerWidth === largeur) return; largeur = innerWidth; clearTimeout(attente); attente = setTimeout(construire, 250); });
+
+  const entete = document.querySelector('.entete'), haut = document.querySelector('.haut-page');
+  const suivre = () => { entete.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > 300); };
+  addEventListener('scroll', suivre, { passive: true }); suivre();
+  haut.addEventListener('click', () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
 
   const pause = document.getElementById('pause');
   pause.addEventListener('click', () => {

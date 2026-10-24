@@ -25,7 +25,9 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--turquoise); ou
 svg { width: 15px; height: 18px; flex: none; translate: 0 -2px; }
 
 /* En-tête */
-.barre { background: var(--nuit); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px max(20px, calc(50% - 540px)); }
+/* La barre reste collée en haut pendant le défilement ; les ancres s'arrêtent sous elle. */
+html { scroll-padding-top: 96px; }
+.barre { position: sticky; top: 0; z-index: 10; transition: box-shadow .2s; background: var(--nuit); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px max(20px, calc(50% - 540px)); }
 .barre .marque img { width: 52px; }
 .barre nav { display: flex; align-items: center; gap: 6px 22px; flex-wrap: wrap; justify-content: flex-end; }
 .barre nav a { color: var(--creme); text-decoration: none; font-weight: 600; font-size: .95rem; }
@@ -33,6 +35,15 @@ svg { width: 15px; height: 18px; flex: none; translate: 0 -2px; }
 .barre nav a:hover { color: #fff; text-decoration: underline; }
 .barre .appli, .bouton { display: inline-flex; align-items: center; gap: 9px; background: var(--corail-fonce); color: #fff !important; border-radius: 999px; padding: 9px 18px 11px; text-decoration: none !important; font-weight: 700; }
 .barre .appli:hover, .bouton:hover { background: var(--corail-encre); }
+.barre.decollee { box-shadow: 0 4px 18px rgba(20,41,46,.28); }
+
+/* Retour en haut : apparaît après un écran de défilement. */
+.haut-page { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 10; width: 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--petrole); color: var(--creme); box-shadow: var(--ombre-haute); cursor: pointer; opacity: 0; visibility: hidden; translate: 0 8px; transition: opacity .2s, translate .2s, visibility .2s, background .2s; }
+.haut-page.visible { opacity: 1; visibility: visible; translate: 0 0; }
+.haut-page:hover { background: var(--nuit); }
+.haut-page:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
+.haut-page svg { width: 20px; height: 20px; translate: none; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
 /* Contenu */
 main { max-width: 1080px; margin: 0 auto; padding: 18px 20px 56px; }
@@ -116,7 +127,7 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .faq .reponse p + p { margin-top: 10px; }
 
 /* Pied */
-.pied { background: var(--nuit); color: #D5E3E2; padding: 44px max(20px, calc(50% - 540px)) 26px; }
+.pied { background: var(--nuit); color: #D5E3E2; padding: 44px max(20px, calc(50% - 540px)) 80px; }
 .appel { max-width: 760px; }
 .appel h2 { color: var(--creme); margin: 0 0 10px; font-size: 1.8rem; }
 .appel h2 em { font-style: normal; color: var(--corail); }
@@ -127,8 +138,12 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .mention { margin-top: 18px; font-size: .88rem; color: #A9BEBF; }
 
 @media (max-width: 720px) {
-  .barre { flex-direction: column; align-items: flex-start; }
-  .barre nav { justify-content: flex-start; }
+  /* Barre compacte sur téléphone : logo et bouton App Store sur une ligne, les liens dessous. */
+  html { scroll-padding-top: 112px; }
+  .barre { flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+  .barre .marque img { width: 40px; }
+  .barre nav { justify-content: flex-start; gap: 6px 18px; }
+  .barre .appli { position: absolute; top: 12px; right: 20px; padding: 7px 14px 9px; font-size: .88rem; }
   .fiche-tete { flex-direction: column; align-items: flex-start; }
   .variante-corps { grid-template-columns: 1fr; }
   .variante .photo { width: 100%; max-width: 360px; }
