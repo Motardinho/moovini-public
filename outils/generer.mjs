@@ -22,7 +22,8 @@ const AUJOURDHUI = new Date().toISOString().slice(0, 10);
 // Empreinte de la feuille de style dans son adresse : un navigateur qui a gardé l'ancienne en cache charge la nouvelle.
 const VERSION_CSS = createHash('sha256').update(readFileSync(join(RACINE, 'assets/site.css'))).digest('hex').slice(0, 8);
 const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio doux', force: 'Renforcement', calme: 'Calme' };
-const NIVEAUX = { 1: 'Tout doux', 2: 'Modéré', 3: 'Plus soutenu' };
+// « Simple » plutôt que « Tout doux », le nom de la durée de 10 min dans l'app (24 octobre 2026).
+const NIVEAUX = { 1: 'Simple', 2: 'Modéré', 3: 'Plus soutenu' };
 const PREVENIR = 'mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store.';
 const POMME = '<svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg>';
 
