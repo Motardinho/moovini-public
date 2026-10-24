@@ -4,6 +4,8 @@
 // Sources, dans contenu/ :
 // - blog/<slug>.md et pour-qui/<slug>.md : en-tête (titre, description, date, mots-cles) puis texte en Markdown simple ;
 // - questions-frequentes.md : chaque « ## » est une question, le texte qui suit sa réponse ;
+// - application.html : la page « L'app » (24 octobre 2026), en HTML parce qu'elle alterne textes et captures ; même en-tête que
+//   les .md, et <?exercices slug,slug?> y devient une rangée de fiches exercices ;
 // - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app).
 // Les vignettes retenues des exercices sont réduites dans images/fiches/ par outils/vignettes.py (Pillow).
 // L'accueil (index.html) et les pages légales ne sont pas générés ; seul le plan du site les liste.
@@ -100,6 +102,7 @@ ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe,
 <header class="barre">
   <a class="marque" href="/"><img src="/images/logo-creme.svg" alt="Moovini, accueil" width="104" height="100"></a>
   <nav aria-label="Navigation principale">
+    <a href="/application/"${chemin === '/application/' ? ' aria-current="page"' : ''}>L'app</a>
     <a href="/blog/"${chemin.startsWith('/blog/') ? ' aria-current="page"' : ''}>Blog</a>
     <a href="/exercices/"${chemin.startsWith('/exercices/') ? ' aria-current="page"' : ''}>Exercices</a>
     <a href="/questions-frequentes/"${chemin.startsWith('/questions') ? ' aria-current="page"' : ''}>Questions</a>
@@ -116,7 +119,7 @@ ${corps}
     <a class="bouton" href="${PREVENIR}">${POMME}Bientôt sur l'App Store<span class="vh"> : être prévenu de la sortie par e-mail</span></a>
   </section>
   <nav class="liens" aria-label="Pied de page">
-    <a href="/">Accueil</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
+    <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
     <a href="/pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a><a href="/pour-qui/debutant-sedentaire/">Débutants</a>
     <a href="/questions-frequentes/">Questions fréquentes</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d'utilisation</a>
     <a href="mailto:contact@moovini.app">contact@moovini.app</a>
@@ -276,6 +279,26 @@ for (const p of articles('pour-qui')) {
 </article>`,
   }));
   plan.push([chemin, p.date]);
+}
+
+// ---------- Page « L'app » ----------
+{
+  const a = lireMd(join(RACINE, 'contenu', 'application.html'));
+  const chemin = '/application/';
+  const ariane = [['Accueil', '/'], ["L'app en détail", chemin]];
+  const parSlug = Object.fromEntries(exercices.map(e => [e.slug, e]));
+  const corps = a.corps.replace(/<\?exercices ([^?]+)\?>/g, (_, liste) => `<ul class="grille-fiches">${liste.split(',').map(s => {
+    const x = parSlug[s.trim()];
+    if (!x) throw new Error(`Exercice inconnu dans application.html : ${s}`);
+    return `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`;
+  }).join('')}</ul>`);
+  ecrire('application/index.html', page({
+    chemin, titre: a.titre, titreSeo: a['titre-seo'], description: a.description,
+    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: a.titre, description: a.description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` }, primaryImageOfPage: `${SITE}/images/app/13-accueil.webp` }],
+    corps: `${arianeHtml(ariane)}
+${corps.trim()}`,
+  }));
+  plan.push([chemin, a['mise-a-jour'] ?? a.date]);
 }
 
 // ---------- Questions fréquentes ----------

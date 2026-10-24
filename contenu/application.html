@@ -1,0 +1,311 @@
+---
+titre: L'app Moovini en détail : des séances douces composées pour toi
+titre-seo: Moovini en détail : l'app de séances douces sur mesure
+description: Questionnaire, séance du jour sur mesure, difficulté réglée par ton ressenti, exercices du plus simple au plus soutenu : Moovini écran par écran.
+date: 2026-10-24
+---
+<!-- Page « L'app » (24 octobre 2026). Source de /application/, mise en page par outils/generer.mjs : ne pas modifier
+     application/index.html à la main. Captures du 24 octobre 2026 (profil de démonstration Julie, et Karim pour le
+     profil confirmé), refaites par marketing/site/20261024-fiche-app/ dans le dépôt de l'app. Chaque fonction décrite
+     ici existe dans l'app ; avant d'en ajouter une, vérifier qu'elle est faite, pas seulement prévue. -->
+<article class="app">
+
+<header class="app-tete">
+  <div class="app-tete-texte">
+    <p class="surtitre">L'app en détail</p>
+    <h1>Une séance faite pour toi, <em>qui suit ton rythme.</em></h1>
+    <p class="chapeau">Moovini te pose quelques questions, compose ta séance du jour, puis l'ajuste à ton énergie et à ton ressenti. Voici tout ce que fait l'app, écran par écran, avec ses vraies captures.</p>
+    <p class="app-appel"><a class="bouton" href="mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store.">Prévenez-moi à la sortie</a><span>Bientôt sur l'App Store, avec 7&nbsp;jours d'essai gratuit.</span></p>
+  </div>
+  <div class="app-tete-tels" aria-hidden="true">
+    <img class="tel" src="/images/app/02-objectif.webp" alt="" width="640" height="1387" decoding="async">
+    <img class="tel" src="/images/app/13-accueil.webp" alt="" width="640" height="1387" fetchpriority="high" decoding="async">
+    <img class="tel" src="/images/app/17-lecteur.webp" alt="" width="640" height="1387" decoding="async">
+  </div>
+</header>
+
+<ul class="app-chiffres">
+  <li><b>10, 20 ou 30&nbsp;min</b>par séance, jamais plus</li>
+  <li><b>79 exercices</b>en 118 versions</li>
+  <li><b>Chaise, debout ou sol</b>selon ce qui te met à l'aise</li>
+  <li><b>7 jours</b>d'essai gratuit, sans compte à créer</li>
+</ul>
+
+<nav class="app-sommaire" aria-label="Sommaire de la page">
+  <ol>
+    <li><a href="#questionnaire">Le questionnaire</a></li>
+    <li><a href="#seance">Ta séance du jour</a></li>
+    <li><a href="#energie">Ton énergie du moment</a></li>
+    <li><a href="#ressenti">Ta difficulté, ton choix</a></li>
+    <li><a href="#niveaux">Du débutant au confirmé</a></li>
+    <li><a href="#lecteur">Pendant la séance</a></li>
+    <li><a href="#progres">Programme et progrès</a></li>
+    <li><a href="#routines">Routines et favoris</a></li>
+    <li><a href="#essai">Essai et vie privée</a></li>
+  </ol>
+</nav>
+
+<section class="app-partie" id="questionnaire" aria-labelledby="t-questionnaire">
+  <p class="numero">1</p>
+  <h2 id="t-questionnaire">Quelques questions pour faire connaissance</h2>
+  <p class="intro">Au premier lancement, Moovini te demande ton prénom, pour te saluer chaque jour, puis te pose huit questions. Chaque réponse a un effet précis sur tes séances, et l'app te l'annonce dès que tu choisis. Une question ne te parle pas ? Tu peux la passer (sauf celle sur ton niveau) : une réponse par défaut la remplace, et tout se change ensuite dans tes Préférences.</p>
+
+  <ol class="questions">
+    <li>
+      <img class="tel" src="/images/app/02-objectif.webp" alt="Écran « Qu'est-ce qui te ferait du bien ? » avec « Me sentir moins raide » choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Ton objectif</p>
+        <h3>« Qu'est-ce qui te ferait du bien&nbsp;? »</h3>
+        <p class="choix">Me sentir moins raide, retrouver un peu d'élan, ou bouger plus régulièrement.</p>
+        <p class="effet"><b>Ce que ça change.</b> Le dosage de tes séances : surtout de la mobilité et du stretching, des exercices plus toniques, ou des séances faciles à refaire.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/03-frein.webp" alt="Écran « Qu'est-ce qui te freine ? » avec « Mes journées sont bien remplies » choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Ton frein</p>
+        <h3>« Qu'est-ce qui te freine&nbsp;? »</h3>
+        <p class="choix">Mes journées sont bien remplies, j'ai du mal à m'y mettre, ou je perds vite le fil.</p>
+        <p class="effet"><b>Ce que ça change.</b> Ton point de départ : des séances courtes, un exercice simple pour ouvrir chaque séance, ou de l'aide pour reprendre après une pause.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/04-niveau.webp" alt="Écran « Tu bouges déjà un peu ? » avec « Je (re)commence » choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Ton niveau</p>
+        <h3>« Tu bouges déjà un peu&nbsp;? »</h3>
+        <p class="choix">Je (re)commence, de temps en temps, ou assez régulièrement.</p>
+        <p class="effet"><b>Ce que ça change.</b> L'intensité de tes premiers exercices, des plus simples aux un peu plus soutenus. Pas de mauvaise réponse : tu pars de là où tu en es.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/05-duree.webp" alt="Écran « On reprend en douceur ? » avec 10 minutes choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">La durée</p>
+        <h3>« On reprend en douceur&nbsp;? »</h3>
+        <p class="choix">10 minutes (conseillé pour commencer), 20 ou 30 minutes.</p>
+        <p class="effet"><b>Ce que ça change.</b> La durée choisie n'est jamais dépassée : de 5 à 7 exercices en 10 minutes, de 8 à 12 en 20, de 12 à 18 en 30.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/06-frequence.webp" alt="Écran « Un rythme qui tient dans ta vie » avec 3 fois par semaine, lundi, mercredi et vendredi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">La fréquence</p>
+        <h3>« Un rythme qui tient dans ta vie. »</h3>
+        <p class="choix">2, 3 ou 5 fois par semaine.</p>
+        <p class="effet"><b>Ce que ça change.</b> L'app te propose des jours, que tu ajoutes ou retires d'une touche, maintenant ou plus tard depuis ton Programme.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/07-moment.webp" alt="Écran « Ton petit moment, ce serait quand ? » avec « Pendant une pause » choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Ton moment</p>
+        <h3>« Ton petit moment, ce serait quand&nbsp;? »</h3>
+        <p class="choix">Au réveil, pendant une pause, ou en fin de journée.</p>
+        <p class="effet"><b>Ce que ça change.</b> Le début de ta séance (un peu de cardio pour te réveiller, la nuque et les épaules pendant la pause), une intensité plus basse le soir, et l'heure de ton rappel, que tu règles au quart d'heure près ou que tu refuses.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/08-positions.webp" alt="Écran « Comment veux-tu commencer ? » avec « Sans aller au sol » choisi" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Tes positions</p>
+        <h3>« Comment veux-tu commencer&nbsp;? »</h3>
+        <p class="choix">Un peu de tout (debout, assis(e) ou au sol), sans aller au sol, ou tout sur une chaise.</p>
+        <p class="effet"><b>Ce que ça change.</b> Tu ne verras que des exercices dans ces positions. Tu n'as pas envie de t'allonger ? Tu ne t'allongeras pas.</p>
+      </div>
+    </li>
+    <li>
+      <img class="tel" src="/images/app/09-zones.webp" alt="Écran « Une zone à ménager ? » avec les genoux cochés" width="640" height="1387" loading="lazy" decoding="async">
+      <div>
+        <p class="etiquette">Tes zones à ménager</p>
+        <h3>« Une zone à ménager&nbsp;? »</h3>
+        <p class="choix">Rien de particulier, ou une ou plusieurs zones : nuque, épaules, dos, poignets et mains, hanches, genoux, chevilles et pieds.</p>
+        <p class="effet"><b>Ce que ça change.</b> Les exercices qui sollicitent ces zones sont écartés de tes séances. Aucun diagnostic n'est demandé : tu dis seulement ce que tu préfères ménager.</p>
+      </div>
+    </li>
+  </ol>
+
+  <div class="bloc">
+    <div class="bloc-texte">
+      <h3>Ta première séance, tout de suite</h3>
+      <p>Dès la dernière réponse, Moovini te présente ta première séance. « Pourquoi ces exercices&nbsp;? » t'explique ses choix, et « Mes réponses » te laisse corriger une réponse d'un geste avant de commencer.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/10-premiere-seance.webp" alt="Écran « Voici ta première séance personnalisée » : 10 minutes, Étape 1, Séance 1 sur 6" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="app-partie" id="seance" aria-labelledby="t-seance">
+  <p class="numero">2</p>
+  <h2 id="t-seance">Ta séance du jour, composée pour toi</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <p>Chaque jour, Moovini assemble ta séance d'après tes réponses. Ce n'est pas une vidéo que tout le monde suit à l'identique : la liste change d'une personne à l'autre, et d'une séance à l'autre.</p>
+      <ul class="liste">
+        <li>Les exercices sont regroupés par position (debout, puis assis(e), puis au sol) : tu ne te relèves pas sans arrêt.</li>
+        <li>Les zones du corps travaillées tournent d'une séance à l'autre.</li>
+        <li>Chaque séance se termine en douceur, par une respiration lente.</li>
+        <li>10&nbsp;secondes de repos entre deux exercices, 20 quand tu changes de position.</li>
+        <li>« À prévoir » te dit d'avance ce qu'il te faut : une chaise, un peu de place au sol, parfois une serviette.</li>
+        <li>« Pourquoi cette séance&nbsp;? » t'explique les choix de l'app.</li>
+      </ul>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/23-apercu-haut.webp" alt="Aperçu de la séance 5 sur 6 : 10 minutes, 6 exercices, surtout le haut du corps, debout puis assis(e), à prévoir : une chaise, et « Pourquoi cette séance ? »" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+  <div class="bloc inverse">
+    <div class="bloc-texte">
+      <h3>Un exercice ne te dit rien&nbsp;? Remplace-le.</h3>
+      <p>Sur l'aperçu, chaque exercice a son bouton Remplacer. L'app te propose le même exercice autrement, ou un autre exercice, toujours dans tes positions et en ménageant tes zones.</p>
+      <p>Tu ne veux plus jamais le voir&nbsp;? Coche « Ne plus me proposer cet exercice ». Tu pourras le réactiver dans tes Préférences.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/16-remplacer.webp" alt="Volet « Remplacer Oreille vers l'épaule » : tourner la tête, rouler les épaules ou ouvrir la poitrine, et la case « Ne plus me proposer cet exercice »" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="app-partie" id="energie" aria-labelledby="t-energie">
+  <p class="numero">3</p>
+  <h2 id="t-energie">Une séance qui s'adapte à ta journée</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <p>Certains jours, on a moins d'énergie, et c'est normal. Sur l'accueil, « Ajuster à mon énergie » te demande comment tu te sens aujourd'hui :</p>
+      <dl class="options">
+        <div><dt>Petite énergie</dt><dd>Une version douce, plus courte (6 minutes au lieu de 10), avec des exercices plus simples d'abord.</dd></div>
+        <div><dt>Ça va bien</dt><dd>Ta séance reste comme prévu.</dd></div>
+        <div><dt>Plein d'élan</dt><dd>Un exercice bonus facultatif, à la fin.</dd></div>
+      </dl>
+      <p>Ce choix vaut pour aujourd'hui seulement : ton programme ne change pas. Et si tu as manqué un jour, tu n'as rien perdu. Pas de série à casser : ta séance t'attend.</p>
+    </div>
+    <div class="bloc-tels">
+      <img class="tel" src="/images/app/13-accueil.webp" alt="Accueil : « Bonjour Julie ! », la séance de 10 minutes, les boutons « Voir la séance » et « Ajuster à mon énergie »" width="640" height="1387" loading="lazy" decoding="async">
+      <img class="tel" src="/images/app/14-energie.webp" alt="Volet « Énergie du moment » avec « Petite énergie » choisi : version douce de 6 minutes" width="640" height="1387" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="app-partie" id="ressenti" aria-labelledby="t-ressenti">
+  <p class="numero">4</p>
+  <h2 id="t-ressenti">Tu montes en difficulté si tu le veux, et seulement si tu le veux</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <p>À la fin de chaque séance, Moovini te demande « Comment c'était&nbsp;? ». C'est facultatif, et c'est ta réponse qui règle le niveau des séances suivantes, d'un cran à la fois.</p>
+      <ul class="ressentis">
+        <li class="facile"><b>Trop facile</b>L'app te pose la question : « Essayer une version un peu plus dynamique la prochaine fois&nbsp;? ». Tu réponds oui, ou « Non, merci ». La difficulté ne monte jamais sans ton accord.</li>
+        <li class="bien"><b>Juste bien</b>On garde ce niveau pour la suite.</li>
+        <li class="dur"><b>Trop difficile</b>Ta prochaine séance te proposera des variantes plus accessibles. Tu préfères garder ton niveau&nbsp;? Une touche suffit.</li>
+      </ul>
+      <p>Pas envie de répondre ? « Passer », et rien ne change.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/18-ressenti.webp" alt="Fin de séance « Bien joué, c'est fait ! » et volet « Comment c'était ? » : trop facile, juste bien, trop difficile, puis la question « Essayer une version un peu plus dynamique la prochaine fois ? » avec Oui et Non, merci" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+  <div class="bloc inverse">
+    <div class="bloc-texte">
+      <h3>Trop dur sur le moment&nbsp;? La version plus douce.</h3>
+      <p>Pendant la séance, quand un exercice a une variante plus accessible, une petite feuille apparaît à côté de son nom (tu la verras <a href="#lecteur">plus bas</a>). Touche-la : la version plus douce le remplace aussitôt, sans changer ton niveau pour la suite.</p>
+      <h3>À chaque étape, c'est toi qui décides</h3>
+      <p>Ton programme avance par cycles de 6 séances, en quatre étapes : <em>Retrouver le mouvement</em>, <em>Gagner en aisance</em>, <em>Bouger plus librement</em> et <em>Prendre confiance</em>. À la fin d'un cycle, tu choisis : passer à l'étape suivante, rester à ton étape, ou passer à la suivante en niveau plus doux. Rien ne se fait tout seul.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/19-programme.webp" alt="Écran « Ton programme » : la semaine, l'étape 1 « Retrouver le mouvement », 5 séances sur 6, puis l'étape 2 « Gagner en aisance »" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<aside class="app-encart">
+  <p><b>Moovini arrive bientôt sur l'App Store.</b> Envoie-nous un petit e-mail et on te prévient le jour de la sortie.</p>
+  <a class="bouton" href="mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store.">Prévenez-moi à la sortie</a>
+</aside>
+
+<section class="app-partie" id="niveaux" aria-labelledby="t-niveaux">
+  <p class="numero">5</p>
+  <h2 id="t-niveaux">Du tout premier pas au rythme plus soutenu</h2>
+  <p class="intro">Le catalogue compte 79 exercices en 118 versions, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. Ils sont classés en trois intensités : tu démarres là où tu en es, et l'app avance avec toi.</p>
+  <div class="paliers">
+    <div class="palier">
+      <h3><span class="pastille doux">Tout doux</span> 31 exercices</h3>
+      <p>Pour (re)commencer sans appréhension : des gestes simples, compris tout de suite, dont beaucoup se font assis(e). 29 exercices du catalogue se font entièrement sur une chaise.</p>
+      <?exercices rouler-epaules,marche-sur-place,tendre-jambe,respiration-ventre?>
+    </div>
+    <div class="palier">
+      <h3><span class="pastille modere">Modéré</span> 17 exercices</h3>
+      <p>Quand tu bouges un peu : plus d'équilibre, de coordination et de force, toujours à ton rythme.</p>
+      <?exercices genou-main-opposee,pas-ecartes,equilibre-une-jambe,tirage-serviette?>
+    </div>
+    <div class="palier">
+      <h3><span class="pastille soutenu">Plus soutenu</span> 31 exercices</h3>
+      <p>Pour celles et ceux qui bougent chaque semaine. Les plus intenses (sauts, gainage) arrivent à la dernière étape du programme, deux nouveaux exercices par cycle.</p>
+      <?exercices fente-avant,squat-poussee,jumping-jacks,pompes?>
+    </div>
+  </div>
+  <div class="comparaison">
+    <figure>
+      <img class="tel" src="/images/app/15-apercu.webp" alt="Séance de Julie : 10 minutes, exercices de mobilité debout et assis" width="640" height="1387" loading="lazy" decoding="async">
+      <figcaption><b>Julie (re)commence.</b> 10 minutes, 6 exercices, sans aller au sol, en ménageant ses genoux.</figcaption>
+    </figure>
+    <figure>
+      <img class="tel" src="/images/app/22-apercu-confirme.webp" alt="Séance de Karim : talons-fesses, cercles de bras, assis-debout, genou vers la poitrine au sol, respiration abdominale" width="640" height="1387" loading="lazy" decoding="async">
+      <figcaption><b>Karim bouge chaque semaine.</b> 20 minutes, 12 exercices, debout, au sol puis assis.</figcaption>
+    </figure>
+  </div>
+  <p class="suite">Tous les exercices sont expliqués pas à pas dans <a href="/exercices/">nos fiches exercices</a>.</p>
+</section>
+
+<section class="app-partie" id="lecteur" aria-labelledby="t-lecteur">
+  <p class="numero">6</p>
+  <h2 id="t-lecteur">Pendant la séance, laisse-toi guider</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <ul class="liste">
+        <li>Chaque exercice est montré en démonstration : tu vois le geste avant de le faire.</li>
+        <li>Une voix t'annonce chaque exercice, te prévient quand il faut changer de côté et t'encourage à mi-parcours.</li>
+        <li>Un décompte 3, 2, 1 et un grand minuteur : pas besoin de compter.</li>
+        <li>Pause, exercice précédent ou suivant, séance écourtée : tu restes maître du rythme.</li>
+        <li>L'écran reste allumé, en portrait comme en paysage.</li>
+        <li>Les démonstrations sont dans l'app : pas besoin de connexion pour bouger.</li>
+      </ul>
+      <p>Tu préfères le silence&nbsp;? Le son et la voix se coupent dans tes Préférences. Et chaque exercice a sa fiche : comment faire, et les astuces.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/17-lecteur.webp" alt="Lecteur de séance : exercice 4 sur 12, « Pas écartés, bras levés », démonstration, minuteur 1:26 et la feuille de la version plus douce" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="app-partie" id="progres" aria-labelledby="t-progres">
+  <p class="numero">7</p>
+  <h2 id="t-progres">Tes progrès, sans pression</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <p><b>Ton programme</b> te montre ta semaine, tes jours de séance (modifiables à tout moment) et l'étape en cours. Un rappel te prévient les jours choisis, à l'heure qui t'arrange.</p>
+      <p><b>Tes progrès</b> rassemblent tes séances de la semaine ou du mois, ton ressenti en général et tes séances passées, avec des mots d'encouragement plutôt qu'une avalanche de chiffres.</p>
+      <p><b>Tes badges</b> marquent les petites victoires : le premier, tu le choisis après ta première séance et tu le gagnes après 3 séances, même espacées. Viennent ensuite les paliers de 5, 10, 20 séances et plus, et quelques surprises pour les lève-tôt ou celles et ceux qui reviennent après une pause.</p>
+    </div>
+    <div class="bloc-tels">
+      <img class="tel" src="/images/app/20-progres.webp" alt="Écran « Tes progrès » : « Au-delà de ton rythme, bravo ! », les séances de la semaine, le ressenti et les badges" width="640" height="1387" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="app-partie" id="routines" aria-labelledby="t-routines">
+  <p class="numero">8</p>
+  <h2 id="t-routines">Envie de bouger en plus&nbsp;?</h2>
+  <div class="bloc inverse">
+    <div class="bloc-texte">
+      <p>Ta séance du jour reste sur l'accueil. À côté, 17 routines de 5 à 10 minutes t'attendent, rangées par moment (au réveil, pendant une pause, en fin de journée) et par zone du corps (nuque, épaules, dos, hanches, jambes).</p>
+      <p>Une recherche les retrouve par nom ou par usage. Une routine te plaît ? Mets-la en favori d'un cœur, et refais ta dernière séance d'une touche depuis l'accueil.</p>
+    </div>
+    <div class="bloc-tels"><img class="tel" src="/images/app/21-routines.webp" alt="Écran « Routines » : recherche, routines par zone (nuque, épaules, dos, hanches, jambes) et « Épaules légères », 6 minutes debout" width="640" height="1387" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<section class="app-partie" id="essai" aria-labelledby="t-essai">
+  <p class="numero">9</p>
+  <h2 id="t-essai">Essaie gratuitement, en toute tranquillité</h2>
+  <div class="bloc">
+    <div class="bloc-texte">
+      <p><b>7 jours d'essai gratuit</b>, avec accès à tout et rien à payer le premier jour. Une notification te prévient avant la fin de l'essai. Ensuite, l'abonnement coûte 59,99&nbsp;€ par an (environ 5&nbsp;€ par mois) ou 9,99&nbsp;€ par mois, sans engagement et résiliable à tout moment dans les réglages de l'App Store.</p>
+      <p><b>Ta vie privée reste la tienne.</b> Pas de compte à créer, pas de publicité, pas d'outil de mesure d'audience : tes réponses et tes séances restent sur ton téléphone. Tout est détaillé dans notre <a href="/privacy/">politique de confidentialité</a>.</p>
+      <p>Une question&nbsp;? Les <a href="/questions-frequentes/">questions fréquentes</a> répondent aux plus courantes, et tu peux aussi nous écrire à <a href="mailto:contact@moovini.app">contact@moovini.app</a>.</p>
+    </div>
+    <div class="bloc-tels">
+      <img class="tel" src="/images/app/11-fonctions.webp" alt="Écran « Tout ce qui t'attend » : séance du jour adaptée, difficulté qui suit tes progrès avec ton accord, démos, progrès, routines, favoris" width="640" height="1387" loading="lazy" decoding="async">
+      <img class="tel" src="/images/app/12-essai.webp" alt="Écran « Essaie Moovini gratuitement » : accès complet pendant 7 jours, rien à payer aujourd'hui" width="640" height="1387" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+</article>
