@@ -4627,7 +4627,7 @@
    "soir",
    "pause"
   ],
-  "pitch": "Deux inspirations, un long soupir : les épaules descendent.",
+  "pitch": "Deux inspirations par le nez, un long soupir par la bouche : seul le ventre bouge.",
   "dosage": "60 à 120 s",
   "side": null,
   "caution": null,
@@ -4665,9 +4665,9 @@
      "Si la tête tourne, reprends une respiration normale"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "prototype",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/long-soupir-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_long-soupir-chaise_studio.mp4"
    },
    {
     "position": "sol",
@@ -4687,7 +4687,7 @@
      ],
      [
       "Soupirer",
-      "Expire longuement par la bouche, comme un grand soupir, et laisse les épaules descendre."
+      "Expire longuement par la bouche, comme un grand soupir, et laisse le ventre redescendre sous tes mains."
      ],
      [
       "Recommencer",
