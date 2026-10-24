@@ -19,7 +19,7 @@
 <link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=bbcb0ec3">
+<link rel="stylesheet" href="/assets/site.css?v=fee318e3">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -304,10 +304,25 @@
     </div>
     <div class="bloc-tels">
       <img class="tel" src="/images/app/11-fonctions.webp" alt="Écran « Tout ce qui t'attend » : séance du jour adaptée, difficulté qui suit tes progrès avec ton accord, démos, progrès, routines, favoris" width="640" height="1387" loading="lazy" decoding="async">
-      <img class="tel" src="/images/app/12-essai.webp" alt="Écran « Essaie Moovini gratuitement » : accès complet pendant 7 jours, rien à payer aujourd'hui" width="640" height="1387" loading="lazy" decoding="async">
+      <!-- Les dates de l'essai, masquées sur la capture avec la fin de leur ligne, sont réécrites à la date du jour (jour 5 et
+           jour 7, comme l'app).
+           Positions relevées par capture_fiche.mjs (brut/12-essai-dates.json) : à refaire si l'écran est recapturé. -->
+      <div class="tel tel-dates">
+        <img src="/images/app/12-essai.webp" alt="Écran « Essaie Moovini gratuitement » : accès complet pendant 7 jours, rien à payer aujourd'hui, une notification au jour 5 et le premier débit au jour 7" width="640" height="1387" loading="lazy" decoding="async">
+        <span class="date" style="left:29.79%; top:36.50%; font-size:3.817cqw; line-height:4.835cqw; font-weight:700; color:#225B65"><span data-jour="5">29/10</span></span>
+        <span class="date" style="left:29.58%; top:45.19%; font-size:3.817cqw; line-height:4.835cqw; font-weight:700; color:#225B65"><span data-jour="7">31/10</span></span>
+        <span class="date" style="left:65.26%; top:47.77%; font-size:3.817cqw; line-height:4.835cqw; font-weight:400; color:#5A7177"><span data-jour="7">31/10</span> si tu ne</span>
+        <span class="date" style="left:39.74%; top:57.63%; font-size:3.562cqw; line-height:4.580cqw; font-weight:400; color:#225B65"><span data-jour="7">31/10</span> pour ne rien payer.</span>
+      </div>
     </div>
   </div>
 </section>
+<script>
+  document.querySelectorAll('.tel-dates [data-jour]').forEach(s => {
+    const d = new Date(); d.setDate(d.getDate() + Number(s.dataset.jour));
+    s.textContent = `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}`;
+  });
+</script>
 
 </article>
 </main>

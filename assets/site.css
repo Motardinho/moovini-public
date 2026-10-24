@@ -138,6 +138,11 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
    écrans en alternance. Source : contenu/application.html. */
 .tel { display: block; width: 100%; height: auto; aspect-ratio: 640 / 1387; border-radius: 30px; background: var(--sable);
   border: 6px solid var(--nuit); box-shadow: 0 22px 40px -22px rgba(20,41,46,.55); }
+/* Capture dont les dates sont écrites par la page (essai) : le cadre porte la bordure, les dates se placent en
+   pourcentage de l'écran et leur taille suit sa largeur (cqw). */
+.tel-dates { position: relative; overflow: hidden; aspect-ratio: auto; container-type: inline-size; }
+.tel-dates img { display: block; width: 100%; height: auto; }
+.tel-dates .date { position: absolute; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; }
 .app-tete { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 32px; align-items: center;
   background: var(--nuit); color: var(--creme); border-radius: 28px; padding: 44px 44px 0; overflow: hidden; }
 .app-tete-texte { padding-bottom: 44px; }
