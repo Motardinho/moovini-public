@@ -2,8 +2,10 @@
 
 Appelé par outils/generer.mjs avec un fichier JSON : [[source, destination, ratio], ...] ; ratio 1 pour un carré,
 1,5 pour les variantes au sol (personne allongée).
-- Vidéo (.mp4) : image prise à 40 % de la durée, cadre centré sur la personne (les vidéos sont en 21:9, personne au
-  centre), réduit à 480 px de large.
+- Vidéo (.mp4) : image prise à l'instant noté pour cette vidéo dans contenu/vignettes-instants.json (en secondes,
+  choisi pour que le geste se voie : jambe tendue, bras levés…), sinon à 40 % de la durée ; cadre centré sur la
+  personne (les vidéos sont en 21:9, personne au centre), réduit à 480 px de large. Après un changement d'instant,
+  supprimer l'image de images/fiches/ pour que le générateur la refasse.
 - Image : cadre centré, gardé à sa taille si elle est plus petite (pas d'agrandissement flou).
 """
 import json
@@ -15,12 +17,16 @@ import tempfile
 from PIL import Image
 
 
+INSTANTS = json.load(open(pathlib.Path(__file__).resolve().parents[1] / "contenu" / "vignettes-instants.json", encoding="utf-8"))
+
+
 def image_de_video(source):
+    instant = INSTANTS.get(pathlib.Path(source).name)
     duree = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", source],
                                  capture_output=True, text=True, check=True).stdout.strip())
     with tempfile.TemporaryDirectory() as dossier:
         sortie = pathlib.Path(dossier) / "image.png"
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{duree * 0.4:.2f}", "-i", source, "-frames:v", "1", str(sortie)], check=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{instant if instant is not None else duree * 0.4:.2f}", "-i", source, "-frames:v", "1", str(sortie)], check=True)
         return Image.open(sortie).convert("RGB")
 
 
