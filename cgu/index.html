@@ -25,6 +25,13 @@
   a { color: var(--accent); }
   .retour { margin: 0 0 18px; font-weight: 600; }
   .retour a { text-decoration: none; }
+  /* Retour en haut : apparaît après un écran de défilement. */
+  .haut-page { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: #FAF7F1; box-shadow: 0 10px 24px rgba(34, 91, 101, 0.18); cursor: pointer; opacity: 0; visibility: hidden; translate: 0 8px; transition: opacity .2s, translate .2s, visibility .2s, background .2s; }
+  .haut-page.visible { opacity: 1; visibility: visible; translate: 0 0; }
+  .haut-page:hover { background: #14292E; }
+  .haut-page:focus-visible { outline: 2px solid #45B9AD; outline-offset: 3px; }
+  .haut-page svg { width: 20px; height: 20px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 </style>
 </head>
 <body>
@@ -90,5 +97,12 @@
     <p class="muted">Hébergement du site : GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
   </section>
 </main>
+<button class="haut-page" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
+<script>
+  const haut = document.querySelector('.haut-page');
+  const suivre = () => haut.classList.toggle('visible', scrollY > innerHeight * .8);
+  addEventListener('scroll', suivre, { passive: true }); suivre();
+  haut.addEventListener('click', () => { scrollTo({ top: 0 }); document.querySelector('.retour a').focus({ preventScroll: true }); });
+</script>
 </body>
 </html>
