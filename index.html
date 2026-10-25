@@ -184,7 +184,7 @@
   }
   .iphone .bordure { background: #050708; padding: var(--bordure); border-radius: calc(var(--ecran) * .14 + var(--bordure)); }
   .iphone .ecran-tel { position: relative; overflow: hidden; border-radius: calc(var(--ecran) * .14); aspect-ratio: 393 / 852; background: #B9AE9F; }
-  .iphone .ecran-tel img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .iphone .ecran-tel img, .iphone .ecran-tel video { display: block; width: 100%; height: 100%; object-fit: cover; }
   .iphone .ilot { position: absolute; top: 1.29%; left: 50%; transform: translateX(-50%); width: 32%; height: 4.38%; border-radius: 999px; background: #000; }
   .iphone .bouton { position: absolute; width: 3px; border-radius: 2px; background: linear-gradient(90deg, #6B7175, #C9CDD0); }
   .iphone .action { left: -3px; top: 17%; height: 5.5%; }
@@ -321,7 +321,7 @@
   </div>
   <div class="scene leve leve-3" aria-hidden="true">
     <div class="iphone"><span class="bouton action"></span><span class="bouton volume-haut"></span><span class="bouton volume-bas"></span><span class="bouton marche"></span>
-      <div class="bordure"><div class="ecran-tel"><img src="images/ecrans/hero-marche.webp" alt="" width="600" height="1301" fetchpriority="high"><span class="ilot"></span></div></div>
+      <div class="bordure"><div class="ecran-tel"><video class="demo" src="images/ecrans/hero-marche.mp4" poster="images/ecrans/hero-marche.webp" width="600" height="1301" muted loop playsinline preload="auto" aria-hidden="true"></video><span class="ilot"></span></div></div>
     </div>
     <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min, 12 exercices</b></span></div>
     <div class="carte carte-semaine"><span><small>Bravo Julie&nbsp;!</small><b>4 séances cette semaine</b><span class="jours"><i class="fait"></i><i class="fait"></i><i class="fait"></i><i class="fait"></i><i></i><i></i><i></i></span></span></div>
@@ -410,11 +410,19 @@
   addEventListener('scroll', suivre, { passive: true }); suivre();
   haut.addEventListener('click', () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
 
+  // Le téléphone montre le mouvement en boucle (25 octobre 2026) : pas de lecture si le système réduit les animations,
+  // et le bouton de pause du mur l'arrête aussi.
+  const demo = document.querySelector('.ecran-tel .demo');
+  const reduit = matchMedia('(prefers-reduced-motion: reduce)');
+  const lire = () => { if (reduit.matches || document.body.classList.contains('fige')) demo.pause(); else demo.play().catch(() => {}); };
+  reduit.addEventListener('change', lire); lire();
+
   const pause = document.getElementById('pause');
   pause.addEventListener('click', () => {
     const fige = document.body.classList.toggle('fige');
     pause.setAttribute('aria-pressed', String(fige));
     pause.textContent = fige ? "Relancer l'animation" : "Mettre en pause l'animation";
+    lire();
   });
 </script>
 </body>
