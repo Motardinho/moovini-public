@@ -47,4 +47,4 @@ Au fil des séances, l'app te propose d'aller un peu plus loin, toujours avec to
 
 ## Quand sort Moovini ?
 
-Moovini arrive bientôt sur l'App Store. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. Pour être prévenu(e) de la sortie, écris-nous à [contact@moovini.app](mailto:contact@moovini.app). En attendant, tu peux déjà essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).
+Moovini arrive bientôt sur l'App Store et Google Play. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. Pour être prévenu(e) de la sortie, écris-nous à [contact@moovini.app](mailto:contact@moovini.app). En attendant, tu peux déjà essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).

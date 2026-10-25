@@ -160,7 +160,7 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .tel-dates .date { position: absolute; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; }
 .app-tete { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 32px; align-items: center;
   background: var(--nuit); color: var(--creme); border-radius: 28px; padding: 44px 44px 0; overflow: hidden; }
-.app-tete-texte { padding-bottom: 44px; }
+.app-tete-texte { min-width: 0; padding-bottom: 44px; }
 .app-tete h1 { color: var(--creme); font-size: clamp(2rem, 4.6vw, 3rem); font-weight: 800; line-height: 1.08; text-wrap: balance; }
 .app-tete h1 em { display: block; font-style: normal; color: var(--corail); }
 .app-tete .surtitre { color: var(--turquoise); }
@@ -238,7 +238,7 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .suite { margin-top: 24px; text-align: center; }
 
 @media (max-width: 900px) {
-  .app-tete { grid-template-columns: 1fr; padding: 32px 22px 0; }
+  .app-tete { grid-template-columns: minmax(0, 1fr); padding: 32px 22px 0; }
   .app-tete-texte { padding-bottom: 0; }
   .app-tete-tels { min-height: 400px; margin-top: 8px; }
   .app-tete-tels .tel { bottom: -110px; width: 40%; }
@@ -264,3 +264,25 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
   .app-tete-tels .tel:nth-child(1), .app-tete-tels .tel:nth-child(3) { bottom: -100px; }
   .app-tete-tels .tel:nth-child(1) { left: -2%; } .app-tete-tels .tel:nth-child(3) { right: -2%; }
 }
+
+/* Boutiques : même présentation que sur l’accueil. */
+  /* Deux boutons de boutique assortis ; l'annonce reste explicite tant que les apps ne sont pas publiques. */
+  .boutiques { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; width: 360px; max-width: 100%; }
+  .bientot { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: 1 1 140px;
+    min-height: 64px; min-width: 0; padding: 11px 10px; border-radius: 18px;
+    border: 1px solid rgba(250,247,241,.28); background: #203B40; color: #fff;
+    text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
+  .bientot.apple { background: var(--corail-fonce); border-color: transparent; }
+  .bientot:hover { background: #2B4B50; border-color: var(--turquoise); }
+  .bientot.apple:hover { background: #B04A33; }
+  .bientot:focus-visible { border-radius: 18px; }
+  .bientot svg { width: 24px; height: 28px; flex: none; }
+  .bientot span { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+  .bientot small { font-size: .7rem; font-weight: 600; line-height: 1.2; opacity: .85; }
+  .bientot strong { font-size: 1rem; font-weight: 800; white-space: nowrap; line-height: 1.2; letter-spacing: -.02em; }
+  @media (max-width: 860px) { .boutiques { justify-content: center; } }
+  @media (max-width: 360px) { .boutiques { gap: 8px; } .bientot { min-width: 0; padding: 11px 12px; gap: 8px; } }
+
+.boutiques a, .boutiques a:hover { color: #fff; text-decoration: none; }
+.boutiques svg { translate: none; }
+.boutiques strong { color: inherit; }

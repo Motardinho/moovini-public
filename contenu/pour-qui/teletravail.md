@@ -56,6 +56,6 @@ L'app ne remplace pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, 
 
 L'app fonctionne sans compte ni inscription : tes réponses et tes séances restent sur ton téléphone, sans publicité ni mesure d'audience. D'autres réponses t'attendent dans les [questions fréquentes](/questions-frequentes/).
 
-## Bientôt sur l'App Store
+## Bientôt sur l'App Store et Google Play
 
-Moovini est une app iPhone de mouvement doux, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Si tu veux l'essayer dès qu'elle arrive sur l'App Store, [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Moovini est une app de mouvement doux pour iPhone et Android, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Si tu veux l'essayer dès qu'elle arrive sur l'App Store et Google Play, [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).

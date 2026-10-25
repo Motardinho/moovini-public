@@ -49,7 +49,7 @@ L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store. P
 
 ## Quand sort Moovini ?
 
-Moovini arrive bientôt sur l'App Store, d'abord sur iPhone. Pour être prévenu(e) de la sortie, [écris-nous](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
+Moovini arrive bientôt sur l'App Store pour iPhone et sur Google Play pour Android. Pour être prévenu(e) de la sortie, [écris-nous](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
 
 ## Moovini remplace-t-elle un avis médical ?
 
