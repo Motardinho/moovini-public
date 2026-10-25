@@ -177,11 +177,15 @@ if (manquantes.length) {
   writeFileSync(join(RACINE, 'outils', '.vignettes.json'), JSON.stringify(manquantes));
   execFileSync('python', [join(RACINE, 'outils', 'vignettes.py'), join(RACINE, 'outils', '.vignettes.json')], { stdio: 'inherit' });
 }
-// Pour les vignettes carrées (liste, en-tête de fiche), une variante cadrée en carré de préférence.
-const imageDe = e => (e.variants.find(v => v.image && v.ratio === 1) ?? e.variants.find(v => v.image))?.image ?? null;
+// Vignette d'un exercice (liste, en-tête de fiche, partage) : la variante debout, sinon au sol, sinon sur chaise, pour que
+// la liste ne montre pas que des mouvements assis (demande du 25 octobre 2026). Une image au sol, en 3:2, est montrée
+// entière dans le carré.
+const ORDRE_VIGNETTE = ['debout', 'sol', 'assis'];
+const varianteVignette = e => e.variants.filter(v => v.image).sort((a, b) => ORDRE_VIGNETTE.indexOf(a.position) - ORDRE_VIGNETTE.indexOf(b.position))[0];
+const imageDe = e => varianteVignette(e)?.image ?? null;
 const visuel = (e, taille) => {
-  const img = imageDe(e);
-  return img ? `<img src="${img}" alt="${echapper(e.name)} : démonstration" width="${taille}" height="${taille}" loading="lazy" decoding="async">`
+  const v = varianteVignette(e);
+  return v ? `<img${v.ratio > 1 ? ' class="large"' : ''} src="${v.image}" alt="${echapper(e.name)} : démonstration" width="${taille}" height="${taille}" loading="lazy" decoding="async">`
     : `<span class="sans-photo ${e.family}" aria-hidden="true">${echapper(e.name.slice(0, 1))}</span>`;
 };
 const positions = e => [...new Set(e.variants.map(v => v.label))];
@@ -243,13 +247,13 @@ ${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul clas
   const ariane = [['Accueil', '/'], ['Exercices', chemin]];
   const groupes = Object.keys(FAMILLES).map(f => [f, exercices.filter(e => e.family === f)]).filter(([, l]) => l.length);
   ecrire('exercices/index.html', page({
-    chemin, titre: `Exercices doux : ${exercices.length} mouvements expliqués pas à pas`, titreSeo: 'Exercices doux sur chaise, debout ou au sol, pas à pas',
-    description: 'Exercices doux pour débutants et sédentaires : mobilité, cardio doux, renforcement et respiration, sur une chaise, debout ou au sol, pas à pas.',
-    jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'Exercices doux', inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
+    chemin, titre: `Aperçu du catalogue d'exercices de Moovini : ${exercices.length} mouvements pas à pas`, titreSeo: 'Exercices doux sur chaise, debout ou au sol : un aperçu',
+    description: `Un aperçu des exercices doux de Moovini : ${exercices.length} mouvements sur ${catalogue.length}, mobilité, cardio doux, renforcement et respiration, sur une chaise, debout ou au sol.`,
+    jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: "Aperçu du catalogue d'exercices de Moovini", inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
     corps: `${arianeHtml(ariane)}
-<header class="entete-page"><h1>Les exercices de Moovini</h1>
-<p class="chapeau">${exercices.length} mouvements doux pour débutants et sédentaires, choisis parmi les ${catalogue.length} de l'app, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. Dans l'app, les exercices se combinent en séances de 10 à 30 minutes d'après tes réponses.</p></header>
-${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercices</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
+<header class="entete-page"><p class="surtitre">Les exercices de Moovini</p><h1>Un aperçu du catalogue : ${exercices.length} exercices sur les ${catalogue.length} de l'app</h1>
+<p class="chapeau">Quelques mouvements doux pour débutants et sédentaires, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. L'app en compte bien d'autres, du plus simple au plus soutenu, et les combine en séances de 10 à 30 minutes d'après tes réponses.</p></header>
+${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercice${l.length > 1 ? 's' : ''}</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
   }));
   plan.push([chemin, AUJOURDHUI]);
 }

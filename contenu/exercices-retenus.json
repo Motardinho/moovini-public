@@ -1,7 +1,7 @@
 [
   "tourner-tete",
   "rouler-epaules",
-  "rotation-buste",
+  "genou-poitrine",
   "inclinaison-laterale",
   "marche-sur-place",
   "boxe",
@@ -10,6 +10,6 @@
   "lever-bras",
   "tendre-jambe",
   "pompes-mur",
-  "pointes-pieds",
+  "fente-avant",
   "respiration-ventre"
 ]
