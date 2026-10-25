@@ -264,21 +264,23 @@
     margin-top: 26px; max-width: 31rem; color: var(--texte);
     font-size: clamp(1.03rem, 2.6vw, 1.2rem); line-height: 1.6; font-weight: 500; text-wrap: balance;
   }
-  /* Le bouton en corail foncé plein, avec le logo Apple : il ne se confond pas avec les bulles crème du téléphone. */
-  .bientot {
-    margin-top: 32px; display: inline-flex; align-items: center; gap: 10px;
-    padding: 14px 28px 16px 24px; border-radius: 999px;
-    background: var(--calme-encre); color: #fff;
-    font-weight: 800; font-size: 1.02rem; text-decoration: none;
-  }
-  /* Le bouton ouvre un e-mail « Prévenez-moi à la sortie ». */
-  .bientot:hover { background: #B04A33; }
-  .bientot:focus-visible { border-radius: 999px; }
+  /* Deux boutons de boutique assortis ; l'annonce reste explicite tant que les apps ne sont pas publiques. */
+  .boutiques { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; width: 360px; max-width: 100%; }
+  .bientot { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex: 1 1 140px;
+    min-height: 64px; min-width: 0; padding: 11px 10px; border-radius: 18px;
+    border: 1px solid rgba(250,247,241,.28); background: #203B40; color: #fff;
+    text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
+  .bientot.apple { background: var(--calme-encre); border-color: transparent; }
+  .bientot:hover { background: #2B4B50; border-color: var(--turquoise); }
+  .bientot.apple:hover { background: #B04A33; }
+  .bientot:focus-visible { border-radius: 18px; }
+  .bientot svg { width: 24px; height: 28px; flex: none; }
+  .bientot span { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+  .bientot small { font-size: .7rem; font-weight: 600; line-height: 1.2; opacity: .85; }
+  .bientot strong { font-size: 1rem; font-weight: 800; white-space: nowrap; line-height: 1.2; letter-spacing: -.02em; }
+  @media (max-width: 860px) { .boutiques { justify-content: center; } }
+  @media (max-width: 360px) { .boutiques { gap: 8px; } .bientot { min-width: 0; padding: 11px 12px; gap: 8px; } }
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  /* La feuille alourdit le bas du logo : on le remonte d'un cheveu pour l'aligner sur le texte. */
-  .bientot svg { width: 17px; height: 20px; flex: none; translate: 0 -2px; }
-  .disponibilite { margin-top: 12px; color: var(--texte); font-size: .94rem; line-height: 1.5; }
-  .disponibilite a { color: inherit; text-underline-offset: 3px; }
   .preuve { margin-top: 18px; max-width: 31rem; text-wrap: balance; font-size: .94rem; color: var(--discret); font-weight: 500; line-height: 1.9; }
   .preuve b { color: var(--turquoise); font-weight: 700; }
   .u { white-space: nowrap; }
@@ -321,8 +323,10 @@
   <div class="texte">
     <h1 class="leve leve-2"><span class="u">Recommence à bouger,</span> <em>en douceur.</em></h1>
     <p class="promesse leve leve-3">Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
-    <a class="bientot leve leve-4" href="mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store." title="Être prévenu de la sortie par e-mail"><svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg>Bientôt sur l'App Store<span class="vh"> : être prévenu de la sortie par e-mail</span></a>
-    <p class="disponibilite leve leve-4">Bientôt aussi sur <a href="mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini&amp;body=Bonjour%2C%20pr%C3%A9venez-moi%20quand%20Moovini%20sera%20disponible%20sur%20Google%20Play.">Google Play pour Android</a>.</p>
+    <div class="boutiques leve leve-4" role="group" aria-label="Être prévenu de la sortie">
+      <a class="bientot apple" href="mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store." title="Être prévenu de la sortie sur l’App Store"><svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span><small>Bientôt sur l’</small><strong>App Store</strong></span></a>
+      <a class="bientot google" href="mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini&amp;body=Bonjour%2C%20pr%C3%A9venez-moi%20quand%20Moovini%20sera%20disponible%20sur%20Google%20Play." title="Être prévenu de la sortie sur Google Play"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#48C6E5" d="M1 1.5v23L13 13z"/><path fill="#65D58B" d="m1 1.5 15 8.6-3 2.9z"/><path fill="#FFD46A" d="m16 10.1 5 2.9-5 2.9-3-2.9z"/><path fill="#FA7B80" d="m1 24.5 12-11.5 3 2.9z"/></svg><span><small>Bientôt sur</small><strong>Google Play</strong></span></a>
+    </div>
     <p class="preuve leve leve-5">Aucune inscription requise et <b class="u">7&nbsp;jours d'essai gratuit</b> pour profiter pleinement de l'application.</p>
   </div>
   <div class="scene leve leve-3" aria-hidden="true">
