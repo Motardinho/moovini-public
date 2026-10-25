@@ -6,11 +6,13 @@
 // - questions-frequentes.md : chaque « ## » est une question, le texte qui suit sa réponse ;
 // - application.html : la page « L'app » (24 octobre 2026), en HTML parce qu'elle alterne textes et captures ; même en-tête que
 //   les .md, et <?exercices slug,slug?> y devient une rangée de fiches exercices ;
-// - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app).
+// - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app) ;
+// - exercices-retenus.json : les seuls exercices qui ont leur fiche sur le site (25 octobre 2026), dans l'ordre du
+//   catalogue. Les fiches et images d'un exercice retiré sont effacées, et un lien vers sa fiche devient du texte.
 // Les vignettes retenues des exercices sont réduites dans images/fiches/ par outils/vignettes.py (Pillow).
 // L'accueil (index.html) et les pages légales ne sont pas générés ; seul le plan du site les liste.
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'node:fs';
+import { join, dirname, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -42,7 +44,7 @@ const dateFr = iso => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { 
 // ---------- Markdown simple : intertitres, paragraphes, listes, citations, gras, italique, liens ----------
 function enLigne(t) {
   return echapper(t)
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, txt, url) => `<a href="${url.replace(/&amp;/g, '&amp;')}"${/^https?:/.test(url) && !url.startsWith(SITE) ? ' rel="noopener"' : ''}>${txt}</a>`)
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, txt, url) => ficheRetiree(url) ? txt : `<a href="${url.replace(/&amp;/g, '&amp;')}"${/^https?:/.test(url) && !url.startsWith(SITE) ? ' rel="noopener"' : ''}>${txt}</a>`)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[\s(«])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
     .replace(/(^|[\s(«])_([^_\s][^_]*)_/g, '$1<em>$2</em>');
@@ -151,7 +153,13 @@ const arianeHtml = elements => `<nav class="ariane" aria-label="Fil d'Ariane"><o
 const plan = [['/', '2026-10-23'], ['/privacy/', '2026-10-23'], ['/cgu/', '2026-10-23']];
 
 // ---------- Exercices ----------
-const exercices = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices.json'), 'utf8'));
+const catalogue = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices.json'), 'utf8'));
+const retenus = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices-retenus.json'), 'utf8'));
+for (const s of retenus) if (!catalogue.some(e => e.slug === s)) throw new Error(`Exercice inconnu dans exercices-retenus.json : ${s}`);
+const exercices = catalogue.filter(e => retenus.includes(e.slug));
+const ficheRetiree = url => { const m = url.match(/^\/exercices\/([a-z0-9-]+)\/$/); return !!m && !retenus.includes(m[1]); };
+for (const d of readdirSync(join(RACINE, 'exercices'), { withFileTypes: true }))
+  if (d.isDirectory() && !retenus.includes(d.name)) rmSync(join(RACINE, 'exercices', d.name), { recursive: true });
 const vignettes = [];
 // Image de la fiche : tirée de la vidéo retenue (nette), sinon la vignette retenue (180 px), sinon aucune.
 for (const e of exercices) for (const v of e.variants) {
@@ -163,6 +171,8 @@ for (const e of exercices) for (const v of e.variants) {
   vignettes.push([join(APP, source), join(RACINE, v.image.slice(1)), v.ratio]);
 }
 const manquantes = vignettes.filter(([, dest]) => !existsSync(dest));
+const gardees = new Set(vignettes.map(([, dest]) => basename(dest)));
+for (const f of readdirSync(join(RACINE, 'images', 'fiches'))) if (!gardees.has(f)) rmSync(join(RACINE, 'images', 'fiches', f));
 if (manquantes.length) {
   writeFileSync(join(RACINE, 'outils', '.vignettes.json'), JSON.stringify(manquantes));
   execFileSync('python', [join(RACINE, 'outils', 'vignettes.py'), join(RACINE, 'outils', '.vignettes.json')], { stdio: 'inherit' });
@@ -179,7 +189,8 @@ const positions = e => [...new Set(e.variants.map(v => v.label))];
 for (const e of exercices) {
   const chemin = `/exercices/${e.slug}/`;
   const ariane = [['Accueil', '/'], ['Exercices', '/exercices/'], [e.name, chemin]];
-  const voisins = exercices.filter(x => x.family === e.family && x.slug !== e.slug).slice(0, 4);
+  // Peu de fiches par famille : la même famille d'abord, puis les autres.
+  const voisins = [...exercices.filter(x => x.family === e.family), ...exercices.filter(x => x.family !== e.family)].filter(x => x.slug !== e.slug).slice(0, 4);
   const sections = e.variants.map(v => `
 <section class="variante">
   <h2>${echapper(v.name ?? e.name)} ${v.label === 'Debout' ? 'debout' : v.label === 'Au sol' ? 'au sol' : 'sur une chaise'}</h2>
@@ -223,7 +234,7 @@ for (const e of exercices) {
   <p class="prudence">Va à ton rythme et arrête si ça fait mal. En cas de problème de santé, de blessure ou de grossesse, demande d'abord conseil à ton médecin.</p>
   <aside class="dans-appli"><h2>Dans Moovini</h2><p>Moovini place ${echapper(e.name.toLowerCase())} dans tes séances quand il convient à tes réponses : démonstration en vidéo, voix qui te guide, décompte et version plus douce si besoin.</p></aside>
 </article>
-${voisins.length ? `<section class="voisins"><h2>Autres exercices de ${FAMILLES[e.family].toLowerCase()}</h2><ul class="grille-fiches">${voisins.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span></a></li>`).join('')}</ul></section>` : ''}`,
+${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul class="grille-fiches">${voisins.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span></a></li>`).join('')}</ul></section>` : ''}`,
   }));
   plan.push([chemin, AUJOURDHUI]);
 }
@@ -232,12 +243,12 @@ ${voisins.length ? `<section class="voisins"><h2>Autres exercices de ${FAMILLES[
   const ariane = [['Accueil', '/'], ['Exercices', chemin]];
   const groupes = Object.keys(FAMILLES).map(f => [f, exercices.filter(e => e.family === f)]).filter(([, l]) => l.length);
   ecrire('exercices/index.html', page({
-    chemin, titre: 'Exercices doux : 79 mouvements expliqués pas à pas', titreSeo: 'Exercices doux sur chaise, debout ou au sol, pas à pas',
+    chemin, titre: `Exercices doux : ${exercices.length} mouvements expliqués pas à pas`, titreSeo: 'Exercices doux sur chaise, debout ou au sol, pas à pas',
     description: 'Exercices doux pour débutants et sédentaires : mobilité, cardio doux, renforcement et respiration, sur une chaise, debout ou au sol, pas à pas.',
     jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'Exercices doux', inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
     corps: `${arianeHtml(ariane)}
 <header class="entete-page"><h1>Les exercices de Moovini</h1>
-<p class="chapeau">${exercices.length} mouvements doux pour débutants et sédentaires, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. Dans l'app, ils se combinent en séances de 10 à 30 minutes d'après tes réponses.</p></header>
+<p class="chapeau">${exercices.length} mouvements doux pour débutants et sédentaires, choisis parmi les ${catalogue.length} de l'app, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. Dans l'app, les exercices se combinent en séances de 10 à 30 minutes d'après tes réponses.</p></header>
 ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercices</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
   }));
   plan.push([chemin, AUJOURDHUI]);
@@ -303,7 +314,7 @@ for (const p of articles('pour-qui')) {
   const parSlug = Object.fromEntries(exercices.map(e => [e.slug, e]));
   const corps = a.corps.replace(/<\?exercices ([^?]+)\?>/g, (_, liste) => `<ul class="grille-fiches">${liste.split(',').map(s => {
     const x = parSlug[s.trim()];
-    if (!x) throw new Error(`Exercice inconnu dans application.html : ${s}`);
+    if (!x) throw new Error(`Exercice sans fiche dans application.html (voir exercices-retenus.json) : ${s}`);
     return `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`;
   }).join('')}</ul>`);
   ecrire('application/index.html', page({

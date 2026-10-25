@@ -153,11 +153,6 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
    écrans en alternance. Source : contenu/application.html. */
 .tel { display: block; width: 100%; height: auto; aspect-ratio: 640 / 1387; border-radius: 30px; background: var(--sable);
   border: 6px solid var(--nuit); box-shadow: 0 22px 40px -22px rgba(20,41,46,.55); }
-/* Capture dont les dates sont écrites par la page (essai) : le cadre porte la bordure, les dates se placent en
-   pourcentage de l'écran et leur taille suit sa largeur (cqw). */
-.tel-dates { position: relative; overflow: hidden; aspect-ratio: auto; container-type: inline-size; }
-.tel-dates img { display: block; width: 100%; height: auto; }
-.tel-dates .date { position: absolute; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; }
 .app-tete { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 32px; align-items: center;
   background: var(--nuit); color: var(--creme); border-radius: 28px; padding: 44px 44px 0; overflow: hidden; }
 .app-tete-texte { min-width: 0; padding-bottom: 44px; }
@@ -177,38 +172,23 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .app-chiffres li { background: #fff; border-radius: 20px; padding: 14px 16px; box-shadow: var(--ombre); color: var(--gris); font-size: .92rem; line-height: 1.4; }
 .app-chiffres b { display: block; color: var(--petrole); font-size: 1.12rem; margin-bottom: 2px; }
 
-.app-sommaire { margin: 30px 0 0; }
-.app-sommaire ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; counter-reset: s; }
-.app-sommaire li { counter-increment: s; }
-.app-sommaire a { display: inline-flex; gap: 8px; align-items: center; background: #fff; border: 1px solid var(--filet); border-radius: 999px;
-  padding: 6px 14px; font-size: .9rem; font-weight: 600; color: var(--petrole); text-decoration: none; }
-.app-sommaire a::before { content: counter(s); color: var(--corail-encre); font-weight: 800; }
-.app-sommaire a:hover { border-color: var(--vert-eau); }
-
 .app-partie { margin-top: 72px; scroll-margin-top: 20px; }
 .app-partie > h2 { margin-top: 6px; font-size: clamp(1.55rem, 3.4vw, 2.1rem); max-width: 760px; }
 .numero { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--corail-fonce); color: #fff; font-weight: 800; }
-.app-partie .intro { max-width: 760px; font-size: 1.1rem; color: var(--gris); }
-.app h3 { margin-top: 0; }
+.app-partie .intro { max-width: 760px; font-size: 1.1rem; color: var(--gris); margin-top: 14px; }
+.app-partie > .grille-fiches { margin-top: 18px; }
 
 /* Blocs texte et écrans */
-/* Juste sous le titre de la partie, le texte part en haut ; un bloc qui a son propre intertitre se centre sur l'écran. */
-.bloc { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: start; margin-top: 28px; }
-.bloc.inverse { align-items: center; margin-top: 48px; }
+.bloc { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: center; margin-top: 28px; }
 .bloc.inverse .bloc-texte { order: 2; }
 .bloc-texte { max-width: 600px; }
-.bloc-texte p + p, .bloc-texte p + ul, .bloc-texte ul + p, .bloc-texte dl + p, .bloc-texte p + dl, .bloc-texte p + h3 { margin-top: 14px; }
-.bloc-texte h3 + p { margin-top: 0; }
+.bloc-texte p + p, .bloc-texte p + ul, .bloc-texte ul + p { margin-top: 14px; }
 .bloc-tels { display: flex; gap: 18px; justify-content: center; }
 .bloc-tels .tel { width: 250px; }
 .bloc-tels .tel + .tel { margin-top: 48px; }
 .liste { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .liste li { position: relative; padding-left: 28px; }
 .liste li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 12px; height: 12px; border-radius: 50%; background: var(--turquoise); box-shadow: 0 0 0 4px var(--mobilite); }
-.options { display: flex; flex-direction: column; gap: 10px; }
-.options div { background: #fff; border-radius: 16px; padding: 10px 14px; box-shadow: var(--ombre); }
-.options dt { font-weight: 700; color: var(--petrole); }
-.options dd { color: var(--gris); font-size: .97rem; }
 .ressentis { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
 .ressentis li { border-radius: 16px; padding: 12px 14px; font-size: .98rem; }
 .ressentis b { display: block; }
@@ -220,21 +200,6 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; }
 .app-encart p { max-width: 560px; }
 
-/* Du débutant au confirmé */
-.paliers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
-.palier { background: #fff; border-radius: 22px; padding: 18px; box-shadow: var(--ombre); }
-.palier h3 { display: flex; align-items: center; gap: 10px; font-size: 1rem; color: var(--gris); margin-bottom: 8px; }
-.palier > p { font-size: .97rem; margin-bottom: 14px; }
-.palier .grille-fiches { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.palier .grille-fiches a { box-shadow: none; background: var(--fond); font-size: .88rem; }
-.pastille { border-radius: 999px; padding: 3px 12px; font-size: .9rem; font-weight: 700; }
-.pastille.doux { background: var(--mobilite); color: var(--mobilite-encre); }
-.pastille.modere { background: var(--cardio); color: var(--cardio-encre); }
-.pastille.soutenu { background: var(--calme); color: var(--calme-encre); }
-.comparaison { display: flex; justify-content: center; gap: 40px; margin-top: 34px; flex-wrap: wrap; }
-.comparaison figure { width: 250px; }
-.comparaison figcaption { margin-top: 14px; font-size: .97rem; color: var(--gris); text-align: center; }
-.comparaison figcaption b { display: block; color: var(--petrole); }
 .suite { margin-top: 24px; text-align: center; }
 
 @media (max-width: 900px) {
@@ -247,17 +212,12 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
   .app-chiffres { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bloc { grid-template-columns: 1fr; gap: 24px; }
   .bloc.inverse .bloc-texte { order: 0; }
-  .paliers { grid-template-columns: 1fr; }
-  .palier .grille-fiches { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
   .bloc-tels { gap: 12px; }
   .bloc-tels .tel { width: min(250px, 100%); }
   .bloc-tels .tel + .tel { margin-top: 32px; }
   .bloc-tels:has(.tel + .tel) .tel { width: calc(50% - 6px); }
-  .palier .grille-fiches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .comparaison { gap: 12px; flex-wrap: nowrap; }
-  .comparaison figure { width: calc(50% - 6px); }
   .app-encart { padding: 20px; }
   .app-tete-tels { min-height: 280px; }
   .app-tete-tels .tel { border-width: 4px; border-radius: 22px; bottom: -70px; }
