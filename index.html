@@ -154,7 +154,7 @@
 
   /* Voile pétrole : le mur reste une ambiance, le texte se lit sans effort. */
   .voile {
-    position: fixed; inset: 0 0 auto; height: 100vh; height: 100lvh; z-index: 1; pointer-events: none;
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background:
       radial-gradient(ellipse 42% 60% at 70% 50%, rgba(20,41,46,.70) 0%, rgba(20,41,46,0) 70%),
       linear-gradient(90deg, rgba(20,41,46,.97) 0%, rgba(20,41,46,.92) 42%, rgba(20,41,46,.62) 70%, rgba(20,41,46,.45) 100%);
@@ -296,6 +296,8 @@
   .pause { font: inherit; font-weight: 600; color: var(--creme); background: none; border: 1px solid rgba(250,247,241,.35); border-radius: 999px; padding: 4px 14px; cursor: pointer; }
   .pause:hover { border-color: var(--creme); }
   .fige .defile, .fige .carte { animation-play-state: paused; }
+  /* Pendant le geste et son inertie, le décor reste immobile. La reprise conserve la progression des animations. */
+  .en-defilement .defile, .en-defilement .carte { animation-play-state: paused; }
   @media (prefers-reduced-motion: reduce) { .pause { display: none; } }
   a:focus-visible, .pause:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; border-radius: 4px; }
   .pause:focus-visible { border-radius: 999px; }
@@ -308,8 +310,7 @@
 </style>
 </head>
 <body>
-<div class="mur" aria-hidden="true"><div class="incline" id="incline"></div></div>
-<div class="voile" aria-hidden="true"></div>
+<div class="mur" aria-hidden="true"><div class="incline" id="incline"></div><div class="voile"></div></div>
 
 <header class="entete leve"><img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100">
   <nav class="menu" aria-label="Navigation principale"><a href="application/">L'app</a><a href="blog/">Blog</a><a href="exercices/">Exercices</a><a href="questions-frequentes/">Questions</a></nav></header>
@@ -408,8 +409,17 @@
   let attente, largeur = innerWidth;
   addEventListener('resize', () => { if (innerWidth === largeur) return; largeur = innerWidth; clearTimeout(attente); attente = setTimeout(construire, 250); });
 
+  // Même calque pour le mur et son voile ; ne pas faire tourner les colonnes et les bulles pendant un scroll rapide.
+  // Les événements scroll continuent pendant l'inertie iOS/Android. Le délai couvre aussi les navigateurs sans scrollend.
+  let repriseDecor;
+  const suspendreDecor = () => {
+    document.body.classList.add('en-defilement');
+    clearTimeout(repriseDecor);
+    repriseDecor = setTimeout(() => document.body.classList.remove('en-defilement'), 200);
+  };
+  addEventListener('touchmove', suspendreDecor, { passive: true });
   const entete = document.querySelector('.entete'), haut = document.querySelector('.haut-page');
-  const suivre = () => { entete.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > 300); };
+  const suivre = () => { suspendreDecor(); entete.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > 300); };
   addEventListener('scroll', suivre, { passive: true }); suivre();
   haut.addEventListener('click', () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
 
