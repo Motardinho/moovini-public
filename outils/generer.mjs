@@ -120,7 +120,7 @@ ${corps}
   <section class="appel" aria-labelledby="appel-titre">
     <h2 id="appel-titre">Recommence à bouger, <em>en douceur.</em></h2>
     <p>Moovini, c'est le mouvement doux pour les sédentaires et les débutants : des séances composées d'après tes réponses, de 10 à 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Aucune inscription requise et 7 jours d'essai gratuit.</p>
-    <a class="bouton" href="${PREVENIR}">${POMME}Bientôt sur l'App Store<span class="vh"> : être prévenu de la sortie par e-mail</span></a>
+    <a class="bouton" href="${PREVENIR}">${POMME}Bientôt sur l'App Store et Google Play<span class="vh"> : être prévenu de la sortie par e-mail</span></a>
   </section>
   <nav class="liens" aria-label="Pied de page">
     <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
