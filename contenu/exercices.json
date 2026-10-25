@@ -676,25 +676,30 @@
     "steps": [
      [
       "S’installer",
-      "Debout, ou assis(e) au bord de la chaise, pieds à plat."
+      "Allonge-toi sur le dos sur un tapis, les jambes tendues et serrées, les bras le long du corps, paumes au sol."
      ],
      [
-      "Le geste",
-      "Monte les bras au-dessus de la tête, paumes face à face."
+      "Monter",
+      "Lève les deux bras tendus devant toi jusqu’à la verticale, au-dessus des épaules."
+     ],
+     [
+      "S’étirer",
+      "Continue jusqu’à poser les bras au sol derrière la tête, paumes vers le haut, et grandis-toi des mains aux pieds quelques secondes."
      ],
      [
       "Revenir",
-      "Redescends lentement, bras le long du corps."
+      "Repasse par la verticale et repose doucement les bras le long du corps."
      ]
     ],
     "tips": [
-     "Garde les épaules basses",
-     "Respire pendant la montée"
+     "Garde la tête posée et le regard vers le plafond",
+     "Laisse le bas du dos au sol, sans te cambrer quand les bras passent derrière",
+     "Si l’épaule tire ou pince, arrête les bras plus haut, sans forcer jusqu’au sol"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/se-grandir-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_se-grandir-sol_studio.mp4"
    }
   ]
  },
@@ -1164,30 +1169,30 @@
     "steps": [
      [
       "S’installer",
-      "Tiens-toi debout, les coudes près du corps, les avant-bras devant toi à hauteur de taille, les mains détendues."
+      "Tiens-toi debout, face à l’avant, les coudes pliés le long du corps, les avant-bras devant toi à hauteur de taille, les mains ouvertes et détendues."
      ],
      [
-      "Les poignets",
-      "Dessine des cercles lents avec les mains, dans un sens puis dans l’autre, puis un huit couché avec les deux mains."
+      "Les cercles",
+      "Dessine des cercles lents avec les deux poignets en même temps, les doigts serrés, sans bouger les coudes."
      ],
      [
-      "Les mains",
-      "Lève les mains doigts vers le haut, puis laisse-les tomber vers le bas. Ouvre grand les doigts, puis ferme doucement le poing."
+      "Ouvrir",
+      "Arrête les cercles, paumes vers le haut, puis ouvre grand les mains en écartant bien les doigts."
      ],
      [
-      "Finir",
-      "Joins les paumes devant la poitrine et descends-les doucement vers le nombril, puis secoue les mains pour les détendre."
+      "Fermer",
+      "Referme doucement les mains en poing, le pouce par-dessus, puis rouvre-les et reprends les cercles."
      ]
     ],
     "tips": [
      "Des gestes lents, dans une amplitude confortable",
-     "Les épaules restent basses, les coudes relâchés",
+     "Les épaules restent basses, les coudes près du corps",
      "Arrête si un poignet fait mal ou fourmille"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/poignets-mains-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_poignets-mains-debout_studio.mp4"
    }
   ]
  },
@@ -1564,30 +1569,30 @@
     "steps": [
      [
       "S’installer",
-      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, le dos à plat."
+      "Mets-toi à quatre pattes sur un tapis, les mains à plat sous les épaules, les genoux sous les hanches, les tibias posés au sol."
      ],
      [
       "Arrondir",
-      "En soufflant, arrondis le dos vers le plafond et rentre le menton vers la poitrine."
+      "En soufflant, pousse le sol avec les mains et arrondis le dos vers le plafond, le menton rentré, le regard vers les genoux."
      ],
      [
       "Creuser",
-      "En inspirant, creuse doucement le dos, sors les fesses et porte le regard devant toi."
+      "En inspirant, redescends lentement le dos jusqu’à le creuser doucement, le regard vers le sol devant les mains."
      ],
      [
       "Enchaîner",
-      "Passe lentement d’une position à l’autre, au rythme de ton souffle, dans une amplitude confortable."
+      "Reste un instant dans chaque position, puis repars, 6 à 8 allers-retours au rythme de ton souffle."
      ]
     ],
     "tips": [
-     "Laisse le mouvement partir du bassin et monter jusqu’à la tête",
-     "Si les genoux sont sensibles, glisse une serviette pliée dessous",
-     "Garde les bras tendus sans bloquer les coudes"
+     "Garde les mains et les genoux immobiles : seul le dos bouge",
+     "Laisse la tête suivre le dos, sans forcer sur la nuque",
+     "Si les genoux sont sensibles, glisse une serviette pliée dessous"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/dos-rond-creux-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_dos-rond-creux-sol_studio.mp4"
    }
   ]
  },
@@ -2532,30 +2537,30 @@
     "steps": [
      [
       "S’installer",
-      "Mets-toi en appui sur les mains, posées sous les épaules, jambes tendues derrière toi, le corps aligné de la tête aux pieds."
+      "Mets-toi en planche, bras tendus, les mains à plat sous les épaules et les doigts vers l’avant, les jambes tendues sur la pointe des pieds."
      ],
      [
       "Monter le genou",
-      "Amène lentement un genou vers la poitrine, sans laisser le bassin monter."
+      "Amène lentement un genou sous la poitrine, la pointe du pied effleure le sol, sans laisser le bassin monter."
      ],
      [
       "Reposer",
-      "Ramène le pied en arrière et repose-le au sol, le corps de nouveau bien aligné."
+      "Ramène le pied en arrière, jambe tendue, et reviens en planche, le corps aligné des épaules aux talons."
      ],
      [
       "Alterner",
-      "Fais de même avec l’autre genou, et continue en alternant lentement."
+      "Fais de même avec l’autre genou, et continue en alternant à un rythme lent et régulier."
      ]
     ],
     "tips": [
      "Plus facile : pose les mains sur l’assise d’une chaise stable calée contre un mur",
-     "Garde les épaules au-dessus des mains et le regard vers le sol",
-     "Souffle quand le genou monte, inspire quand le pied revient"
+     "Garde les épaules au-dessus des mains et le regard vers le sol devant tes mains",
+     "Si les poignets ou le bas du dos fatiguent, pose les genoux au sol et reprends après une courte pause"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/grimpeur-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_grimpeur-sol_studio.mp4"
    }
   ]
  },
@@ -2802,9 +2807,9 @@
      "Pour que ce soit plus facile, rapproche les pieds du mur ; pour que ce soit plus dur, éloigne-les"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "prototype",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/pompes-mur-debout-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_pompes-mur-debout_studio.mp4"
    },
    {
     "position": "sol",
@@ -2816,30 +2821,30 @@
     "steps": [
      [
       "S’installer",
-      "À genoux sur un tapis, pose les mains au sol à hauteur de poitrine, un peu plus larges que les épaules."
-     ],
-     [
-      "S’aligner",
-      "Avance les mains pour que ton corps soit droit de la tête aux genoux, le ventre rentré, sans laisser le bassin monter ni creuser."
+      "À genoux sur un tapis, pose les mains à plat un peu plus larges que les épaules, à hauteur de poitrine. Lève les pieds et croise les chevilles."
      ],
      [
       "Descendre",
-      "Plie les coudes près du corps et descends lentement la poitrine entre les mains."
+      "Plie les coudes et descends lentement la poitrine vers le tapis, entre tes mains, le corps d’un seul bloc des épaules aux genoux."
      ],
      [
-      "Remonter",
-      "Pousse dans les mains pour tendre les bras, en soufflant pendant que tu pousses."
+      "Pousser",
+      "Souffle en poussant dans les mains pour revenir bras tendus."
+     ],
+     [
+      "Répéter",
+      "Recommence sans te presser, les mains toujours à la même place."
      ]
     ],
     "tips": [
      "Mets un coussin ou plie le tapis sous les genoux pour plus de confort",
-     "Pour alléger, descends moins bas ; pour corser, éloigne un peu plus les genoux des mains",
-     "Regarde le sol un peu devant les mains pour garder la nuque dans l’axe"
+     "Garde la nuque dans le prolongement du dos, le regard vers le sol juste devant les mains",
+     "Pour alléger, descends moins bas ; pour corser, éloigne un peu plus les genoux des mains"
     ],
     "gear": [],
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/pompes-genoux-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_pompes-genoux-sol_studio.mp4"
    }
   ]
  },
@@ -3394,26 +3399,26 @@
      ],
      [
       "Allonger",
-      "Tends un bras devant toi et la jambe opposée derrière, dans l’alignement du dos, sans tourner le bassin."
+      "Tends un bras devant toi et la jambe opposée derrière, jusqu’à la hauteur du dos, sans tourner le bassin."
      ],
      [
       "Tenir",
-      "Garde la position 2 à 3 secondes en respirant, le dos toujours plat."
+      "Garde la position environ 2 secondes en respirant, la tête dans le prolongement du dos."
      ],
      [
       "Alterner",
-      "Repose la main et le genou, puis allonge l’autre bras et l’autre jambe, en alternant."
+      "Repose la main et le genou, puis allonge l’autre bras et l’autre jambe."
      ]
     ],
     "tips": [
      "Imagine un verre d’eau posé sur le bas du dos qui ne doit pas tomber",
-     "Plus facile : allonge d’abord seulement la jambe, ou seulement le bras",
-     "Pense à t’allonger loin plutôt qu’à monter haut"
+     "Ne monte pas la jambe plus haut que le dos, pour ne pas creuser les reins",
+     "Plus facile : allonge d’abord seulement la jambe, ou seulement le bras"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/pointeur-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_pointeur-sol_studio.mp4"
    },
    {
     "position": "sol",
@@ -3953,30 +3958,30 @@
     "steps": [
      [
       "S’installer",
-      "Allonge-toi sur le ventre sur un tapis, les avant-bras au sol et les coudes sous les épaules."
+      "Allonge-toi sur le ventre sur un tapis, les avant-bras à plat, les coudes sous les épaules et les mains jointes."
      ],
      [
       "Monter",
-      "Pousse dans les avant-bras et décolle le buste et le bassin, en gardant les genoux posés au sol."
+      "Pousse dans les avant-bras et décolle le buste et le bassin, les genoux posés. Lève le bas des jambes, pieds joints."
      ],
      [
       "S’aligner",
-      "Place ton corps bien droit des épaules aux genoux, le ventre légèrement rentré, sans creuser le dos."
+      "Garde le corps droit des épaules aux genoux, le ventre légèrement rentré, la tête dans le prolongement du dos et le regard vers le sol devant les mains."
      ],
      [
       "Tenir",
-      "Garde la position 20 à 30 secondes en respirant, puis repose-toi doucement sur le ventre."
+      "Reste immobile 20 à 30 secondes en respirant calmement, puis repose-toi doucement sur le ventre."
      ]
     ],
     "tips": [
-     "Mets un coussin sous les genoux si le sol est dur",
-     "Regarde le sol entre tes mains pour garder la nuque dans l’axe",
-     "Si tu trembles trop, fais une courte pause et reprends"
+     "Mets un coussin ou plie le tapis sous les genoux pour plus de confort",
+     "Pousse le sol avec les avant-bras pour ne pas t’affaisser entre les épaules",
+     "Si tu trembles trop ou si le bas du dos se creuse, fais une courte pause et reprends"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/planche-genoux-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_planche-genoux-sol_studio.mp4"
    }
   ]
  },
@@ -4128,11 +4133,11 @@
     "steps": [
      [
       "S’installer",
-      "Allonge-toi sur le dos, les bras le long du corps, et lève les genoux pliés au-dessus des hanches."
+      "Allonge-toi sur le dos sur un tapis, le bout des doigts derrière les oreilles, les coudes ouverts, et lève les genoux pliés au-dessus des hanches."
      ],
      [
       "Enrouler",
-      "En soufflant, ramène les genoux vers la poitrine en décollant à peine le bassin du sol."
+      "En soufflant, ramène les genoux vers la poitrine : le bassin décolle un peu du tapis."
      ],
      [
       "Redescendre",
@@ -4140,18 +4145,18 @@
      ],
      [
       "Répéter",
-      "Recommence lentement, la nuque et les épaules relâchées au sol."
+      "Recommence, la tête et les épaules posées sur le tapis, le regard au plafond."
      ]
     ],
     "tips": [
-     "Évite-le si le bas du dos fait mal pendant le mouvement",
-     "Appuie légèrement les mains au sol pour te stabiliser",
-     "Plus facile : rapproche juste les genoux de la poitrine sans décoller le bassin"
+     "Les mains ne tirent pas sur la nuque : le bout des doigts reste juste derrière les oreilles",
+     "Plus facile : rapproche les genoux de la poitrine sans décoller le bassin",
+     "Évite-le si le bas du dos fait mal pendant le mouvement"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/crunch-inverse-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_crunch-inverse-sol_studio.mp4"
    }
   ]
  },
@@ -4187,30 +4192,30 @@
     "steps": [
      [
       "S’installer",
-      "Allonge-toi sur le ventre sur un tapis, les bras tendus devant toi, les jambes allongées, le front posé au sol."
+      "Allonge-toi sur le ventre sur un tapis, les bras allongés devant toi à largeur d’épaules, paumes au sol, les jambes allongées et serrées."
      ],
      [
       "Décoller",
-      "Décolle un peu les bras et les jambes du sol en allongeant tout le corps, de quelques centimètres seulement."
+      "Décolle en même temps les bras, le haut de la poitrine et les jambes, bras et jambes tendus, sans à-coup."
      ],
      [
       "Tenir",
-      "Tiens 3 secondes, le regard vers le sol et la nuque longue."
+      "Tiens environ 3 secondes, le regard vers le tapis et la tête dans le prolongement du dos."
      ],
      [
       "Reposer",
-      "Repose doucement bras, jambes et front au sol, relâche un instant, puis recommence."
+      "Repose doucement bras, poitrine et jambes sur le tapis, relâche un instant, puis recommence."
      ]
     ],
     "tips": [
      "Pense à t’allonger vers l’avant et l’arrière plutôt qu’à monter haut",
-     "Arrête si cambrer le bas du dos fait mal",
-     "Pour simplifier, décolle seulement les bras, puis seulement les jambes"
+     "Pour simplifier, décolle seulement les bras, puis seulement les jambes",
+     "Arrête si cambrer le bas du dos fait mal"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/superman-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_superman-sol_studio.mp4"
    }
   ]
  },
@@ -4245,30 +4250,30 @@
     "steps": [
      [
       "S’installer",
-      "À quatre pattes sur un tapis, mains sous les épaules et genoux sous les hanches, le dos plat."
+      "À quatre pattes sur un tapis, mains à plat sous les épaules, coudes souples, genoux sous les hanches, le dos plat et le regard vers le tapis."
      ],
      [
       "Pousser",
-      "Garde un genou plié et pousse le talon vers le plafond, la semelle vers le haut."
+      "Garde le genou plié à angle droit et pousse le talon vers le plafond, pied fléchi, jusqu’à ce que la cuisse soit dans l’alignement du dos."
      ],
      [
       "Redescendre",
-      "Ramène lentement le genou sous la hanche, sans le poser, le dos toujours plat, sans cambrer."
+      "Ramène lentement le genou juste au-dessus du tapis, sans le poser, puis recommence ; le dos reste plat, sans cambrer."
      ],
      [
       "Changer de côté",
-      "Après tes 10 mouvements, fais la même chose avec l’autre jambe."
+      "À mi-exercice, fais la même chose avec l’autre jambe."
      ]
     ],
     "tips": [
-     "Monte seulement jusqu’à ce que la cuisse soit dans l’alignement du dos",
+     "Les mains, l’autre genou et le dos restent immobiles : seule la jambe bouge",
      "Serre la fesse en haut, c’est elle qui travaille",
      "Mets un coussin sous le genou d’appui pour plus de confort"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/ruade-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_ruade-sol_studio.mp4"
    }
   ]
  },
@@ -4364,30 +4369,30 @@
     "steps": [
      [
       "S’installer",
-      "Assieds-toi au bord d’une chaise, le dos droit, les pieds à plat, une serviette tenue à deux mains, bras tendus devant toi."
+      "Assieds-toi droit sur l’avant de la chaise, les pieds à plat au sol. Roule une serviette et tiens-la à deux mains, poings fermés, paumes vers le bas."
      ],
      [
       "Tendre",
-      "Tire la serviette vers les côtés pour qu’elle reste bien tendue."
+      "Tends les bras devant toi à hauteur d’épaules, la serviette bien tendue entre tes poings."
      ],
      [
       "Tirer",
-      "Ramène les coudes en arrière et la serviette vers la poitrine, en serrant les omoplates."
+      "Ramène la serviette vers le bas de ta poitrine : les coudes plient et passent derrière toi, les omoplates se serrent, les épaules restent basses."
      ],
      [
       "Revenir",
-      "Tends lentement les bras devant toi sans relâcher la tension, puis recommence."
+      "Tends à nouveau les bras devant toi sans relâcher la serviette, puis enchaîne le tirage suivant."
      ]
     ],
     "tips": [
+     "Le dos reste droit, sans t’appuyer sur le dossier",
      "Garde les épaules basses, loin des oreilles",
-     "Souffle en tirant, inspire en tendant les bras",
-     "Pour corser, tire plus fort sur les côtés de la serviette"
+     "Souffle en tirant ; si l’épaule gêne, tire moins loin"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/tirage-serviette-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-18_tirage-serviette-chaise_studio.mp4"
    },
    {
     "position": "debout",
@@ -4457,30 +4462,30 @@
     "steps": [
      [
       "S’installer",
-      "Mets-toi à quatre pattes, les mains sous les épaules, les genoux sous les hanches, les orteils posés au sol."
+      "Mets-toi à quatre pattes sur un tapis, les mains à plat sous les épaules, les doigts vers l’avant, les genoux sous les hanches et les orteils retournés au sol."
      ],
      [
       "Gainer",
-      "Rentre le ventre et garde le dos plat, comme une table."
+      "Rentre légèrement le ventre et garde le dos plat comme une table, la tête dans le prolongement du dos et le regard vers le tapis devant les mains."
      ],
      [
       "Décoller",
-      "Pousse dans les mains et les orteils pour décoller les genoux de deux ou trois centimètres, sans bouger le dos."
+      "Pousse dans les mains et les orteils pour décoller les genoux de deux ou trois centimètres, sans bouger le dos ni le bassin."
      ],
      [
       "Tenir",
-      "Tiens 20 à 30 secondes en respirant, puis repose les genoux doucement."
+      "Reste ainsi en respirant calmement, puis repose les genoux en douceur. Recommence pour 20 à 30 secondes de tenue en tout."
      ]
     ],
     "tips": [
-     "Les genoux restent tout près du sol : plus bas, c’est plus efficace",
-     "Respire normalement, sans bloquer le souffle",
-     "Pour simplifier, repose les genoux quelques secondes puis repars"
+     "Les genoux restent tout près du sol : inutile de monter plus haut",
+     "Garde les bras tendus sans verrouiller les coudes, et respire sans bloquer le souffle",
+     "Si tu trembles trop ou si le dos s’arrondit, repose les genoux quelques secondes puis repars"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/ours-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_ours-sol_studio.mp4"
    }
   ]
  },
@@ -4736,30 +4741,30 @@
     "steps": [
      [
       "S’installer",
-      "Assieds-toi confortablement sur une chaise, le dos droit, les pieds à plat, les mains posées sur les cuisses."
+      "Assieds-toi droit(e) sur une chaise, les pieds à plat écartés comme les hanches, les bras le long du corps."
      ],
      [
-      "Fermer les yeux",
-      "Ferme doucement les yeux et laisse tomber les épaules."
+      "Relâcher les épaules",
+      "Monte doucement les épaules, roule-les vers l’arrière, puis laisse-les descendre."
      ],
      [
-      "Relâcher",
-      "Relâche le visage, la mâchoire, puis les bras et les jambes, en respirant lentement par le nez."
+      "Poser les mains",
+      "Pose les mains sur les cuisses, paumes vers le haut, les doigts détendus, et ferme doucement les yeux."
      ],
      [
-      "Revenir",
-      "Reste ainsi 1 à 2 minutes, puis rouvre les yeux en douceur et étire-toi si tu en as envie."
+      "Rester",
+      "Reste immobile 1 à 2 minutes, la tête droite, en respirant lentement par le nez, puis rouvre les yeux en douceur."
      ]
     ],
     "tips": [
-     "Tu peux aussi le faire allongé(e), bras écartés paumes vers le haut",
      "Laisse ton expiration devenir un peu plus longue que ton inspiration",
-     "Si une pensée arrive, laisse-la passer et reviens à ton souffle"
+     "Si une pensée arrive, laisse-la passer et reviens à ton souffle",
+     "Tu peux aussi le faire allongé(e), bras écartés paumes vers le haut"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/relachement-chaise-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_relachement-chaise_studio.mp4"
    },
    {
     "position": "sol",
@@ -4830,30 +4835,30 @@
     "steps": [
      [
       "S’installer",
-      "Mets-toi à genoux sur un tapis, les avant-bras au sol, les coudes sous les épaules."
+      "Mets-toi à genoux sur un tapis, les avant-bras à plat, les coudes sous les épaules et les mains jointes."
      ],
      [
       "Monter",
-      "Recule une jambe puis l’autre et pose les pointes de pieds au sol, le corps aligné de la tête aux talons."
+      "Recule une jambe puis l’autre, jambes tendues et serrées, et pose les pointes de pieds au sol."
+     ],
+     [
+      "S’aligner",
+      "Garde le corps droit de la tête aux talons, le ventre légèrement rentré, sans creuser le dos ni monter les fesses. Regarde le sol devant les mains, la nuque longue."
      ],
      [
       "Tenir",
-      "Rentre légèrement le ventre, serre les fessiers et tiens 20 à 40 s en respirant, sans creuser le dos."
-     ],
-     [
-      "Revenir",
-      "Repose doucement les genoux au sol, puis relâche."
+      "Reste immobile 20 à 40 secondes en respirant calmement, puis repose doucement les genoux au sol."
      ]
     ],
     "tips": [
-     "Si le bas du dos se creuse, choisis plutôt la planche sur les genoux",
-     "Regarde le sol entre tes mains, la nuque longue",
-     "Pousse le sol avec les avant-bras pour ne pas t’affaisser dans les épaules"
+     "Pousse le sol avec les avant-bras pour ne pas t’affaisser entre les épaules",
+     "Respire calmement pendant toute la tenue, sans bloquer le souffle",
+     "Si le bas du dos se creuse, pose les genoux : c’est la planche sur les genoux"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/planche-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_planche-sol_studio.mp4"
    }
   ]
  },
@@ -4889,30 +4894,30 @@
     "steps": [
      [
       "S’installer",
-      "Allonge-toi sur le dos, les bras le long du corps, un pied au sol près des fesses, l’autre jambe tendue dans l’axe de la cuisse."
+      "Allonge-toi sur le dos sur un tapis, la tête posée au sol, les bras le long du corps, paumes vers le sol. Pose le pied droit au sol près des fesses et lève la jambe gauche tendue, dans l’axe de la cuisse."
      ],
      [
       "Monter",
-      "Pousse dans le talon au sol pour monter le bassin, bien horizontal, sans basculer d’un côté."
+      "En soufflant, pousse dans le talon droit pour monter le bassin, les deux hanches à la même hauteur. Marque une courte pause en haut."
      ],
      [
       "Redescendre",
-      "Redescends lentement le bassin jusqu’au sol, la jambe toujours tendue."
+      "En inspirant, redescends lentement le bassin jusqu’au tapis. La jambe gauche reste tendue en l’air, puis remonte le bassin."
      ],
      [
       "Changer de côté",
-      "Après tes répétitions, change de jambe et fais de même de l’autre côté."
+      "À mi-exercice, repose la jambe levée, puis fais de même avec le pied gauche au sol et la jambe droite tendue."
      ]
     ],
     "tips": [
-     "Appuie les bras au sol pour garder l’équilibre",
-     "Plus facile : garde les deux pieds au sol",
-     "Souffle en montant, inspire en descendant"
+     "Garde le bassin bien horizontal : les deux hanches montent ensemble, sans basculer",
+     "Appuie les bras et les paumes au sol pour garder l’équilibre",
+     "Si le bas du dos tire, monte moins haut ou garde les deux pieds au sol"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/pont-une-jambe-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_pont-une-jambe-sol_studio.mp4"
    }
   ]
  },
@@ -5760,30 +5765,30 @@
     "steps": [
      [
       "S’installer",
-      "Tiens-toi debout, les pieds à la largeur du bassin, puis accroupis-toi et pose les mains au sol devant toi."
+      "Tiens-toi debout, les pieds à la largeur du bassin, puis plie les genoux et pose les mains à plat au sol devant tes pieds."
      ],
      [
       "Reculer",
-      "Envoie les pieds en arrière pour te mettre en planche, le corps aligné de la tête aux pieds."
+      "Envoie les deux pieds ensemble en arrière pour te mettre en planche, le dos plat, de la tête aux talons."
      ],
      [
       "Revenir",
-      "Ramène les pieds vers les mains, en position accroupie."
+      "Ramène les deux pieds près des mains, en position accroupie."
      ],
      [
       "Se relever",
-      "Relève-toi debout, sans pompe ni saut, puis recommence."
+      "Redresse-toi jusqu’à être bien debout, sans pompe ni saut, puis recommence."
      ]
     ],
     "tips": [
-     "Recule les pieds un après l’autre si le dos fatigue",
      "Plie bien les genoux pour poser les mains au sol",
-     "Souffle en reculant les pieds"
+     "Souffle en reculant les pieds",
+     "Recule les pieds un après l’autre si le dos fatigue"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/demi-burpee-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_demi-burpee-sol_studio.mp4"
    }
   ]
  },
@@ -5877,30 +5882,30 @@
     "steps": [
      [
       "S’accroupir",
-      "Debout, accroupis-toi et pose les mains au sol devant les pieds."
+      "Debout, plie les genoux et pose les mains à plat au sol devant tes pieds."
      ],
      [
       "Planche",
-      "Envoie les pieds en arrière pour te mettre en planche, puis fais une pompe."
+      "Saute les deux pieds ensemble en arrière pour te mettre en planche, le dos plat."
      ],
      [
-      "Ramener",
-      "Ramène les pieds près des mains en restant accroupi(e)."
+      "Pompe",
+      "Descends la poitrine jusqu’au sol, puis repousse le sol pour remonter en planche."
      ],
      [
       "Sauter",
-      "Relève-toi et saute, les bras tendus vers le ciel, puis atterris en douceur."
+      "Ramène les pieds près des mains d’un petit bond, puis saute les bras tendus vers le ciel et atterris en douceur."
      ]
     ],
     "tips": [
-     "Sans la pompe ni le saut, c’est un demi-burpee : plus doux pour le dos et les articulations",
+     "Garde le ventre serré et le dos plat en planche",
      "Recule et ramène les pieds un par un si sauter est trop dur",
-     "Garde le ventre serré en planche pour protéger le dos"
+     "Sans la pompe ni le saut, c’est un demi-burpee : plus doux pour le dos et les articulations"
     ],
     "gear": null,
-    "thumbnail": null,
-    "video": "photos",
-    "videoSrc": null
+    "thumbnail": "assets/moovini/mouvements/burpee-sol-studio.webp",
+    "video": "retenue",
+    "videoSrc": "assets/videos/2026-10-25_burpee-sol_studio.mp4"
    }
   ]
  },
