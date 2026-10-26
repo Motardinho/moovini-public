@@ -129,7 +129,7 @@ ${corps.replaceAll('<?boutiques?>', BOUTIQUES)}
   <nav class="liens" aria-label="Pied de page">
     <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
     <a href="/pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a><a href="/pour-qui/debutant-sedentaire/">Débutants</a>
-    <a href="/questions-frequentes/">Questions fréquentes</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d'utilisation</a>
+    <a href="/questions-frequentes/">Questions fréquentes</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d'utilisation</a><a href="/assistance/">Assistance</a>
     <a href="mailto:contact@moovini.app">contact@moovini.app</a>
   </nav>
   <p class="mention">Moovini propose des exercices doux pour le bien-être et ne remplace pas l'avis d'un médecin ou d'un(e) kiné. © 2026 Moovini</p>
@@ -150,7 +150,7 @@ const ORGANISATION = { '@id': `${SITE}/#organisation` };
 const filAriane = elements => ({ '@type': 'BreadcrumbList', itemListElement: elements.map(([nom, chemin], i) => ({ '@type': 'ListItem', position: i + 1, name: nom, item: `${SITE}${chemin}` })) });
 const arianeHtml = elements => `<nav class="ariane" aria-label="Fil d'Ariane"><ol>${elements.map(([nom, chemin], i) => i === elements.length - 1 ? `<li aria-current="page">${echapper(nom)}</li>` : `<li><a href="${chemin}">${echapper(nom)}</a></li>`).join('')}</ol></nav>`;
 
-const plan = [['/', '2026-10-23'], ['/privacy/', '2026-10-23'], ['/cgu/', '2026-10-23']];
+const plan = [['/', '2026-10-23'], ['/privacy/', '2026-10-23'], ['/cgu/', '2026-10-23'], ['/assistance/', '2026-10-26']];
 
 // ---------- Exercices ----------
 const catalogue = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices.json'), 'utf8'));
