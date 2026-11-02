@@ -77,6 +77,41 @@ const couverture = x => x.image ? `<figure class="couverture"><img src="${x.imag
 const vignette = x => x.image ? `<img src="${x.image.replace(/\.webp$/, '-640.webp')}" alt="" width="640" height="360" loading="lazy" decoding="async">` : '';
 const imageDePartage = x => x.image ? `${SITE}${x.image}` : undefined;
 
+// Les exercices bougent à l'écran (demande du 2 novembre 2026). La page reste écrite avec des images fixes : le script les
+// anime quand elles approchent, joue seulement ce qui se voit, et ne fait rien si le visiteur demande moins d'animations ou
+// économise ses données. Une image data-cadre (le lecteur de l'app) garde son décor : le clip se pose dessus, en fondu.
+const SCRIPT_CLIPS = `<script>
+  (() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
+    const lecture = new IntersectionObserver(l => l.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .25 });
+    const animer = img => {
+      const v = document.createElement('video');
+      v.muted = v.defaultMuted = v.loop = v.playsInline = true;
+      v.preload = 'auto';
+      v.src = img.dataset.clip;
+      if (img.dataset.cadre) {
+        const [gauche, haut, largeur, hauteur, fondu] = img.dataset.cadre.split(' ');
+        v.style.cssText = \`left:\${gauche};top:\${haut};width:\${largeur};height:\${hauteur};--fondu:\${fondu}\`;
+        v.setAttribute('aria-hidden', 'true');
+        v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
+        img.after(v);
+      } else {
+        // L'image devient l'affiche du clip, dont la première image est la même. Dans la page tout de suite : Safari sur
+        // iPhone ne lance pas une vidéo hors de la page. S'il refuse de la jouer (mode économie d'énergie), l'affiche reste.
+        v.className = img.className;
+        v.width = img.getAttribute('width'); v.height = img.getAttribute('height');
+        v.poster = img.getAttribute('src');
+        v.setAttribute('aria-label', img.alt);
+        img.replaceWith(v);
+      }
+      lecture.observe(v);
+    };
+    const approche = new IntersectionObserver(l => l.forEach(e => { if (e.isIntersecting) { approche.unobserve(e.target); animer(e.target); } }), { rootMargin: '200px' });
+    document.querySelectorAll('img[data-clip]').forEach(img => approche.observe(img));
+  })();
+</script>
+`;
+
 // ---------- Gabarit commun ----------
 function page({ chemin, titre, titreSeo, description, image = `${SITE}/images/partage.jpg`, imageAlt = 'Moovini, l\u2019app de mouvement doux', jsonld = [], corps, type = 'website' }) {
   const url = `${SITE}${chemin}`;
@@ -143,7 +178,7 @@ ${corps.replaceAll('<?boutiques?>', BOUTIQUES)}
   addEventListener('scroll', suivre, { passive: true }); suivre();
   haut.addEventListener('click', () => { scrollTo({ top: 0 }); barre.querySelector('.marque').focus({ preventScroll: true }); });
 </script>
-</body>
+${corps.includes('data-clip') ? SCRIPT_CLIPS : ''}</body>
 </html>
 `;
 }
@@ -161,7 +196,7 @@ const exercices = catalogue.filter(e => retenus.includes(e.slug));
 const ficheRetiree = url => { const m = url.match(/^\/exercices\/([a-z0-9-]+)\/$/); return !!m && !retenus.includes(m[1]); };
 for (const d of readdirSync(join(RACINE, 'exercices'), { withFileTypes: true }))
   if (d.isDirectory() && !retenus.includes(d.name)) rmSync(join(RACINE, 'exercices', d.name), { recursive: true });
-const vignettes = [];
+const vignettes = [], clipsFiches = [];
 // Image de la fiche : tirée de la vidéo retenue (nette), sinon la vignette retenue (180 px), sinon aucune.
 for (const e of exercices) for (const v of e.variants) {
   const source = v.videoSrc ?? v.thumbnail;
@@ -170,6 +205,11 @@ for (const e of exercices) for (const v of e.variants) {
   // Au sol, la personne est allongée : image en 3:2 au lieu d'un carré.
   v.ratio = v.position === 'sol' && v.videoSrc ? 1.5 : 1;
   vignettes.push([join(APP, source), join(RACINE, v.image.slice(1)), v.ratio]);
+  // Même cadre que l'image, qui bouge une fois à l'écran (demande du 2 novembre 2026) ; voir SCRIPT_CLIPS.
+  if (v.videoSrc) {
+    v.clip = v.image.replace('/images/fiches/', '/images/clips/').replace(/\.webp$/, '.mp4');
+    clipsFiches.push([join(APP, v.videoSrc), join(RACINE, v.clip.slice(1)), v.ratio, 480]);
+  }
 }
 const manquantes = vignettes.filter(([, dest]) => !existsSync(dest));
 const gardees = new Set(vignettes.map(([, dest]) => basename(dest)));
@@ -178,15 +218,28 @@ if (manquantes.length) {
   writeFileSync(join(RACINE, 'outils', '.vignettes.json'), JSON.stringify(manquantes));
   execFileSync('python', [join(RACINE, 'outils', 'vignettes.py'), join(RACINE, 'outils', '.vignettes.json')], { stdio: 'inherit' });
 }
+// Fabrique les clips qui manquent dans un dossier et efface ceux qui ne servent plus.
+function preparerClips(dossier, liste) {
+  mkdirSync(join(RACINE, dossier), { recursive: true });
+  const gardes = new Set(liste.map(([, dest]) => basename(dest)));
+  for (const f of readdirSync(join(RACINE, dossier))) if (!gardes.has(f)) rmSync(join(RACINE, dossier, f));
+  const absents = liste.filter(([, dest]) => !existsSync(dest));
+  if (!absents.length) return;
+  writeFileSync(join(RACINE, 'outils', '.clips.json'), JSON.stringify(absents));
+  execFileSync('python', [join(RACINE, 'outils', 'clips.py'), join(RACINE, 'outils', '.clips.json')], { stdio: 'inherit' });
+  rmSync(join(RACINE, 'outils', '.clips.json'));
+}
+preparerClips('images/clips', clipsFiches);
 // Vignette d'un exercice (liste, en-tête de fiche, partage) : la variante debout, sinon au sol, sinon sur chaise, pour que
 // la liste ne montre pas que des mouvements assis (demande du 25 octobre 2026). Une image au sol, en 3:2, est montrée
 // entière dans le carré.
 const ORDRE_VIGNETTE = ['debout', 'sol', 'assis'];
 const varianteVignette = e => e.variants.filter(v => v.image).sort((a, b) => ORDRE_VIGNETTE.indexOf(a.position) - ORDRE_VIGNETTE.indexOf(b.position))[0];
 const imageDe = e => varianteVignette(e)?.image ?? null;
+const attributClip = v => v.clip ? ` data-clip="${v.clip}"` : '';
 const visuel = (e, taille) => {
   const v = varianteVignette(e);
-  return v ? `<img${v.ratio > 1 ? ' class="large"' : ''} src="${v.image}" alt="${echapper(e.name)} : démonstration" width="${taille}" height="${taille}" loading="lazy" decoding="async">`
+  return v ? `<img${v.ratio > 1 ? ' class="large"' : ''} src="${v.image}"${attributClip(v)} alt="${echapper(e.name)} : démonstration" width="${taille}" height="${taille}" loading="lazy" decoding="async">`
     : `<span class="sans-photo ${e.family}" aria-hidden="true">${echapper(e.name.slice(0, 1))}</span>`;
 };
 const positions = e => [...new Set(e.variants.map(v => v.label))];
@@ -200,7 +253,7 @@ for (const e of exercices) {
 <section class="variante">
   <h2>${echapper(v.name ?? e.name)} ${v.label === 'Debout' ? 'debout' : v.label === 'Au sol' ? 'au sol' : 'sur une chaise'}</h2>
   <div class="variante-corps">
-    ${v.image ? `<img class="photo${v.ratio > 1 ? ' large' : ''}" src="${v.image}" alt="${echapper(e.name)} ${v.label.toLowerCase()} : position de démonstration" width="480" height="${Math.round(480 / v.ratio)}" loading="lazy" decoding="async">` : ''}
+    ${v.image ? `<img class="photo${v.ratio > 1 ? ' large' : ''}" src="${v.image}"${attributClip(v)} alt="${echapper(e.name)} ${v.label.toLowerCase()} : position de démonstration" width="480" height="${Math.round(480 / v.ratio)}" loading="lazy" decoding="async">` : ''}
     <div>
       ${v.pitch ? `<p class="accroche">${echapper(v.pitch)}</p>` : ''}
       ${v.steps.length ? `<h3>Les étapes</h3><ol class="etapes">${v.steps.map(([t, txt]) => `<li><strong>${echapper(t)}</strong><br>${echapper(txt)}</li>`).join('')}</ol>` : ''}
@@ -264,8 +317,41 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
 // du lundi 2 novembre 2026, puis on reprend au début. Toutes sont écrites dans la page, celle de la semaine de génération
 // visible ; un petit script montre celle de la semaine en cours, sans nouvelle publication. Images : le lecteur de l'app
 // sur chaque exercice (images/seance/sSS-EE.webp, marketing/site/20261102-seance-semaine/ dans le dépôt de l'app).
+// Le geste y bouge : contenu/seance-cadres.json dit où la vidéo est posée sur chaque image (même script de capture) et le
+// clip (images/seance/clips/) couvre la largeur de l'écran, de la tête aux pieds, entre la consigne et le minuteur.
 {
   const seances = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seances.json'), 'utf8'));
+  const cadres = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seance-cadres.json'), 'utf8'));
+  // En points d'écran. Marges autour du geste, sans toucher la consigne : elle commence 14 points sous la zone du geste.
+  const LARGEUR_ECRAN = 393, HAUTEUR_ECRAN = 1041 * 393 / 480, BARRE_ETAT = 54, MARGE_HAUT = 10, MARGE_BAS = 13, FONDU = 6;
+  // Le cadre d'un clip tient à sa vidéo : il vaut pour toutes les images de cette vidéo, même posée un peu autrement.
+  const zones = new Map();
+  for (const { video, place: [gauche, , largeur, hauteur], box } of Object.values(cadres)) {
+    if (!box) continue;
+    const z = zones.get(video) ?? { x0: 1, x1: 0, hauteurMin: Infinity, box };
+    z.x0 = Math.min(z.x0, -gauche / largeur);
+    z.x1 = Math.max(z.x1, (LARGEUR_ECRAN - gauche) / largeur);
+    z.hauteurMin = Math.min(z.hauteurMin, hauteur);
+    z.largeur = Math.max(z.largeur ?? 0, largeur);
+    zones.set(video, z);
+  }
+  const clipsSeance = [];
+  for (const [video, z] of zones) {
+    z.y0 = Math.max(0, z.box[2] - MARGE_HAUT / z.hauteurMin);
+    z.y1 = Math.min(1, z.box[3] + MARGE_BAS / z.hauteurMin);
+    z.clip = `/images/seance/clips/${video}`;
+    clipsSeance.push([join(APP, 'assets/videos', video), join(RACINE, z.clip.slice(1)), [z.x0, z.y0, z.x1 - z.x0, z.y1 - z.y0], (z.x1 - z.x0) * z.largeur * 480 / LARGEUR_ECRAN]);
+  }
+  preparerClips('images/seance/clips', clipsSeance);
+  const pourcent = x => `${(x * 100).toFixed(2)}%`;
+  // Attributs de l'image : le clip, et sa place sur l'image en part de l'écran (gauche, haut, largeur, hauteur, fondu).
+  const clipDuLecteur = nom => {
+    const c = cadres[nom], z = c && zones.get(c.video);
+    if (!z) return '';
+    const [gauche, haut, largeur, hauteur] = c.place;
+    const cadre = [(gauche + z.x0 * largeur) / LARGEUR_ECRAN, (BARRE_ETAT + haut + z.y0 * hauteur) / HAUTEUR_ECRAN, (z.x1 - z.x0) * largeur / LARGEUR_ECRAN, (z.y1 - z.y0) * hauteur / HAUTEUR_ECRAN, FONDU / ((z.y1 - z.y0) * hauteur)];
+    return ` data-clip="${z.clip}" data-cadre="${cadre.map(pourcent).join(' ')}"`;
+  };
   const chemin = '/seance-de-la-semaine/';
   const ariane = [['Accueil', '/'], ['La séance de la semaine', chemin]];
   const POSITIONS = { debout: 'Debout', assis: 'Sur une chaise', sol: 'Au sol' };
@@ -279,7 +365,7 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     if (!existsSync(join(RACINE, image.slice(1)))) throw new Error(`Image du lecteur manquante : ${image}`);
     const nom = echapper(m.nom);
     return `<li class="mouvement">
-  <img src="${image}" alt="${nom}, ${POSITIONS[m.position].toLowerCase()} : le lecteur de Moovini pendant l'exercice" width="480" height="1041" loading="lazy" decoding="async">
+  <figure class="lecteur"><img src="${image}"${clipDuLecteur(basename(image, '.webp'))} alt="${nom}, ${POSITIONS[m.position].toLowerCase()} : le lecteur de Moovini pendant l'exercice" width="480" height="1041" loading="lazy" decoding="async"></figure>
   <div>
     <h3><span class="rang">${i + 1}.</span> ${retenus.includes(m.slug) ? `<a href="/exercices/${m.slug}/">${nom}</a>` : nom}</h3>
     <ul class="pastilles"><li class="position ${m.position}">${POSITIONS[m.position]}</li>${niveau(m.niveau)}<li class="famille ${m.famille}">${FAMILLES[m.famille]}</li></ul>

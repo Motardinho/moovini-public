@@ -22,7 +22,7 @@
 <link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=d63931a1">
+<link rel="stylesheet" href="/assets/site.css?v=cd85b51b">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -167,7 +167,7 @@
     <div class="bloc-tels"><img class="tel" src="/images/app/17-lecteur.webp" alt="Lecteur de séance : exercice 4 sur 12, « Pas écartés, bras levés », démonstration avec la consigne « Un pas sur le côté, bras en V », minuteur 1:25 et la feuille de la version plus douce" width="640" height="1387" loading="lazy" decoding="async"></div>
   </div>
   <p class="intro">Des exercices simples pour (re)commencer jusqu'aux plus soutenus, sur une chaise, debout ou au sol. Quelques-uns, pas à pas :</p>
-  <ul class="grille-fiches"><li><a href="/exercices/rouler-epaules/"><img src="/images/fiches/2026-10-18_rouler-epaules-debout_studio.webp" alt="Rouler les épaules : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Rouler les épaules</span><small>Sur une chaise ou debout</small></a></li><li><a href="/exercices/marche-sur-place/"><img src="/images/fiches/2026-10-18_marche-sur-place-debout_studio.webp" alt="Marche sur place : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Marche sur place</span><small>Sur une chaise ou debout</small></a></li><li><a href="/exercices/genou-poitrine/"><img class="large" src="/images/fiches/2026-10-18_genou-poitrine-sol_studio.webp" alt="Genou vers la poitrine : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Genou vers la poitrine</span><small>Sur une chaise ou au sol</small></a></li><li><a href="/exercices/fente-avant/"><img src="/images/fiches/2026-10-18_fente-avant-debout_studio.webp" alt="Fente avant : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Fente avant</span><small>Debout</small></a></li></ul>
+  <ul class="grille-fiches"><li><a href="/exercices/rouler-epaules/"><img src="/images/fiches/2026-10-18_rouler-epaules-debout_studio.webp" data-clip="/images/clips/2026-10-18_rouler-epaules-debout_studio.mp4" alt="Rouler les épaules : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Rouler les épaules</span><small>Sur une chaise ou debout</small></a></li><li><a href="/exercices/marche-sur-place/"><img src="/images/fiches/2026-10-18_marche-sur-place-debout_studio.webp" data-clip="/images/clips/2026-10-18_marche-sur-place-debout_studio.mp4" alt="Marche sur place : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Marche sur place</span><small>Sur une chaise ou debout</small></a></li><li><a href="/exercices/genou-poitrine/"><img class="large" src="/images/fiches/2026-10-18_genou-poitrine-sol_studio.webp" data-clip="/images/clips/2026-10-18_genou-poitrine-sol_studio.mp4" alt="Genou vers la poitrine : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Genou vers la poitrine</span><small>Sur une chaise ou au sol</small></a></li><li><a href="/exercices/fente-avant/"><img src="/images/fiches/2026-10-18_fente-avant-debout_studio.webp" data-clip="/images/clips/2026-10-18_fente-avant-debout_studio.mp4" alt="Fente avant : démonstration" width="96" height="96" loading="lazy" decoding="async"><span>Fente avant</span><small>Debout</small></a></li></ul>
   <p class="suite">D'autres dans <a href="/exercices/">nos fiches exercices</a>.</p>
 </section>
 
@@ -213,6 +213,36 @@
   const suivre = () => { barre.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > innerHeight * .8); };
   addEventListener('scroll', suivre, { passive: true }); suivre();
   haut.addEventListener('click', () => { scrollTo({ top: 0 }); barre.querySelector('.marque').focus({ preventScroll: true }); });
+</script>
+<script>
+  (() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
+    const lecture = new IntersectionObserver(l => l.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .25 });
+    const animer = img => {
+      const v = document.createElement('video');
+      v.muted = v.defaultMuted = v.loop = v.playsInline = true;
+      v.preload = 'auto';
+      v.src = img.dataset.clip;
+      if (img.dataset.cadre) {
+        const [gauche, haut, largeur, hauteur, fondu] = img.dataset.cadre.split(' ');
+        v.style.cssText = `left:${gauche};top:${haut};width:${largeur};height:${hauteur};--fondu:${fondu}`;
+        v.setAttribute('aria-hidden', 'true');
+        v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
+        img.after(v);
+      } else {
+        // L'image devient l'affiche du clip, dont la première image est la même. Dans la page tout de suite : Safari sur
+        // iPhone ne lance pas une vidéo hors de la page. S'il refuse de la jouer (mode économie d'énergie), l'affiche reste.
+        v.className = img.className;
+        v.width = img.getAttribute('width'); v.height = img.getAttribute('height');
+        v.poster = img.getAttribute('src');
+        v.setAttribute('aria-label', img.alt);
+        img.replaceWith(v);
+      }
+      lecture.observe(v);
+    };
+    const approche = new IntersectionObserver(l => l.forEach(e => { if (e.isIntersecting) { approche.unobserve(e.target); animer(e.target); } }), { rootMargin: '200px' });
+    document.querySelectorAll('img[data-clip]').forEach(img => approche.observe(img));
+  })();
 </script>
 </body>
 </html>
