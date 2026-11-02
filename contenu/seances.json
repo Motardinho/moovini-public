@@ -1,0 +1,2364 @@
+[
+ {
+  "titre": "Le haut du corps en douceur",
+  "etape": "Retrouver le mouvement",
+  "minutes": 20,
+  "zones": "Surtout le haut du corps",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 0,
+   "plan": "premiere-seance"
+  },
+  "mouvements": [
+   {
+    "nom": "Rouler les épaules",
+    "slug": "rouler-epaules",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Rotation du buste",
+    "slug": "rotation-buste",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Torsion allongée",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Oreille vers l’épaule",
+    "slug": "oreille-epaule",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Lever les bras",
+    "slug": "lever-bras",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Moulin à vent",
+    "slug": "moulin-a-vent",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Boxe dans le vide",
+    "slug": "boxe",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la poitrine",
+    "slug": "genou-poitrine",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "sol",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Genou vers la poitrine",
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Jambes et hanches sur une chaise",
+  "etape": "Retrouver le mouvement",
+  "minutes": 10,
+  "zones": "Surtout les jambes et les hanches",
+  "reglage": {
+   "mouvement": "assis",
+   "duree": "10",
+   "n": 1,
+   "plan": "seance-2"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Tendre la jambe",
+    "slug": "tendre-jambe",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Étirement du fessier en 4",
+    "slug": "fessier-en-4",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Étirement du fessier en 4",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Bien ancré(e) sur tes jambes",
+  "etape": "Retrouver le mouvement",
+  "minutes": 20,
+  "zones": "Surtout les jambes",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 1,
+   "plan": "seance-2"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Assis-debout",
+    "slug": "assis-debout",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Étirement de l’avant de la hanche",
+    "slug": "avant-hanche",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses doux",
+    "slug": "talons-fesses-doux",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Élévation latérale de la jambe",
+    "slug": "jambe-laterale",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Squat avec appui",
+    "slug": "mini-squat",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": [
+     {
+      "nom": "Squat sans appui",
+      "position": "debout",
+      "niveau": 3
+     },
+     {
+      "nom": "Squat jambes écartées",
+      "position": "debout",
+      "niveau": 3
+     }
+    ]
+   },
+   {
+    "nom": "Étirement du mollet",
+    "slug": "mollet",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "un mur"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Pas de côté",
+    "slug": "pas-de-cote",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Le haut du corps, assis(e)",
+  "etape": "Retrouver le mouvement",
+  "minutes": 20,
+  "zones": "Surtout le haut du corps",
+  "reglage": {
+   "mouvement": "assis",
+   "duree": "20",
+   "n": 4,
+   "plan": "seance-5"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Genoux ramenés",
+    "slug": "genoux-ramenes",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Rotation du buste",
+    "slug": "rotation-buste",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Torsion allongée",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Se grandir, bras au-dessus de la tête",
+    "slug": "se-grandir",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Se grandir, bras au-dessus de la tête",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Boxe dans le vide",
+    "slug": "boxe",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Serrer les omoplates",
+    "slug": "omoplates",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Étirement du fessier en 4",
+    "slug": "fessier-en-4",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Étirement du fessier en 4",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Talons devant",
+    "slug": "talons-devant",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Dix minutes pour tout le corps",
+  "etape": "Retrouver le mouvement",
+  "minutes": 10,
+  "zones": "Tout le corps",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "10",
+   "n": 0,
+   "plan": "premiere-seance"
+  },
+  "mouvements": [
+   {
+    "nom": "Rouler les épaules",
+    "slug": "rouler-epaules",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Rotation du buste",
+    "slug": "rotation-buste",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Torsion allongée",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Genou vers la poitrine",
+    "slug": "genou-poitrine",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "sol",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Genou vers la poitrine",
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Les épaules en mouvement",
+  "etape": "Retrouver le mouvement",
+  "minutes": 20,
+  "zones": "Surtout le haut du corps",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 3,
+   "plan": "seance-4"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Lever les bras",
+    "slug": "lever-bras",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Moulin à vent",
+    "slug": "moulin-a-vent",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Boxe dans le vide",
+    "slug": "boxe",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Bras croisé devant la poitrine",
+    "slug": "bras-croise",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Serrer les omoplates",
+    "slug": "omoplates",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses doux",
+    "slug": "talons-fesses-doux",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Tout le corps sur une chaise",
+  "etape": "Gagner en aisance",
+  "minutes": 20,
+  "zones": "Tout le corps",
+  "reglage": {
+   "mouvement": "assis",
+   "duree": "20",
+   "n": 6,
+   "plan": "seance-1"
+  },
+  "mouvements": [
+   {
+    "nom": "Étirement du fessier en 4",
+    "slug": "fessier-en-4",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Étirement du fessier en 4",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Genoux ramenés",
+    "slug": "genoux-ramenes",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Rotation du buste",
+    "slug": "rotation-buste",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Torsion allongée",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Se grandir, bras au-dessus de la tête",
+    "slug": "se-grandir",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Se grandir, bras au-dessus de la tête",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Boxe dans le vide",
+    "slug": "boxe",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Serrer les omoplates",
+    "slug": "omoplates",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Inclinaison latérale",
+    "slug": "inclinaison-laterale",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Talons devant",
+    "slug": "talons-devant",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Les jambes en mouvement",
+  "etape": "Gagner en aisance",
+  "minutes": 20,
+  "zones": "Surtout les jambes",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 7,
+   "plan": "seance-2"
+  },
+  "mouvements": [
+   {
+    "nom": "Moulin à vent",
+    "slug": "moulin-a-vent",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Assis-debout",
+    "slug": "assis-debout",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Élévation latérale de la jambe",
+    "slug": "jambe-laterale",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Balancier de jambe",
+    "slug": "balancier-jambe",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses",
+    "slug": "talons-fesses",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Squat avec appui",
+    "slug": "mini-squat",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": [
+     {
+      "nom": "Squat sans appui",
+      "position": "debout",
+      "niveau": 3
+     },
+     {
+      "nom": "Squat jambes écartées",
+      "position": "debout",
+      "niveau": 3
+     }
+    ]
+   },
+   {
+    "nom": "Cercles de genou levé",
+    "slug": "cercles-genou",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses doux",
+    "slug": "talons-fesses-doux",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Trente minutes sur une chaise",
+  "etape": "Retrouver le mouvement",
+  "minutes": 30,
+  "zones": "Surtout le haut du corps",
+  "reglage": {
+   "mouvement": "assis",
+   "duree": "30",
+   "n": 1,
+   "plan": "seance-2"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Tendre la jambe",
+    "slug": "tendre-jambe",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Étirement du fessier en 4",
+    "slug": "fessier-en-4",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Étirement du fessier en 4",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genoux ramenés",
+    "slug": "genoux-ramenes",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Bras croisé devant la poitrine",
+    "slug": "bras-croise",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Talons devant",
+    "slug": "talons-devant",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Cercles de bras",
+    "slug": "cercles-bras",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Boxe dans le vide",
+    "slug": "boxe",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Écarter la jambe, assis(e)",
+    "slug": "ecarter-jambe",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Rotation du buste",
+    "slug": "rotation-buste",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Torsion allongée",
+      "position": "sol",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Lever les bras",
+    "slug": "lever-bras",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Serrer les omoplates",
+    "slug": "omoplates",
+    "famille": "force",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Ouvrir la poitrine",
+    "slug": "ouvrir-poitrine",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Poignets et mains",
+    "slug": "poignets-mains",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "assis",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "debout",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Un cran au-dessus",
+  "etape": "Bouger plus librement",
+  "minutes": 20,
+  "zones": "Surtout les jambes",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 12,
+   "plan": "seance-1"
+  },
+  "mouvements": [
+   {
+    "nom": "Moulin à vent",
+    "slug": "moulin-a-vent",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas croisé en arrière",
+    "slug": "pas-croise",
+    "famille": "cardio",
+    "niveau": 3,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Tirage avec une serviette",
+    "slug": "tirage-serviette",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une serviette"
+    ],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Déroulé du dos debout",
+    "slug": "deroule-dos",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Fente avant",
+    "slug": "fente-avant",
+    "famille": "force",
+    "niveau": 3,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Fente avec appui sur la chaise",
+      "position": "debout",
+      "niveau": 2
+     },
+     {
+      "nom": "Fente arrière",
+      "position": "debout",
+      "niveau": 3
+     }
+    ]
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Dips sur la chaise",
+    "slug": "dips-chaise",
+    "famille": "force",
+    "niveau": 3,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Balancier de jambe",
+    "slug": "balancier-jambe",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses",
+    "slug": "talons-fesses",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Trente minutes debout",
+  "etape": "Retrouver le mouvement",
+  "minutes": 30,
+  "zones": "Surtout les jambes",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "30",
+   "n": 1,
+   "plan": "seance-2"
+  },
+  "mouvements": [
+   {
+    "nom": "Tourner la tête",
+    "slug": "tourner-tete",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Assis-debout",
+    "slug": "assis-debout",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Étirement de l’avant de la hanche",
+    "slug": "avant-hanche",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses doux",
+    "slug": "talons-fesses-doux",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Élévation latérale de la jambe",
+    "slug": "jambe-laterale",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Marche sur place",
+    "slug": "marche-sur-place",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Squat avec appui",
+    "slug": "mini-squat",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": [
+     {
+      "nom": "Squat sans appui",
+      "position": "debout",
+      "niveau": 3
+     },
+     {
+      "nom": "Squat jambes écartées",
+      "position": "debout",
+      "niveau": 3
+     }
+    ]
+   },
+   {
+    "nom": "Étirement du mollet",
+    "slug": "mollet",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "un mur"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Pas de côté",
+    "slug": "pas-de-cote",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Équilibre sur une jambe",
+    "slug": "equilibre-une-jambe",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Cercles de bassin",
+    "slug": "cercles-bassin",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Bascule du buste, dos droit",
+    "slug": "bascule-buste",
+    "famille": "force",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Bras croisé devant la poitrine",
+    "slug": "bras-croise",
+    "famille": "mobilite",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Talons devant",
+    "slug": "talons-devant",
+    "famille": "cardio",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     }
+    ]
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "titre": "Un cran de plus",
+  "etape": "Prendre confiance",
+  "minutes": 20,
+  "zones": "Surtout les jambes",
+  "reglage": {
+   "mouvement": "libre",
+   "duree": "20",
+   "n": 18,
+   "plan": "seance-1"
+  },
+  "mouvements": [
+   {
+    "nom": "Moulin à vent",
+    "slug": "moulin-a-vent",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas croisé en arrière",
+    "slug": "pas-croise",
+    "famille": "cardio",
+    "niveau": 3,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Fente avant",
+    "slug": "fente-avant",
+    "famille": "force",
+    "niveau": 3,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": true,
+    "objets": [],
+    "variantes": [
+     {
+      "nom": "Fente avec appui sur la chaise",
+      "position": "debout",
+      "niveau": 2
+     },
+     {
+      "nom": "Fente arrière",
+      "position": "debout",
+      "niveau": 3
+     }
+    ]
+   },
+   {
+    "nom": "Déroulé du dos debout",
+    "slug": "deroule-dos",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 85,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Genou vers la main opposée",
+    "slug": "genou-main-opposee",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 2
+     }
+    ]
+   },
+   {
+    "nom": "Dips sur la chaise",
+    "slug": "dips-chaise",
+    "famille": "force",
+    "niveau": 3,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Transfert de poids latéral",
+    "slug": "transfert-poids",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Pas écartés, bras levés",
+    "slug": "pas-ecartes",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Fente latérale",
+    "slug": "fente-laterale",
+    "famille": "force",
+    "niveau": 3,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Balancier de jambe",
+    "slug": "balancier-jambe",
+    "famille": "mobilite",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": true,
+    "objets": [
+     "une chaise"
+    ],
+    "variantes": []
+   },
+   {
+    "nom": "Talons-fesses",
+    "slug": "talons-fesses",
+    "famille": "cardio",
+    "niveau": 2,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": []
+   },
+   {
+    "nom": "Respiration abdominale",
+    "slug": "respiration-ventre",
+    "famille": "calme",
+    "niveau": 1,
+    "secondes": 90,
+    "position": "debout",
+    "cotes": false,
+    "objets": [],
+    "variantes": [
+     {
+      "position": "assis",
+      "niveau": 1
+     },
+     {
+      "nom": "Respiration abdominale",
+      "position": "sol",
+      "niveau": 1
+     }
+    ]
+   }
+  ]
+ }
+]

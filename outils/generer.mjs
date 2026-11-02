@@ -2,6 +2,7 @@
 // fiches exercices et plan du site. Sans dépendance : node outils/generer.mjs, depuis la racine du site.
 //
 // Sources, dans contenu/ :
+// - seances.json : séances de « La séance de la semaine », composées par le moteur de l'app (même export que les exercices) ;
 // - blog/<slug>.md et pour-qui/<slug>.md : en-tête (titre, description, date, mots-cles) puis texte en Markdown simple ;
 // - questions-frequentes.md : chaque « ## » est une question, le texte qui suit sa réponse ;
 // - application.html : la page « L'app » (24 octobre 2026), en HTML parce qu'elle alterne textes et captures ; même en-tête que
@@ -127,7 +128,7 @@ ${corps.replaceAll('<?boutiques?>', BOUTIQUES)}
     ${BOUTIQUES}
   </section>
   <nav class="liens" aria-label="Pied de page">
-    <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
+    <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/seance-de-la-semaine/">La séance de la semaine</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>
     <a href="/pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a><a href="/pour-qui/debutant-sedentaire/">Débutants</a>
     <a href="/questions-frequentes/">Questions fréquentes</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d'utilisation</a><a href="/assistance/">Assistance</a>
     <a href="mailto:contact@moovini.app">contact@moovini.app</a>
@@ -252,8 +253,94 @@ ${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul clas
     jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: "Aperçu du catalogue d'exercices de Moovini", inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
     corps: `${arianeHtml(ariane)}
 <header class="entete-page"><p class="surtitre">Les exercices de Moovini</p><h1>Un aperçu du catalogue : ${exercices.length} exercices sur les ${catalogue.length} de l'app</h1>
-<p class="chapeau">Quelques mouvements doux pour débutants et sédentaires, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. L'app en compte bien d'autres, du plus simple au plus soutenu, et les combine en séances de 10 à 30 minutes d'après tes réponses.</p></header>
+<p class="chapeau">Quelques mouvements doux pour débutants et sédentaires, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. L'app en compte bien d'autres, du plus simple au plus soutenu, et les combine en séances de 10 à 30 minutes d'après tes réponses. <a href="/seance-de-la-semaine/">Regarde la séance de la semaine</a>.</p></header>
 ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercice${l.length > 1 ? 's' : ''}</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
+  }));
+  plan.push([chemin, AUJOURDHUI]);
+}
+
+// ---------- La séance de la semaine (2 novembre 2026) ----------
+// contenu/seances.json : séances composées par le moteur de l'app (node scripts/export-site.mjs), une par semaine à partir
+// du lundi 2 novembre 2026, puis on reprend au début. Toutes sont écrites dans la page, celle de la semaine de génération
+// visible ; un petit script montre celle de la semaine en cours, sans nouvelle publication. Images : le lecteur de l'app
+// sur chaque exercice (images/seance/sSS-EE.webp, marketing/site/20261102-seance-semaine/ dans le dépôt de l'app).
+{
+  const seances = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seances.json'), 'utf8'));
+  const chemin = '/seance-de-la-semaine/';
+  const ariane = [['Accueil', '/'], ['La séance de la semaine', chemin]];
+  const POSITIONS = { debout: 'Debout', assis: 'Sur une chaise', sol: 'Au sol' };
+  const JOUR = 864e5, DEPART = Date.UTC(2026, 10, 2);
+  const duree = s => { const m = Math.floor(s / 60), r = s % 60; return m ? (r ? `${m} min ${String(r).padStart(2, '0')}` : `${m} min`) : `${r} s`; };
+  const niveau = n => `<li class="niveau"><span class="crans" aria-hidden="true">${[1, 2, 3].map(c => `<i${c <= n ? ' class="plein"' : ''}></i>`).join('')}</span>${NIVEAUX[n]}</li>`;
+  // Une version au sol porte parfois le même nom que le mouvement : la position suffit alors à la dire.
+  const variante = (v, m) => `${v.nom && v.nom !== m.nom ? `${echapper(v.nom)}, ${POSITIONS[v.position].toLowerCase()}` : POSITIONS[v.position].toLowerCase()} (${NIVEAUX[v.niveau].toLowerCase()})`;
+  const carte = (m, i, s, numero) => {
+    const image = `/images/seance/s${String(numero).padStart(2, '0')}-${String(i + 1).padStart(2, '0')}.webp`;
+    if (!existsSync(join(RACINE, image.slice(1)))) throw new Error(`Image du lecteur manquante : ${image}`);
+    const nom = echapper(m.nom);
+    return `<li class="mouvement">
+  <img src="${image}" alt="${nom}, ${POSITIONS[m.position].toLowerCase()} : le lecteur de Moovini pendant l'exercice" width="480" height="1041" loading="lazy" decoding="async">
+  <div>
+    <h3><span class="rang">${i + 1}.</span> ${retenus.includes(m.slug) ? `<a href="/exercices/${m.slug}/">${nom}</a>` : nom}</h3>
+    <ul class="pastilles"><li class="position ${m.position}">${POSITIONS[m.position]}</li>${niveau(m.niveau)}<li class="famille ${m.famille}">${FAMILLES[m.famille]}</li></ul>
+    <p class="mouvement-detail">${duree(m.secondes)}${m.cotes ? ', en changeant de côté' : ''}.${m.objets.length ? ` À prévoir : ${echapper(m.objets.join(', '))}.` : ''}</p>
+    ${m.variantes.length ? `<p class="mouvement-variantes"><strong>Variantes :</strong> ${m.variantes.map(v => variante(v, m)).join(' ; ')}.</p>` : ''}
+  </div>
+</li>`;
+  };
+  const article = (s, k, visible) => {
+    const compte = p => s.mouvements.filter(m => m.position === p).length;
+    const objets = [...new Set([...(compte('assis') ? ['une chaise'] : []), ...s.mouvements.flatMap(m => m.objets), ...(compte('sol') ? ['de la place au sol'] : [])])];
+    const moyenne = s.mouvements.reduce((a, m) => a + m.niveau, 0) / s.mouvements.length;
+    const nv = moyenne < 1.5 ? 1 : moyenne < 2.3 ? 2 : 3;
+    return `<article class="seance" data-rang="${k}"${visible ? '' : ' hidden'}>
+  <header class="seance-tete">
+    <p>${echapper(s.etape)}</p>
+    <h2>${echapper(s.titre)}</h2>
+    <span class="seance-duree">${s.minutes} min</span>
+  </header>
+  <dl class="reperes">
+    <div><dt>Mouvements</dt><dd>${s.mouvements.length}</dd></div>
+    <div><dt>Positions</dt><dd>${Object.keys(POSITIONS).filter(compte).map(p => `${compte(p)} ${POSITIONS[p].toLowerCase()}`).join(', ')}</dd></div>
+    <div><dt>À prévoir</dt><dd>${objets.length ? echapper(objets.join(', ').replace(/^./, c => c.toUpperCase())) : 'Rien'}</dd></div>
+    <div><dt>Niveau</dt><dd>${NIVEAUX[nv]}</dd></div>
+    <div><dt>Zones</dt><dd>${echapper(s.zones)}</dd></div>
+  </dl>
+  <ol class="mouvements">
+${s.mouvements.map((m, i) => carte(m, i, s, k + 1)).join('\n')}
+  </ol>
+</article>`;
+  };
+  const rangDeLaSemaine = Math.floor((Date.now() - DEPART) / (7 * JOUR));
+  const actuelle = ((rangDeLaSemaine % seances.length) + seances.length) % seances.length;
+  const description = 'Une vraie séance de gym douce composée par l’app Moovini, exercice par exercice : position, niveau, variantes et durées. Elle change chaque lundi.';
+  ecrire('seance-de-la-semaine/index.html', page({
+    chemin, titre: 'La séance de la semaine : une vraie séance de gym douce', titreSeo: 'Séance de gym douce à la maison : la séance de la semaine', description,
+    image: `${SITE}/images/seance/s01-02.webp`, imageAlt: 'Le lecteur de Moovini pendant un exercice',
+    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'La séance de la semaine', description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` } }],
+    corps: `${arianeHtml(ariane)}
+<header class="entete-page"><p class="surtitre">Une autre séance chaque lundi</p><h1>La séance de la semaine : une vraie séance de gym douce</h1>
+<p class="chapeau">Les mouvements, leur ordre et leurs durées sont ceux que l'app Moovini compose, sans retouche. Chaque image vient de son lecteur, à l'exercice près.</p>
+<p class="seance-dates" id="seance-dates"></p></header>
+${seances.map((s, k) => article(s, k, k === actuelle)).join('\n')}
+<aside class="dans-appli"><h2>Dans Moovini</h2><p>Cette séance est composée pour un profil type, sans zone à ménager. Dans l'app, la tienne part de tes réponses : ton temps, tes positions, tes zones à ménager. Une vidéo, une consigne courte, une voix et un minuteur te guident, et tu peux remplacer un mouvement ou passer à une version plus douce.</p><?boutiques?></aside>
+<p class="prudence">Va à ton rythme et arrête si ça fait mal. En cas de problème de santé, de blessure ou de grossesse, demande d'abord conseil à ton médecin.</p>
+<script>
+  // Montre la séance de la semaine en cours, à l'heure de Paris. ?decalage=1 : la semaine suivante, pour vérifier.
+  (() => {
+    const JOUR = 864e5, DEPART = Date.UTC(2026, 10, 2), seances = [...document.querySelectorAll('.seance')];
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date()).map(x => [x.type, +x.value]));
+    const decalage = +new URLSearchParams(location.search).get('decalage') || 0;
+    const jour = Date.UTC(p.year, p.month - 1, p.day) + decalage * 7 * JOUR;
+    const lundi = jour - ((new Date(jour).getUTCDay() + 6) % 7) * JOUR, dimanche = lundi + 6 * JOUR;
+    const n = seances.length, rang = ((Math.floor((lundi - DEPART) / (7 * JOUR)) % n) + n) % n;
+    seances.forEach((s, i) => { s.hidden = i !== rang; });
+    const jeudi = new Date(lundi + 3 * JOUR), debutAn = Date.UTC(jeudi.getUTCFullYear(), 0, 1), semaine = 1 + Math.floor((jeudi - debutAn) / (7 * JOUR));
+    const date = (t, o) => new Intl.DateTimeFormat('fr-FR', { timeZone: 'UTC', ...o }).format(t);
+    const memeMois = new Date(lundi).getUTCMonth() === new Date(dimanche).getUTCMonth();
+    document.getElementById('seance-dates').textContent = 'Semaine ' + semaine + ', du lundi ' + date(lundi, memeMois ? { day: 'numeric' } : { day: 'numeric', month: 'long' }) + ' au dimanche ' + date(dimanche, { day: 'numeric', month: 'long' });
+  })();
+</script>`,
   }));
   plan.push([chemin, AUJOURDHUI]);
 }
