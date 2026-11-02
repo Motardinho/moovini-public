@@ -41,9 +41,9 @@ Cela fait une dizaine de minutes. Si tu as plus de temps et que tout va bien, re
 
 ### Rouler les épaules
 
-Debout, les pieds à la largeur du bassin, les bras relâchés et les mains contre les cuisses. Monte les deux épaules vers les oreilles, emmène-les vers l'arrière, laisse-les descendre, puis ramène-les devant : un grand cercle lent d'environ 3 secondes. Fais-en 5 vers l'arrière, puis 5 vers l'avant.
+Debout, les pieds écartés à largeur de hanches, les bras relâchés le long du corps, le regard devant toi. Monte les deux épaules vers les oreilles, tire-les vers l'arrière, puis laisse-les redescendre : un grand cercle lent d'environ 3 secondes. Fais-en 5. Change ensuite de sens : monte les épaules, roule-les vers l'avant, puis vers le bas ; les bras suivent et s'écartent un peu. Fais-en 5.
 
-Seules les épaules bougent, la tête reste droite. Va moins haut si la nuque tire. La fiche complète : [rouler les épaules](/exercices/rouler-epaules/).
+Seules les épaules travaillent, les bras restent relâchés et suivent le mouvement. Garde la tête droite. Va moins haut si la nuque tire. La fiche complète : [rouler les épaules](/exercices/rouler-epaules/).
 
 ### Cercles de bassin
 

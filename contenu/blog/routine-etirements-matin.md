@@ -37,9 +37,9 @@ Seule la tête tourne, les épaules et le buste restent face à l'avant. Tourne 
 
 ### 3. Rouler les épaules
 
-Les bras relâchés, les mains contre les cuisses, monte les deux épaules vers les oreilles, sans bouger la tête. Emmène-les vers l'arrière, laisse-les descendre, puis ramène-les devant : un grand cercle lent d'environ 3 secondes. Fais 5 cercles vers l'arrière, puis 5 vers l'avant, et relâche en soufflant.
+Debout, les bras relâchés le long du corps, le regard devant toi, monte les deux épaules vers les oreilles, tire-les vers l'arrière, puis laisse-les redescendre : un grand cercle lent d'environ 3 secondes. Fais-en 5. Change ensuite de sens : monte les épaules, roule-les vers l'avant, puis vers le bas ; les bras suivent et s'écartent un peu. Fais-en 5, puis laisse retomber les épaules et souffle doucement.
 
-Garde la tête droite et le cou long. Va moins haut si la nuque tire. La fiche : [rouler les épaules](/exercices/rouler-epaules/).
+Garde la tête droite, le cou long et le visage détendu. Va moins haut si la nuque tire. La fiche : [rouler les épaules](/exercices/rouler-epaules/).
 
 ### 4. Inclinaison latérale
 
