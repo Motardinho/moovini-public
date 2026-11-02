@@ -36,6 +36,8 @@ html { scroll-padding-top: 96px; }
 .barre .appli, .bouton { display: inline-flex; align-items: center; gap: 9px; background: var(--corail-fonce); color: #fff !important; border-radius: 999px; padding: 9px 18px 11px; text-decoration: none !important; font-weight: 700; }
 .barre .appli:hover, .bouton:hover { background: var(--corail-encre); }
 .barre.decollee { box-shadow: 0 4px 18px rgba(20,41,46,.28); }
+/* Sur téléphone, le menu tient sur une ligne avec « La séance ». */
+@media (max-width: 560px) { .barre nav .long { display: none; } }
 
 /* Retour en haut : apparaît après un écran de défilement. */
 .haut-page { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 10; width: 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--petrole); color: var(--creme); box-shadow: var(--ombre-haute); cursor: pointer; opacity: 0; visibility: hidden; translate: 0 8px; transition: opacity .2s, translate .2s, visibility .2s, background .2s; }

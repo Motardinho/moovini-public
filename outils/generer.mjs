@@ -147,8 +147,8 @@ ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe,
   <a class="marque" href="/"><img src="/images/logo-creme.svg" alt="Moovini, accueil" width="104" height="100"></a>
   <nav aria-label="Navigation principale">
     <a href="/application/"${chemin === '/application/' ? ' aria-current="page"' : ''}>L'app</a>
+    <a href="/seance-de-la-semaine/"${chemin === '/seance-de-la-semaine/' ? ' aria-current="page"' : ''}>La séance<span class="long"> de la semaine</span></a>
     <a href="/blog/"${chemin.startsWith('/blog/') ? ' aria-current="page"' : ''}>Blog</a>
-    <a href="/exercices/"${chemin.startsWith('/exercices/') ? ' aria-current="page"' : ''}>Exercices</a>
     <a href="/questions-frequentes/"${chemin.startsWith('/questions') ? ' aria-current="page"' : ''}>Questions</a>
     <a class="appli" href="#boutiques">Bientôt sur iOS et Android</a>
   </nav>
@@ -406,7 +406,7 @@ ${s.mouvements.map((m, i) => carte(m, i, s, k + 1)).join('\n')}
     jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'La séance de la semaine', description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` } }],
     corps: `${arianeHtml(ariane)}
 <header class="entete-page"><p class="surtitre">Une autre séance chaque lundi</p><h1>La séance de la semaine : une vraie séance de gym douce</h1>
-<p class="chapeau">Les mouvements, leur ordre et leurs durées sont ceux que l'app Moovini compose, sans retouche. Chaque image vient de son lecteur, à l'exercice près.</p>
+<p class="chapeau">Chaque semaine, une vraie séance choisie parmi les ${catalogue.length} exercices de l'app. Les mouvements, leur ordre et leurs durées sont ceux que Moovini compose, sans retouche. Chaque image vient de son lecteur, à l'exercice près.</p>
 <p class="seance-dates" id="seance-dates"></p></header>
 ${seances.map((s, k) => article(s, k, k === actuelle)).join('\n')}
 <aside class="dans-appli"><h2>Dans Moovini</h2><p>Cette séance est composée pour un profil type, sans zone à ménager. Dans l'app, la tienne part de tes réponses : ton temps, tes positions, tes zones à ménager. Une vidéo, une consigne courte, une voix et un minuteur te guident, et tu peux remplacer un mouvement ou passer à une version plus douce.</p><?boutiques?></aside>
@@ -526,4 +526,8 @@ ecrire('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${plan.map(([c, d]) => `  <url><loc>${SITE}${c}</loc><lastmod>${d}</lastmod></url>`).join('\n')}
 </urlset>
 `);
+// L'accueil et la page de l'app citent le nombre d'exercices en toutes lettres : à reprendre après un changement de catalogue.
+const versions = catalogue.reduce((n, e) => n + e.variants.length, 0);
+if (!readFileSync(join(RACINE, 'index.html'), 'utf8').includes(`les ${catalogue.length} exercices`)) console.warn(`À corriger dans index.html : ${catalogue.length} exercices`);
+if (!readFileSync(join(RACINE, 'contenu', 'application.html'), 'utf8').includes(`<b>${catalogue.length} exercices</b>en ${versions} versions`)) console.warn(`À corriger dans contenu/application.html : ${catalogue.length} exercices en ${versions} versions`);
 console.log(`${exercices.length} fiches, ${billets.length} billets, ${articles('pour-qui').length} pages « Pour qui », questions fréquentes ; ${plan.length} adresses dans le plan du site ; ${manquantes.length} vignettes réduites.`);
