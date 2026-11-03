@@ -39,15 +39,15 @@
 <main>
   <p class="retour"><a href="../">← Moovini</a></p>
   <h1>Politique de confidentialité de Moovini</h1>
-  <p class="date">Dernière mise à jour : 23 octobre 2026</p>
+  <p class="date">Dernière mise à jour : 3 novembre 2026</p>
 
   <section class="brief">
     <h2>En bref</h2>
     <ul>
       <li>Pas de compte : tu n'as rien à créer, ni e-mail ni mot de passe.</li>
       <li>Tes réponses, tes séances et tes zones à ménager restent sur ton téléphone.</li>
-      <li>Ni publicité, ni outil de mesure d'audience, ni pistage d'une app à l'autre.</li>
-      <li>Seuls partent vers un serveur : un message que tu choisis de nous envoyer, les informations nécessaires à ton abonnement, et une vérification des mises à jour de l'app.</li>
+      <li>Ni publicité, ni pistage d'une app à l'autre. Une mesure d'usage compte les grandes étapes (onboarding, séances, achat) et les plantages ; tu peux la couper dans Préférences.</li>
+      <li>Seuls partent vers un serveur : un message que tu choisis de nous envoyer, les informations nécessaires à ton abonnement, une vérification des mises à jour de l'app, et la mesure d'usage si tu ne l'as pas coupée.</li>
       <li>Sur le site moovini.app : ni cookie ni mesure d'audience ; seul l'hébergeur du site voit passer ta visite.</li>
     </ul>
   </section>
@@ -93,6 +93,19 @@
   </section>
 
   <section>
+    <h2>Mesure d'usage et plantages</h2>
+    <p>Pour savoir si l'app fonctionne et améliorer Moovini, elle mesure son usage avec le service <strong>PostHog</strong>, hébergé dans l'Union européenne, pour notre seul compte. PostHog reçoit :</p>
+    <ul>
+      <li>un identifiant aléatoire créé par l'app, sans lien avec ton nom, ton e-mail ou ton compte d'abonnement, et renouvelé après 13 mois ;</li>
+      <li>quelques événements : installation, mise à jour, ouverture et fermeture de l'app, écrans de l'onboarding vus, onboarding terminé, écran d'abonnement vu ou quitté, achat commencé, terminé ou annulé (formule), séance commencée ou terminée (type de séance, nombre d'exercices, séance écourtée ou non) ;</li>
+      <li>les rapports de plantage ;</li>
+      <li>des informations techniques : type d'appareil, système et sa version, taille de l'écran, nom et version de l'app. Ton adresse IP passe avec la connexion, mais elle n'est ni conservée ni utilisée pour te localiser.</li>
+    </ul>
+    <p>Tes réponses, ton prénom, tes zones à ménager, tes ressentis, ton niveau d'énergie et le contenu de tes séances ne sont pas envoyés. Ces données ne sont croisées avec aucune autre et ne servent qu'à améliorer l'app, jamais à de la publicité. PostHog les garde 1 an.</p>
+    <p>Pour la couper : Préférences, puis Mesure d'usage. Plus aucun événement n'est alors envoyé.</p>
+  </section>
+
+  <section>
     <h2>Mises à jour de l'app</h2>
     <p>À l'ouverture, l'app vérifie auprès du service <strong>Expo</strong> (EAS Update) s'il existe une nouvelle version de son contenu, par exemple une nouvelle vidéo. Cette vérification transmet seulement des informations techniques : version de l'app, système du téléphone et adresse IP. Aucune de tes réponses ni de tes séances n'est envoyée.</p>
   </section>
@@ -110,10 +123,11 @@
       <li><strong>RevenueCat</strong> : état de l'abonnement et restauration des achats ;</li>
       <li><strong>EmailJS</strong> et <strong>Google</strong> (Gmail) : acheminement et réception des messages « Nous écrire » ;</li>
       <li><strong>ImprovMX</strong> : redirection des e-mails envoyés à contact@moovini.app ;</li>
+      <li><strong>PostHog</strong> : mesure d'usage et rapports de plantage ;</li>
       <li><strong>Expo</strong> (EAS Update) : mises à jour du contenu de l'app ;</li>
       <li><strong>GitHub</strong> (GitHub Pages) : hébergement du site moovini.app.</li>
     </ul>
-    <p>Certains de ces services peuvent traiter des données hors de l'Union européenne, avec les garanties prévues par le RGPD. Aucun service de publicité ni de mesure d'audience n'est utilisé.</p>
+    <p>Certains de ces services peuvent traiter des données hors de l'Union européenne, avec les garanties prévues par le RGPD. Aucun service de publicité n'est utilisé.</p>
   </section>
 
   <section>
