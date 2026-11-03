@@ -273,6 +273,15 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 /* Le clip posé sur le lecteur : invisible jusqu'à sa première image (pas 0, Safari ne jouerait pas une vidéo masquée), fondu en haut et en bas pour ne pas laisser de bord. */
 .lecteur video { position: absolute; max-width: none; object-fit: fill; opacity: .01; transition: opacity .25s; -webkit-mask-image: linear-gradient(transparent, #000 var(--fondu), #000 calc(100% - var(--fondu)), transparent); mask-image: linear-gradient(transparent, #000 var(--fondu), #000 calc(100% - var(--fondu)), transparent); }
 .lecteur video.joue { opacity: 1; }
+.lecteur picture { display: block; }
+/* Sur ordinateur, le lecteur en paysage : le clip remplit l'image, et un calque transparent (titre, temps, consigne, bouton) reste au-dessus de la personne, comme dans l'app. */
+@media (min-width: 561px) {
+  .mouvements { grid-template-columns: repeat(auto-fill, minmax(430px, 1fr)); gap: 20px; }
+  .lecteur img { aspect-ratio: 852 / 393; }
+}
+.lecteur video.plein { inset: 0; width: 100%; height: 100%; -webkit-mask-image: none; mask-image: none; }
+.lecteur .calque { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; opacity: 0; transition: opacity .25s; }
+.lecteur video.joue ~ .calque { opacity: 1; }
 .mouvement > div { padding: 14px 16px 16px; }
 .mouvement h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; color: var(--petrole); }
 .mouvement h3 a { color: inherit; }
@@ -290,7 +299,5 @@ h3 { color: var(--petrole); font-size: 1.12rem; font-weight: 700; margin: 26px 0
 .mouvement-variantes strong { color: var(--petrole); }
 @media (max-width: 560px) {
   .mouvements { grid-template-columns: 1fr; gap: 14px; }
-  .mouvement { flex-direction: row; align-items: stretch; }
-  .lecteur { width: 118px; flex: none; align-self: flex-start; }
   .mouvement > div { padding: 12px 14px; min-width: 0; }
 }

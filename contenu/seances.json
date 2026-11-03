@@ -8,7 +8,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 0,
-   "plan": "premiere-seance"
+   "plan": "premiere-seance",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -169,17 +172,16 @@
     ]
    },
    {
-    "nom": "Genou vers la poitrine",
-    "slug": "genou-poitrine",
+    "nom": "Inclinaison latérale",
+    "slug": "inclinaison-laterale",
     "famille": "mobilite",
-    "niveau": 2,
+    "niveau": 1,
     "secondes": 90,
-    "position": "sol",
+    "position": "debout",
     "cotes": false,
     "objets": [],
     "variantes": [
      {
-      "nom": "Genou vers la poitrine",
       "position": "assis",
       "niveau": 1
      }
@@ -217,7 +219,10 @@
    "mouvement": "assis",
    "duree": "10",
    "n": 1,
-   "plan": "seance-2"
+   "plan": "seance-2",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -328,7 +333,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 1,
-   "plan": "seance-2"
+   "plan": "seance-2",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -518,7 +526,10 @@
    "mouvement": "assis",
    "duree": "20",
    "n": 4,
-   "plan": "seance-5"
+   "plan": "seance-5",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -732,12 +743,15 @@
   "titre": "Dix minutes pour tout le corps",
   "etape": "Retrouver le mouvement",
   "minutes": 10,
-  "zones": "Tout le corps",
+  "zones": "Surtout le haut du corps et le dos",
   "reglage": {
    "mouvement": "libre",
    "duree": "10",
    "n": 0,
-   "plan": "premiere-seance"
+   "plan": "premiere-seance",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -805,17 +819,16 @@
     "variantes": []
    },
    {
-    "nom": "Genou vers la poitrine",
-    "slug": "genou-poitrine",
+    "nom": "Inclinaison latérale",
+    "slug": "inclinaison-laterale",
     "famille": "mobilite",
-    "niveau": 2,
+    "niveau": 1,
     "secondes": 85,
-    "position": "sol",
+    "position": "debout",
     "cotes": false,
     "objets": [],
     "variantes": [
      {
-      "nom": "Genou vers la poitrine",
       "position": "assis",
       "niveau": 1
      }
@@ -853,7 +866,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 3,
-   "plan": "seance-4"
+   "plan": "seance-4",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -1046,7 +1062,10 @@
    "mouvement": "assis",
    "duree": "20",
    "n": 6,
-   "plan": "seance-1"
+   "plan": "seance-1",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -1265,7 +1284,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 7,
-   "plan": "seance-2"
+   "plan": "seance-2",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -1445,7 +1467,10 @@
    "mouvement": "assis",
    "duree": "30",
    "n": 1,
-   "plan": "seance-2"
+   "plan": "seance-2",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -1745,7 +1770,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 12,
-   "plan": "seance-1"
+   "plan": "seance-1",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -1928,7 +1956,10 @@
    "mouvement": "libre",
    "duree": "30",
    "n": 1,
-   "plan": "seance-2"
+   "plan": "seance-2",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {
@@ -2194,7 +2225,10 @@
    "mouvement": "libre",
    "duree": "20",
    "n": 18,
-   "plan": "seance-1"
+   "plan": "seance-1",
+   "remplacements": {
+    "m10-genou-poitrine-sol": "m06-inclinaison-laterale"
+   }
   },
   "mouvements": [
    {

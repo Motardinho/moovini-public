@@ -22,7 +22,7 @@
 <link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1fd92ecb">
+<link rel="stylesheet" href="/assets/site.css?v=26197126">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -159,17 +159,30 @@
   (() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
     const lecture = new IntersectionObserver(l => l.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .25 });
+    const paysage = matchMedia('(min-width: 561px)');
     const animer = img => {
       const v = document.createElement('video');
       v.muted = v.defaultMuted = v.loop = v.playsInline = true;
       v.preload = 'auto';
+      if (paysage.matches && img.dataset.clipPaysage) {
+        v.src = img.dataset.clipPaysage;
+        v.className = 'plein';
+        v.setAttribute('aria-hidden', 'true');
+        v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
+        const lecteur = img.closest('.lecteur'), calque = new Image();
+        calque.className = 'calque'; calque.alt = ''; calque.src = img.dataset.calque;
+        lecteur.append(v);
+        // Le clip ne démarre qu'avec son calque prêt : le titre et le temps ne passent jamais sous la personne.
+        calque.decode().then(() => { if (v.isConnected) { lecteur.append(calque); lecture.observe(v); } }, () => v.remove());
+        return;
+      }
       v.src = img.dataset.clip;
       if (img.dataset.cadre) {
         const [gauche, haut, largeur, hauteur, fondu] = img.dataset.cadre.split(' ');
         v.style.cssText = `left:${gauche};top:${haut};width:${largeur};height:${hauteur};--fondu:${fondu}`;
         v.setAttribute('aria-hidden', 'true');
         v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
-        img.after(v);
+        img.closest('.lecteur').append(v);
       } else {
         // L'image devient l'affiche du clip, dont la première image est la même. Dans la page tout de suite : Safari sur
         // iPhone ne lance pas une vidéo hors de la page. S'il refuse de la jouer (mode économie d'énergie), l'affiche reste.
@@ -183,6 +196,12 @@
     };
     const approche = new IntersectionObserver(l => l.forEach(e => { if (e.isIntersecting) { approche.unobserve(e.target); animer(e.target); } }), { rootMargin: '200px' });
     document.querySelectorAll('img[data-clip]').forEach(img => approche.observe(img));
+    // Téléphone tourné, fenêtre élargie : l'image change, son clip et son calque avec.
+    paysage.addEventListener('change', () => document.querySelectorAll('.lecteur').forEach(lecteur => {
+      lecteur.querySelectorAll('video, .calque').forEach(e => e.remove());
+      const img = lecteur.querySelector('img[data-clip]');
+      if (img) approche.observe(img);
+    }));
   })();
 </script>
 </body>

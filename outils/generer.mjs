@@ -80,21 +80,35 @@ const imageDePartage = x => x.image ? `${SITE}${x.image}` : undefined;
 // Les exercices bougent à l'écran (demande du 2 novembre 2026). La page reste écrite avec des images fixes : le script les
 // anime quand elles approchent, joue seulement ce qui se voit, et ne fait rien si le visiteur demande moins d'animations ou
 // économise ses données. Une image data-cadre (le lecteur de l'app) garde son décor : le clip se pose dessus, en fondu.
+// Sur ordinateur, ce lecteur passe en paysage (data-clip-paysage) : le clip remplit l'image et son calque reste au-dessus.
 const SCRIPT_CLIPS = `<script>
   (() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
     const lecture = new IntersectionObserver(l => l.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .25 });
+    const paysage = matchMedia('(min-width: 561px)');
     const animer = img => {
       const v = document.createElement('video');
       v.muted = v.defaultMuted = v.loop = v.playsInline = true;
       v.preload = 'auto';
+      if (paysage.matches && img.dataset.clipPaysage) {
+        v.src = img.dataset.clipPaysage;
+        v.className = 'plein';
+        v.setAttribute('aria-hidden', 'true');
+        v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
+        const lecteur = img.closest('.lecteur'), calque = new Image();
+        calque.className = 'calque'; calque.alt = ''; calque.src = img.dataset.calque;
+        lecteur.append(v);
+        // Le clip ne démarre qu'avec son calque prêt : le titre et le temps ne passent jamais sous la personne.
+        calque.decode().then(() => { if (v.isConnected) { lecteur.append(calque); lecture.observe(v); } }, () => v.remove());
+        return;
+      }
       v.src = img.dataset.clip;
       if (img.dataset.cadre) {
         const [gauche, haut, largeur, hauteur, fondu] = img.dataset.cadre.split(' ');
         v.style.cssText = \`left:\${gauche};top:\${haut};width:\${largeur};height:\${hauteur};--fondu:\${fondu}\`;
         v.setAttribute('aria-hidden', 'true');
         v.addEventListener('playing', () => v.classList.add('joue'), { once: true });
-        img.after(v);
+        img.closest('.lecteur').append(v);
       } else {
         // L'image devient l'affiche du clip, dont la première image est la même. Dans la page tout de suite : Safari sur
         // iPhone ne lance pas une vidéo hors de la page. S'il refuse de la jouer (mode économie d'énergie), l'affiche reste.
@@ -108,6 +122,12 @@ const SCRIPT_CLIPS = `<script>
     };
     const approche = new IntersectionObserver(l => l.forEach(e => { if (e.isIntersecting) { approche.unobserve(e.target); animer(e.target); } }), { rootMargin: '200px' });
     document.querySelectorAll('img[data-clip]').forEach(img => approche.observe(img));
+    // Téléphone tourné, fenêtre élargie : l'image change, son clip et son calque avec.
+    paysage.addEventListener('change', () => document.querySelectorAll('.lecteur').forEach(lecteur => {
+      lecteur.querySelectorAll('video, .calque').forEach(e => e.remove());
+      const img = lecteur.querySelector('img[data-clip]');
+      if (img) approche.observe(img);
+    }));
   })();
 </script>
 `;
@@ -319,6 +339,8 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
 // sur chaque exercice (images/seance/sSS-EE.webp, marketing/site/20261102-seance-semaine/ dans le dépôt de l'app).
 // Le geste y bouge : contenu/seance-cadres.json dit où la vidéo est posée sur chaque image (même script de capture) et le
 // clip (images/seance/clips/) couvre la largeur de l'écran, de la tête aux pieds, entre la consigne et le minuteur.
+// Sur ordinateur (3 novembre 2026), le lecteur en paysage : images/seance/paysage/, avec son calque transparent et son clip
+// plein cadre (paysage/clips/), d'après contenu/seance-cadres-paysage.json. Sur mobile, le portrait reste.
 {
   const seances = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seances.json'), 'utf8'));
   const cadres = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seance-cadres.json'), 'utf8'));
@@ -343,6 +365,16 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     clipsSeance.push([join(APP, 'assets/videos', video), join(RACINE, z.clip.slice(1)), [z.x0, z.y0, z.x1 - z.x0, z.y1 - z.y0], (z.x1 - z.x0) * z.largeur * 480 / LARGEUR_ECRAN]);
   }
   preparerClips('images/seance/clips', clipsSeance);
+  // Paysage : une vidéo plus petite que l'écran (geste large) est agrandie juste assez pour couvrir l'image, sans le dégradé de l'app sur ses bords.
+  const cadresPaysage = JSON.parse(readFileSync(join(RACINE, 'contenu', 'seance-cadres-paysage.json'), 'utf8'));
+  const PAYSAGE_L = 852, PAYSAGE_H = 393, zonesPaysage = new Map();
+  for (const { video, place: [gauche, haut, largeur, hauteur] } of Object.values(cadresPaysage)) {
+    if (zonesPaysage.has(video)) continue;
+    const zoom = Math.max(1, PAYSAGE_L / largeur, PAYSAGE_H / hauteur), l = largeur * zoom, h = hauteur * zoom;
+    const g = Math.min(0, Math.max(PAYSAGE_L - l, gauche - (l - largeur) / 2)), t = Math.min(0, Math.max(PAYSAGE_H - h, haut - (h - hauteur) / 2));
+    zonesPaysage.set(video, [-g / l, -t / h, PAYSAGE_L / l, PAYSAGE_H / h]);
+  }
+  preparerClips('images/seance/paysage/clips', [...zonesPaysage].map(([video, cadre]) => [join(APP, 'assets/videos', video), join(RACINE, 'images/seance/paysage/clips', video), cadre, 720]));
   const pourcent = x => `${(x * 100).toFixed(2)}%`;
   // Attributs de l'image : le clip, et sa place sur l'image en part de l'écran (gauche, haut, largeur, hauteur, fondu).
   const clipDuLecteur = nom => {
@@ -350,7 +382,8 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     if (!z) return '';
     const [gauche, haut, largeur, hauteur] = c.place;
     const cadre = [(gauche + z.x0 * largeur) / LARGEUR_ECRAN, (BARRE_ETAT + haut + z.y0 * hauteur) / HAUTEUR_ECRAN, (z.x1 - z.x0) * largeur / LARGEUR_ECRAN, (z.y1 - z.y0) * hauteur / HAUTEUR_ECRAN, FONDU / ((z.y1 - z.y0) * hauteur)];
-    return ` data-clip="${z.clip}" data-cadre="${cadre.map(pourcent).join(' ')}"`;
+    const p = cadresPaysage[nom];
+    return ` data-clip="${z.clip}" data-cadre="${cadre.map(pourcent).join(' ')}"${p ? ` data-clip-paysage="/images/seance/paysage/clips/${p.video}" data-calque="/images/seance/paysage/${nom}-calque.webp"` : ''}`;
   };
   const chemin = '/seance-de-la-semaine/';
   const ariane = [['Accueil', '/'], ['La séance de la semaine', chemin]];
@@ -365,7 +398,7 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     if (!existsSync(join(RACINE, image.slice(1)))) throw new Error(`Image du lecteur manquante : ${image}`);
     const nom = echapper(m.nom);
     return `<li class="mouvement">
-  <figure class="lecteur"><img src="${image}"${clipDuLecteur(basename(image, '.webp'))} alt="${nom}, ${POSITIONS[m.position].toLowerCase()} : le lecteur de Moovini pendant l'exercice" width="480" height="1041" loading="lazy" decoding="async"></figure>
+  <figure class="lecteur"><picture><source media="(min-width: 561px)" srcset="${image.replace('/seance/', '/seance/paysage/')}" width="900" height="415"><img src="${image}"${clipDuLecteur(basename(image, '.webp'))} alt="${nom}, ${POSITIONS[m.position].toLowerCase()} : le lecteur de Moovini pendant l'exercice" width="480" height="1041" loading="lazy" decoding="async"></picture></figure>
   <div>
     <h3><span class="rang">${i + 1}.</span> ${retenus.includes(m.slug) ? `<a href="/exercices/${m.slug}/">${nom}</a>` : nom}</h3>
     <ul class="pastilles"><li class="position ${m.position}">${POSITIONS[m.position]}</li>${niveau(m.niveau)}<li class="famille ${m.famille}">${FAMILLES[m.famille]}</li></ul>
@@ -406,7 +439,7 @@ ${s.mouvements.map((m, i) => carte(m, i, s, k + 1)).join('\n')}
     jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: 'La séance de la semaine', description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` } }],
     corps: `${arianeHtml(ariane)}
 <header class="entete-page"><p class="surtitre">Une autre séance chaque lundi</p><h1>La séance de la semaine : une vraie séance de gym douce</h1>
-<p class="chapeau">Chaque semaine, une vraie séance choisie parmi les ${catalogue.length} exercices de l'app. Les mouvements, leur ordre et leurs durées sont ceux que Moovini compose, sans retouche. Chaque image vient de son lecteur, à l'exercice près.</p>
+<p class="chapeau">Chaque semaine, une vraie séance choisie parmi les ${catalogue.length} exercices de l'app. Les mouvements, leur ordre et leurs durées sont ceux que Moovini compose. Chaque image vient de son lecteur, à l'exercice près.</p>
 <p class="seance-dates" id="seance-dates"></p></header>
 ${seances.map((s, k) => article(s, k, k === actuelle)).join('\n')}
 <aside class="dans-appli"><h2>Dans Moovini</h2><p>Cette séance est composée pour un profil type, sans zone à ménager. Dans l'app, la tienne part de tes réponses : ton temps, tes positions, tes zones à ménager. Une vidéo, une consigne courte, une voix et un minuteur te guident, et tu peux remplacer un mouvement ou passer à une version plus douce.</p><?boutiques?></aside>
