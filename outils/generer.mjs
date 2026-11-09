@@ -29,7 +29,8 @@ const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio doux', force: 'Renforc
 const NIVEAUX = { 1: 'Simple', 2: 'Modéré', 3: 'Plus soutenu' };
 // Lien App Store avec campagne (9 novembre 2026, sortie iPhone) : ct nomme la rubrique, pour lire dans App Store Connect
 // (Analyses, Campagnes) quelles pages amènent des téléchargements. pt est le jeton de fournisseur du compte.
-const APP_STORE = ct => `https://apps.apple.com/app/apple-store/id6825750322?pt=129550693&amp;ct=${ct}&amp;mt=8`;
+// « /fr/ » est obligatoire : sans code pays, Apple ouvre la boutique américaine, en anglais, sur ordinateur.
+const APP_STORE = ct => `https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=${ct}&amp;mt=8`;
 // Une campagne par rubrique (site-blog, site-exercices…) : Apple n'affiche une campagne qu'au-delà de quelques comptes.
 const campagne = chemin => 'site-' + (chemin.split('/')[1] || 'accueil');
 // Badge officiel d'Apple, non modifié (règles marketing de l'App Store) ; Google Play reste annoncé tant qu'Android n'est pas public.
