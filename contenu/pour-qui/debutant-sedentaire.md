@@ -54,6 +54,6 @@ Cette peur est normale, et c'est pour ça que tout commence doucement. Même cou
 
 Moovini ne remplace pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur, arrête et demande conseil. Après une opération, une blessure, une grossesse ou un problème de santé, demande d'abord à ton médecin.
 
-## Moovini arrive bientôt
+## Moovini est sur l'App Store
 
-Moovini est une app de mouvement doux pour iPhone et Android, en français, sans compte ni inscription : tes réponses et tes séances restent sur ton téléphone. Elle arrive bientôt sur l'App Store et Google Play, avec 7 jours d'essai gratuit : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Moovini est une app de mouvement doux pour iPhone et Android, en français, sans compte ni inscription : tes réponses et tes séances restent sur ton téléphone. Elle est disponible sur l'App Store, avec 7 jours d'essai gratuit : [télécharge Moovini sur iPhone](app-store). La version Android arrive bientôt sur Google Play.

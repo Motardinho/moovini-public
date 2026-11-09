@@ -27,8 +27,14 @@ const VERSION_CSS = createHash('sha256').update(readFileSync(join(RACINE, 'asset
 const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio doux', force: 'Renforcement', calme: 'Calme' };
 // « Simple » plutôt que « Tout doux », le nom de la durée de 10 min dans l'app (24 octobre 2026).
 const NIVEAUX = { 1: 'Simple', 2: 'Modéré', 3: 'Plus soutenu' };
-const BOUTIQUES = `<div class="boutiques" role="group" aria-label="Être prévenu de la sortie">
-      <a class="bientot apple" href="mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini&amp;body=Bonjour%2C%20j%E2%80%99aimerais%20%C3%AAtre%20pr%C3%A9venu(e)%20quand%20Moovini%20sortira%20sur%20l%E2%80%99App%20Store." title="Être prévenu de la sortie sur l’App Store"><svg viewBox="0 0 14 17" aria-hidden="true"><path fill="currentColor" d="M11.6 9c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.2.8-.6 0-1.6-.8-2.7-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.4.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.7s1.8-1 2.5-2c.8-1.2 1.1-2.3 1.1-2.4 0 0-2.1-.8-2.1-3.3zM9.6 3c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span><small>Bientôt sur l’</small><strong>App Store</strong></span></a>
+// Lien App Store avec campagne (9 novembre 2026, sortie iPhone) : ct nomme la rubrique, pour lire dans App Store Connect
+// (Analyses, Campagnes) quelles pages amènent des téléchargements. pt est le jeton de fournisseur du compte.
+const APP_STORE = ct => `https://apps.apple.com/app/apple-store/id6825750322?pt=129550693&amp;ct=${ct}&amp;mt=8`;
+// Une campagne par rubrique (site-blog, site-exercices…) : Apple n'affiche une campagne qu'au-delà de quelques comptes.
+const campagne = chemin => 'site-' + (chemin.split('/')[1] || 'accueil');
+// Badge officiel d'Apple, non modifié (règles marketing de l'App Store) ; Google Play reste annoncé tant qu'Android n'est pas public.
+const boutiques = ct => `<div class="boutiques" role="group" aria-label="Télécharger Moovini">
+      <a class="badge-apple" href="${APP_STORE(ct)}" rel="noopener"><img src="/images/badge-app-store-fr.svg" alt="Télécharger dans l’App Store" width="177" height="56"></a>
       <a class="bientot google" href="mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini&amp;body=Bonjour%2C%20pr%C3%A9venez-moi%20quand%20Moovini%20sera%20disponible%20sur%20Google%20Play." title="Être prévenu de la sortie sur Google Play"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#48C6E5" d="M1 1.5v23L13 13z"/><path fill="#65D58B" d="m1 1.5 15 8.6-3 2.9z"/><path fill="#FFD46A" d="m16 10.1 5 2.9-5 2.9-3-2.9z"/><path fill="#FA7B80" d="m1 24.5 12-11.5 3 2.9z"/></svg><span><small>Bientôt sur</small><strong>Google Play</strong></span></a>
     </div>`;
 
@@ -159,6 +165,7 @@ function page({ chemin, titre, titreSeo, description, image = `${SITE}/images/pa
 <link rel="icon" href="/images/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="icon" href="/images/symbole.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-itunes-app" content="app-id=6825750322">
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v=${VERSION_CSS}">
 ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe, null, 1)}\n</script>\n` : ''}</head>
@@ -170,17 +177,17 @@ ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe,
     <a href="/seance-de-la-semaine/"${chemin === '/seance-de-la-semaine/' ? ' aria-current="page"' : ''}>La séance<span class="long"> de la semaine</span></a>
     <a href="/blog/"${chemin.startsWith('/blog/') ? ' aria-current="page"' : ''}>Blog</a>
     <a href="/questions-frequentes/"${chemin.startsWith('/questions') ? ' aria-current="page"' : ''}>Questions</a>
-    <a class="appli" href="#boutiques">Bientôt sur iOS et Android</a>
+    <a class="appli" href="${APP_STORE(campagne(chemin))}" rel="noopener">Télécharger l'app</a>
   </nav>
 </header>
 <main id="contenu">
-${corps.replaceAll('<?boutiques?>', BOUTIQUES)}
+${corps.replaceAll('<?boutiques?>', boutiques(campagne(chemin))).replaceAll('href="app-store"', `href="${APP_STORE(campagne(chemin))}" rel="noopener"`)}
 </main>
 <footer class="pied">
   <section class="appel" id="boutiques" aria-labelledby="appel-titre">
     <h2 id="appel-titre">Recommence à bouger, <em>en douceur.</em></h2>
     <p>Moovini, c'est le mouvement doux pour les sédentaires et les débutants : des séances composées d'après tes réponses, de 10 à 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Aucune inscription requise et 7 jours d'essai gratuit.</p>
-    ${BOUTIQUES}
+    ${boutiques(campagne(chemin))}
   </section>
   <nav class="liens" aria-label="Pied de page">
     <a href="/">Accueil</a><a href="/application/">L'app en détail</a><a href="/seance-de-la-semaine/">La séance de la semaine</a><a href="/blog/">Blog</a><a href="/exercices/">Exercices</a><a href="/pour-qui/teletravail/">Télétravail</a>

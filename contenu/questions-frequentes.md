@@ -47,9 +47,9 @@ Moovini commence par 7 jours d'essai gratuit, avec accès à tout. Ensuite, l'ab
 
 L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store. Pour ne rien payer, résilie au moins 24 heures avant la fin de l'essai. Une résiliation prend effet à la fin de la période en cours : tu gardes l'accès jusque-là. Les détails sont dans les [conditions d'utilisation](/cgu/).
 
-## Quand sort Moovini ?
+## Où télécharger Moovini ?
 
-Moovini arrive bientôt sur l'App Store pour iPhone et sur Google Play pour Android. Pour être prévenu(e) de la sortie, [écris-nous](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
+Moovini est disponible sur l'App Store pour iPhone depuis le 9 novembre 2026 : [télécharge-la ici](app-store). La version Android arrive bientôt sur Google Play. Pour être prévenu(e) de sa sortie, [écris-nous](mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
 
 ## Moovini remplace-t-elle un avis médical ?
 

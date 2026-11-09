@@ -45,6 +45,6 @@ Tu choisis entre 10, 20 ou 30 minutes par séance, et 2, 3 ou 5 séances par sem
 
 Au fil des séances, l'app te propose d'aller un peu plus loin, toujours avec ton accord. De nouveaux exercices se débloquent petit à petit. Tu vois tes minutes bougées et tes séances de la semaine, et tu peux programmer des rappels les jours de ton choix.
 
-## Quand sort Moovini ?
+## Où trouver Moovini ?
 
-Moovini arrive bientôt sur l'App Store et Google Play. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. Pour être prévenu(e) de la sortie, écris-nous à [contact@moovini.app](mailto:contact@moovini.app). En attendant, tu peux déjà essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).
+Moovini est disponible sur l'App Store pour iPhone, et bientôt sur Google Play. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. [Télécharge-la sur l'App Store](app-store), ou commence par essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).

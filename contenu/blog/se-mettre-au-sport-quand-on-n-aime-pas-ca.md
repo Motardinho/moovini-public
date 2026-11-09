@@ -65,4 +65,4 @@ Tu n'aimeras peut-être jamais le mot « sport », et tant pis pour lui. Vise pl
 
 ## Commencer sans te demander quoi faire
 
-Moovini est une app iPhone de mouvement doux, en français, pensée pour les personnes sédentaires et les débutants. Tu réponds à quelques questions et elle compose ta séance de 10, 20 ou 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Il n'y a pas de compte à créer, et tu as 7 jours d'essai gratuit pour voir si ça te convient. L'app arrive bientôt sur l'App Store : [écris-nous pour être prévenu(e) de la sortie](mailto:contact@moovini.app?subject=Pr%C3%A9venez-moi%20%C3%A0%20la%20sortie%20de%20Moovini).
+Moovini est une app iPhone de mouvement doux, en français, pensée pour les personnes sédentaires et les débutants. Tu réponds à quelques questions et elle compose ta séance de 10, 20 ou 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Il n'y a pas de compte à créer, et tu as 7 jours d'essai gratuit pour voir si ça te convient. Pour essayer, [télécharge Moovini sur l'App Store](app-store).
