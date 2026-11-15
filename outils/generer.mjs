@@ -10,6 +10,8 @@
 // - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app) ;
 // - exercices-retenus.json : les seuls exercices qui ont leur fiche sur le site (25 octobre 2026), dans l'ordre du
 //   catalogue. Les fiches et images d'un exercice retiré sont effacées, et un lien vers sa fiche devient du texte.
+// - exercices-seo.json : titre Google (« titre-seo »), description et titre de page (« h1 ») écrits à la main pour
+//   une fiche, d'après ses requêtes dans la Search Console (15 novembre 2026) ; sinon ils sont tirés du catalogue.
 // Les vignettes retenues des exercices sont réduites dans images/fiches/ par outils/vignettes.py (Pillow).
 // L'accueil (index.html) et les pages légales ne sont pas générés ; seul le plan du site les liste.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'node:fs';
@@ -221,6 +223,8 @@ const catalogue = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices.jso
 const retenus = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices-retenus.json'), 'utf8'));
 for (const s of retenus) if (!catalogue.some(e => e.slug === s)) throw new Error(`Exercice inconnu dans exercices-retenus.json : ${s}`);
 const exercices = catalogue.filter(e => retenus.includes(e.slug));
+const seoFiches = JSON.parse(readFileSync(join(RACINE, 'contenu', 'exercices-seo.json'), 'utf8'));
+for (const s of Object.keys(seoFiches)) if (!retenus.includes(s)) throw new Error(`Fiche sans page dans exercices-seo.json : ${s}`);
 const ficheRetiree = url => { const m = url.match(/^\/exercices\/([a-z0-9-]+)\/$/); return !!m && !retenus.includes(m[1]); };
 for (const d of readdirSync(join(RACINE, 'exercices'), { withFileTypes: true }))
   if (d.isDirectory() && !retenus.includes(d.name)) rmSync(join(RACINE, 'exercices', d.name), { recursive: true });
@@ -291,10 +295,11 @@ for (const e of exercices) {
   </div>
 </section>`).join('');
   const debut = `${e.name} (${positions(e).join(', ').toLowerCase()}) : ${e.pitch.replace(/\.$/, '')}.`;
-  const description = [`${debut} Les étapes, les astuces et une version plus douce dans Moovini.`, `${debut} Les étapes et les astuces, pas à pas.`, `${debut} Pas à pas.`, debut]
+  const seo = seoFiches[e.slug] ?? {};
+  const description = seo.description ?? [`${debut} Les étapes, les astuces et une version plus douce dans Moovini.`, `${debut} Les étapes et les astuces, pas à pas.`, `${debut} Pas à pas.`, debut]
     .find(d => d.length <= 158) ?? debut;
   ecrire(`exercices/${e.slug}/index.html`, page({
-    chemin, titre: `${e.name} : l'exercice pas à pas`, titreSeo: titrePour(`${e.name} : exercice ${FAMILLES[e.family].toLowerCase()} pas à pas`, `${e.name} : l'exercice pas à pas`, `${e.name}, pas à pas`, e.name),
+    chemin, titre: `${e.name} : l'exercice pas à pas`, titreSeo: seo['titre-seo'] ?? titrePour(`${e.name} : exercice ${FAMILLES[e.family].toLowerCase()} pas à pas`, `${e.name} : l'exercice pas à pas`, `${e.name}, pas à pas`, e.name),
     description, image: imageDe(e) ? `${SITE}${imageDe(e)}` : undefined, imageAlt: e.name,
     jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: `${e.name} : l'exercice pas à pas`, description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, publisher: ORGANISATION, ...(imageDe(e) ? { primaryImageOfPage: `${SITE}${imageDe(e)}` } : {}) }],
     corps: `${arianeHtml(ariane)}
@@ -302,7 +307,7 @@ for (const e of exercices) {
   <header class="fiche-tete">
     ${visuel(e, 160)}
     <div>
-      <h1>${echapper(e.name)}</h1>
+      <h1>${echapper(seo.h1 ?? e.name)}</h1>
       <p class="chapeau">${echapper(e.pitch)}</p>
       <ul class="pastilles">
         <li class="famille ${e.family}">${FAMILLES[e.family]}</li><li>${NIVEAUX[e.level]}</li>${positions(e).map(p => `<li>${p}</li>`).join('')}
