@@ -35,10 +35,14 @@ const NIVEAUX = { 1: 'Simple', 2: 'Modéré', 3: 'Plus soutenu' };
 const APP_STORE = ct => `https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=${ct}&amp;mt=8`;
 // Une campagne par rubrique (site-blog, site-exercices…) : Apple n'affiche une campagne qu'au-delà de quelques comptes.
 const campagne = chemin => 'site-' + (chemin.split('/')[1] || 'accueil');
-// Badge officiel d'Apple, non modifié (règles marketing de l'App Store) ; Google Play reste annoncé tant qu'Android n'est pas public.
+// Lien Google Play avec campagne (16 novembre 2026, sortie Android) : utm_campaign reprend la rubrique (site-blog…),
+// lu dans Play Console (Statistiques, Acquisition). hl=fr ouvre la fiche en français sur ordinateur.
+const GOOGLE_PLAY = ct => `https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&amp;hl=fr&amp;referrer=utm_source%3Dmoovini.app%26utm_medium%3Dsite%26utm_campaign%3D${ct}`;
+// Badges officiels d'Apple et de Google, non modifiés (règles marketing des deux boutiques). Le PNG de Google garde
+// sa marge transparente : affiché plus grand, avec une marge négative, pour que les deux badges visibles aient 56 px de haut.
 const boutiques = ct => `<div class="boutiques" role="group" aria-label="Télécharger Moovini">
       <a class="badge-apple" href="${APP_STORE(ct)}" rel="noopener"><img src="/images/badge-app-store-fr.svg" alt="Télécharger dans l’App Store" width="177" height="56"></a>
-      <a class="bientot google" href="mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini&amp;body=Bonjour%2C%20pr%C3%A9venez-moi%20quand%20Moovini%20sera%20disponible%20sur%20Google%20Play." title="Être prévenu de la sortie sur Google Play"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#48C6E5" d="M1 1.5v23L13 13z"/><path fill="#65D58B" d="m1 1.5 15 8.6-3 2.9z"/><path fill="#FFD46A" d="m16 10.1 5 2.9-5 2.9-3-2.9z"/><path fill="#FA7B80" d="m1 24.5 12-11.5 3 2.9z"/></svg><span><small>Bientôt sur</small><strong>Google Play</strong></span></a>
+      <a class="badge-google" href="${GOOGLE_PLAY(ct)}" rel="noopener"><img src="/images/badge-google-play-fr.png" alt="Disponible sur Google Play" width="188" height="73"></a>
     </div>`;
 
 const ecrire = (chemin, contenu) => { const f = join(RACINE, chemin); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, contenu); };
@@ -184,7 +188,7 @@ ${jsonld.length ? `<script type="application/ld+json">\n${JSON.stringify(graphe,
   </nav>
 </header>
 <main id="contenu">
-${corps.replaceAll('<?boutiques?>', boutiques(campagne(chemin))).replaceAll('href="app-store"', `href="${APP_STORE(campagne(chemin))}" rel="noopener"`)}
+${corps.replaceAll('<?boutiques?>', boutiques(campagne(chemin))).replaceAll('href="app-store"', `href="${APP_STORE(campagne(chemin))}" rel="noopener"`).replaceAll('href="google-play"', `href="${GOOGLE_PLAY(campagne(chemin))}" rel="noopener"`)}
 </main>
 <footer class="pied">
   <section class="appel" id="boutiques" aria-labelledby="appel-titre">

@@ -47,4 +47,4 @@ Au fil des séances, l'app te propose d'aller un peu plus loin, toujours avec to
 
 ## Où trouver Moovini ?
 
-Moovini est disponible sur l'App Store pour iPhone, et bientôt sur Google Play. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. [Télécharge-la sur l'App Store](app-store), ou commence par essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).
+Moovini est disponible sur l'App Store pour iPhone et sur Google Play pour Android. Sans compte ni inscription, tes réponses et tes séances restent sur ton téléphone. Télécharge-la [sur l'App Store](app-store) ou [sur Google Play](google-play). Tu peux aussi commencer par essayer notre séance de [gym douce à la maison](/blog/gym-douce-a-la-maison/).

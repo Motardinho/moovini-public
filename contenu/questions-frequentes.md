@@ -41,15 +41,15 @@ Tes réponses, tes séances et tes zones à ménager restent sur ton téléphone
 
 ## Combien coûte Moovini ?
 
-Moovini commence par 7 jours d'essai gratuit, avec accès à tout. Ensuite, l'abonnement coûte 59,99 € par an ou 9,99 € par mois en France, au prix affiché par l'App Store au moment de l'achat.
+Moovini commence par 7 jours d'essai gratuit, avec accès à tout. Ensuite, l'abonnement coûte 59,99 € par an ou 9,99 € par mois en France, au prix affiché par l'App Store ou Google Play au moment de l'achat.
 
 ## Comment arrêter l'abonnement ?
 
-L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store. Pour ne rien payer, résilie au moins 24 heures avant la fin de l'essai. Une résiliation prend effet à la fin de la période en cours : tu gardes l'accès jusque-là. Les détails sont dans les [conditions d'utilisation](/cgu/).
+L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store sur iPhone, ou dans Google Play sur Android. Pour ne rien payer, résilie au moins 24 heures avant la fin de l'essai. Une résiliation prend effet à la fin de la période en cours : tu gardes l'accès jusque-là. Les détails sont dans les [conditions d'utilisation](/cgu/).
 
 ## Où télécharger Moovini ?
 
-Moovini est disponible sur l'App Store pour iPhone depuis le 9 novembre 2026 : [télécharge-la ici](app-store). La version Android arrive bientôt sur Google Play. Pour être prévenu(e) de sa sortie, [écris-nous](mailto:contact@moovini.app?subject=Sortie%20Android%20de%20Moovini) : nous te répondrons dès qu'elle sera disponible.
+Moovini est disponible sur l'App Store pour iPhone depuis le 9 novembre 2026, et sur Google Play pour Android depuis le 16 novembre 2026 : [télécharge-la sur iPhone](app-store) ou [sur Android](google-play).
 
 ## Moovini remplace-t-elle un avis médical ?
 
