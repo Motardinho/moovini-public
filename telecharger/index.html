@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Télécharger Moovini</title>
+<meta name="description" content="Moovini sur l'App Store et sur Google Play : des séances de sport doux de 10 à 30 minutes, sur une chaise, debout ou au sol.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://moovini.app/telecharger/">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" href="../images/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<script>
+  // Lien des bios et des légendes (20 novembre 2026) : un iPhone part vers l'App Store, un téléphone Android vers
+  // Google Play, chacun avec la source du lien (?src=tiktok-julafrite). Aucun cookie ni traceur : seul le type
+  // d'appareil est lu, dans le navigateur. Sur ordinateur, ou si la redirection n'a pas lieu, les deux badges restent.
+  (function () {
+    var m = /[?&]src=([a-z0-9-]{1,40})(?:&|$)/.exec(location.search);
+    var src = m ? m[1] : 'telecharger';
+    var apple = 'https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&ct=' + src + '&mt=8';
+    var google = 'https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&hl=fr&referrer=' +
+      encodeURIComponent('utm_source=moovini.app&utm_medium=telecharger&utm_campaign=' + src);
+    window.mooviniLiens = { apple: apple, google: google };
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (/Android/i.test(ua)) location.replace(google);
+    else if (ios) location.replace(apple);
+  })();
+</script>
+<style>
+  :root { --bg: #F5F0E8; --card: #FFFFFF; --ink: #225B65; --muted: #5A7177; --accent: #2E8F86; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 56px 16px 64px; text-align: center; }
+  .symbole { width: 72px; height: 72px; border-radius: 18px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 18px 0 8px; }
+  p { margin: 0 0 22px; color: var(--muted); }
+  .boutiques { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin: 8px 0 28px; }
+  .badge-apple, .badge-google { display: inline-flex; flex: none; border-radius: 9px; }
+  .badge-apple img { display: block; width: auto; height: 56px; }
+  .badge-google img { display: block; width: auto; height: 73px; margin: -8.5px 0; }
+  .badge-apple:focus-visible, .badge-google:focus-visible { outline: 2px solid #45B9AD; outline-offset: 3px; }
+  a { color: var(--accent); }
+  @media (max-width: 420px) { .boutiques { gap: 8px; } .badge-apple img { height: 48px; } .badge-google img { height: 62.5px; margin: -7.25px 0; } }
+</style>
+</head>
+<body>
+<main>
+  <img class="symbole" src="../apple-touch-icon.png" width="72" height="72" alt="">
+  <h1>Télécharge Moovini</h1>
+  <p>Des séances de sport doux de 10 à 30 minutes, sur une chaise, debout ou au sol. 7 jours d'essai gratuit.</p>
+  <div class="boutiques">
+    <a class="badge-apple" id="lien-apple" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=telecharger&amp;mt=8" rel="noopener"><img src="../images/badge-app-store-fr.svg" alt="Télécharger dans l’App Store" width="177" height="56"></a>
+    <a class="badge-google" id="lien-google" href="https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&amp;hl=fr&amp;referrer=utm_source%3Dmoovini.app%26utm_medium%3Dtelecharger%26utm_campaign%3Dtelecharger" rel="noopener"><img src="../images/badge-google-play-fr.png" alt="Disponible sur Google Play" width="188" height="73"></a>
+  </div>
+  <p><a href="../">Découvrir Moovini sur moovini.app</a></p>
+</main>
+<script>
+  if (window.mooviniLiens) {
+    document.getElementById('lien-apple').href = window.mooviniLiens.apple;
+    document.getElementById('lien-google').href = window.mooviniLiens.google;
+  }
+</script>
+</body>
+</html>
