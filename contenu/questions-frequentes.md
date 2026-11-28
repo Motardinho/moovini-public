@@ -47,6 +47,10 @@ Tu as 7 jours gratuits et sans engagement pour découvrir Moovini, avec accès �
 
 L'essai et l'abonnement se gèrent dans les réglages de ton compte App Store sur iPhone, ou dans Google Play sur Android. Pour ne rien payer, résilie au moins 24 heures avant la fin de l'essai. Une résiliation prend effet à la fin de la période en cours : tu gardes l'accès jusque-là. Les détails sont dans les [conditions d'utilisation](/cgu/).
 
+## Est-ce que je peux suivre ma séance sur la télé ?
+
+Oui. Pendant la séance, tourne ton téléphone : le lecteur passe en paysage. Recopie ensuite l'écran du téléphone sur ta télé, avec AirPlay sur iPhone ou la diffusion d'écran sur Android (Cast, Smart View selon ta télé). Il n'y a pas d'app Moovini à installer sur la télé : la séance, la voix et le minuteur tournent sur ton téléphone.
+
 ## Où télécharger Moovini ?
 
 Moovini est disponible sur l'App Store pour iPhone depuis le 9 novembre 2026, et sur Google Play pour Android depuis le 16 novembre 2026 : [télécharge-la sur iPhone](app-store) ou [sur Android](google-play).

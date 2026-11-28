@@ -432,9 +432,10 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     const moyenne = s.mouvements.reduce((a, m) => a + m.niveau, 0) / s.mouvements.length;
     const nv = moyenne < 1.5 ? 1 : moyenne < 2.3 ? 2 : 3;
     return `<article class="seance" data-rang="${k}"${visible ? '' : ' hidden'}>
+  <div class="seance-carte">
   <header class="seance-tete">
-    <p>${echapper(s.etape)}</p>
-    <h2>${echapper(s.titre)}</h2>
+    <div><p>${echapper(s.etape)}</p>
+    <h2>${echapper(s.titre)}</h2></div>
     <span class="seance-duree">${s.minutes} min</span>
   </header>
   <dl class="reperes">
@@ -444,6 +445,7 @@ ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} 
     <div><dt>Niveau</dt><dd>${NIVEAUX[nv]}</dd></div>
     <div><dt>Zones</dt><dd>${echapper(s.zones)}</dd></div>
   </dl>
+  </div>
   <ol class="mouvements">
 ${s.mouvements.map((m, i) => carte(m, i, s, k + 1)).join('\n')}
   </ol>
@@ -461,7 +463,7 @@ ${s.mouvements.map((m, i) => carte(m, i, s, k + 1)).join('\n')}
 <p class="chapeau">Chaque semaine, une vraie séance choisie parmi les ${catalogue.length} exercices de l'app. Les mouvements, leur ordre et leurs durées sont ceux que Moovini compose. Chaque image vient de son lecteur, à l'exercice près.</p>
 <p class="seance-dates" id="seance-dates"></p></header>
 ${seances.map((s, k) => article(s, k, k === actuelle)).join('\n')}
-<aside class="dans-appli"><h2>Dans Moovini</h2><p>Cette séance est composée pour un profil type, sans zone à ménager. Dans l'app, la tienne part de tes réponses : ton temps, tes positions, tes zones à ménager. Une vidéo, une consigne courte, une voix et un minuteur te guident, et tu peux remplacer un mouvement ou passer à une version plus douce.</p><?boutiques?></aside>
+<aside class="dans-appli"><h2>Dans Moovini</h2><p>Cette séance est composée pour un profil type, sans zone à ménager. Dans l'app, la tienne part de tes réponses : ton temps, tes positions, tes zones à ménager. Une vidéo, une consigne courte, une voix et un minuteur te guident, et tu peux remplacer un mouvement ou passer à une version plus douce. Pour voir les gestes en grand, tourne ton téléphone et recopie son écran sur ta télé.</p><?boutiques?></aside>
 <p class="prudence">Va à ton rythme et arrête si ça fait mal. En cas de problème de santé, de blessure ou de grossesse, demande d'abord conseil à ton médecin.</p>
 <script>
   // Montre la séance de la semaine en cours, à l'heure de Paris. ?decalage=1 : la semaine suivante, pour vérifier.
