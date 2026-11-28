@@ -5,4 +5,4 @@
 
 .v-phone video{height:auto}.v-detail>.v-light{margin-top:0}.v-product .v-play{color:#225b65}
 @media(max-width:480px){body .v-nav.v-nav{padding:16px;gap:8px;min-height:0}body .v-nav .v-brand{flex:none;font-size:21px;gap:7px;letter-spacing:-1px}body .v-nav .v-brand img{width:30px;height:30px;border-radius:8px}body .v-nav nav{gap:12px;font-size:13px}body .v-nav .v-download{flex:none;padding:8px 13px;font-size:13px;white-space:nowrap}body .v-nav .v-download span{display:none}}
-.v-product.v-photo{padding:0;overflow:hidden;background:#e5eee6}.v-product.v-photo img{width:100%;height:100%;min-height:570px;object-fit:cover}@media(max-width:800px){.v-product.v-photo img{min-height:0;aspect-ratio:4/5}}
+.v-product.v-photo{padding:0;overflow:hidden;background:#e5eee6}.v-product.v-photo img{width:100%;height:100%;min-height:570px;object-fit:cover;object-position:center 30%}@media(max-width:800px){.v-product.v-photo img{min-height:0;height:auto}}
