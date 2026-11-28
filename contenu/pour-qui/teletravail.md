@@ -58,4 +58,4 @@ L'app fonctionne sans compte ni inscription : tes réponses et tes séances rest
 
 ## Disponible sur l'App Store
 
-Moovini est une app de mouvement doux pour iPhone et Android, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Elle est disponible sur l'App Store et sur Google Play, avec 7 jours d'essai gratuit : [télécharge Moovini sur iPhone](app-store) ou [sur Android](google-play).
+Moovini est une app de mouvement doux pour iPhone et Android, en français, pour les adultes de 30 à 55 ans qui bougent peu ou veulent s'y remettre. Elle est disponible sur l'App Store et sur Google Play, avec 7 jours gratuits et sans engagement pour découvrir Moovini : [télécharge Moovini sur iPhone](app-store) ou [sur Android](google-play).

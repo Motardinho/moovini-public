@@ -56,4 +56,4 @@ Moovini ne remplace pas l'avis d'un médecin ou d'un(e) kiné. En cas de douleur
 
 ## Moovini est sur l'App Store
 
-Moovini est une app de mouvement doux pour iPhone et Android, en français, sans compte ni inscription : tes réponses et tes séances restent sur ton téléphone. Elle est disponible sur l'App Store et sur Google Play, avec 7 jours d'essai gratuit : [télécharge Moovini sur iPhone](app-store) ou [sur Android](google-play).
+Moovini est une app de mouvement doux pour iPhone et Android, en français, sans compte ni inscription : tes réponses et tes séances restent sur ton téléphone. Elle est disponible sur l'App Store et sur Google Play, avec 7 jours gratuits et sans engagement pour découvrir Moovini : [télécharge Moovini sur iPhone](app-store) ou [sur Android](google-play).

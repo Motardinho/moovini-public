@@ -65,4 +65,4 @@ Tu n'aimeras peut-être jamais le mot « sport », et tant pis pour lui. Vise pl
 
 ## Commencer sans te demander quoi faire
 
-Moovini est une app de mouvement doux pour iPhone et Android, en français, pensée pour les personnes sédentaires et les débutants. Tu réponds à quelques questions et elle compose ta séance de 10, 20 ou 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Il n'y a pas de compte à créer, et tu as 7 jours d'essai gratuit pour voir si ça te convient. Pour essayer, télécharge Moovini [sur l'App Store](app-store) ou [sur Google Play](google-play).
+Moovini est une app de mouvement doux pour iPhone et Android, en français, pensée pour les personnes sédentaires et les débutants. Tu réponds à quelques questions et elle compose ta séance de 10, 20 ou 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Il n'y a pas de compte à créer, et tu as 7 jours gratuits et sans engagement pour découvrir Moovini. Pour essayer, télécharge Moovini [sur l'App Store](app-store) ou [sur Google Play](google-play).

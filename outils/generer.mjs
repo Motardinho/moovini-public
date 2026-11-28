@@ -1,3 +1,4 @@
+import { vitrine, habillerContenu } from './vitrine.mjs';
 // Générateur des pages de contenu de moovini.app (23 octobre 2026) : blog, pages « Pour qui », questions fréquentes,
 // fiches exercices et plan du site. Sans dépendance : node outils/generer.mjs, depuis la racine du site.
 //
@@ -8,12 +9,12 @@
 // - application.html : la page « L'app » (24 octobre 2026), en HTML parce qu'elle alterne textes et captures ; même en-tête que
 //   les .md, et <?exercices slug,slug?> y devient une rangée de fiches exercices ;
 // - exercices.json : export du catalogue de l'app (node scripts/export-site.mjs, dans le dépôt de l'app) ;
-// - exercices-retenus.json : les seuls exercices qui ont leur fiche sur le site (25 octobre 2026), dans l'ordre du
+// - exercices-retenus.json : les exercices qui ont leur fiche sur le site (tout le catalogue depuis le 28 novembre 2026), dans l'ordre du
 //   catalogue. Les fiches et images d'un exercice retiré sont effacées, et un lien vers sa fiche devient du texte.
 // - exercices-seo.json : titre Google (« titre-seo »), description et titre de page (« h1 ») écrits à la main pour
 //   une fiche, d'après ses requêtes dans la Search Console (15 novembre 2026) ; sinon ils sont tirés du catalogue.
 // Les vignettes retenues des exercices sont réduites dans images/fiches/ par outils/vignettes.py (Pillow).
-// L'accueil (index.html) et les pages légales ne sont pas générés ; seul le plan du site les liste.
+// L’accueil vient de contenu/accueil.html ; les pages légales restent écrites à la main.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -149,7 +150,7 @@ const SCRIPT_CLIPS = `<script>
 function page({ chemin, titre, titreSeo, description, image = `${SITE}/images/partage.jpg`, imageAlt = 'Moovini, l\u2019app de mouvement doux', jsonld = [], corps, type = 'website' }) {
   const url = `${SITE}${chemin}`;
   const graphe = { '@context': 'https://schema.org', '@graph': [...jsonld] };
-  return `<!doctype html>
+  const html = `<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -193,7 +194,7 @@ ${corps.replaceAll('<?boutiques?>', boutiques(campagne(chemin))).replaceAll('hre
 <footer class="pied">
   <section class="appel" id="boutiques" aria-labelledby="appel-titre">
     <h2 id="appel-titre">Recommence à bouger, <em>en douceur.</em></h2>
-    <p>Moovini, c'est le mouvement doux pour les sédentaires et les débutants : des séances composées d'après tes réponses, de 10 à 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Aucune inscription requise et 7 jours d'essai gratuit.</p>
+    <p>Moovini, c'est le mouvement doux pour les sédentaires et les débutants : des séances composées d'après tes réponses, de 10 à 30 minutes, sur une chaise ou debout, chez toi ou au bureau. Aucune inscription requise et 7 jours gratuits et sans engagement pour découvrir Moovini.</p>
     ${boutiques(campagne(chemin))}
   </section>
   <nav class="liens" aria-label="Pied de page">
@@ -215,6 +216,7 @@ ${corps.replaceAll('<?boutiques?>', boutiques(campagne(chemin))).replaceAll('hre
 ${corps.includes('data-clip') ? SCRIPT_CLIPS : ''}</body>
 </html>
 `;
+  return chemin === '/application/' ? html : habillerContenu(html, chemin.split('/')[1]);
 }
 const ORGANISATION = { '@id': `${SITE}/#organisation` };
 const filAriane = elements => ({ '@type': 'BreadcrumbList', itemListElement: elements.map(([nom, chemin], i) => ({ '@type': 'ListItem', position: i + 1, name: nom, item: `${SITE}${chemin}` })) });
@@ -338,12 +340,12 @@ ${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul clas
   const ariane = [['Accueil', '/'], ['Exercices', chemin]];
   const groupes = Object.keys(FAMILLES).map(f => [f, exercices.filter(e => e.family === f)]).filter(([, l]) => l.length);
   ecrire('exercices/index.html', page({
-    chemin, titre: `Aperçu du catalogue d'exercices de Moovini : ${exercices.length} mouvements pas à pas`, titreSeo: 'Exercices doux sur chaise, debout ou au sol : un aperçu',
-    description: `Un aperçu des exercices doux de Moovini : ${exercices.length} mouvements sur ${catalogue.length}, mobilité, cardio doux, renforcement et respiration, sur une chaise, debout ou au sol.`,
-    jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: "Aperçu du catalogue d'exercices de Moovini", inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
+    chemin, titre: `Les ${exercices.length} exercices de Moovini, pas à pas`, titreSeo: `${exercices.length} exercices doux sur chaise, debout ou au sol`,
+    description: `Les ${exercices.length} exercices doux de Moovini : mobilité, cardio doux, renforcement et respiration, sur une chaise, debout ou au sol, avec leurs étapes et leurs astuces.`,
+    jsonld: [filAriane(ariane), { '@type': 'CollectionPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: "Les exercices de Moovini", inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` } }],
     corps: `${arianeHtml(ariane)}
-<header class="entete-page"><p class="surtitre">Les exercices de Moovini</p><h1>Un aperçu du catalogue : ${exercices.length} exercices sur les ${catalogue.length} de l'app</h1>
-<p class="chapeau">Quelques mouvements doux pour débutants et sédentaires, sur une chaise, debout ou au sol, chacun avec ses étapes et ses astuces. L'app en compte bien d'autres, du plus simple au plus soutenu, et les combine en séances de 10 à 30 minutes d'après tes réponses. <a href="/seance-de-la-semaine/">Regarde la séance de la semaine</a>.</p></header>
+<header class="entete-page"><p class="surtitre">Les exercices de Moovini</p><h1>Tout le catalogue : ${exercices.length} exercices doux</h1>
+<p class="chapeau">Tous les mouvements de l'app, pour débutants et sédentaires, sur une chaise, debout ou au sol, du plus simple au plus soutenu, chacun avec ses étapes et ses astuces. L'app les combine en séances de 10 à 30 minutes d'après tes réponses. <a href="/seance-de-la-semaine/">Regarde la séance de la semaine</a>.</p></header>
 ${groupes.map(([f, l]) => `<section class="groupe"><h2 id="${f}">${FAMILLES[f]} <span>${l.length} exercice${l.length > 1 ? 's' : ''}</span></h2><ul class="grille-fiches">${l.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`).join('')}</ul></section>`).join('\n')}`,
   }));
   plan.push([chemin, AUJOURDHUI]);
@@ -544,12 +546,12 @@ for (const p of articles('pour-qui')) {
     if (!x) throw new Error(`Exercice sans fiche dans application.html (voir exercices-retenus.json) : ${s}`);
     return `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span><small>${listeFr(positions(x))}</small></a></li>`;
   }).join('')}</ul>`);
-  ecrire('application/index.html', page({
+  ecrire('application/index.html', vitrine(page({
     chemin, titre: a.titre, titreSeo: a['titre-seo'], description: a.description,
-    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: a.titre, description: a.description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` }, primaryImageOfPage: `${SITE}/images/app/13-accueil.webp` }],
+    jsonld: [filAriane(ariane), { '@type': 'WebPage', '@id': `${SITE}${chemin}`, url: `${SITE}${chemin}`, name: a.titre, description: a.description, inLanguage: 'fr-FR', isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#app` }, primaryImageOfPage: `${SITE}/images/identite-20261114/05-accueil.webp` }],
     corps: `${arianeHtml(ariane)}
 ${corps.trim()}`,
-  }));
+  })));
   plan.push([chemin, a['mise-a-jour'] ?? a.date]);
 }
 
@@ -576,8 +578,7 @@ ecrire('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${plan.map(([c, d]) => `  <url><loc>${SITE}${c}</loc><lastmod>${d}</lastmod></url>`).join('\n')}
 </urlset>
 `);
-// L'accueil et la page de l'app citent le nombre d'exercices en toutes lettres : à reprendre après un changement de catalogue.
-const versions = catalogue.reduce((n, e) => n + e.variants.length, 0);
-if (!readFileSync(join(RACINE, 'index.html'), 'utf8').includes(`les ${catalogue.length} exercices`)) console.warn(`À corriger dans index.html : ${catalogue.length} exercices`);
-if (!readFileSync(join(RACINE, 'contenu', 'application.html'), 'utf8').includes(`<b>${catalogue.length} exercices</b>en ${versions} versions`)) console.warn(`À corriger dans contenu/application.html : ${catalogue.length} exercices en ${versions} versions`);
 console.log(`${exercices.length} fiches, ${billets.length} billets, ${articles('pour-qui').length} pages « Pour qui », questions fréquentes ; ${plan.length} adresses dans le plan du site ; ${manquantes.length} vignettes réduites.`);
+
+// L’accueil a sa source propre depuis la refonte du 14 novembre 2026.
+ecrire('index.html', vitrine(readFileSync(join(RACINE, 'contenu/accueil.html'), 'utf8'), 'accueil'));

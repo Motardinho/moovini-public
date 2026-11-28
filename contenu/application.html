@@ -1,113 +1,161 @@
 ---
-titre: L'app Moovini en détail : des séances douces composées pour toi
-titre-seo: Moovini en détail : l'app de séances douces sur mesure
-description: Questionnaire, séance du jour sur mesure, difficulté réglée par ton ressenti, voix qui te guide : Moovini en cinq écrans.
+titre: L’app Moovini : tes séances de gym douce adaptées
+titre-seo: Comment fonctionne Moovini, l’app de gym douce
+description: Découvre les séances adaptées de Moovini : questionnaire, guidage vidéo et vocal, énergie du jour, routines et progrès sans pression.
 date: 2026-10-24
-mise-a-jour: 2026-10-25
+mise-a-jour: 2026-11-14
 ---
-<!-- Page « L'app » (24 octobre 2026, resserrée le 25 octobre 2026). Source de /application/, mise en page par
-     outils/generer.mjs : ne pas modifier application/index.html à la main. Captures du 24 octobre 2026 (profil de
-     démonstration Julie), refaites par marketing/site/20261024-fiche-app/ dans le dépôt de l'app. Chaque fonction décrite
-     ici existe dans l'app ; avant d'en ajouter une, vérifier qu'elle est faite, pas seulement prévue. -->
-<article class="app">
-
-<header class="app-tete">
-  <div class="app-tete-texte">
-    <p class="surtitre">L'app en détail</p>
-    <h1>Une séance faite pour toi, <em>qui suit ton rythme.</em></h1>
-    <p class="chapeau">Quelques questions au départ, puis ton ressenti après chaque séance : Moovini compose tes séances et s'aligne sur toi. L'essentiel, en cinq écrans.</p>
-    <?boutiques?>
-  </div>
-  <div class="app-tete-tels" aria-hidden="true">
-    <img class="tel" src="/images/app/02-objectif.webp" alt="" width="640" height="1387" decoding="async">
-    <img class="tel" src="/images/app/13-accueil.webp" alt="" width="640" height="1387" fetchpriority="high" decoding="async">
-    <img class="tel" src="/images/app/17-lecteur.webp" alt="" width="640" height="1387" decoding="async">
-  </div>
+<article class="v-detail">
+<div class="v-wrap">
+<header class="v-hero">
+<div>
+<p class="v-eyebrow">L’app Moovini, en détail</p>
+<h1>Tu te lances.<br>
+<em>On te guide.</em>
+</h1>
+<p class="v-lead">Une séance composée pour toi, un mouvement à la fois. Découvre comment Moovini t’accompagne avant, pendant et après.</p>
+<div class="v-actions">
+<a class="v-badge" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=site-application&amp;mt=8">
+<img src="/images/badge-app-store-fr.svg" width="177" height="56" alt="Télécharger dans l’App Store">
+</a>
+<a class="v-badge v-badge-google" href="google-play"><img src="/images/badge-google-play-fr.png" width="188" height="73" alt="Disponible sur Google Play"></a>
+<a href="#lecteur">Voir comment ça marche ↓</a>
+</div>
+<p class="v-fine">7 jours gratuits et sans engagement pour découvrir Moovini, puis abonnement. <a href="#essai">Tarifs et conditions</a>.</p>
+<nav class="v-subnav" aria-label="Dans cette page">
+<a href="#lecteur">Le guidage</a>
+<a href="#seance">L’adaptation</a>
+<a href="#progres">Les progrès</a>
+</nav>
+</div>
+<div class="v-stage">
+<div class="v-phone">
+<img src="/images/identite-20261114/05-accueil.webp" width="640" height="1387" loading="lazy" alt="Ta séance du jour dans l’app Moovini">
+</div>
+</div>
 </header>
-
-<ul class="app-chiffres">
-  <li><b>10, 20 ou 30&nbsp;min</b>par séance, au choix</li>
-  <li><b>85 exercices</b>en 124 versions</li>
-  <li><b>Chaise, debout ou sol</b>selon ce qui te met à l'aise</li>
-  <li><b>7 jours</b>d'essai gratuit, sans compte Moovini à créer</li>
+</div>
+<div class="v-light">
+<section class="v-wrap v-feature" id="lecteur">
+<div class="v-product">
+<div class="v-demo">
+<div class="v-phone">
+<video data-demo muted loop playsinline preload="none" poster="/images/ecrans/hero-assis-debout.webp" width="600" height="1301" aria-label="Démonstration du lecteur Moovini : exercice assis-debout, consigne et minuteur">
+<source src="/images/ecrans/hero-assis-debout.mp4" type="video/mp4">
+</video>
+</div>
+<button class="v-play" type="button" aria-pressed="false">Lire la démonstration</button>
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">01 / Pendant ta séance</p>
+<h2>Regarde le geste.<br>
+<em>Laisse-toi guider.</em>
+</h2>
+<ul>
+<li>Une vidéo et une consigne courte pour chaque mouvement.</li>
+<li>La voix annonce l’exercice et les changements de côté.</li>
+<li>Le minuteur compte pour toi.</li>
+<li>Tu peux mettre en pause, passer un exercice ou choisir une version plus douce lorsqu’elle est disponible.</li>
 </ul>
-
-<section class="app-partie" id="questionnaire" aria-labelledby="t-questionnaire">
-  <div class="bloc">
-    <div class="bloc-texte">
-      <div class="titre-partie"><p class="numero">1</p><h2 id="t-questionnaire">Quelques questions, une seule fois</h2></div>
-      <p>Au premier lancement, Moovini te demande ton objectif, ton niveau, ton rythme (10, 20 ou 30 minutes, 2 à 5 fois par semaine), les positions qui te conviennent et les zones à ménager. À chaque choix, l'app t'annonce ce qu'il change.</p>
-      <p>Dès la dernière réponse, ta première séance est prête. Tout se modifie ensuite dans tes Préférences.</p>
-    </div>
-    <div class="bloc-tels"><img class="tel" src="/images/app/02-objectif.webp" alt="Écran « Qu'est-ce qui te ferait du bien ? » avec « Me sentir moins raide » choisi et l'effet annoncé « Surtout de la mobilité et du stretching »" width="640" height="1387" loading="lazy" decoding="async"></div>
-  </div>
+<p>Les démonstrations sont dans l’app. Une fois installée et ton accès activé, tu peux aussi suivre tes séances hors connexion.</p>
+</div>
 </section>
-
-<section class="app-partie" id="seance" aria-labelledby="t-seance">
-  <div class="bloc inverse">
-    <div class="bloc-texte">
-      <div class="titre-partie"><p class="numero">2</p><h2 id="t-seance">Ta séance du jour, composée pour toi</h2></div>
-      <p>Ce n'est pas une vidéo que tout le monde suit à l'identique : Moovini assemble ta séance d'après tes réponses, regroupe les exercices par position et fait tourner les zones travaillées. « À prévoir » te dit d'avance s'il te faut une chaise ou un peu de place au sol.</p>
-      <p>Un exercice ne te dit rien&nbsp;? Remplace-le. Moins d'énergie aujourd'hui&nbsp;? « Ajuster à mon énergie » te propose une version douce de 6 minutes, pour aujourd'hui seulement.</p>
-    </div>
-    <div class="bloc-tels"><img class="tel" src="/images/app/23-apercu-haut.webp" alt="Aperçu de la séance 5 sur 6 : 10 minutes, 6 exercices, surtout le haut du corps, debout puis assis(e), à prévoir : une chaise, et « Pourquoi cette séance ? »" width="640" height="1387" loading="lazy" decoding="async"></div>
-  </div>
+<section class="v-wrap v-feature" id="questionnaire">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/app/02-objectif.webp" width="640" height="1387" loading="lazy" alt="Questionnaire Moovini : choix de ton objectif">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">02 / Quelques réponses pour commencer</p>
+<h2>Une séance qui part<br>
+<em>de toi.</em>
+</h2>
+<p>Ton objectif, ton niveau, tes disponibilités, tes positions et les zones à ménager : tes réponses orientent les exercices proposés.</p>
+<p>Ta première séance est composée à partir de ces choix. Tu peux les modifier ensuite dans les Préférences.</p>
+</div>
 </section>
-
-<section class="app-partie" id="ressenti" aria-labelledby="t-ressenti">
-  <div class="bloc">
-    <div class="bloc-texte">
-      <div class="titre-partie"><p class="numero">3</p><h2 id="t-ressenti">Tu montes en difficulté si tu le veux</h2></div>
-      <p>À la fin de chaque séance, Moovini te demande « Comment c'était&nbsp;? ». Ta réponse règle les séances suivantes, d'un cran à la fois :</p>
-      <ul class="ressentis">
-        <li class="facile"><b>Trop facile</b>L'app te propose une version plus dynamique. Tu peux dire non : la difficulté ne monte jamais sans ton accord.</li>
-        <li class="bien"><b>Juste bien</b>On garde ce niveau.</li>
-        <li class="dur"><b>Trop difficile</b>Des variantes plus accessibles la prochaine fois.</li>
-      </ul>
-      <p>Ton programme avance par cycles de 6 séances, en quatre étapes, et c'est toi qui choisis de passer à la suivante.</p>
-    </div>
-    <div class="bloc-tels"><img class="tel" src="/images/app/18-ressenti.webp" alt="Fin de séance « Bien joué, c'est fait ! » et volet « Comment c'était ? » : trop facile, juste bien, trop difficile, puis la question « Essayer une version un peu plus dynamique la prochaine fois ? » avec Oui et Non, merci" width="640" height="1387" loading="lazy" decoding="async"></div>
-  </div>
+<section class="v-wrap v-feature" id="seance">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/14-energie.webp" width="640" height="1387" loading="lazy" alt="Choix de l’énergie du jour dans Moovini">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">03 / Ton énergie du jour</p>
+<h2>Le programme s’adapte.<br>
+<em>Toi, tu choisis.</em>
+</h2>
+<p>Avant de commencer, regarde les exercices et ce qu’il faut préparer. Tu peux remplacer un exercice par une proposition compatible avec tes préférences.</p>
+<p>Moins d’énergie aujourd’hui ? L’app propose une séance raccourcie et plus douce, pour ce jour seulement. Tu vois la proposition avant de la lancer.</p>
+</div>
 </section>
-
-<aside class="app-encart">
-  <p><b>Moovini est disponible sur l'App Store pour iPhone et sur Google Play pour Android.</b> 7 jours d'essai gratuit, sans compte à créer.</p>
-  <?boutiques?>
-</aside>
-
-<section class="app-partie" id="lecteur" aria-labelledby="t-lecteur">
-  <div class="bloc inverse">
-    <div class="bloc-texte">
-      <div class="titre-partie"><p class="numero">4</p><h2 id="t-lecteur">Pendant la séance, laisse-toi guider</h2></div>
-      <ul class="liste">
-        <li>Une démonstration en vidéo et une consigne courte pour chaque mouvement.</li>
-        <li>Une voix qui annonce l'exercice et te prévient quand il faut changer de côté.</li>
-        <li>Un grand minuteur : pas besoin de compter.</li>
-        <li>Trop dur sur le moment&nbsp;? Une touche sur la petite feuille, et la version plus douce le remplace.</li>
-        <li>Pas besoin de connexion pour bouger : les démonstrations sont dans l'app.</li>
-      </ul>
-    </div>
-    <div class="bloc-tels"><img class="tel" src="/images/app/17-lecteur.webp" alt="Lecteur de séance : exercice 4 sur 12, « Pas écartés, bras levés », démonstration avec la consigne « Un pas sur le côté, bras en V », minuteur 1:25 et la feuille de la version plus douce" width="640" height="1387" loading="lazy" decoding="async"></div>
-  </div>
-  <p class="intro">Des exercices simples pour (re)commencer jusqu'aux plus soutenus, sur une chaise, debout ou au sol. Quelques-uns, pas à pas :</p>
-  <?exercices rouler-epaules,marche-sur-place,genou-poitrine,fente-avant?>
-  <p class="suite">D'autres dans <a href="/exercices/">nos fiches exercices</a>.</p>
+<section class="v-wrap v-feature" id="ressenti">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/18-ressenti.webp" width="640" height="1387" loading="lazy" alt="Bilan de séance et choix du ressenti : trop facile, juste bien ou trop difficile">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">04 / Après la séance</p>
+<h2>Tu donnes le ton<br>
+<em>pour la suite.</em>
+</h2>
+<p>À la fin, indique ton ressenti si tu le souhaites. Trop difficile ? Les prochaines séances peuvent devenir plus accessibles. Trop facile ? L’app te propose de monter d’un cran, avec ton accord.</p>
+<p>Ton programme avance par cycles de 6 séances, en quatre étapes. À chaque fin d’étape, tu choisis de continuer ou de rester encore à ce niveau.</p>
+</div>
 </section>
-
-<section class="app-partie" id="progres" aria-labelledby="t-progres">
-  <div class="bloc">
-    <div class="bloc-texte">
-      <div class="titre-partie"><p class="numero">5</p><h2 id="t-progres">Tes progrès, sans pression</h2></div>
-      <p>Ta semaine, tes séances passées et ton ressenti, avec des mots d'encouragement plutôt qu'une avalanche de chiffres. Des badges marquent les petites victoires, et pas de série à casser si tu manques un jour.</p>
-      <p>Envie de bouger en plus&nbsp;? 17 routines de 5 à 10 minutes t'attendent, par moment de la journée ou par zone du corps.</p>
-    </div>
-    <div class="bloc-tels"><img class="tel" src="/images/app/20-progres.webp" alt="Écran « Tes progrès » : « Au-delà de ton rythme, bravo ! », les séances de la semaine, le ressenti et les badges" width="640" height="1387" loading="lazy" decoding="async"></div>
-  </div>
+<section class="v-wrap v-feature" id="progres">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/07-progres.webp" width="640" height="1387" loading="lazy" alt="Historique et progrès du profil de démonstration">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">05 / Chaque séance compte</p>
+<h2>Des petites victoires.<br>
+<em>Sans pression.</em>
+</h2>
+<p>Retrouve ta semaine, ton historique et tes badges. Un jour manqué n’efface pas les séances déjà réalisées.</p>
+<p>Les rappels sont facultatifs. Tu choisis tes jours et ton horaire pour donner au mouvement une place dans ton quotidien.</p>
+</div>
 </section>
-
-<section class="app-partie" id="essai" aria-labelledby="t-essai">
-  <h2 id="t-essai">Essaie gratuitement, en toute tranquillité</h2>
-  <p class="intro"><b>7 jours d'essai gratuit</b>, puis 59,99&nbsp;€ par an ou 9,99&nbsp;€ par mois, sans engagement. Pas de compte Moovini à créer, pas de publicité : tes réponses et tes séances restent sur ton téléphone (<a href="/privacy/">confidentialité</a>). Une question&nbsp;? Les <a href="/questions-frequentes/">questions fréquentes</a> ou <a href="mailto:contact@moovini.app">contact@moovini.app</a>.</p>
+<section class="v-wrap v-feature" id="routines">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/08-routines.webp" width="640" height="1387" loading="lazy" alt="Routines Moovini par moment de la journée et par zone">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">06 / Même une pause compte</p>
+<h2>Un peu de mouvement<br>
+<em>entre deux moments.</em>
+</h2>
+<p>En plus de ton programme, découvre des routines par moment ou par zone : nuque, épaules, dos, hanches, jambes. Elles respectent aussi tes positions et ton niveau.</p>
+<p>Enregistre tes favorites pour les retrouver. Pour te faire une idée des mouvements, explore aussi nos fiches exercices.</p>
+<a class="v-text-link" href="/exercices/">Découvrir les exercices →</a>
+</div>
 </section>
-
+<div class="v-wrap">
+<p class="v-demo-caption">Écrans présentés avec un profil de démonstration. Les séances varient selon tes réponses.</p>
+</div>
+<div style="height:35px">
+</div>
+</div>
+<section class="v-cta" id="essai">
+<p class="v-eyebrow">Ton premier pas commence ici</p>
+<h2>À toi de bouger.<br>
+<em>À ton rythme.</em>
+</h2>
+<p class="v-lead">Découvre les séances adaptées à toi et laisse-toi guider, un mouvement après l’autre.</p>
+<div class="v-actions">
+<a class="v-badge" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=site-application&amp;mt=8">
+<img src="/images/badge-app-store-fr.svg" width="177" height="56" alt="Télécharger dans l’App Store">
+</a>
+<a class="v-badge v-badge-google" href="google-play"><img src="/images/badge-google-play-fr.png" width="188" height="73" alt="Disponible sur Google Play"></a>
+</div>
+<p class="v-price">7 jours gratuits et sans engagement pour découvrir Moovini.<br>Puis 59,99 € par an ou 9,99 € par mois.</p>
+<p class="v-fine">Abonnement requis. L’offre disponible est précisée dans l’app avant confirmation. Renouvellement automatique, sauf résiliation dans les réglages de l’App Store ou de Google Play avant l’échéance. <a href="/cgu/">Voir les conditions</a>.</p>
+</section>
 </article>

@@ -6,7 +6,7 @@
 <!-- Titre et description pour les moteurs de recherche : les requêtes visées (« reprendre le sport en douceur »,
      « exercices sur chaise », « au bureau ») et le mot « app » qui distingue Moovini des homonymes (gel, vélos). -->
 <title>Moovini, l'app pour reprendre le sport en douceur</title>
-<meta name="description" content="Mouvement doux pour sédentaires et débutants : des séances de 10 à 30 min composées d'après tes réponses, sur une chaise ou debout. 7 jours gratuits.">
+<meta name="description" content="Mouvement doux pour sédentaires et débutants : des séances de 10 à 30 min composées d'après tes réponses, sur chaise, debout ou au sol. Essai sous conditions.">
 
 <meta name="application-name" content="Moovini">
 <meta name="apple-mobile-web-app-title" content="Moovini">
@@ -20,11 +20,11 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://moovini.app/">
 <meta property="og:title" content="Moovini : recommence à bouger, en douceur">
-<meta property="og:description" content="Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses : chez toi ou au travail, sur une chaise ou debout, de 10 à 30 minutes.">
+<meta property="og:description" content="Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses : chez toi ou au travail, sur chaise, debout ou au sol, de 10 à 30 minutes.">
 <meta property="og:image" content="https://moovini.app/images/partage.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="La page d'accueil de Moovini : le titre « Recommence à bouger, en douceur » et l'app ouverte sur une séance.">
+<meta property="og:image:alt" content="Moovini, gym douce à la maison">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14292E">
 <!-- Icônes carrées, multiples de 48 px : Google n'affiche pas d'icône rectangulaire dans ses résultats. -->
@@ -35,7 +35,7 @@
 <!-- Bannière Safari sur iPhone, qui ouvre la fiche App Store (sortie le 9 novembre 2026). -->
 <meta name="apple-itunes-app" content="app-id=6825750322">
 <!-- Données structurées : qui est Moovini (et pas le gel ni les vélos du même nom), le site et l'app.
-     Pas encore de note : l'app est sortie sur l'App Store le 9 novembre 2026 et sur Google Play le 16 novembre 2026. -->
+     Pas encore de note : l'app est sortie sur l'App Store le 9 novembre 2026, Android suivra. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,7 +62,7 @@
       "@id": "https://moovini.app/#app",
       "name": "Moovini",
       "alternateName": "Moovini, mouvement doux",
-      "description": "Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses : chez toi ou au bureau, sur une chaise ou debout, de 10 à 30 minutes. Mobilité, étirements, renforcement léger et cardio doux, avec des démonstrations vidéo et une voix qui guide.",
+      "description": "Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses : chez toi ou au bureau, sur chaise, debout ou au sol, de 10 à 30 minutes. Mobilité, étirements, renforcement léger et cardio doux, avec des démonstrations vidéo et une voix qui guide.",
       "operatingSystem": ["iOS", "Android"],
       "applicationCategory": "HealthApplication",
       "applicationSubCategory": "Fitness",
@@ -76,380 +76,140 @@
 }
 </script>
 <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-  /* Plus Jakarta Sans hébergée sur le site (licence OFL, fonts/OFL.txt) : un seul fichier variable pour l'alphabet
-     latin, de 500 à 800, et aucune requête vers Google à la visite. */
-  @font-face {
-    font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500 800; font-display: swap;
-    src: url(fonts/plus-jakarta-sans-latin.woff2) format('woff2');
-  }
-  :root {
-    --nuit: #14292E; --creme: #FAF7F1; --petrole: #225B65; --gris: #5A7177; --texte: #D5E3E2; --discret: #A9BEBF;
-    --turquoise: #45B9AD; --corail: #EA8069;
-    --mobilite: #E6F5F2; --mobilite-encre: #2E8F86;
-    --cardio: #FDF1D6; --cardio-encre: #B07A10;
-    --force: #E4EEF0; --force-encre: #225B65;
-    --calme: #FCE9E3; --calme-encre: #C4553D;
-    --largeur: 168px; --ecart: 22px; --inclinaison: -16deg;
-  }
-  @media (max-width: 600px) { :root { --largeur: 118px; --ecart: 14px; } }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { min-height: 100%; }
-  /* Une seule hauteur d'écran sur ordinateur : le pied de page tient dedans, sans défilement. */
-  body { display: flex; flex-direction: column; min-height: 100svh; }
-  body {
-    background: var(--nuit); color: var(--creme);
-    font-family: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
-  }
-
-  /* ---------- Le mur incliné : des écrans de l'app qui défilent dans l'axe de la diagonale ---------- */
-  /* La barre d'adresse mobile change la hauteur visible pendant le scroll. Le décor garde la hauteur du grand
-     écran (lvh), sinon son centre et le mur incliné sautent. Le calque reste indépendant du contenu défilant. */
-  .mur { position: fixed; inset: 0 0 auto; height: 100vh; height: 100lvh; overflow: hidden; z-index: 0; pointer-events: none; contain: paint; transform: translateZ(0); }
-  .incline {
-    position: absolute; left: 50%; top: 50%;
-    width: var(--cote); height: var(--cote);
-    transform: translate(-50%, -50%) rotate(var(--inclinaison));
-    display: flex; justify-content: center; gap: var(--ecart);
-  }
-  .colonne { width: var(--largeur); flex: none; }
-  .defile { display: flex; flex-direction: column; gap: var(--ecart); will-change: transform; }
-  @media (prefers-reduced-motion: no-preference) {
-    .defile { animation: monte var(--duree) linear infinite; animation-delay: var(--depart); }
-    .colonne.descend .defile { animation-direction: reverse; }
-  }
-  /* Le contenu de chaque colonne est dessiné deux fois : glisser de la moitié boucle sans raccord. */
-  @keyframes monte { from { transform: translateY(0); } to { transform: translateY(calc(-50% - var(--ecart) / 2)); } }
-
-  .telephone {
-    background: #0E1C1F; border-radius: 26px; padding: 5px;
-    box-shadow: 0 0 0 1px rgba(250,247,241,.10) inset, 0 18px 40px -14px rgba(0,0,0,.55);
-  }
-  .telephone img { display: block; width: 100%; height: auto; aspect-ratio: 360 / 731; border-radius: 21px; background: var(--creme); }
-  @media (max-width: 600px) { .telephone { border-radius: 18px; padding: 3.5px; } .telephone img { border-radius: 15px; } }
-
-  .ecran {
-    background: var(--creme); border-radius: 22px; padding: 12px 11px 11px;
-    display: flex; flex-direction: column; gap: 7px;
-    box-shadow: 0 14px 30px -14px rgba(0,0,0,.55);
-  }
-  .ecran .haut { display: flex; justify-content: space-between; align-items: center; font-size: 9px; font-weight: 600; color: var(--gris); }
-  .ecran .photo { border-radius: 14px; aspect-ratio: 1; overflow: hidden; }
-  .ecran .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .ecran .nom { font-size: 12px; line-height: 1.25; font-weight: 700; color: var(--petrole); min-height: 30px; }
-  .ecran .bas { display: flex; align-items: center; gap: 7px; }
-  .ecran .barre { flex: 1; height: 5px; border-radius: 3px; background: #E3DDD2; overflow: hidden; }
-  .ecran .barre i { display: block; height: 100%; border-radius: 3px; }
-  .ecran .temps { font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .ecran .pastille { font-size: 8.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; }
-  @media (max-width: 600px) {
-    .ecran { border-radius: 16px; padding: 8px; gap: 5px; }
-    .ecran .haut { font-size: 7px; } .ecran .photo { border-radius: 10px; }
-    .ecran .nom { font-size: 9.5px; min-height: 24px; } .ecran .temps { font-size: 8px; }
-    .ecran .pastille { font-size: 7px; padding: 1px 5px; } .ecran .barre { height: 4px; }
-  }
-  .mobilite .photo, .mobilite .pastille { background: var(--mobilite); } .mobilite .pastille { color: var(--mobilite-encre); } .mobilite .barre i { background: var(--mobilite-encre); }
-  .cardio .photo, .cardio .pastille { background: var(--cardio); } .cardio .pastille { color: var(--cardio-encre); } .cardio .barre i { background: var(--cardio-encre); }
-  .force .photo, .force .pastille { background: var(--force); } .force .pastille { color: var(--force-encre); } .force .barre i { background: var(--force-encre); }
-  .calme .photo, .calme .pastille { background: var(--calme); } .calme .pastille { color: var(--calme-encre); } .calme .barre i { background: var(--calme-encre); }
-
-  /* Voile pétrole : le mur reste une ambiance, le texte se lit sans effort. */
-  .voile {
-    position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background:
-      radial-gradient(ellipse 42% 60% at 70% 50%, rgba(20,41,46,.70) 0%, rgba(20,41,46,0) 70%),
-      linear-gradient(90deg, rgba(20,41,46,.97) 0%, rgba(20,41,46,.92) 42%, rgba(20,41,46,.62) 70%, rgba(20,41,46,.45) 100%);
-  }
-  @media (max-width: 860px) {
-    .voile { background: linear-gradient(rgba(20,41,46,.95) 0%, rgba(20,41,46,.93) 55%, rgba(20,41,46,.62) 100%); }
-  }
-
-  /* ---------- Le seul écran : le texte, et le téléphone tenu en main comme sur les pages d'app qui inspirent ---------- */
-  main {
-    position: relative; z-index: 2; flex: 1; width: 100%;
-    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 24px;
-    max-width: 1120px; margin: 0 auto; padding: 8px 32px 8px;
-  }
-  .texte { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-  .scene { position: relative; display: grid; place-items: center; }
-
-  /* iPhone au format réel : écran 393 × 852 pt, coins de 55 pt (14 % de la largeur), Dynamic Island de 126 × 37 pt
-     à 11 pt du haut, cadre titane, bordure noire et boutons (action et volume à gauche, marche à droite). */
-  .iphone {
-    /* La hauteur du téléphone incliné vaut environ 2,35 fois sa largeur : il suit la hauteur de la fenêtre. */
-    --l: clamp(180px, calc((100svh - 140px) / 2.35), 290px); --cadre: 3px; --bordure: 9px;
-    --ecran: calc(var(--l) - 2 * var(--cadre) - 2 * var(--bordure));
-    position: relative; width: var(--l); padding: var(--cadre);
-    border-radius: calc(var(--ecran) * .14 + var(--bordure) + var(--cadre));
-    background: linear-gradient(135deg, #8E9498 0%, #E4E7E9 22%, #7A8084 48%, #C9CDD0 74%, #6B7175 100%);
-    box-shadow: 0 50px 90px -30px rgba(0,0,0,.75);
-    transform: rotate(-9deg);
-  }
-  .iphone .bordure { background: #050708; padding: var(--bordure); border-radius: calc(var(--ecran) * .14 + var(--bordure)); }
-  .iphone .ecran-tel { position: relative; overflow: hidden; border-radius: calc(var(--ecran) * .14); aspect-ratio: 393 / 852; background: #B9AE9F; }
-  .iphone .ecran-tel img, .iphone .ecran-tel video { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .iphone .ilot { position: absolute; top: 1.29%; left: 50%; transform: translateX(-50%); width: 32%; height: 4.38%; border-radius: 999px; background: #000; }
-  .iphone .bouton { position: absolute; width: 3px; border-radius: 2px; background: linear-gradient(90deg, #6B7175, #C9CDD0); }
-  .iphone .action { left: -3px; top: 17%; height: 5.5%; }
-  .iphone .volume-haut { left: -3px; top: 25%; height: 10%; }
-  .iphone .volume-bas { left: -3px; top: 37%; height: 10%; }
-  .iphone .marche { right: -3px; top: 28%; height: 15%; }
-  .carte {
-    position: absolute; z-index: 2; display: flex; align-items: center; gap: 11px;
-    background: rgba(255,255,255,.94); border-radius: 18px; padding: 12px 15px 12px 12px;
-    box-shadow: 0 22px 40px -18px rgba(0,0,0,.6), 0 2px 8px rgba(0,0,0,.18);
-    text-align: left; white-space: nowrap;
-  }
-  .carte small { display: block; font-size: .72rem; font-weight: 600; color: var(--gris); }
-  .carte b { display: block; font-size: .95rem; font-weight: 800; color: #225B65; }
-  .carte .pastille-ronde { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; flex: none; font-weight: 800; font-size: .8rem; }
-  .carte .vignette { width: 44px; height: 44px; border-radius: 12px; background: var(--mobilite); overflow: hidden; flex: none; }
-  .carte .vignette img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .carte .jours { display: flex; gap: 4px; margin-top: 6px; }
-  .carte .jours i { width: 14px; height: 14px; border-radius: 50%; background: #E3DDD2; }
-  .carte .jours i.fait { background: #2E8F86; }
-  .carte-seance { top: 0; right: -34px; }
-  .carte-seance .pastille-ronde { background: var(--cardio); color: var(--cardio-encre); }
-  /* En bas à gauche, sur le nom de l'exercice, sous les pieds : la bulle ne cache pas le mouvement. */
-  .carte-semaine { top: 69%; left: -46px; }
-  .carte-exercice { bottom: -24px; right: -44px; }
-  @media (prefers-reduced-motion: no-preference) {
-    .carte { animation: flotte 6s ease-in-out infinite; }
-    .carte-semaine { animation-delay: -2s; } .carte-exercice { animation-delay: -4s; }
-    @keyframes flotte { 50% { transform: translateY(-10px); } }
-  }
-
-  @media (max-width: 860px) {
-    main { grid-template-columns: minmax(0, 1fr); padding: 22px 20px 16px; gap: 8px; }
-    .texte { align-items: center; text-align: center; }
-    .scene { min-height: 0; padding: 36px 0 56px; }
-    .iphone { --l: 230px; --bordure: 7px; }
-    .carte { padding: 9px 12px 9px 9px; gap: 9px; border-radius: 15px; }
-    .carte b { font-size: .82rem; } .carte small { font-size: .66rem; }
-    .carte .pastille-ronde, .carte .vignette { width: 34px; height: 34px; border-radius: 10px; }
-    .carte-seance { top: 10px; right: max(0px, calc(50% - 215px)); }
-    .carte-semaine { top: 66%; left: max(0px, calc(50% - 215px)); }
-    .carte-exercice { bottom: 22px; right: max(0px, calc(50% - 210px)); }
-  }
-  /* Le logo en en-tête, aligné sur la colonne de texte : le titre a toute la largeur pour lui. */
-  /* Il reste collé en haut quand on défile (sur téléphone), sur un fond nuit qui n'apparaît qu'après le premier pixel. */
-  .entete { position: sticky; top: 0; z-index: 3; transition: background .2s, box-shadow .2s; width: 100%; padding: 26px max(32px, calc(50% - 528px)) 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  /* Menu discret vers les pages de contenu (blog, exercices, questions) : l'accueil reste sur un seul écran. */
-  .entete.decollee { background: rgba(20,41,46,.95); box-shadow: 0 4px 18px rgba(0,0,0,.25); }
-  .menu { display: flex; gap: 22px; }
-  /* Retour en haut, sur téléphone (l'accueil tient en un écran sur ordinateur). */
-  .haut-page { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 3; width: 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--creme); color: var(--nuit); box-shadow: 0 6px 20px rgba(0,0,0,.3); cursor: pointer; opacity: 0; visibility: hidden; translate: 0 8px; transition: opacity .2s, translate .2s, visibility .2s; }
-  .haut-page.visible { opacity: 1; visibility: visible; translate: 0 0; }
-  .haut-page svg { width: 20px; height: 20px; }
-  .haut-page:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; }
-  .menu a { color: var(--creme); text-decoration: none; font-weight: 700; font-size: .95rem; opacity: .9; }
-  .menu a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
-  .logo { width: clamp(62px, 6vw, 80px); height: auto; display: block; }
-  h1 {
-    font-weight: 800; letter-spacing: -.03em;
-    font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.04;
-  }
-  /* Léger dégradé corail vers pêche sur « en douceur. » */
-  h1 em {
-    display: block; width: fit-content; font-style: normal; color: var(--corail);
-    background: linear-gradient(90deg, var(--corail) 0%, #F09A80 50%, #F6C1AA 100%);
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  @media (max-width: 860px) {
-    .entete { flex-direction: column; justify-content: center; gap: 12px; padding: 18px 20px 12px; }
-    .menu { gap: 18px; }
-    h1 { font-size: clamp(1.45rem, 6.3vw, 2.6rem); }
-    h1 em { margin: 0 auto; }
-  }
-  .promesse {
-    margin-top: 26px; max-width: 31rem; color: var(--texte);
-    font-size: clamp(1.03rem, 2.6vw, 1.2rem); line-height: 1.6; font-weight: 500; text-wrap: balance;
-  }
-  /* Badges officiels App Store (sortie iPhone, 9 novembre 2026) et Google Play (sortie Android, 16 novembre 2026), même hauteur visible. */
-  .boutiques { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 30px; width: 400px; max-width: 100%; }
-  .badge-apple { display: inline-flex; flex: none; border-radius: 9px; }
-  .badge-apple img { display: block; width: auto; height: 56px; }
-  .badge-google { display: inline-flex; flex: none; border-radius: 9px; }
-  .badge-google img { display: block; width: auto; height: 73px; margin: -8.5px 0; }
-  @media (max-width: 860px) { .boutiques { justify-content: center; } }
-  @media (max-width: 420px) { .boutiques { gap: 8px; } .badge-apple img { height: 48px; } .badge-google img { height: 62.5px; margin: -7.25px 0; } }
-  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .preuve { margin-top: 18px; max-width: 31rem; text-wrap: balance; font-size: .94rem; color: var(--discret); font-weight: 500; line-height: 1.9; }
-  .preuve b { color: var(--turquoise); font-weight: 700; }
-  .voir-seance { display: flex; align-items: center; gap: 14px; width: fit-content; max-width: min(31rem, calc(100vw - 40px)); margin-top: 18px; padding: 10px 18px 10px 10px; border: 1px solid rgba(69,185,173,.55); border-radius: 18px; background: rgba(20,41,46,.72); color: var(--creme); text-decoration: none; text-align: left; transition: background .2s, border-color .2s; }
-  .voir-seance:hover { background: rgba(20,41,46,.92); border-color: var(--turquoise); }
-  .voir-seance img { width: 56px; height: 56px; flex: none; border-radius: 12px; object-fit: cover; }
-  .voir-seance b { display: block; font-size: 1rem; font-weight: 700; color: #fff; }
-  .voir-seance small { display: block; margin-top: 2px; font-size: .84rem; line-height: 1.35; opacity: .85; }
-  .voir-seance svg { width: 20px; height: 20px; flex: none; color: var(--turquoise); }
-  @media (max-width: 860px) { .voir-seance { margin-inline: auto; } }
-  @media (max-width: 560px) { .menu .long { display: none; } }
-  .u { white-space: nowrap; }
-
-  /* Bande pétrole sous le pied de page : il reste lisible quand une carte claire du mur passe derrière. */
-  footer {
-    position: relative; z-index: 2; padding: 26px 20px 18px;
-    display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 22px;
-    font-size: .94rem; color: var(--texte);
-    background: linear-gradient(rgba(20,41,46,0) 0%, rgba(20,41,46,.94) 38%, rgba(20,41,46,.97) 100%);
-  }
-  footer a { color: var(--creme); text-decoration: none; font-weight: 600; }
-  /* Place pour le bouton de retour en haut, qui n'apparaît que sur téléphone. */
-  @media (max-width: 860px) { footer { padding-bottom: 76px; } }
-  footer a:hover { text-decoration: underline; }
-  /* Le mur et les bulles bougent sans fin : ce bouton les fige (WCAG 2.2.2). Inutile si le système réduit déjà les animations. */
-  .pause { font: inherit; font-weight: 600; color: var(--creme); background: none; border: 1px solid rgba(250,247,241,.35); border-radius: 999px; padding: 4px 14px; cursor: pointer; }
-  .pause:hover { border-color: var(--creme); }
-  .fige .defile, .fige .carte { animation-play-state: paused; }
-  /* Pendant le geste et son inertie, le décor reste immobile. La reprise conserve la progression des animations. */
-  .en-defilement .defile, .en-defilement .carte { animation-play-state: paused; }
-  @media (prefers-reduced-motion: reduce) { .pause { display: none; } }
-  a:focus-visible, .pause:focus-visible { outline: 2px solid var(--turquoise); outline-offset: 3px; border-radius: 4px; }
-  .pause:focus-visible { border-radius: 999px; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .leve { opacity: 0; transform: translateY(14px); animation: lever .9s cubic-bezier(.22,1,.36,1) forwards; }
-    .leve-2 { animation-delay: .1s; } .leve-3 { animation-delay: .2s; } .leve-4 { animation-delay: .3s; } .leve-5 { animation-delay: .4s; }
-    @keyframes lever { to { opacity: 1; transform: none; } }
-  }
-</style>
-</head>
-<body>
-<div class="mur" aria-hidden="true"><div class="incline" id="incline"></div><div class="voile"></div></div>
-
-<header class="entete leve"><img class="logo" src="images/logo-creme.svg" alt="Moovini" width="104" height="100">
-  <nav class="menu" aria-label="Navigation principale"><a href="application/">L'app</a><a href="seance-de-la-semaine/">La séance<span class="long"> de la semaine</span></a><a href="blog/">Blog</a><a href="questions-frequentes/">Questions</a></nav></header>
-
-<main>
-  <div class="texte">
-    <h1 class="leve leve-2"><span class="u">Recommence à bouger,</span> <em>en douceur.</em></h1>
-    <p class="promesse leve leve-3">Des séances de mouvement doux pour sédentaires et débutants, composées d'après tes réponses&nbsp;: chez toi ou au travail, sur une chaise ou debout, de 10 à 30&nbsp;minutes.</p>
-    <div class="boutiques leve leve-4" role="group" aria-label="Télécharger Moovini">
-      <a class="badge-apple" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=site-accueil&amp;mt=8" rel="noopener"><img src="images/badge-app-store-fr.svg" alt="Télécharger dans l’App Store" width="177" height="56"></a>
-      <a class="badge-google" href="https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&amp;hl=fr&amp;referrer=utm_source%3Dmoovini.app%26utm_medium%3Dsite%26utm_campaign%3Dsite-accueil" rel="noopener"><img src="images/badge-google-play-fr.png" alt="Disponible sur Google Play" width="188" height="73"></a>
-    </div>
-    <p class="preuve leve leve-5">Aucune inscription requise et <b class="u">7&nbsp;jours d'essai gratuit</b> pour profiter pleinement de l'application.</p>
-    <a class="voir-seance leve leve-5" href="seance-de-la-semaine/"><img src="images/fiches/2026-10-18_marche-sur-place-debout_studio.webp" alt="" width="56" height="56" decoding="async"><span><b>Regarde la séance de la semaine</b><small>Une vraie séance, choisie parmi les 85 exercices de l'app. Une autre chaque lundi.</small></span><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 10h12M10.5 4.5 16 10l-5.5 5.5"/></svg></a>
-  </div>
-  <div class="scene leve leve-3" aria-hidden="true">
-    <div class="iphone"><span class="bouton action"></span><span class="bouton volume-haut"></span><span class="bouton volume-bas"></span><span class="bouton marche"></span>
-      <div class="bordure"><div class="ecran-tel"><video class="demo" src="images/ecrans/hero-assis-debout.mp4" poster="images/ecrans/hero-assis-debout.webp" width="600" height="1301" muted loop playsinline preload="auto" aria-hidden="true"></video><span class="ilot"></span></div></div>
-    </div>
-    <div class="carte carte-seance"><span class="pastille-ronde">20</span><span><small>Séance du jour</small><b>20 min, 12 exercices</b></span></div>
-    <div class="carte carte-semaine"><span><small>Bravo Julie&nbsp;!</small><b>4 séances cette semaine</b><span class="jours"><i class="fait"></i><i class="fait"></i><i class="fait"></i><i class="fait"></i><i></i><i></i><i></i></span></span></div>
-    <div class="carte carte-exercice"><span class="vignette"><img src="images/exercices/pompes-mur-debout-studio.webp" alt=""></span><span><small>Ensuite</small><b>Pompes contre le mur</b></span></div>
-  </div>
+<link rel="stylesheet" href="/assets/vitrine.css?v=20261114a"><script defer src="/assets/vitrine.js?v=20261114a"></script></head>
+<body class="vitrine">
+ <a class="skip" href="#contenu">Aller au contenu</a>
+ <header class="v-nav"><a class="v-brand" href="/" aria-label="Moovini, accueil"><img src="/images/identite-20261114/icone.png" width="40" height="40" alt="">moovini</a><nav aria-label="Navigation principale"><a href="/application/" >L’app</a><a href="/seance-de-la-semaine/">Une séance à découvrir</a><a href="/blog/">Le blog</a></nav><a class="v-download" href="/telecharger/">Télécharger <span aria-hidden="true">↗</span></a></header>
+ <main id="contenu">
+<div class="v-wrap">
+<section class="v-hero">
+<div>
+<p class="v-eyebrow">Gym douce à la maison</p>
+<h1>Reprends le sport<br>
+<em>à ton rythme.</em>
+</h1>
+<p class="v-lead">Pas besoin d’être sportif pour commencer. Des séances adaptées de 10 à 30 minutes, sur chaise, debout ou au sol. Moovini te guide à chaque mouvement.</p>
+<div class="v-actions">
+<a class="v-badge" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=site-accueil&amp;mt=8">
+<img src="/images/badge-app-store-fr.svg" width="177" height="56" alt="Télécharger dans l’App Store">
+</a>
+<a class="v-badge v-badge-google" href="https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&amp;hl=fr&amp;referrer=utm_source%3Dmoovini.app%26utm_medium%3Dsite%26utm_campaign%3Dsite-accueil" rel="noopener"><img src="/images/badge-google-play-fr.png" width="188" height="73" alt="Disponible sur Google Play"></a>
+<a href="/application/">Découvrir l’app →</a>
+</div>
+<p class="v-fine">7 jours gratuits et sans engagement pour découvrir Moovini, puis abonnement.<br>
+<a href="#essai">Voir les tarifs et les conditions</a>
+</p>
+</div>
+<div class="v-stage">
+<div class="v-demo">
+<div class="v-phone">
+<video data-demo muted loop playsinline preload="none" poster="/images/ecrans/hero-assis-debout.webp" width="600" height="1301" aria-label="Démonstration du lecteur Moovini : exercice assis-debout, consigne et minuteur">
+<source src="/images/ecrans/hero-assis-debout.mp4" type="video/mp4">
+</video>
+</div>
+<button class="v-play" type="button" aria-pressed="false">Lire la démonstration</button>
+</div>
+</div>
+</section>
+<div class="v-facts">
+<div>
+<b>10 à 30 min</b>
+<span>selon ton temps</span>
+</div>
+<div>
+<b>Plus de 80</b>
+<span>exercices en vidéo</span>
+</div>
+<div>
+<b>3 positions</b>
+<span>chaise, debout ou sol</span>
+</div>
+<div>
+<b>Même hors ligne</b>
+<span>tes séances te suivent</span>
+</div>
+</div>
+</div>
+<div class="v-light">
+<section class="v-wrap v-section">
+<p class="v-eyebrow">Le plus dur, c’est souvent de commencer</p>
+<h2>Tu n’as pas besoin<br>d’avoir déjà le rythme.</h2>
+<div class="v-steps">
+<div class="v-step">
+<span>01 / TU REPRENDS</span>
+<h3>Ça fait longtemps ?</h3>
+<p>Commence à ton niveau. Les séances tiennent compte de tes réponses, avec des mouvements guidés pour te lancer.</p>
+</div>
+<div class="v-step">
+<span>02 / TU FAIS DE LA PLACE</span>
+<h3>Une journée bien remplie ?</h3>
+<p>Choisis 10, 20 ou 30 minutes. Une petite routine peut aussi trouver sa place entre deux moments de ta journée.</p>
+</div>
+<div class="v-step">
+<span>03 / TU CHOISIS</span>
+<h3>Tu préfères rester debout ?</h3>
+<p>Ou commencer sur une chaise ? Tu choisis les positions qui te conviennent. Ta séance les respecte.</p>
+</div>
+</div>
+</section>
+<section class="v-wrap v-feature">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/05-accueil.webp" width="640" height="1387" loading="lazy" alt="Accueil Moovini : la séance du jour et l’adaptation à ton énergie">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">Des séances adaptées à toi</p>
+<h2>Ton programme.<br>
+<em>Pas celui du voisin.</em>
+</h2>
+<p>Ton objectif, ton temps, tes positions : quelques réponses suffisent pour composer ta séance parmi les exercices de Moovini.</p>
+<p>Une petite énergie aujourd’hui ? Ajuste la séance. Un mouvement ne te convient pas ? Remplace-le avant de commencer.</p>
+<a class="v-text-link" href="/application/#seance">Comment l’app s’adapte à toi →</a>
+</div>
+</section>
+<section class="v-wrap v-feature">
+<div class="v-product">
+<div class="v-phone">
+<img src="/images/identite-20261114/07-progres.webp" width="640" height="1387" loading="lazy" alt="Écran Progrès Moovini : séances réalisées et petites victoires du profil de démonstration">
+</div>
+</div>
+<div class="v-copy">
+<p class="v-eyebrow">Progresse sans pression</p>
+<h2>Chaque séance<br>
+<em>compte.</em>
+</h2>
+<p>Retrouve tes séances et tes petites victoires. Après une pause, tu reprends avec ce que tu as déjà accompli.</p>
+<p>Ton ressenti aide à ajuster la suite. Tu choisis quand passer à l’étape suivante.</p>
+<div class="v-inline">
+<span>Sans compte à créer</span>
+<span>Sans publicité</span>
+</div>
+</div>
+</section>
+<section class="v-wrap v-section">
+<p class="v-eyebrow">Un aperçu avant de te lancer</p>
+<h2>Regarde à quoi<br>ressemble une séance.</h2>
+<div class="v-home-more">
+<p class="v-intro">Découvre une sélection de mouvements et leur guidage dans notre séance de la semaine.</p>
+<a class="v-text-link" href="/seance-de-la-semaine/">Voir la séance de la semaine →</a>
+</div>
+</section>
+</div>
+<section class="v-cta" id="essai">
+<p class="v-eyebrow">Ton premier pas commence ici</p>
+<h2>À toi de bouger.<br>
+<em>À ton rythme.</em>
+</h2>
+<p class="v-lead">Découvre les séances adaptées à toi et laisse-toi guider, un mouvement après l’autre.</p>
+<div class="v-actions">
+<a class="v-badge" href="https://apps.apple.com/fr/app/apple-store/id6825750322?pt=129550693&amp;ct=site-accueil&amp;mt=8">
+<img src="/images/badge-app-store-fr.svg" width="177" height="56" alt="Télécharger dans l’App Store">
+</a>
+<a class="v-badge v-badge-google" href="https://play.google.com/store/apps/details?id=com.marcolevrai.moovini&amp;hl=fr&amp;referrer=utm_source%3Dmoovini.app%26utm_medium%3Dsite%26utm_campaign%3Dsite-accueil" rel="noopener"><img src="/images/badge-google-play-fr.png" width="188" height="73" alt="Disponible sur Google Play"></a>
+</div>
+<p class="v-price">7 jours gratuits et sans engagement pour découvrir Moovini.<br>Puis 59,99 € par an ou 9,99 € par mois.</p>
+<p class="v-fine">Abonnement requis. L’offre disponible est précisée dans l’app avant confirmation. Renouvellement automatique, sauf résiliation dans les réglages de l’App Store ou de Google Play avant l’échéance. <a href="/cgu/">Voir les conditions</a>.</p>
+</section>
 </main>
-
-<footer>
-  <a href="application/">L'app en détail</a>
-  <a href="seance-de-la-semaine/">La séance de la semaine</a>
-  <a href="exercices/">Exercices</a>
-  <a href="pour-qui/teletravail/">Télétravail</a>
-  <a href="pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a>
-  <a href="pour-qui/debutant-sedentaire/">Débutants</a>
-  <a href="privacy/">Politique de confidentialité</a>
-  <a href="cgu/">Conditions d'utilisation</a>
-  <a href="mailto:contact@moovini.app">contact@moovini.app</a>
-  <span>© 2026 Moovini</span>
-  <button class="pause" type="button" id="pause" aria-pressed="false">Mettre en pause l'animation</button>
-</footer>
-
-<button class="haut-page" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
-<script>
-  // Vrais écrans de l'app (captures du 23 octobre 2026, profil de démonstration) et écrans d'exercices.
-  const ECRANS = ['app-03-lecteur', 'onboarding-02-objectif', 'app-01-accueil', 'onboarding-05-seance', 'app-05-progres',
-    'onboarding-04-positions', 'app-02-seance', 'onboarding-07-essai', 'app-06-programme', 'onboarding-01-bienvenue',
-    'app-04-fin', 'onboarding-03-duree', 'onboarding-06-fonctions'];
-  const EXERCICES = [
-    ['tourner-tete-debout-studio', 'Tourner la tête', 'mobilite'], ['boxe-debout-studio', 'Boxe dans le vide', 'cardio'],
-    ['squat-debout-studio', 'Squat avec appui', 'force'], ['respiration-ventre-chaise-studio', 'Respiration abdominale', 'calme'],
-    ['cercles-bras-debout-studio', 'Cercles de bras', 'mobilite'], ['fente-avant-debout-studio', 'Fente avant', 'force'],
-    ['marche-sur-place-chaise-studio', 'Marche sur place', 'cardio'], ['ouvrir-poitrine-debout-studio', 'Ouvrir la poitrine', 'mobilite'],
-    ['jumping-jacks-debout-studio', 'Jumping jacks', 'cardio'], ['equilibre-une-jambe-debout-studio', 'Équilibre sur une jambe', 'force'],
-    ['rotation-buste-chaise-studio', 'Rotation du buste', 'mobilite'], ['lever-bras-debout-studio', 'Lever les bras', 'force'],
-    ['genou-poitrine-sol-studio', 'Genou vers la poitrine', 'mobilite'], ['pas-de-cote-debout-studio', 'Pas de côté', 'cardio'],
-    ['tirage-serviette-debout-studio', 'Tirage avec une serviette', 'force'], ['inclinaison-laterale-debout-studio', 'Inclinaison latérale', 'mobilite'],
-    ['tendre-jambe-chaise-studio', 'Tendre la jambe', 'force'], ['rouler-epaules-debout-studio', 'Rouler les épaules', 'mobilite'],
-    ['pompes-sol-studio', 'Pompes', 'force'], ['cercles-bassin-debout-studio', 'Cercles de bassin', 'mobilite'],
-    ['talons-devant-debout-studio', 'Talons devant', 'cardio'], ['squat-poussee-debout-studio', 'Squat et poussée vers le ciel', 'force'],
-    ['menton-poitrine-chaise-studio', 'Menton vers la poitrine', 'mobilite'], ['haut-du-dos-debout-studio', 'Étirement du haut du dos', 'mobilite'],
-  ];
-  const FAMILLES = { mobilite: 'Mobilité', cardio: 'Cardio', force: 'Force', calme: 'Calme' };
-  const DUREES = [30, 40, 45, 60];
-
-  // Le mur est un décor : ses images passent après celle du téléphone de l'accueil.
-  const telephone = i => `<div class="telephone"><img src="images/ecrans/${ECRANS[i % ECRANS.length]}.webp" alt="" decoding="async" fetchpriority="low"></div>`;
-  function exercice(i) {
-    const [fichier, nom, famille] = EXERCICES[i % EXERCICES.length];
-    const duree = DUREES[i % DUREES.length], ecoule = Math.round(duree * (0.2 + ((i * 37) % 60) / 100));
-    return `<div class="ecran ${famille}">
-      <div class="haut"><span>${i % 6 + 1} sur 6</span><span class="pastille">${FAMILLES[famille]}</span></div>
-      <div class="photo"><img src="images/exercices/${fichier}.webp" alt="" decoding="async" fetchpriority="low"></div>
-      <div class="nom">${nom}</div>
-      <div class="bas"><div class="barre"><i style="width:${Math.round(100 * ecoule / duree)}%"></i></div><span class="temps">0:${String(duree - ecoule).padStart(2, '0')}</span></div>
-    </div>`;
-  }
-
-  // Le plan incliné est un carré de la diagonale de l'écran : il couvre tout, quel que soit l'angle. Chaque colonne
-  // alterne écrans de l'app et écrans d'exercices, part décalée, et défile à vitesse constante dans l'axe incliné.
-  function construire() {
-    const incline = document.getElementById('incline');
-    const css = getComputedStyle(document.documentElement);
-    const l = parseFloat(css.getPropertyValue('--largeur')), e = parseFloat(css.getPropertyValue('--ecart'));
-    const mur = document.querySelector('.mur');
-    const cote = Math.ceil(Math.hypot(mur.clientWidth, mur.clientHeight) * 1.08);
-    const colonnes = Math.ceil(cote / (l + e)) + 1;
-    const hTel = l * 731 / 360 + 10, hEx = l * 1.62;
-    let html = '', iTel = 0, iEx = 0;
-    for (let c = 0; c < colonnes; c++) {
-      let bloc = '', hauteur = 0, k = c;
-      while (hauteur < cote + hTel) {
-        if (k % 3 === 1) { bloc += exercice(iEx++ * 5 + c); hauteur += hEx + e; }
-        else { bloc += telephone(iTel++ * 7 + c * 3); hauteur += hTel + e; }
-        k++;
-      }
-      const vitesse = 26; // pixels par seconde
-      html += `<div class="colonne${c % 2 ? ' descend' : ''}" style="--duree:${(hauteur / vitesse).toFixed(1)}s; --depart:-${((c * 7.3) % 20).toFixed(1)}s"><div class="defile">${bloc}${bloc}</div></div>`;
-    }
-    incline.style.setProperty('--cote', `${cote}px`);
-    incline.innerHTML = html;
-  }
-  // Le mur se construit juste après le premier affichage : le titre et le téléphone passent d'abord.
-  requestAnimationFrame(() => setTimeout(construire, 0));
-  let attente, largeur = innerWidth;
-  addEventListener('resize', () => { if (innerWidth === largeur) return; largeur = innerWidth; clearTimeout(attente); attente = setTimeout(construire, 250); });
-
-  // Même calque pour le mur et son voile ; ne pas faire tourner les colonnes et les bulles pendant un scroll rapide.
-  // Les événements scroll continuent pendant l'inertie iOS/Android. Le délai couvre aussi les navigateurs sans scrollend.
-  let repriseDecor;
-  const suspendreDecor = () => {
-    document.body.classList.add('en-defilement');
-    clearTimeout(repriseDecor);
-    repriseDecor = setTimeout(() => document.body.classList.remove('en-defilement'), 200);
-  };
-  addEventListener('touchmove', suspendreDecor, { passive: true });
-  const entete = document.querySelector('.entete'), haut = document.querySelector('.haut-page');
-  const suivre = () => { suspendreDecor(); entete.classList.toggle('decollee', scrollY > 4); haut.classList.toggle('visible', scrollY > 300); };
-  addEventListener('scroll', suivre, { passive: true }); suivre();
-  haut.addEventListener('click', () => scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
-
-  // Le téléphone montre le mouvement en boucle (25 octobre 2026) : pas de lecture si le système réduit les animations,
-  // et le bouton de pause du mur l'arrête aussi.
-  const demo = document.querySelector('.ecran-tel .demo');
-  const reduit = matchMedia('(prefers-reduced-motion: reduce)');
-  const lire = () => { if (reduit.matches || document.body.classList.contains('fige')) demo.pause(); else demo.play().catch(() => {}); };
-  reduit.addEventListener('change', lire); lire();
-
-  const pause = document.getElementById('pause');
-  pause.addEventListener('click', () => {
-    const fige = document.body.classList.toggle('fige');
-    pause.setAttribute('aria-pressed', String(fige));
-    pause.textContent = fige ? "Relancer l'animation" : "Mettre en pause l'animation";
-    lire();
-  });
-</script>
-</body>
-</html>
+ <footer class="v-footer"><a class="v-brand" href="/">moovini</a><p>Un peu de mouvement. À ton rythme.</p><nav aria-label="Pied de page"><a href="/application/">L’app</a><a href="/exercices/">Exercices</a><a href="/seance-de-la-semaine/">La séance de la semaine</a><a href="/blog/">Blog</a><a href="/pour-qui/debutant-sedentaire/">Débutants</a><a href="/pour-qui/teletravail/">Télétravail</a><a href="/pour-qui/reprendre-le-sport-apres-40-ans/">Après 40 ans</a><a href="/questions-frequentes/">Questions fréquentes</a><a href="/assistance/">Assistance</a><a href="/privacy/">Confidentialité</a><a href="/cgu/">Conditions d’utilisation</a><a href="mailto:contact@moovini.app">Contact</a></nav><small>© 2026 Moovini. Des exercices pour le bien-être, sans remplacer l’avis d’un professionnel de santé.</small></footer></body></html>

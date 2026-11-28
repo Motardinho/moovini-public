@@ -41,7 +41,7 @@ Tes réponses, tes séances et tes zones à ménager restent sur ton téléphone
 
 ## Combien coûte Moovini ?
 
-Moovini commence par 7 jours d'essai gratuit, avec accès à tout. Ensuite, l'abonnement coûte 59,99 € par an ou 9,99 € par mois en France, au prix affiché par l'App Store ou Google Play au moment de l'achat.
+Tu as 7 jours gratuits et sans engagement pour découvrir Moovini, avec accès à tout. Ensuite, l'abonnement coûte 59,99 € par an ou 9,99 € par mois en France, au prix affiché par l'App Store ou Google Play au moment de l'achat.
 
 ## Comment arrêter l'abonnement ?
 
