@@ -281,12 +281,16 @@ const visuel = (e, taille) => {
     : `<span class="sans-photo ${e.family}" aria-hidden="true">${echapper(e.name.slice(0, 1))}</span>`;
 };
 const positions = e => [...new Set(e.variants.map(v => v.label))];
+// Maillage (28 novembre 2026) : chaque fiche renvoie vers les articles du blog qui la citent, les plus récents d'abord.
+const billetsCitant = slug => articles('blog').filter(b => b.corps.includes(`/exercices/${slug}/`))
+  .sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 
 for (const e of exercices) {
   const chemin = `/exercices/${e.slug}/`;
   const ariane = [['Accueil', '/'], ['Exercices', '/exercices/'], [e.name, chemin]];
   // Peu de fiches par famille : la même famille d'abord, puis les autres.
   const voisins = [...exercices.filter(x => x.family === e.family), ...exercices.filter(x => x.family !== e.family)].filter(x => x.slug !== e.slug).slice(0, 4);
+  const lectures = billetsCitant(e.slug);
   const sections = e.variants.map(v => `
 <section class="variante">
   <h2>${echapper(v.name ?? e.name)} ${v.label === 'Debout' ? 'debout' : v.label === 'Au sol' ? 'au sol' : 'sur une chaise'}</h2>
@@ -331,7 +335,7 @@ for (const e of exercices) {
   <p class="prudence">Va à ton rythme et arrête si ça fait mal. En cas de problème de santé, de blessure ou de grossesse, demande d'abord conseil à ton médecin.</p>
   <aside class="dans-appli"><h2>Dans Moovini</h2><p>Moovini place ${echapper(e.name.toLowerCase())} dans tes séances quand il convient à tes réponses : démonstration en vidéo, voix qui te guide, décompte et version plus douce si besoin.</p></aside>
 </article>
-${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul class="grille-fiches">${voisins.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span></a></li>`).join('')}</ul></section>` : ''}`,
+${lectures.length ? `<section class="voisins"><h2>Dans le blog</h2><ul class="cartes">${lectures.map(x => `<li><a href="/blog/${x.slug}/">${vignette(x)}<strong>${echapper(x.titre)}</strong><span>${echapper(x.description)}</span></a></li>`).join('')}</ul></section>\n` : ''}${voisins.length ? `<section class="voisins"><h2>D'autres exercices</h2><ul class="grille-fiches">${voisins.map(x => `<li><a href="/exercices/${x.slug}/">${visuel(x, 96)}<span>${echapper(x.name)}</span></a></li>`).join('')}</ul></section>` : ''}`,
   }));
   plan.push([chemin, AUJOURDHUI]);
 }

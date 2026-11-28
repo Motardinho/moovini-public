@@ -83,7 +83,7 @@ Debout face à un mur, à un grand pas, pose les mains à plat à hauteur d'épa
 
 Pour que ce soit plus facile, rapproche les pieds du mur, et pour que ce soit plus dur, éloigne-les. Voir [pompes contre le mur](/exercices/pompes-mur/).
 
-Quand ces deux mouvements deviennent faciles, tu pourras passer à des versions plus exigeantes, comme le squat sans appui, mains jointes devant la poitrine.
+Quand ces deux mouvements deviennent faciles, tu pourras passer à des versions plus exigeantes, comme le squat sans appui, mains jointes devant la poitrine. Tu trouveras six exercices de ce type, du plus doux au plus exigeant, dans notre article sur le [renforcement musculaire débutant](/blog/renforcement-musculaire-debutant/).
 
 ## Retour au calme : finir en respirant
 
